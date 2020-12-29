@@ -1,0 +1,3 @@
+[submodule "HW/model3d"]
+	path = HW/model3d
+	url = ../Model3D.git
