@@ -1,3 +1,33 @@
 [submodule "HW/model3d"]
 	path = HW/model3d
 	url = ../Model3D.git
+[submodule "FW/Library/bootloader"]
+	path = FW/Library/bootloader
+	url = https://sampidevkit@bitbucket.org/sampicontributors/bootloader.git
+[submodule "FW/Library/system"]
+	path = FW/Library/system
+	url = https://sampidevkit@bitbucket.org/sampicontributors/system.git
+[submodule "FW/Library/usb"]
+	path = FW/Library/usb
+	url = https://sampidevkit@bitbucket.org/sampicontributors/usb.git
+[submodule "FW/Library/programmer"]
+	path = FW/Library/programmer
+	url = https://sampidevkit@bitbucket.org/sampicontributors/programmer.git
+[submodule "FW/Library/memory"]
+	path = FW/Library/memory
+	url = https://sampidevkit@bitbucket.org/sampicontributors/memory.git
+[submodule "FW/Library/kit"]
+	path = FW/Library/kit
+	url = https://sampidevkit@bitbucket.org/sampicontributors/kit.git
+[submodule "FW/Library/indicator"]
+	path = FW/Library/indicator
+	url = https://sampidevkit@bitbucket.org/sampicontributors/indicator.git
+[submodule "FW/Library/fileio"]
+	path = FW/Library/fileio
+	url = https://sampidevkit@bitbucket.org/sampicontributors/fileio.git
+[submodule "FW/Library/common"]
+	path = FW/Library/common
+	url = https://sampidevkit@bitbucket.org/sampicontributors/common.git
+[submodule "FW/Library/buttons"]
+	path = FW/Library/buttons
+	url = https://sampidevkit@bitbucket.org/sampicontributors/buttons.git

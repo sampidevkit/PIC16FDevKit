@@ -12,10 +12,18 @@
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>../Library</sourceRootElem>
+                <sourceRootElem>app</sourceRootElem>
+                <sourceRootElem>config</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
-                    <name>default</name>
+                    <name>bootloader</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>application</name>
                     <type>2</type>
                 </confElem>
             </confList>

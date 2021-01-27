@@ -4,6 +4,124 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f2" displayName="App" projectFiles="true">
+        <itemPath>app/AppMain.h</itemPath>
+        <itemPath>app/libcomp.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="Config" projectFiles="true">
+        <itemPath>config/BLD_FileIO_Cfg.h</itemPath>
+        <itemPath>config/BLD_Nvm_Cfg.h</itemPath>
+        <itemPath>config/Bootloader_Cfg.h</itemPath>
+        <itemPath>config/Common_Lib_Cfg.h</itemPath>
+        <itemPath>config/HexParsing_Cfg.h</itemPath>
+        <itemPath>config/TaskManager_Cfg.h</itemPath>
+        <itemPath>config/TickTimer_Cfg.h</itemPath>
+        <itemPath>config/UserFunctions_Cfg.h</itemPath>
+        <itemPath>config/Wdt_Cfg.h</itemPath>
+        <itemPath>config/fileio_lite_cfg.h</itemPath>
+        <itemPath>config/files_lite_cfg.h</itemPath>
+        <itemPath>config/kit_cfg.h</itemPath>
+        <itemPath>config/kit_usb_device_cfg.h</itemPath>
+        <itemPath>config/usb_device_msd_cfg.h</itemPath>
+        <itemPath>config/user_usb_device_config.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Library" displayName="Library" projectFiles="true">
+        <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="Linker" displayName="Linker" projectFiles="true">
+            <logicalFolder name="p32MM0064GPM028"
+                           displayName="p32MM0064GPM028"
+                           projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="p32MM0256GPM028"
+                           displayName="p32MM0256GPM028"
+                           projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="p32MM0256GPM036"
+                           displayName="p32MM0256GPM036"
+                           projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="p32MM0256GPM048"
+                           displayName="p32MM0256GPM048"
+                           projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="p32MM0256GPM064"
+                           displayName="p32MM0256GPM064"
+                           projectFiles="true">
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../Library/bootloader/BLD_FileIO.h</itemPath>
+          <itemPath>../Library/bootloader/BLD_Nvm.h</itemPath>
+          <itemPath>../Library/bootloader/BLD_Target_Device.h</itemPath>
+          <itemPath>../Library/bootloader/Bootloader.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="buttons" displayName="buttons" projectFiles="true">
+          <itemPath>../Library/buttons/ButtonApi.h</itemPath>
+          <itemPath>../Library/buttons/Buttons.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="common" displayName="common" projectFiles="true">
+          <itemPath>../Library/common/Debug.h</itemPath>
+          <itemPath>../Library/common/LibDef.h</itemPath>
+          <itemPath>../Library/common/RingBuffer.h</itemPath>
+          <itemPath>../Library/common/UserFunctions.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="fileio" displayName="fileio" projectFiles="true">
+          <itemPath>../Library/fileio/fileio.h</itemPath>
+          <itemPath>../Library/fileio/fileio_lfn.h</itemPath>
+          <itemPath>../Library/fileio/fileio_lite.h</itemPath>
+          <itemPath>../Library/fileio/fileio_media.h</itemPath>
+          <itemPath>../Library/fileio/fileio_private.h</itemPath>
+          <itemPath>../Library/fileio/fileio_private_lfn.h</itemPath>
+          <itemPath>../Library/fileio/files_lite.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="indicator" displayName="indicator" projectFiles="true">
+          <itemPath>../Library/indicator/Indicator.h</itemPath>
+          <itemPath>../Library/indicator/Led7Seg.h</itemPath>
+          <itemPath>../Library/indicator/LedMatrix.h</itemPath>
+          <itemPath>../Library/indicator/RGB_Led.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="kit" displayName="kit" projectFiles="true">
+          <itemPath>../Library/kit/kit.h</itemPath>
+          <itemPath>../Library/kit/kit_rs232_win32.h</itemPath>
+          <itemPath>../Library/kit/kit_usb_device.h</itemPath>
+          <itemPath>../Library/kit/kit_usb_device_cdc.h</itemPath>
+          <itemPath>../Library/kit/kit_usb_device_generic.h</itemPath>
+          <itemPath>../Library/kit/kit_usb_device_hid.h</itemPath>
+          <itemPath>../Library/kit/kit_usb_device_msd.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="memory" displayName="memory" projectFiles="true">
+          <itemPath>../Library/memory/AT21CS01.h</itemPath>
+          <itemPath>../Library/memory/ee24aa.h</itemPath>
+          <itemPath>../Library/memory/sd_spi.h</itemPath>
+          <itemPath>../Library/memory/sd_spi_fileio.h</itemPath>
+          <itemPath>../Library/memory/sd_spi_private.h</itemPath>
+          <itemPath>../Library/memory/SST25xx.h</itemPath>
+          <itemPath>../Library/memory/SSTFileIO.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="programmer" displayName="programmer" projectFiles="true">
+          <itemPath>../Library/programmer/HexParsing.h</itemPath>
+          <itemPath>../Library/programmer/Icsp.h</itemPath>
+          <itemPath>../Library/programmer/ICSP_FileIO.h</itemPath>
+          <itemPath>../Library/programmer/ICSP_PIC32MM.h</itemPath>
+          <itemPath>../Library/programmer/ICSP_Target_Device.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="system" displayName="system" projectFiles="true">
+          <itemPath>../Library/system/TaskManager.h</itemPath>
+          <itemPath>../Library/system/TickCounter.h</itemPath>
+          <itemPath>../Library/system/TickTimer.h</itemPath>
+          <itemPath>../Library/system/Wdt.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="usb" displayName="usb" projectFiles="true">
+          <itemPath>../Library/usb/usb_device_audio.h</itemPath>
+          <itemPath>../Library/usb/usb_device_ccid.h</itemPath>
+          <itemPath>../Library/usb/usb_device_cdc.h</itemPath>
+          <itemPath>../Library/usb/usb_device_generic.h</itemPath>
+          <itemPath>../Library/usb/usb_device_hid.h</itemPath>
+          <itemPath>../Library/usb/usb_device_midi.h</itemPath>
+          <itemPath>../Library/usb/usb_device_msd.h</itemPath>
+          <itemPath>../Library/usb/usb_device_phdc.h</itemPath>
+          <itemPath>../Library/usb/usb_device_phdc_com_model.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -36,10 +154,109 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <itemPath>../Library/bootloader/Linker/p32MM0064GPM028/App.ld</itemPath>
+      <itemPath>../Library/bootloader/Linker/p32MM0064GPM028/Bld.ld</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="App" projectFiles="true">
+        <itemPath>app/AppMain.c</itemPath>
+        <itemPath>app/libcomp.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Config" projectFiles="true">
+        <itemPath>config/user_usb_device_descriptors.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Library" displayName="Library" projectFiles="true">
+        <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
+          <logicalFolder name="Linker" displayName="Linker" projectFiles="true">
+            <logicalFolder name="p32MM0064GPM028"
+                           displayName="p32MM0064GPM028"
+                           projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="p32MM0256GPM028"
+                           displayName="p32MM0256GPM028"
+                           projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="p32MM0256GPM036"
+                           displayName="p32MM0256GPM036"
+                           projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="p32MM0256GPM048"
+                           displayName="p32MM0256GPM048"
+                           projectFiles="true">
+            </logicalFolder>
+            <logicalFolder name="p32MM0256GPM064"
+                           displayName="p32MM0256GPM064"
+                           projectFiles="true">
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../Library/bootloader/BLD_FileIO.c</itemPath>
+          <itemPath>../Library/bootloader/BLD_Nvm.c</itemPath>
+          <itemPath>../Library/bootloader/Bootloader.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="buttons" displayName="buttons" projectFiles="true">
+          <itemPath>../Library/buttons/ButtonApi.c</itemPath>
+          <itemPath>../Library/buttons/Buttons.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="common" displayName="common" projectFiles="true">
+          <itemPath>../Library/common/Debug.c</itemPath>
+          <itemPath>../Library/common/RingBuffer.c</itemPath>
+          <itemPath>../Library/common/UserFunctions.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="fileio" displayName="fileio" projectFiles="true">
+          <itemPath>../Library/fileio/fileio.c</itemPath>
+          <itemPath>../Library/fileio/fileio_lfn.c</itemPath>
+          <itemPath>../Library/fileio/files_lite.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="indicator" displayName="indicator" projectFiles="true">
+          <itemPath>../Library/indicator/Indicator.c</itemPath>
+          <itemPath>../Library/indicator/Led7Seg.c</itemPath>
+          <itemPath>../Library/indicator/LedMatrix.c</itemPath>
+          <itemPath>../Library/indicator/RGB_Led.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="kit" displayName="kit" projectFiles="true">
+          <itemPath>../Library/kit/kit.c</itemPath>
+          <itemPath>../Library/kit/kit_rs232_win32.c</itemPath>
+          <itemPath>../Library/kit/kit_usb_device.c</itemPath>
+          <itemPath>../Library/kit/kit_usb_device_cdc.c</itemPath>
+          <itemPath>../Library/kit/kit_usb_device_generic.c</itemPath>
+          <itemPath>../Library/kit/kit_usb_device_hid.c</itemPath>
+          <itemPath>../Library/kit/kit_usb_device_msd.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="memory" displayName="memory" projectFiles="true">
+          <itemPath>../Library/memory/AT21CS01.c</itemPath>
+          <itemPath>../Library/memory/ee24aa.c</itemPath>
+          <itemPath>../Library/memory/sd_spi.c</itemPath>
+          <itemPath>../Library/memory/sd_spi_fileio.c</itemPath>
+          <itemPath>../Library/memory/SST25xx.c</itemPath>
+          <itemPath>../Library/memory/SSTFileIO.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="programmer" displayName="programmer" projectFiles="true">
+          <itemPath>../Library/programmer/HexParsing.c</itemPath>
+          <itemPath>../Library/programmer/Icsp.c</itemPath>
+          <itemPath>../Library/programmer/ICSP_FileIO.c</itemPath>
+          <itemPath>../Library/programmer/ICSP_PIC32MM.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="system" displayName="system" projectFiles="true">
+          <itemPath>../Library/system/TaskManager.c</itemPath>
+          <itemPath>../Library/system/TickCounter.c</itemPath>
+          <itemPath>../Library/system/TickTimer.c</itemPath>
+          <itemPath>../Library/system/Wdt.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="usb" displayName="usb" projectFiles="true">
+          <itemPath>../Library/usb/usb_device_audio.c</itemPath>
+          <itemPath>../Library/usb/usb_device_ccid.c</itemPath>
+          <itemPath>../Library/usb/usb_device_cdc.c</itemPath>
+          <itemPath>../Library/usb/usb_device_generic.c</itemPath>
+          <itemPath>../Library/usb/usb_device_hid.c</itemPath>
+          <itemPath>../Library/usb/usb_device_msd.c</itemPath>
+          <itemPath>../Library/usb/usb_device_msd_multi_sector.c</itemPath>
+          <itemPath>../Library/usb/usb_device_phdc.c</itemPath>
+          <itemPath>../Library/usb/usb_device_phdc_com_model.c</itemPath>
+          <itemPath>../Library/usb/user_usb_device_events.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -71,11 +288,18 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>MyConfig.mc3</itemPath>
+      <itemPath>CleanDist.bat</itemPath>
+      <itemPath>DragDropProg.bat</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../Library</Elem>
+    <Elem>app</Elem>
+    <Elem>config</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
-    <conf name="default" type="2">
+    <conf name="bootloader" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MM0064GPM028</targetDevice>
@@ -114,8 +338,12 @@
         <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
-        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+        <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="../Library/bootloader/Linker/p32MM0064GPM028/App.ld"
+            ex="true"
+            overriding="false">
+      </item>
       <C32>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
@@ -127,16 +355,16 @@
         <property key="extra-include-directories" value=""/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="isolate-each-function" value="false"/>
+        <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value=""/>
-        <property key="place-data-into-section" value="false"/>
-        <property key="post-instruction-scheduling" value="default"/>
-        <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="optimization-level" value="-O1"/>
+        <property key="place-data-into-section" value="true"/>
+        <property key="post-instruction-scheduling" value="schedule-insns2"/>
+        <property key="pre-instruction-scheduling" value="schedule-insns"/>
+        <property key="preprocessor-macros" value="__BOOTLOADER__"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
-        <property key="toplevel-reordering" value=""/>
+        <property key="toplevel-reordering" value="-ftoplevel-reorder"/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
@@ -199,7 +427,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
-        <property key="remove-unused-sections" value="false"/>
+        <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
         <property key="serial-origin" value=""/>
@@ -238,7 +466,188 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
-        <property key="common-include-directories" value=""/>
+        <property key="common-include-directories"
+                  value="app;mcc_generated_files;mcc_generated_files\usb;..\Library;..\Library\usb"/>
+        <property key="gp-relative-option" value=""/>
+        <property key="legacy-libc" value="true"/>
+        <property key="mdtcm" value=""/>
+        <property key="mitcm" value=""/>
+        <property key="mstacktcm" value="false"/>
+        <property key="omit-pack-options" value="1"/>
+        <property key="relaxed-math" value="false"/>
+        <property key="save-temps" value="false"/>
+        <property key="wpo-lto" value="false"/>
+      </C32Global>
+    </conf>
+    <conf name="application" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC32MM0064GPM028</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>noID</platformTool>
+        <languageToolchain>XC32</languageToolchain>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <packs>
+        <pack name="PIC32MM-GPM-0XX_DFP" vendor="Microchip" version="1.2.31"/>
+      </packs>
+      <ScriptingSettings>
+      </ScriptingSettings>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+        <subordinates>
+        </subordinates>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <item path="../Library/bootloader/Linker/p32MM0064GPM028/Bld.ld"
+            ex="true"
+            overriding="false">
+      </item>
+      <C32>
+        <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value="-O1"/>
+        <property key="place-data-into-section" value="true"/>
+        <property key="post-instruction-scheduling" value="schedule-insns2"/>
+        <property key="pre-instruction-scheduling" value="schedule-insns"/>
+        <property key="preprocessor-macros" value="__APPLICATION__"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="support-ansi" value="false"/>
+        <property key="toplevel-reordering" value="-ftoplevel-reorder"/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32>
+      <C32-AR>
+        <property key="additional-options-chop-files" value="false"/>
+      </C32-AR>
+      <C32-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="enable-symbols" value="true"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC32asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="warning-level" value=""/>
+      </C32-AS>
+      <C32-CO>
+        <property key="coverage-enable" value=""/>
+      </C32-CO>
+      <C32-LD>
+        <property key="additional-options-use-response-files" value="false"/>
+        <property key="additional-options-write-sla" value="false"/>
+        <property key="allocate-dinit" value="false"/>
+        <property key="code-dinit" value="false"/>
+        <property key="ebase-addr" value=""/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="exclude-floating-point-library" value="false"/>
+        <property key="exclude-standard-libraries" value="false"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="fill-flash-options-addr" value=""/>
+        <property key="fill-flash-options-const" value=""/>
+        <property key="fill-flash-options-how" value="0"/>
+        <property key="fill-flash-options-inc-const" value="1"/>
+        <property key="fill-flash-options-increment" value=""/>
+        <property key="fill-flash-options-seq" value=""/>
+        <property key="fill-flash-options-what" value="0"/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="heap-size" value=""/>
+        <property key="input-libraries" value=""/>
+        <property key="kseg-length" value=""/>
+        <property key="kseg-origin" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
+        <property key="no-device-startup-code" value="false"/>
+        <property key="no-startup-files" value="false"/>
+        <property key="oXC32ld-extra-opts" value=""/>
+        <property key="optimization-level" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="true"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="serial-length" value=""/>
+        <property key="serial-origin" value=""/>
+        <property key="stack-size" value=""/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+      </C32-LD>
+      <C32CPP>
+        <property key="additional-warnings" value="false"/>
+        <property key="addresss-attribute-use" value="false"/>
+        <property key="check-new" value="false"/>
+        <property key="eh-specs" value="true"/>
+        <property key="enable-app-io" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="exceptions" value="true"/>
+        <property key="exclude-floating-point" value="false"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="generate-16-bit-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="make-warnings-into-errors" value="false"/>
+        <property key="optimization-level" value=""/>
+        <property key="place-data-into-section" value="false"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="rtti" value="true"/>
+        <property key="strict-ansi" value="false"/>
+        <property key="toplevel-reordering" value=""/>
+        <property key="unaligned-access" value=""/>
+        <property key="use-cci" value="false"/>
+        <property key="use-iar" value="false"/>
+        <property key="use-indirect-calls" value="false"/>
+      </C32CPP>
+      <C32Global>
+        <property key="common-include-directories"
+                  value="app;config;mcc_generated_files;mcc_generated_files\usb;..\Library;..\Library\usb"/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="true"/>
         <property key="mdtcm" value=""/>
