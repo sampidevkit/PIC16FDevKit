@@ -1,6 +1,14 @@
 # PIC16FDevKit
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Picture/PIC16DevKit%20v1.0%20Top%20(1).png?raw=true)
 This is an open source project, a development kit of PIC16F877A and PIC16F18877.<br/>
+* Arduino Uno PCB form and pinout.
+* Drag-n-Drop programmer: You can download directly a hex file to your target chip.
+* USB to UART bridge and UART switcher: UART data will be transferred between Target chip & PC or target chip & Arduino pins or PC & Arduino pins.
+* SRAM emulator up to 4KBytes.
+* Flash memory 64Mbit [GD25Q64CSIGR](https://www.gigadevice.com/datasheet/gd25q64c/).
+* Temperature sensor [PCT2075](https://www.nxp.com/docs/en/data-sheet/PCT2075.pdf).
+* Real time clock and calendar [RV3028-C7](https://www.microcrystal.com/fileadmin/Media/Products/RTC/Datasheet/RV-3028-C7.pdf).
+# Target MCU Comparisons
 <br/>[PIC16F877A:](https://www.microchip.com/wwwproducts/en/PIC16F877A)<br/>
 This powerful (200 nanosecond instruction execution) yet easy-to-program (only 35 single word instructions) CMOS FLASH-based 8-bit microcontroller packs Microchip's powerful PIC® architecture into an 40- or 44-pin package and is upwards compatible with the PIC16C5X, PIC12CXXX and PIC16C7X devices. 
 The PIC16F877A features 256 bytes of EEPROM data memory, self programming, an ICD, 2 Comparators, 8 channels of 10-bit Analog-to-Digital (A/D) converter, 2 capture/compare/PWM functions, the synchronous serial port can be configured as either 3-wire Serial Peripheral Interface (SPI™) or the 2-wire Inter-Integrated Circuit (I²C™) bus and a Universal Asynchronous Receiver Transmitter (USART). 
