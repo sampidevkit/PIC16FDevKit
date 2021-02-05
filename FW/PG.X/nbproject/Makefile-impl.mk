@@ -31,7 +31,7 @@ DEFAULTCONF=app
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=app bld 
+ALLCONFS=app 
 
 
 # build
@@ -46,14 +46,12 @@ ALLCONFS=app bld
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=bld clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=app build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=bld build
 
 
 

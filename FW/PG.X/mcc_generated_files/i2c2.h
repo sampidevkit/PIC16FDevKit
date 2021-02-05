@@ -483,7 +483,7 @@ uint8_t *I2C2_WritePointerGet(void);
 
  */
 
-#pragma message "I2C2_StatusCallback() is an Application implemented function. If this function is already implemented, you can turn off this message by deleting or commenting out this message."
+//#pragma message "I2C2_StatusCallback() is an Application implemented function. If this function is already implemented, you can turn off this message by deleting or commenting out this message."
 bool I2C2_StatusCallback(I2C2_SLAVE_DRIVER_STATUS status);
 
 #ifdef __cplusplus  // Provide C++ Compatibility

@@ -222,5 +222,6 @@ please contact mla_licensing@microchip.com
 /** DEFINITIONS ****************************************************/
 
 /** DEFINITIONS ****************************************************/
-
+#else
+#include "user_usb_device_config.h"
 #endif //USBCFG_H

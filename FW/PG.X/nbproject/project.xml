@@ -16,14 +16,14 @@
                 <sourceRootElem>../../HW/Product/Schematic</sourceRootElem>
                 <sourceRootElem>../../Docs</sourceRootElem>
                 <sourceRootElem>../Library</sourceRootElem>
+                <sourceRootElem>src/app</sourceRootElem>
+                <sourceRootElem>src/bld</sourceRootElem>
+                <sourceRootElem>config/app</sourceRootElem>
+                <sourceRootElem>config/bld</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
                     <name>app</name>
-                    <type>2</type>
-                </confElem>
-                <confElem>
-                    <name>bld</name>
                     <type>2</type>
                 </confElem>
             </confList>

@@ -203,7 +203,7 @@ volatile uint8_t CtrlTrfData[USB_EP0_BUFF_SIZE] CTRL_TRF_DATA_ADDR_TAG;
             volatile char msd_buffer[512] __at(MSD_BUFFER_ADDRESS);
         #endif
     #else
-        volatile char msd_buffer[512];
+//        volatile char msd_buffer[512];
 	#endif
 #endif
 
