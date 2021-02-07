@@ -10,7 +10,7 @@
 #define ICSP_Exit()                     PIC16F188XX_ExitICSP()
 #define ICSP_Entry()                    PIC16F188XX_EnterICSP()
 #define ICSP_ChipErase()                PIC16F188XX_MTAP_ChipErase()
-#define ICSP_DownloadPE()               PIC16F188XX_DownloadPE() // set 1 if without PE
+#define ICSP_DownloadPE()               1 // set 1 if without PE
 #define ICSP_BlankCheck()               PIC16F188XX_PE_BlankCheck(TARGET_PFM_START, TARGET_PFM_WORD_LENGTH)
 #define ICSP_DWordProg(Addr, W1, W0)    PIC16F188XX_PE_DoubleWordProg(Addr, W1, W0)
 
