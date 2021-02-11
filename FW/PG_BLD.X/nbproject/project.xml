@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>PG_BLD</name>
+            <name>PG_APP</name>
+            <creation-uuid>c09e480e-67ee-4fe1-a2fe-8eb0387a40bd</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
+            <asminc-extensions/>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>../../HW/Product/Schematic</sourceRootElem>
+                <sourceRootElem>../../Docs</sourceRootElem>
+                <sourceRootElem>../Library</sourceRootElem>
+                <sourceRootElem>src/app</sourceRootElem>
+                <sourceRootElem>src/bld</sourceRootElem>
+                <sourceRootElem>config</sourceRootElem>
+                <sourceRootElem>app</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>bootloader</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
