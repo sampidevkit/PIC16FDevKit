@@ -166,5 +166,6 @@
 
 extern bool UART_DTR;
 void mInitDTRPin(void);
+void USER_USB_Device_LoadUDID(void);
 
 #endif

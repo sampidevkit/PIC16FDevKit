@@ -1,5 +1,5 @@
 @echo off
 
-copy Lastbuild.hex G:
+copy targetmcu.hex G:
 
 echo Done.

@@ -19,6 +19,7 @@
 #include "Bootloader/BLD_Nvm.h"
 #include "Bootloader/BLD_FileIO.h"
 #include "Common/LibDef.h"
+#include "Common/UserFunctions.h"
 #include "FileIO/files_lite.h"
 #include "FileIO/fileio_lite.h"
 #include "Kit/kit.h"

@@ -1,9 +1,7 @@
 #ifndef USER_USB_DESCRIPTORS_C
 #define USER_USB_DESCRIPTORS_C
 
-#include "usb.h"
-#include "usb_device_cdc.h"
-#include "usb_device_msd.h"
+#include "libcomp.h"
 
 /** CONSTANTS ******************************************************/
 
@@ -210,20 +208,41 @@ sd002={
 //Bulk Only Transport (BOT) specs v1.0 restrict the serial number to consist only
 //of ASCII characters "0" through "9" and capital letters "A" through "F".
 
-const struct
+struct
 {
     uint8_t bLength;
     uint8_t bDscType;
-    uint16_t string[10];
+    uint16_t string[12];
 }
 
 sd003={
     sizeof (sd003), USB_DESCRIPTOR_STRING,
     {
-        '0', '9', '0', '2', '6', '0', '3', '7', '7', '5'
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B'
     }
 };
 
+void USER_USB_Device_LoadUDID(void)
+{
+    uint32_t udID;
+    uint8_t i, c;
+
+    udID=UDID1;
+
+    for(i=0; i<8; i++)
+    {
+        sd003.string[i]=Bcd2Hex((uint8_t) (udID&0xF));
+        udID>>=4;
+    }
+
+    udID=UDID2;
+
+    for(i=0; i<4; i++)
+    {
+        sd003.string[8+i]=Bcd2Hex((uint8_t) (udID&0xF));
+        udID>>=4;
+    }
+}
 
 //Array of configuration descriptors
 const uint8_t*const USB_CD_Ptr[]={

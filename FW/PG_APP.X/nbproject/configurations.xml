@@ -240,7 +240,7 @@
         <targetDevice>PIC32MM0064GPM028</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>Simulator</platformTool>
+        <platformTool>snap</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
@@ -258,6 +258,7 @@
         <archiverTool>
         </archiverTool>
         <loading>
+          <loadableFile>../PG_BLD.X/Bootloader.hex</loadableFile>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
@@ -311,7 +312,7 @@
         <property key="post-instruction-scheduling" value="schedule-insns2"/>
         <property key="pre-instruction-scheduling" value="schedule-insns"/>
         <property key="preprocessor-macros"
-                  value="COMMON_LIB_CFG;USBGEN_H;USBCFG_H;__USB_DESCRIPTORS_C;__APP_DEBUG__"/>
+                  value="COMMON_LIB_CFG;USBGEN_H;USBCFG_H;__USB_DESCRIPTORS_C"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value="-ftoplevel-reorder"/>
@@ -1026,7 +1027,7 @@
         <targetDevice>PIC32MM0064GPM028</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>Simulator</platformTool>
+        <platformTool>snap</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
@@ -1044,6 +1045,7 @@
         <archiverTool>
         </archiverTool>
         <loading>
+          <loadableFile>../PG_BLD.X/Bootloader.hex</loadableFile>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
@@ -1097,7 +1099,7 @@
         <property key="post-instruction-scheduling" value="schedule-insns2"/>
         <property key="pre-instruction-scheduling" value="schedule-insns"/>
         <property key="preprocessor-macros"
-                  value="COMMON_LIB_CFG;USBGEN_H;USBCFG_H;__USB_DESCRIPTORS_C;__APP_DEBUG__"/>
+                  value="COMMON_LIB_CFG;USBGEN_H;USBCFG_H;__USB_DESCRIPTORS_C"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
         <property key="toplevel-reordering" value="-ftoplevel-reorder"/>

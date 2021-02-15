@@ -5,6 +5,7 @@
       <itemPath>../../Docs/40001753B.pdf</itemPath>
       <itemPath>../../Docs/PIC16LF18856-76-Data-Sheet-40001824E.pdf</itemPath>
       <itemPath>../../HW/Product/Schematic/PIC16DevKit PIC16LF18857 v1.2 Sch.pdf</itemPath>
+      <itemPath>../../Docs/PIC32MM-Families-Flash-Programming-Specification-DS60001364E.pdf</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -39,6 +40,7 @@
         </logicalFolder>
         <logicalFolder name="common" displayName="common" projectFiles="true">
           <itemPath>../Library/common/LibDef.h</itemPath>
+          <itemPath>../Library/common/UserFunctions.h</itemPath>
         </logicalFolder>
         <logicalFolder name="fileio" displayName="fileio" projectFiles="true">
           <itemPath>../Library/fileio/fileio_lite.h</itemPath>
@@ -109,6 +111,9 @@
           <itemPath>../Library/bootloader/BLD_Nvm.c</itemPath>
           <itemPath>../Library/bootloader/Bootloader.c</itemPath>
           <itemPath>../Library/bootloader/asm.S</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f1" displayName="common" projectFiles="true">
+          <itemPath>../Library/common/UserFunctions.c</itemPath>
         </logicalFolder>
         <logicalFolder name="fileio" displayName="fileio" projectFiles="true">
           <itemPath>../Library/fileio/files_lite.c</itemPath>
@@ -438,7 +443,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="true"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="8192"/>
+        <property key="heap-size" value=""/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>
@@ -453,7 +458,7 @@
         <property key="report-memory-usage" value="true"/>
         <property key="serial-length" value=""/>
         <property key="serial-origin" value=""/>
-        <property key="stack-size" value="2048"/>
+        <property key="stack-size" value=""/>
         <property key="symbol-stripping" value=""/>
         <property key="trace-symbols" value=""/>
         <property key="warn-section-align" value="true"/>
@@ -1088,6 +1093,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d00ffff"/>
         <property key="memories.rww" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="F:/Github/SAMPIDevKit/PIC16FDevKit/FW/PG_BLD.X/debug/bootloader/PG_BLD_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

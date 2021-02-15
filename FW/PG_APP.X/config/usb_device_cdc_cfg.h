@@ -10,7 +10,7 @@
 
 #define USB_CDC_RXD_LedSetHigh()    Indicator_SetState(1, 5, 1, 1)
 #define USB_CDC_RXD_LedSetLow()                 
-#define USB_CDC_TXD_LedSetHigh()    Indicator_SetState(2, 5, 1, 1)
+#define USB_CDC_TXD_LedSetHigh()    Indicator_SetState(1, 5, 1, 1)
 #define USB_CDC_TXD_LedSetLow()   
 
 #endif

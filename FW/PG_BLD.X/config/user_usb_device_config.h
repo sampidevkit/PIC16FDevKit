@@ -3,12 +3,12 @@
 
 /** DEFINITIONS ****************************************************/
 #define USB_EP0_BUFF_SIZE		8	// Valid Options: 8, 16, 32, or 64 bytes.
-								// Using larger options take more SRAM, but
-								// does not provide much advantage in most types
-								// of applications.  Exceptions to this, are applications
-								// that use EP0 IN or OUT for sending large amounts of
-								// application related data.
-									
+// Using larger options take more SRAM, but
+// does not provide much advantage in most types
+// of applications.  Exceptions to this, are applications
+// that use EP0 IN or OUT for sending large amounts of
+// application related data.
+
 #define USB_MAX_NUM_INT     	1   // For tracking Alternate Setting
 #define USB_MAX_EP_NUMBER	    1
 
@@ -84,8 +84,8 @@
 //parameter is not relevant.
 
 #define USB_STATUS_STAGE_TIMEOUT    (uint8_t)45   //Approximate timeout in milliseconds, except when
-                                                //USB_POLLING mode is used, and USBDeviceTasks() is called at < 1kHz
-                                                //In this special case, the timeout becomes approximately:
+//USB_POLLING mode is used, and USBDeviceTasks() is called at < 1kHz
+//In this special case, the timeout becomes approximately:
 //Timeout(in milliseconds) = ((1000 * (USB_STATUS_STAGE_TIMEOUT - 1)) / (USBDeviceTasks() polling frequency in Hz))
 //------------------------------------------------------------------------------------------------------------------
 
@@ -118,5 +118,7 @@
 #define MSD_DATA_IN_EP          1u
 #define MSD_DATA_OUT_EP         1u
 //#define MSD_BUFFER_ADDRESS      0x600
+
+void USER_USB_Device_LoadUDID(void);
 
 #endif

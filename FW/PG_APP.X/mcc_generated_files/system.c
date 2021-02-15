@@ -83,20 +83,20 @@
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"
-#include "i2c2.h"
-#include "sccp4_compare.h"
-#include "coretimer.h"
-#include "usb/usb.h"
-#include "uart2.h"
-#include "adc1.h"
+#include "sccp8_compare.h"
 #include "memory/flash.h"
-#include "sccp5_compare.h"
+#include "sccp9_compare.h"
 #include "sccp6_compare.h"
 #include "sccp7_compare.h"
-#include "sccp8_compare.h"
+#include "uart2.h"
+#include "adc1.h"
+#include "coretimer.h"
+#include "i2c2.h"
+#include "usb/usb.h"
+#include "sccp4_compare.h"
+#include "sccp5_compare.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
-#include "sccp9_compare.h"
 
 void SYSTEM_Initialize(void)
 {
@@ -106,8 +106,8 @@ void SYSTEM_Initialize(void)
     CORETIMER_Initialize();
     SCCP4_COMPARE_Initialize();
     SCCP5_COMPARE_Initialize();
-    USBDeviceInit();
     SCCP6_COMPARE_Initialize();
+    USBDeviceInit();
     SCCP9_COMPARE_Initialize();
     SCCP8_COMPARE_Initialize();
     SCCP7_COMPARE_Initialize();

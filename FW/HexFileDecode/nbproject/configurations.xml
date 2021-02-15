@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="app" projectFiles="true">
+        <itemPath>app/libcomp.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="config" projectFiles="true">
+        <itemPath>config/Common_Lib_Cfg.h</itemPath>
+        <itemPath>config/HexParsing_Cfg.h</itemPath>
+        <itemPath>config/ICSP_PIC16F188XX_Cfg.h</itemPath>
+        <itemPath>config/Icsp_Cfg.h</itemPath>
+        <itemPath>config/TickTimer_Cfg.h</itemPath>
+        <itemPath>config/UserFunctions_Cfg.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Library" displayName="Library" projectFiles="true">
+        <logicalFolder name="common" displayName="common" projectFiles="true">
+          <itemPath>../Library/common/LibDef.h</itemPath>
+          <itemPath>../Library/common/UserFunctions.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="programmer" displayName="programmer" projectFiles="true">
+          <itemPath>../Library/programmer/HexParsing.h</itemPath>
+          <itemPath>../Library/programmer/ICSP_PIC16F188XX.h</itemPath>
+          <itemPath>../Library/programmer/ICSP_Target_Device.h</itemPath>
+          <itemPath>../Library/programmer/Icsp.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="system" displayName="system" projectFiles="true">
+          <itemPath>../Library/system/TickTimer.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>CleanDist.bat</itemPath>
+      <itemPath>lastbuild.hex</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="app" projectFiles="true">
+        <itemPath>app/libcomp.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Library" displayName="Library" projectFiles="true">
+        <logicalFolder name="common" displayName="common" projectFiles="true">
+          <itemPath>../Library/common/UserFunctions.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="programmer" displayName="programmer" projectFiles="true">
+          <itemPath>../Library/programmer/HexParsing.c</itemPath>
+          <itemPath>../Library/programmer/ICSP_PIC16F188XX.c</itemPath>
+          <itemPath>../Library/programmer/Icsp.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="system" displayName="system" projectFiles="true">
+          <itemPath>../Library/system/TickTimer.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>main.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../Library</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>3</standard>
+          <incDir>
+            <pElem>../Library</pElem>
+            <pElem>app</pElem>
+            <pElem>config</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>COMMON_LIB_CFG</Elem>
+            <Elem>FORCE_ICSP_ENTRY</Elem>
+          </preprocessorList>
+        </cTool>
+      </compileType>
+      <item path="../Library/common/LibDef.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../Library/common/UserFunctions.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../Library/common/UserFunctions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../Library/programmer/HexParsing.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../Library/programmer/HexParsing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../Library/programmer/ICSP_PIC16F188XX.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../Library/programmer/ICSP_PIC16F188XX.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../Library/programmer/ICSP_Target_Device.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="../Library/programmer/Icsp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../Library/programmer/Icsp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../Library/system/TickTimer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../Library/system/TickTimer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CleanDist.bat" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="app/libcomp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="app/libcomp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/Common_Lib_Cfg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/HexParsing_Cfg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/ICSP_PIC16F188XX_Cfg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/Icsp_Cfg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/TickTimer_Cfg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="config/UserFunctions_Cfg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="lastbuild.hex" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -14,8 +14,8 @@
 //#define BLD_Write(b)        UART2_Write(b)
 //#define BLD_BUFFER_SIZE     48
 //
-//#define __PROJECT_NAME__    "RPC BOOTLOADER"
-//#define __HARDWARE_ID__     "HWZ001 v2"
-//#define __WEBSITE__         "https://store.rpc.vn"
+//#define __PROJECT_NAME__    "SAMPI BOOTLOADER"
+//#define __HARDWARE_ID__     "SAMM-57 v1.2"
+//#define __WEBSITE__         "https://github.com/sampidevkit/PIC16FDevKit/tree/pic16lf18857"
 
 #endif
