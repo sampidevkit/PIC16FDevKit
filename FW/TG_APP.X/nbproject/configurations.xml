@@ -83,7 +83,7 @@
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC16LF18857</targetDevice>
+        <targetDevice>PIC16F18857</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
@@ -117,9 +117,9 @@
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep>copy ${ImagePath} ".\lastbuild.${OUTPUT_SUFFIX}"</makeCustomizationPostStep>
-        <makeCustomizationPutChecksumInUserID>true</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
-        <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>

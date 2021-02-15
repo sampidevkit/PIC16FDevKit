@@ -16,7 +16,7 @@
     all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
-        Device            :  PIC16LF18857
+        Device            :  PIC16F18857
         Driver Version    :  2.04
     The generated drivers are tested against the following:
         Compiler          :  XC8 2.31 and above or later

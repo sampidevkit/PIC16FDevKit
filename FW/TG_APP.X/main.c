@@ -1,11 +1,13 @@
 #include "libcomp.h"
 
+#if(0)
 __eeprom uint8_t EepromData[]={
     "https://github.com/sampidevkit/PIC16FDevKit/tree/pic16lf18857\n"
     "This is an open source project, a development kit of PIC16LF18857.\n"
     "Arduino Uno PCB form and pinout.\n"
     "Drag-n-Drop programmer: You can download directly a hex file to your target chip.\n\x00"
 };
+#endif
 
 struct
 {
@@ -59,7 +61,13 @@ void main(void)
     Tick_Timer_Reset(Tick);
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
-
+#if(1)
+    while(1)
+    {
+        USER_LED_Toggle();
+        __delay_ms(50);
+    }
+#else
     while(1)
     {
         while(EUSART_is_rx_ready())
@@ -118,7 +126,7 @@ void main(void)
                 LedCxt.Toff=900;
                 LED_UpdateState();
                 break;
-                
+
             case 10:
                 DoNext=0;
                 break;
@@ -126,9 +134,10 @@ void main(void)
             default:
                 if(Tick_Timer_Is_Over_Ms(Tick, 5000))
                     DoNext++;
-                
+
                 LED_Task();
                 break;
         }
     }
+#endif
 }
