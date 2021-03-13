@@ -1,5 +1,5 @@
 # PIC16F Dev Kit
-![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Picture/PIC16DevKit%20v1.2%20Top%20(1).png?raw=true)
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Picture/PIC16DevKit%20v2.0%20Top.png?raw=true)
 <br/>This is an open source project, a development kit of PIC16F18877 MCU.<br/>
 * Arduino Uno PCB form and pinout.
 * Drag-n-Drop programmer, directly download a hex file to your target chip.
