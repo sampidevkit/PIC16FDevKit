@@ -1,6 +1,6 @@
 # PIC16F Dev Kit
-![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Picture/PIC16DevKit%20v2.0%20Top.png?raw=true)
-<br/>This is an open source project, a development kit of PIC16F18877 MCU.<br/>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Picture/PIC16DevKit.png?raw=true)
+<br/>This is an open source project, a development kit of PIC16F18875/6/7 MCU.<br/>
 * Arduino Uno PCB form and pinout.
 * Drag-n-Drop programmer, directly download a hex file to your target chip.
 * USB to UART bridge.
@@ -10,11 +10,18 @@
 * Real time clock and calendar.<br/>
 ## Block Diagram
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/Diagram.png?raw=true)
+## Schematic
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Schematic/PIC16DevKit_001.png?raw=true)
+<br/>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Schematic/PIC16DevKit_002.png?raw=true)
 ## [Target MCU PIC16F18877:](https://www.microchip.com/wwwproducts/en/PIC16F18877)<br/>
-PIC16(L)F1885X/7X microcontrollers feature Analog, Core Independent Peripherals and communication peripherals, combined with eXtreme Low Power (XLP) for a wide range of general purpose and low-power applications. 
+PIC16(L)F1887X microcontrollers feature Analog, Core Independent Peripherals and communication peripherals, combined with eXtreme Low Power (XLP) for a wide range of general purpose and low-power applications. 
 The family features the CRC/SCAN, HLT and Windowed WDT to support customers looking to add safety to their application. 
 Additionally, this family includes up to 56 KB of Flash memory, along with a 10-bit ADC with Computation (ADC2) for automated signal analysis to reduce the complexity of the application.<br/>
 <br/>More info [here](https://www.microchip.com/wwwproducts/ProductCompare/PIC16F877A/PIC16F18877).
+## IDE And Compiler
+* [MPLAB X IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide).
+* [MPLAB XC8 Compiler](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers).
 ## Datasheets:
 * [Target MCU PIC16LF18877](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF1885777_Data_Sheet_40001825F.pdf).
 * [PIC16LF18877 Programming Specification](https://ww1.microchip.com/downloads/en/DeviceDoc/40001753B.pdf).
