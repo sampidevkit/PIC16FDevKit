@@ -1,0 +1,6 @@
+#ifndef ICSP_PIC16F188XX_CFG_H
+#define ICSP_PIC16F188XX_CFG_H
+
+#define TARGET_MCU_PIC16F18877
+
+#endif
