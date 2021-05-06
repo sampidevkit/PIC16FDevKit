@@ -5,9 +5,12 @@
 // Library configure
 #define ICSP_LOG_LEN                    APP_BUFFER_LOG_LEN
 #define Icsp_Log_Buffer                 App_Log_Buffer       
-#define ICSP_Shared_IO_Module_Enable()  do{LATAbits.LATA4=1; TRISAbits.TRISA4=0; KIT_USB_Device_CDC_Uart_Enable();}while(0)
-#define ICSP_Shared_IO_Module_Disable() do{TRISAbits.TRISA4=1; KIT_USB_Device_CDC_Uart_Disable();}while(0)
+//#define ICSP_Shared_IO_Module_Enable()  do{LATAbits.LATA4=1; TRISAbits.TRISA4=0; KIT_USB_Device_CDC_Uart_Enable();}while(0)
+//#define ICSP_Shared_IO_Module_Disable() do{TRISAbits.TRISA4=1; KIT_USB_Device_CDC_Uart_Disable();}while(0)
+#define ICSP_Shared_IO_Module_Enable()  Change_ICSP_To_I2C()
+#define ICSP_Shared_IO_Module_Disable() Change_I2C_To_ICSP()
 #define ICSP_LedActive()                Indicator_SetHigh(0)
+#define ICSP_LedFail()                  Indicator_SetState(0, 500, 1000, IND_LOOP_FOREVER)
 #define ICSP_LedRelease()               Indicator_SetState(0, 5, 995, IND_LOOP_FOREVER)
 #define ICSP_Exit()                     PIC16F188XX_ExitICSP()
 #define ICSP_Entry()                    PIC16F188XX_EnterICSP()

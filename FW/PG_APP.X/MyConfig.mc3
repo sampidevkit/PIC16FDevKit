@@ -21,12 +21,12 @@
          <string>class com.microchip.mcc.mcu16.modules.uart_irda_upb.UART</string>
       </entry>
       <entry>
-         <string>WATCHDOG</string>
-         <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
-      </entry>
-      <entry>
          <string>Pin Module</string>
          <string>class com.microchip.mcc.mcu16.pinManager.PinManager</string>
+      </entry>
+      <entry>
+         <string>WATCHDOG</string>
+         <string>class com.microchip.mcc.mcu16.systemManager.wdt.Wdt</string>
       </entry>
       <entry>
          <string>ICD</string>
@@ -45,12 +45,12 @@
          <string>class com.microchip.mcc.mcu16.systemManager.DefaultSystemManagerMcu16</string>
       </entry>
       <entry>
-         <string>JTAG</string>
-         <string>class com.microchip.mcc.mcu16.systemManager.jtag.JTAG</string>
-      </entry>
-      <entry>
          <string>CDCDevice</string>
          <string>class com.microchip.mcc.modules.mcu16.deviceclass.CDCDevice.CDCDevice</string>
+      </entry>
+      <entry>
+         <string>JTAG</string>
+         <string>class com.microchip.mcc.mcu16.systemManager.jtag.JTAG</string>
       </entry>
       <entry>
          <string>VendorDevice</string>
@@ -70,9 +70,9 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.boardsupportlibrary.BoardSuppportLibrary" version="1.12.0"/>
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.170.0"/>
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.USBDEVICELite.USBDEVICELite" version="1.27.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.170.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.boardsupportlibrary.BoardSuppportLibrary" version="1.12.0"/>
    </usedLibraries>
    <tokenMap class="java.util.HashMap">
       <entry>
@@ -2884,10 +2884,6 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SDA%aux2"/>
-         <value>OFF</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SDA%aux0"/>
          <value>OFF</value>
       </entry>
@@ -3328,12 +3324,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CORETIMER" registerAlias="Compare"/>
-         <value>4294967295</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP12" settingAlias="EPHSHK12" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CORETIMER" registerAlias="Compare"/>
+         <value>4294967295</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="iocUserSet AVDD1"/>
@@ -3822,10 +3818,6 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="I2C1" registerAlias="I2CCON" settingAlias="BOEN" alias="enabled"/>
          <value>1</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="SCL%aux3"/>
-         <value>OFF</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="CNPDB"/>
@@ -8164,12 +8156,12 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CORETIMER" registerAlias="CTI" settingAlias="SubPriority"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UEP15" settingAlias="EPTXEN15"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CORETIMER" registerAlias="CTI" settingAlias="SubPriority"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RPOR2" settingAlias="RP9R"/>
@@ -8248,11 +8240,11 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CORETIMER" registerAlias="Count"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP0" settingAlias="LSPD0" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP0" settingAlias="LSPD0" alias="disabled"/>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CORETIMER" registerAlias="Count"/>
          <value>0</value>
       </entry>
       <entry>
@@ -9631,7 +9623,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>fc5b898a04e94a6edcd51c3be26075336837b29748f03ab8a302895e9ca1a892</hash>
+         <hash>989d0113f7ef842fe171fa64b4e96191c57ba9b16dfa9e7dfc53adf83e8bf4fc</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -9646,28 +9638,28 @@
          <hash>0ddc1ebe9576cccbc026fccbf0240687ee2a3c9d60067fbba0a057e20ce5911c</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\usb\usb_descriptors.c</file>
-         <hash>9021c68530905d354ad4a3a0d5e09de0b8ba75ae6a320e5e4381484dcf1a601a</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\memory\flash.c</file>
          <hash>10162269ef26e2be17cc73730649b40b949fd6382692aefcf0bb627ad334506b</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\usb\usb_descriptors.c</file>
+         <hash>9021c68530905d354ad4a3a0d5e09de0b8ba75ae6a320e5e4381484dcf1a601a</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>64975044fd9a10a82d5d61b2bd99503ec87354fc6ccf36a1426f24da8c0b8267</hash>
+         <hash>dfd510124e019d877fc57d4945d7a665820f3db6b3065c0bca491143e7b21629</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.h</file>
          <hash>499d271b005b07e248900177e3c9d6b924b10a9da204576e6463df437c1b3fd3</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\usb\usb.h</file>
-         <hash>516175b3ebdccc6914985b0a6405f461fa928e8d23ae19ef3a93ececfd9c1339</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\uart2.h</file>
          <hash>7af7e01e2c9ae785cacb041852b4bf25ea635f3c463e98674a8ae864b0caed99</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\usb\usb.h</file>
+         <hash>516175b3ebdccc6914985b0a6405f461fa928e8d23ae19ef3a93ececfd9c1339</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.c</file>
@@ -9682,12 +9674,16 @@
          <hash>eae482e385b5aadabecc1c839785b10e6fb0654592b20e63f9cfe761f4500007</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\uart2.c</file>
+         <hash>d64db3cf284d8c70d94e24a044cdbb2bc5363d5aa92ad1cc21f1633b09d0221c</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\usb\usb_device.c</file>
          <hash>386906dcfa271ae2d841b1610df4299ecb586ef8485f04273a6c649c11a5449b</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\uart2.c</file>
-         <hash>d64db3cf284d8c70d94e24a044cdbb2bc5363d5aa92ad1cc21f1633b09d0221c</hash>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>0baa908a07ac212e2ae12e13a38e39d56b6a1b431a9a8982b6c66636bbcd3f8b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\usb\usb_device.h</file>
@@ -9702,20 +9698,16 @@
          <hash>0ad4cd0fcabb6a55f92d6edc075ba6b4410315ad671fd140cc31928bddef27f0</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>0baa908a07ac212e2ae12e13a38e39d56b6a1b431a9a8982b6c66636bbcd3f8b</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\usb\usb_hal.h</file>
          <hash>4e4ccc67c8e238ad1033ff8b9d04be5e9f00ba01ee536ac25d203cba119fe24b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>81555693296d7c6738178752fc573e482f238163c19f10e76f92df50df37d06e</hash>
+         <hash>c173d71c64104ddfae0c103fb4fa64c665de9e7e77f732e78433a128e5ab2553</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\usb\utilities\mchpwinusb_template.inf</file>
-         <hash>73ee2bea459b8d639590ff15b95f6276c2405c5f8b0a897de810d36a81815219</hash>
+         <hash>7e933a294e3cc8e06c38ae36e92e602428a98c33049ca821040fc7a3cb178350</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\coretimer.c</file>

@@ -83,13 +83,13 @@
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"
-#include "i2c1.h"
-#include "coretimer.h"
-#include "usb/usb.h"
-#include "memory/flash.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
+#include "coretimer.h"
+#include "memory/flash.h"
 #include "uart2.h"
+#include "usb/usb.h"
+#include "i2c1.h"
 
 void SYSTEM_Initialize(void)
 {

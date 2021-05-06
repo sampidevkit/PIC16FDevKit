@@ -64,5 +64,7 @@ extern uint8_t App_Log_Buffer[APP_BUFFER_LOG_LEN];
 
 public void DummyInterruptHandler(void);
 public void LibComp_Initialize(void);
+public void Change_I2C_To_ICSP(void);
+public void Change_ICSP_To_I2C(void);
 
 #endif
