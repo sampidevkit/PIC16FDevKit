@@ -58,13 +58,23 @@
 #define Disable_Coretimer_Interrupt()   (IEC0CLR=_IEC0_CTIE_MASK)
 #define Enable_Coretimer_Interrupt()    (IEC0SET=_IEC0_CTIE_MASK)
 #define Clear_Coretimer_Interrupt()     (IFS0CLR=_IFS0_CTIF_MASK)
-
+// INFO.txt file
 #define APP_BUFFER_LOG_LEN              64
 extern uint8_t App_Log_Buffer[APP_BUFFER_LOG_LEN];
+// States of status LED
+
+typedef enum {
+    SLED_IDLE,
+    SLED_ACTIVE,
+    SLED_RESET,
+    SLED_FAIL,
+    SLED_ONESHOT
+} sled_t;
 
 public void DummyInterruptHandler(void);
 public void LibComp_Initialize(void);
 public void Change_I2C_To_ICSP(void);
 public void Change_ICSP_To_I2C(void);
+public void StatusLED_SetState(sled_t State);
 
 #endif

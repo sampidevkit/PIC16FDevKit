@@ -9,7 +9,7 @@ public void APP_Main_Initialize(void) // <editor-fold defaultstate="collapsed" d
     DoNext=0;
     ButtonApi_Init();
     Tick_Timer_Reset(Tick);
-    Indicator_SetState(0, 10, 990, IND_LOOP_FOREVER);
+    StatusLED_SetState(SLED_IDLE);
 } // </editor-fold>
 
 public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="Application Main Task">
@@ -20,7 +20,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             if(Sw1_Is_Pressed())
             {
                 DoNext=1;
-                ICSP_LedActive();
+                StatusLED_SetState(SLED_RESET);
                 ICSP_MCLR_SetLow();
                 ICSP_MCLR_SetDigitalOutput();
             }
@@ -32,7 +32,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
                 DoNext=0;
                 ICSP_MCLR_SetHigh();
                 ICSP_MCLR_SetDigitalInput();
-                ICSP_LedRelease();
+                StatusLED_SetState(SLED_IDLE);
             }
             break;
 
@@ -42,5 +42,19 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
     }
 
     if(Sw2_Is_Pressed())
+    {
+        PG_STT_SetHigh();
+        RLED_EXT_SetLow();
+        GLED_EXT_SetLow();
+        SYSKEY=0x00000000; //write invalid key to force lock
+        SYSKEY=0xAA996655; //write key1 to SYSKEY
+        SYSKEY=0x556699AA; //write key2 to SYSKEY
+        // OSCCON is now unlocked
+        /* set SWRST bit to arm reset */
+        RSWRSTSET=1;
+        /* read RSWRST register to trigger reset */
+        unsigned int dummy=RSWRST;
+        /* prevent any unwanted code execution until reset occurs*/
         while(1);
+    }
 } // </editor-fold>
