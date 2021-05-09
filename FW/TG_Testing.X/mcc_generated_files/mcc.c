@@ -56,6 +56,7 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     FVR_Initialize();
     ADCC_Initialize();
+    TMR0_Initialize();
     EUSART_Initialize();
 }
 

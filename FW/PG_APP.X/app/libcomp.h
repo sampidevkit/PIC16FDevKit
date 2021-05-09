@@ -14,6 +14,7 @@
 #include "watchdog.h"
 #include "exceptions.h"
 #include "pin_manager.h"
+#include "memory/flash.h"
 #include "interrupt_manager.h"
 /* ************************************************************ SAMPI Library */
 #include "Buttons/Buttons.h"
@@ -40,9 +41,8 @@
 #include "USB/usb_device_msd.h"
 #include "USB/usb_device_cdc.h"
 /* ************************************************************** Application */
-#include "Ext_GPIO.h"
-#include "I2C_Slaver.h"
 #include "SRAM_Emulator.h"
+#include "Registration.h"
 
 // Clock sources
 #define SYS_CLK                         24000000UL
@@ -61,6 +61,8 @@
 // INFO.txt file
 #define APP_BUFFER_LOG_LEN              64
 extern uint8_t App_Log_Buffer[APP_BUFFER_LOG_LEN];
+// ICSP FileIO
+extern bool MediaReady;
 // States of status LED
 
 typedef enum {
@@ -73,8 +75,17 @@ typedef enum {
 
 public void DummyInterruptHandler(void);
 public void LibComp_Initialize(void);
+public void SoftwareReset(void);
 public void Change_I2C_To_ICSP(void);
 public void Change_ICSP_To_I2C(void);
 public void StatusLED_SetState(sled_t State);
+public void SOFTPORT_Initialize(void);
+public bool SOFTPORT_IsRxReady(void);
+public uint8_t SOFTPORT_Read(void);
+public bool SOFTPORT_IsTxReady(void);
+public void SOFTPORT_Write(uint8_t Data);
+public void SOFTPORT_Enable(void);
+public void SOFTPORT_Disable(void);
+public void SOFTPORT_SetBaudrate(uint32_t speed);
 
 #endif

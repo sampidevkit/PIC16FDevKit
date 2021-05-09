@@ -31,3 +31,6 @@
 [submodule "FW/Library/buttons"]
 	path = FW/Library/buttons
 	url = https://sampidevkit@bitbucket.org/sampicontributors/buttons.git
+[submodule "FW/Library/rtcc"]
+	path = FW/Library/rtcc
+	url = https://sampidevkit@bitbucket.org/sampicontributors/rtcc.git

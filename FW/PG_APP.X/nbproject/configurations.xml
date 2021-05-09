@@ -11,9 +11,8 @@
       <logicalFolder name="f1" displayName="Application" projectFiles="true">
         <itemPath>app/SRAM_Emulator.h</itemPath>
         <itemPath>app/libcomp.h</itemPath>
-        <itemPath>app/I2C_Slaver.h</itemPath>
-        <itemPath>app/Ext_GPIO.h</itemPath>
         <itemPath>app/AppMain.h</itemPath>
+        <itemPath>app/Registration.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Configure" projectFiles="true">
         <logicalFolder name="f1" displayName="SubConfig" projectFiles="true">
@@ -114,9 +113,9 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="Application" projectFiles="true">
         <itemPath>app/AppMain.c</itemPath>
-        <itemPath>app/I2C_Slaver.c</itemPath>
         <itemPath>app/SRAM_Emulator.c</itemPath>
         <itemPath>app/libcomp.c</itemPath>
+        <itemPath>app/Registration.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Configure" projectFiles="true">
         <itemPath>config/user_usb_device_descriptors.c</itemPath>

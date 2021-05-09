@@ -150,14 +150,14 @@ void I2C1_Initialize(void)
 {
 
     // initialize the hardware
-    // ACKEN disabled; STRICT disabled; STREN enabled; GCEN disabled; SMEN disabled; DISSLW enabled; SBCDE disabled; SIDL disabled; BOEN disabled; ACKDT Sends ACK; SCIE disabled; PCIE disabled; SCLREL Holds; RSEN disabled; SDAHT disabled; A10M 7 Bit; PEN disabled; RCEN disabled; SEN disabled; ON enabled; 
-    I2C1CON = 0x8040;
+    // ACKEN disabled; STRICT disabled; STREN disabled; GCEN disabled; SMEN disabled; DISSLW enabled; SBCDE disabled; SIDL disabled; BOEN disabled; ACKDT Sends ACK; SCIE disabled; PCIE disabled; SCLREL Holds; RSEN disabled; SDAHT disabled; A10M 7 Bit; PEN disabled; RCEN disabled; SEN disabled; ON enabled; 
+    I2C1CON = 0x8000;
     // BCL disabled; P disabled; S disabled; I2COV disabled; IWCOL disabled; 
     I2C1STAT = 0x00;
     // I2CADD 83; 
     I2C1_SlaveAddressSet(0x53);
-    // AMSK 83; 
-    I2C1_SlaveAddressMaskSet(0x53);
+    // AMSK 127; 
+    I2C1_SlaveAddressMaskSet(0x7F);
 
     // make sure this is set first
     i2c1_slave_state = S_SLAVE_IDLE;
@@ -387,8 +387,6 @@ void __attribute__ ((vector(_I2C1_SLAVE_VECTOR), interrupt(IPL1SOFT))) _I2C1_SLA
             break;
     }
 
-    //I2C1_RELEASE_SCL_CLOCK_CONTROL_BIT = 1;
-    I2C1_RELEASE_SCL_CLOCK_CONTROL_SET;
 
     // clear the slave interrupt flag
     IFS2bits.I2C1SIF = 0;

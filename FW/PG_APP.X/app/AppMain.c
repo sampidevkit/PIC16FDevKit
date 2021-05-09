@@ -8,8 +8,10 @@ public void APP_Main_Initialize(void) // <editor-fold defaultstate="collapsed" d
 {
     DoNext=0;
     ButtonApi_Init();
+    Registration_Init();
     Tick_Timer_Reset(Tick);
     StatusLED_SetState(SLED_IDLE);
+    MediaReady=1;
 } // </editor-fold>
 
 public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="Application Main Task">
@@ -17,22 +19,47 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
     switch(DoNext)
     {
         case 0:
+        case 1:
+        case 2:
+        case 3:
             if(Sw1_Is_Pressed())
             {
-                DoNext=1;
-                StatusLED_SetState(SLED_RESET);
+                MediaReady=0;
+                ICSP_Init(1);
+                DoNext=5;
+                Tick_Timer_Reset(Tick);
                 ICSP_MCLR_SetLow();
                 ICSP_MCLR_SetDigitalOutput();
             }
+            else if(Sw3_Is_Pressed())
+            {
+                DoNext++;
+                Tick_Timer_Reset(Tick);
+            }
+            else if(DoNext>0)
+            {
+                if(Tick_Timer_Is_Over_Ms(Tick, 1000))
+                    DoNext=0;
+            }
             break;
 
-        case 1:
+        case 4:
+            MediaReady=0;
+            ICSP_Init(0);
+            Tick_Timer_Reset(Tick);
+            ICSP_MCLR_SetLow();
+            ICSP_MCLR_SetDigitalOutput();
+            DoNext=5;
+            break;
+
+        case 5:
             if(Tick_Timer_Is_Over_Ms(Tick, 500))
             {
+                ICSP_Deinit();
                 DoNext=0;
                 ICSP_MCLR_SetHigh();
                 ICSP_MCLR_SetDigitalInput();
-                StatusLED_SetState(SLED_IDLE);
+                MediaReady=1;
             }
             break;
 
@@ -43,18 +70,9 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
 
     if(Sw2_Is_Pressed())
     {
-        PG_STT_SetHigh();
         RLED_EXT_SetLow();
         GLED_EXT_SetLow();
-        SYSKEY=0x00000000; //write invalid key to force lock
-        SYSKEY=0xAA996655; //write key1 to SYSKEY
-        SYSKEY=0x556699AA; //write key2 to SYSKEY
-        // OSCCON is now unlocked
-        /* set SWRST bit to arm reset */
-        RSWRSTSET=1;
-        /* read RSWRST register to trigger reset */
-        unsigned int dummy=RSWRST;
-        /* prevent any unwanted code execution until reset occurs*/
-        while(1);
+        MediaReady=0;
+        SoftwareReset();
     }
 } // </editor-fold>

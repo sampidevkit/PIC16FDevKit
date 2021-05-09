@@ -4,6 +4,17 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f2" displayName="Configure" projectFiles="true">
+        <itemPath>cfg/RV3028C7_Cfg.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="Library" projectFiles="true">
+        <logicalFolder name="common" displayName="common" projectFiles="true">
+          <itemPath>../Library/common/LibDef.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
+          <itemPath>../Library/rtcc/RV3028C7.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -19,15 +30,20 @@
         <itemPath>mcc_generated_files/spi2.h</itemPath>
         <itemPath>mcc_generated_files/adcc.h</itemPath>
         <itemPath>mcc_generated_files/fvr.h</itemPath>
+        <itemPath>mcc_generated_files/libcomp.h</itemPath>
+        <itemPath>mcc_generated_files/tmr0.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
     </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
+    <logicalFolder name="SourceFiles" displayName="Source" projectFiles="true">
+      <logicalFolder name="f1" displayName="Library" projectFiles="true">
+        <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
+          <itemPath>../Library/rtcc/RV3028C7.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -43,6 +59,8 @@
         <itemPath>mcc_generated_files/i2c1_master.c</itemPath>
         <itemPath>mcc_generated_files/spi2.c</itemPath>
         <itemPath>mcc_generated_files/fvr.c</itemPath>
+        <itemPath>mcc_generated_files/libcomp.c</itemPath>
+        <itemPath>mcc_generated_files/tmr0.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -57,6 +75,8 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../Library/rtcc</Elem>
+    <Elem>../Library/common</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -109,7 +129,8 @@
         <property key="default-char-type" value="true"/>
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="true"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="mcc_generated_files;..\Library;cfg"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>
