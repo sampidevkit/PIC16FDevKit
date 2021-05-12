@@ -35,13 +35,32 @@ Họ vi điều khiển PIC16F1887x là họ vi điều khiển 8-bit thế hệ
 
 ## 5. Mạch Nạp Tích Hợp
 
-### 5.1. Nạp Bootloader
+### 5.1. Nạp Chương Trình Mạch Nạp
+Chương trình mạch nạp chỉ cần nạp 1 lần. Các công cụ cần chuẩn bị: </br>
+* Mạch nạp chuyên dụng như PICkit3, PICkit4, Snap, ICD3, ICD4, ...
+* Header đực 2x4x1.27 dùng cho cổng nạp ICSP theo sơ đồ sau: </br>
+Pin2-MCLR, Pin4-PGC, Pin6-PGD, Pin8-VDD (3V3), Pin7-GND </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/ICSP.png?raw=true)
+* Cáp micro USB: Kết nối Kit với nguồn USB 5V bất kỳ. Nếu sử dụng nguồn điện 3.3V cấp từ mạch nạp thì không cần sử dụng cáp micro USB.
+* File chương trình tải về từ [master/FW/PG_APP.X/Bootloader_Application.hex](https://github.com/sampidevkit/PIC16FDevKit/raw/master/FW/PG_APP.X/Bootloader_Application.hex).
+* MCU là PIC32MM0064GPM028.
+Khi nạp thành công, kết nối kit với máy tính bằng cáp micro USB bạn sẽ thấy xuất hiện ổ đĩa như sau: </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_MSD_APP.png?raw=true)
+Mở ổ đĩa này, bạn sẽ thấy file SAMPIDevKit_INFO.txt chứa nội dung như sau: </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_INFO.png?raw=true)
+Nếu có lỗi xảy ra, xem ở mục 5.3.
+### 5.2. Cập Nhật Chương Trình Mạch Nạp
+Để cập nhật chương trình mới cho chip nạp, bạn có thể thực hiện như mục 5.1 hoặc thực hiện như sau: </br>
+* Kết nối kit với máy tính bằng cáp micro USB.
+* Nhấn giữ nút RESET đến khi các đèn STT, X0, X1 cùng sáng (khoảng 5s).
+* Vào My Computer/ This PC sẽ thấy xuất hiện ổ đĩa BOOTLOADER.
+* Tải File chương trình về từ [master/FW/PG_APP.X/Bootloader_Application.hex](https://github.com/sampidevkit/PIC16FDevKit/raw/master/FW/PG_APP.X/Bootloader_Application.hex) và lưu vào ổ đĩa BOOTLOADER.
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_MSD_BLD.png?raw=true)
+* Sau khi lưu, kit sẽ tự khởi động lại và hoạt động với chương trình mới. Nếu có lỗi xảy ra, xem ở mục 5.3.
 
-### 5.2. Nạp Application
-
-### 5.3. Kích Hoạt Kit
-
-### 5.4. Các Mã Lỗi
+### 5.3 Các Trạng Thái Lỗi
+* Lỗi khi ghi file hex vào ổ đĩa của kit: File nạp không đúng định dạng hoặc sự cố kết nối USB.
+* Các trạng thái LED: (update soon)
 
 ## 6. Tài Liệu Kỹ Thuật:
 * [Target MCU PIC16LF18877](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF1885777_Data_Sheet_40001825F.pdf).
