@@ -11,10 +11,12 @@
 * Chip đồng hồ thời gian thực độ chính xác cao. Giao tiếp I2C với MCU chính.<br/>
 ## 1. Sơ Đồ Khối
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/Diagram.png?raw=true)
+
 ## 2. Sơ Đồ Nguyên Lý
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Schematic/PIC16DevKit_001.png?raw=true)
 <br/>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/HW/Product/Schematic/PIC16DevKit_002.png?raw=true)
+
 ## 3. Vi Điều Khiển Chính PIC16F1887x
 Họ vi điều khiển PIC16F1887x là họ vi điều khiển 8-bit thế hệ mới của PIC16F887/PIC16F877A. Tương thích hoàn toàn về mặt I/O và các chức năng cơ bản. Bên cạnh đó, chip được trang bị các tính năng mới hơn như:<br/>
 * Dao động nội lên đến 32MHz và tốc độ đạt 8MIPS so với 5MIPS của chip cũ.
@@ -24,14 +26,29 @@ Họ vi điều khiển PIC16F1887x là họ vi điều khiển 8-bit thế hệ
 * Tính năng mới: 4x cổng logic khả trình (CLC), tính năng bắt điểm 0 của tín hiệu AC (ZCD), CRC, NCO, CWG, DSM, ...
 * Ngõ vào ra của các module chức năng có thể cấu hình trên bất kì I/O nào nhờ chức năng Peripheral Pin Select (PPS).
 * Năng lượng thấp, phù hợp cho các ứng dụng sử dụng pin.<br/>
-[Thông tin thêm](https://www.microchip.com/wwwproducts/ProductCompare/PIC16F877A/PIC16F18877).
+* [Thông tin thêm xem tại đây](https://www.microchip.com/wwwproducts/ProductCompare/PIC16F877A/PIC16F18877).
+
 ## 4. Môi Trường Lập Trình, Trình Biên Dịch và Công Cụ Hỗ Trợ
 
-### 4.1. [Môi Trường Lập Trình MPLAB X IDE](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide).
+### 4.1. Môi Trường Lập Trình MPLAB X IDE
+![](https://microchipdeveloper.com/local--files/mplabx:lesson1-7/mplabx-start-page.PNG)
+Môi trường lập trình MPLAB X IDE sử dụng mã nguồn của Netbeans, giao diện thân thiện và dễ sử dụng. Tải về và hướng dẫn cài đặt tại đây: </br>
+[Installing MPLAB® X IDE](https://microchipdeveloper.com/mplabx:installation). </br>
+Khuyến cáo: Sử dụng Windows 64bit với RAM tối thiểu 4GB và ổ cứng trống từ 20GB.
 
-### 4.2. [Trình Biên Dịch MPLAB XC8](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers).
+### 4.2. Trình Biên Dịch MPLAB XC8
+Nếu sử dụng ngôn ngữ lập trình C để lập trình cho Kit, bạn cần tải về trình biên dịch XC8. Nó sẽ chuyển mã C thành mã assembly. </br>
+![](https://microchipdeveloper.com/local--files/mplabx:lesson1-4/CompilerWork2.png)
+</br>Sau đó, nó sẽ chuyển mã assembly sang mã máy dưới dạng file HEX. Bạn cũng có thể sử dụng XC8 để biên dịch cho mã nguồn được viết trực tiếp bằng assembly. 
+![](https://microchipdeveloper.com/local--files/mplabx:lesson1-4/HEXFile.png)
+</br>Trình biên dịch có thể sử dụng miễn phí, không giới hạn code size, chỉ giới hạn các cấp độ tối ưu mã nguồn. Chức năng tối ưu mã nguồn sử dụng trong sản xuất, không cần thiết trong học tập. Tải về và hướng dẫn cài đặt tại đây: </br>
+[Installing MPLAB® XC8 Compiler](https://microchipdeveloper.com/xc8:installation).
 
-### 4.3. [Công Cụ Cấu Hình và Tạo Code Mẫu MPLAB Code Configurator (MCC)](https://www.microchip.com/en-us/development-tools-tools-and-software/embedded-software-center/mplab-code-configurator#Downloads).
+### 4.3. Công Cụ Cấu Hình và Tạo Code Mẫu MPLAB Code Configurator (MCC)
+MCC là một plugin của MPLAB X IDE, hỗ trợ tạo cấu hình chip, cấu hình các ngoại vi và các API để người dùng sử dụng mà không mất nhiều thời gian xây dựng chúng. </br>
+![](https://microchipdeveloper.com/local--files/mplabx:mcc/mccscreen.png)
+</br>Tải về và hướng dẫn cài đặt tại đây: </br>
+[Install MPLAB® Code Configurator (MCC)](https://microchipdeveloper.com/install:mcc).
 
 ## 5. Mạch Nạp Tích Hợp
 
@@ -45,22 +62,28 @@ Pin2-MCLR, Pin4-PGC, Pin6-PGD, Pin8-VDD (3V3), Pin7-GND </br>
 * File chương trình tải về từ [master/FW/PG_APP.X/Bootloader_Application.hex](https://github.com/sampidevkit/PIC16FDevKit/raw/master/FW/PG_APP.X/Bootloader_Application.hex).
 * MCU là PIC32MM0064GPM028.
 Khi nạp thành công, kết nối kit với máy tính bằng cáp micro USB bạn sẽ thấy xuất hiện ổ đĩa như sau: </br>
-![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_MSD_APP.png?raw=true)
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_MSD_APP.png?raw=true) </br>
 Mở ổ đĩa này, bạn sẽ thấy file SAMPIDevKit_INFO.txt chứa nội dung như sau: </br>
-![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_INFO.png?raw=true)
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_INFO.png?raw=true) </br>
 Nếu có lỗi xảy ra, xem ở mục 5.3.
 ### 5.2. Cập Nhật Chương Trình Mạch Nạp
 Để cập nhật chương trình mới cho chip nạp, bạn có thể thực hiện như mục 5.1 hoặc thực hiện như sau: </br>
 * Kết nối kit với máy tính bằng cáp micro USB.
-* Nhấn giữ nút RESET đến khi các đèn STT, X0, X1 cùng sáng (khoảng 5s).
+* Nhấn giữ nút RESET đến khi các đèn STT, RLED, BLED cùng sáng (khoảng 5s).
 * Vào My Computer/ This PC sẽ thấy xuất hiện ổ đĩa BOOTLOADER.
-* Tải File chương trình về từ [master/FW/PG_APP.X/Bootloader_Application.hex](https://github.com/sampidevkit/PIC16FDevKit/raw/master/FW/PG_APP.X/Bootloader_Application.hex) và lưu vào ổ đĩa BOOTLOADER.
+* Tải File chương trình về từ [master/FW/PG_APP.X/Bootloader_Application.hex](https://github.com/sampidevkit/PIC16FDevKit/raw/master/FW/PG_APP.X/Bootloader_Application.hex) và lưu vào ổ đĩa BOOTLOADER. </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_MSD_BLD.png?raw=true)
 * Sau khi lưu, kit sẽ tự khởi động lại và hoạt động với chương trình mới. Nếu có lỗi xảy ra, xem ở mục 5.3.
 
-### 5.3 Các Trạng Thái Lỗi
+### 5.3 Các Trạng Thái LED Lỗi
 * Lỗi khi ghi file hex vào ổ đĩa của kit: File nạp không đúng định dạng hoặc sự cố kết nối USB.
-* Các trạng thái LED: (update soon)
+* Chế độ bootloader:
+* Chế độ chờ: Led STT nháy với chu kì ON=10ms, OFF=1990ms
+* Lỗi không nhận chip: Led STT nháy với chu kì ON=500ms, OFF=1500ms
+* Truyền nhận dữ liệu UART: Led STT nháy 1 lần TON=5ms.
+
+## 6. Hướng Dẫn Lập Trình Cơ Bản
+[Xem tại đây](https://github.com/sampidevkit/PIC16FDevKit/blob/master/FW/README.md).
 
 ## 6. Tài Liệu Kỹ Thuật:
 * [Target MCU PIC16LF18877](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF1885777_Data_Sheet_40001825F.pdf).
@@ -88,4 +111,4 @@ Nếu có lỗi xảy ra, xem ở mục 5.3.
 * [Female header 1x10/8/7x2.54mm SSW-1XX-01-T-S](http://suddendocs.samtec.com/catalog_english/ssq_th.pdf).
 * [Male header 1x10/8/7x2.54mm TSW-1XX-23-L-S](http://suddendocs.samtec.com/catalog_english/tsw_th.pdf).
 * [Arduino Uno Dimension](http://arduino.cc/documents/ArduinoUno.dxf).
-* [Arduino Uno Pinout](https://content.arduino.cc/assets/Pinout-UNOrev3_latest.png)
+* [Arduino Uno Pinout](https://content.arduino.cc/assets/Pinout-UNOrev3_latest.png).

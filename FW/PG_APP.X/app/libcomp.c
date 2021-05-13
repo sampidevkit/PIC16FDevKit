@@ -73,7 +73,7 @@ LOOP:
         case SLED_IDLE:
         default:
             if(locked==0)
-                Indicator_SetState(0, 5, 1995, IND_LOOP_FOREVER);
+                Indicator_SetState(0, 10, 1990, IND_LOOP_FOREVER);
             else
             {
                 Set=SLED_FAIL;
