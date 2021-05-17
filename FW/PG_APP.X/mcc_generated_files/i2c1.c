@@ -126,9 +126,14 @@ typedef enum
  Section: Local Functions
 */
 
-inline void __attribute__ ((always_inline)) I2C1_TransmitProcess(void);
-inline void __attribute__ ((always_inline)) I2C1_ReceiveProcess(void);
+//inline void __attribute__ ((always_inline)) I2C1_TransmitProcess(void);
+//inline void __attribute__ ((always_inline)) I2C1_ReceiveProcess(void);
 
+#define I2C1_TransmitProcess() {if(p_i2c1_read_pointer==NULL) return; \
+    I2C1_TRANSMIT_REG = *p_i2c1_read_pointer;I2C1_RELEASE_SCL_CLOCK_CONTROL_SET;}
+
+#define I2C1_ReceiveProcess() {if(p_i2c1_write_pointer==NULL) return; \
+    *p_i2c1_write_pointer = I2C1_RECEIVE_REG;}
 /**
  Section: Local Variables
 */
@@ -451,33 +456,33 @@ void I2C1_SlaveAddressSet(
 
 
 
-inline void __attribute__ ((always_inline)) I2C1_TransmitProcess(void)
-{
-    // get the data to be transmitted
+//inline void __attribute__ ((always_inline)) I2C1_TransmitProcess(void)
+//{
+//    // get the data to be transmitted
+//
+//    // sanity check (to avoid stress)
+//    if (p_i2c1_read_pointer == NULL)
+//        return;
+//
+//    I2C1_TRANSMIT_REG = *p_i2c1_read_pointer;
+//
+//    // set the SCL clock to be released
+//    //I2C1_RELEASE_SCL_CLOCK_CONTROL_BIT = 1;
+//    I2C1_RELEASE_SCL_CLOCK_CONTROL_SET;
+//
+//}
 
-    // sanity check (to avoid stress)
-    if (p_i2c1_read_pointer == NULL)
-        return;
-
-    I2C1_TRANSMIT_REG = *p_i2c1_read_pointer;
-
-    // set the SCL clock to be released
-    //I2C1_RELEASE_SCL_CLOCK_CONTROL_BIT = 1;
-    I2C1_RELEASE_SCL_CLOCK_CONTROL_SET;
-
-}
-
-inline void __attribute__ ((always_inline)) I2C1_ReceiveProcess(void)
-{   
-    // store the received data 
-    
-    // sanity check (to avoid stress)
-    if (p_i2c1_write_pointer == NULL)
-        return;
-
-    *p_i2c1_write_pointer = I2C1_RECEIVE_REG;
-
-}
+//inline void __attribute__ ((always_inline)) I2C1_ReceiveProcess(void)
+//{   
+//    // store the received data 
+//    
+//    // sanity check (to avoid stress)
+//    if (p_i2c1_write_pointer == NULL)
+//        return;
+//
+//    *p_i2c1_write_pointer = I2C1_RECEIVE_REG;
+//
+//}
 
 /* Note: This is an example of the I2C1_StatusCallback()
          implementation. This is an emulated EEPROM Memory

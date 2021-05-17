@@ -214,7 +214,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -287,6 +287,7 @@
                   value="COMMON_LIB_CFG;USBGEN_H;USBCFG_H;__USB_DESCRIPTORS_C"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="toplevel-reordering" value="-ftoplevel-reorder"/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -318,6 +319,7 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -399,6 +401,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <Simulator>
@@ -1001,7 +1004,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -1074,6 +1077,7 @@
                   value="COMMON_LIB_CFG;USBGEN_H;USBCFG_H;__USB_DESCRIPTORS_C"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="toplevel-reordering" value="-ftoplevel-reorder"/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -1105,6 +1109,7 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
@@ -1186,6 +1191,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <Simulator>

@@ -71,8 +71,8 @@
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.170.0"/>
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.USBDEVICELite.USBDEVICELite" version="1.27.0"/>
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.boardsupportlibrary.BoardSuppportLibrary" version="1.12.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.USBDEVICELite.USBDEVICELite" version="1.27.0"/>
    </usedLibraries>
    <tokenMap class="java.util.HashMap">
       <entry>
@@ -308,16 +308,16 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="PERR" alias="enabled"/>
-         <value>1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP6" settingAlias="EPHSHK6" alias="enabled"/>
          <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UOTGIE" settingAlias="T1MSECIE" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="PERR" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISB" settingAlias="TRISB8" alias="output"/>
@@ -384,12 +384,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="ACTIVE" alias="disabled"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="I2C1" registerAlias="SICI" settingAlias="SubPriority"/>
          <value>2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="ACTIVE" alias="disabled"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="CNPDB" settingAlias="CNPDB9" alias="disabled"/>
@@ -472,12 +472,12 @@
          <value>25</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="UBRG" settingAlias="BRG"/>
-         <value>624</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UTOK" settingAlias="PID"/>
          <value>OUT (TX) token type transaction</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="UBRG" settingAlias="BRG"/>
+         <value>624</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="FLASH" registerAlias="NVMCON" settingAlias="NVMOP" alias="Program erase operation"/>
@@ -1012,12 +1012,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="RXINV" alias="enabled"/>
-         <value>1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP15" settingAlias="EPRXEN15" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="RXINV" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ODCA" settingAlias="ODCA4"/>
@@ -1156,12 +1156,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="CLKSEL" alias="PBCLK"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UIR" settingAlias="STALLIF"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="CLKSEL" alias="PBCLK"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCTUN" settingAlias="TUN" alias="Center Frequency+1.269%"/>
@@ -1276,12 +1276,12 @@
          <value>No Clock Failure</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="USTA" settingAlias="UTXBRK"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UOTGCON" settingAlias="DMPULUP" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="USTA" settingAlias="UTXBRK"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UCON" settingAlias="JSTATE"/>
@@ -1336,15 +1336,15 @@
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="RXINV" alias="disabled"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP5" settingAlias="EPCONDIS5" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP12" settingAlias="EPSTALL12" alias="disabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="RXINV" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
@@ -1424,15 +1424,15 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="PERR" alias="disabled"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UEP7" settingAlias="EPCONDIS7"/>
          <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UIE" settingAlias="IDLEIE" alias="disabled"/>
+         <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="PERR" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
@@ -1576,12 +1576,12 @@
          <value>AVAILABLE</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="UMODE" settingAlias="SIDL"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP15" settingAlias="EPRXEN15" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="UMODE" settingAlias="SIDL"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PMD5" settingAlias="I2C2MD"/>
@@ -1740,12 +1740,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART2" name="UARTFunctionMode"/>
-         <value>UART</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="USB" registerAlias="UEIE"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART2" name="UARTFunctionMode"/>
+         <value>UART</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="UTXISEL" alias="TX_COMPLETE"/>
@@ -1956,16 +1956,16 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART2" name="SWTXBufferSize"/>
-         <value>254</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEIE" settingAlias="CRC5EE" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="I2C1" registerAlias="I2CSTAT" settingAlias="RBF" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART2" name="SWTXBufferSize"/>
+         <value>254</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCTUN" settingAlias="TUN" alias="Center Frequency+1.316%"/>
@@ -2420,12 +2420,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="SIDL" alias="enabled"/>
-         <value>1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UOTGIE" settingAlias="T1MSECIE"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="SIDL" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PMDCON"/>
@@ -3704,11 +3704,11 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="USTA" settingAlias="ADDR"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UPWRC" settingAlias="USLPGRD" alias="disabled"/>
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UPWRC" settingAlias="USLPGRD" alias="disabled"/>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="USTA" settingAlias="ADDR"/>
          <value>0</value>
       </entry>
       <entry>
@@ -4392,11 +4392,11 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="URXISEL" alias="RX_1_2_BUF_FULL"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP5" settingAlias="EPHSHK5" alias="enabled"/>
          <value>1</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP5" settingAlias="EPHSHK5" alias="enabled"/>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="URXISEL" alias="RX_1_2_BUF_FULL"/>
          <value>1</value>
       </entry>
       <entry>
@@ -4680,12 +4680,12 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="RTSMD" alias="enabled"/>
-         <value>1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP0" settingAlias="RETRYDIS0" alias="disabled"/>
          <value>0</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="RTSMD" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PMD3" settingAlias="CCP2MD"/>
@@ -5100,12 +5100,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="UART2" registerAlias="UTXREG"/>
-         <value>0</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP0" settingAlias="EPCONDIS0" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="UART2" registerAlias="UTXREG"/>
+         <value>0</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UEP0" settingAlias="EPSTALL0" alias="enabled"/>
@@ -6216,12 +6216,12 @@
          <value>32768</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="UTXINV" alias="enabled"/>
-         <value>1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UOTGSTAT" settingAlias="SESEND"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="USTA" settingAlias="UTXINV" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="RNMICON" settingAlias="NMICNT"/>
@@ -8248,12 +8248,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="UTXI" settingAlias="flag"/>
-         <value>disabled</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="USB" registerAlias="UCON" settingAlias="RESUME" alias="enabled"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="UART2" registerAlias="UTXI" settingAlias="flag"/>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UOTGCON" settingAlias="VBUSON"/>
@@ -9124,12 +9124,12 @@
          <value>0</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="UART2" registerAlias="UMODE"/>
-         <value>163848</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="USB" name="EnableStatusTO"/>
          <value>enabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="UART2" registerAlias="UMODE"/>
+         <value>163848</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="FWDT" settingAlias="WDTWIN"/>
@@ -9296,12 +9296,12 @@
          <value>CSECME</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="OVFDIS" alias="enabled"/>
-         <value>1</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UEP14" settingAlias="EPSTALL14"/>
          <value>disabled</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="UART2" registerAlias="UMODE" settingAlias="OVFDIS" alias="enabled"/>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="USB" registerAlias="UEP2" settingAlias="EPHSHK2"/>
@@ -9623,7 +9623,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>5c6fb7f75ae9ce1edd2579bae24165322ac13bf34135ef7d8f771cd4921c0918</hash>
+         <hash>903beae5c72df5775d870cc32f81e13dbd8f9db817ac59a5d0742e4b3732b41a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -9647,7 +9647,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>6ffed371d44db28d0fcbe111c321c9adfb75f3133acd2549bf01cec7836f3404</hash>
+         <hash>764f0ad18f19db9e61967c1eac91a7d4bc74ae263b8c380ab4b8535401447cf7</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.h</file>
@@ -9682,10 +9682,6 @@
          <hash>386906dcfa271ae2d841b1610df4299ecb586ef8485f04273a6c649c11a5449b</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>0baa908a07ac212e2ae12e13a38e39d56b6a1b431a9a8982b6c66636bbcd3f8b</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\usb\usb_device.h</file>
          <hash>d52cca783292c65509a0a32dcee70eb352e4684078896bb9cb790123ba9cff1b</hash>
       </entry>
@@ -9698,16 +9694,20 @@
          <hash>0ad4cd0fcabb6a55f92d6edc075ba6b4410315ad671fd140cc31928bddef27f0</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>0baa908a07ac212e2ae12e13a38e39d56b6a1b431a9a8982b6c66636bbcd3f8b</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\usb\usb_hal.h</file>
          <hash>4e4ccc67c8e238ad1033ff8b9d04be5e9f00ba01ee536ac25d203cba119fe24b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>b469e0dab8c770e01f3bbcfd5ab806d3842b7bca3c1024000449648f1418d392</hash>
+         <hash>c650eff11c0a2ba67e1fddcc3af71edff7cf3e5aa84d2a67e723bc357e85ad81</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\usb\utilities\mchpwinusb_template.inf</file>
-         <hash>706f8dbcd36f236f8c64e3ea3bcd7e8f373724f4c43766a8a6db42346411b026</hash>
+         <hash>0dd7391f478b544ec6701752bf7c49415226e616c6ce18647136bedabc264b71</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\coretimer.c</file>

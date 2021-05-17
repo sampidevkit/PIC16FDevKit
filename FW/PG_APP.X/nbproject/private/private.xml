@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/F:/Github/SAMPIDevKit/PIC16DevKit/PIC16F1887x/FW/Library/usb/usb_device_msd.c</file>
+            <file>file:/F:/Github/SAMPIDevKit/PIC16DevKit/PIC16F1887x/FW/Library/usb/usb_device_msd.h</file>
+            <file>file:/F:/Github/SAMPIDevKit/PIC16DevKit/PIC16F1887x/FW/Library/kit/kit_usb_device_msd.c</file>
+            <file>file:/F:/Github/SAMPIDevKit/PIC16DevKit/PIC16F1887x/FW/PG_APP.X/mcc_generated_files/usb/usb_device.c</file>
+        </group>
     </open-files>
 </project-private>

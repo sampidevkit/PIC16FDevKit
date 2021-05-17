@@ -51,9 +51,9 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#include "memory/flash.h"
 #include "coretimer.h"
 #include "watchdog.h"
+#include "memory/flash.h"
 #include "usb/usb.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
