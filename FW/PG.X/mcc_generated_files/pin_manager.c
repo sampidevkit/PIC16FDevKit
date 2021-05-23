@@ -102,8 +102,8 @@ void PIN_MANAGER_Initialize (void)
     SYSTEM_RegUnlock(); // unlock PPS
     RPCONbits.IOLOCK = 0;
 
-    RPINR9bits.U2RXR = 0x0003;    //RA2->UART2:U2RX
     RPOR0bits.RP4R = 0x0004;    //RA3->UART2:U2TX
+    RPINR9bits.U2RXR = 0x0003;    //RA2->UART2:U2RX
 
     RPCONbits.IOLOCK = 1; // lock   PPS
     SYSTEM_RegLock(); 

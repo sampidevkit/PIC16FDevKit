@@ -1,5 +1,17 @@
 #include "libcomp.h"
 
+#define SW_SCL_SetDigitalInput()    ICSP_PGD_SetDigitalInput()
+#define SW_SCL_SetDigitalOutput()   ICSP_PGD_SetDigitalOutput()
+#define SW_SCL_GetValue()           ICSP_PGD_GetValue()
+#define SW_SCL_SetHigh()            ICSP_PGD_SetHigh()
+#define SW_SCL_SetLow()             ICSP_PGD_SetLow()
+
+#define SW_SDA_SetDigitalInput()    ICSP_PGC_SetDigitalInput()
+#define SW_SDA_SetDigitalOutput()   ICSP_PGC_SetDigitalOutput()
+#define SW_SDA_GetValue()           ICSP_PGC_GetValue()
+#define SW_SDA_SetHigh()            ICSP_PGC_SetHigh()
+#define SW_SDA_SetLow()             ICSP_PGC_SetLow()
+
 public bool MediaReady=0;
 public uint8_t App_Log_Buffer[APP_BUFFER_LOG_LEN];
 
@@ -10,7 +22,9 @@ public void DummyInterruptHandler(void) // <editor-fold defaultstate="collapsed"
 
 public void LibComp_Initialize(void) // <editor-fold defaultstate="collapsed" desc="App porting initialize">
 {
-
+    VDDTG_EN_SetHigh();
+    nVICSP_EN_SetLow();
+    nVICSP_EN_SetDigitalOutput();
 } // </editor-fold>
 
 public void SoftwareReset(void) // <editor-fold defaultstate="collapsed" desc="Software reset">
@@ -27,9 +41,42 @@ public void SoftwareReset(void) // <editor-fold defaultstate="collapsed" desc="S
     while(1);
 } // </editor-fold>
 
+private void SW_I2C_SCL_Pulse(bool x) // <editor-fold defaultstate="collapsed" desc="SCL pulse">
+{
+    if(x)
+    {
+        SW_SCL_SetDigitalInput();
+        SW_SCL_SetHigh();
+    }
+    else
+    {
+        SW_SCL_SetLow();
+        SW_SCL_SetDigitalOutput();
+    }
+
+    while(SW_SCL_GetValue()!=x);
+} // </editor-fold>
+
+private void SW_I2C_SDA_Pulse(bool x) // <editor-fold defaultstate="collapsed" desc="SDA pulse">
+{
+    if(x)
+    {
+        SW_SDA_SetDigitalInput();
+        SW_SDA_SetHigh();
+    }
+    else
+    {
+        SW_SDA_SetLow();
+        SW_SDA_SetDigitalOutput();
+    }
+
+    while(SW_SDA_GetValue()!=x);
+} // </editor-fold>
+
 public void Change_I2C_To_ICSP(void) // <editor-fold defaultstate="collapsed" desc="Change I2C to ICSP">
 {
-    VDDTG_EN_SetLow();
+    nVICSP_EN_SetLow();
+    nVICSP_EN_SetDigitalOutput();
     // clear the master interrupt flag
     IFS2bits.I2C1SIF=0;
     // enable the master interrupt
@@ -37,21 +84,14 @@ public void Change_I2C_To_ICSP(void) // <editor-fold defaultstate="collapsed" de
     // OFF I2C module
     I2C1CONbits.ON=0;
     SRAM_Emulate_Deinit();
-    nVICSP_EN_SetLow();
-    nVICSP_EN_SetDigitalOutput();
-    __delay_ms(10);
-    VDDTG_EN_SetHigh();
 } // </editor-fold>
 
 public void Change_ICSP_To_I2C(void) // <editor-fold defaultstate="collapsed" desc="Change ICSP to I2C">
 {
-    VDDTG_EN_SetLow();
     nVICSP_EN_SetHigh();
     nVICSP_EN_SetDigitalInput();
     SRAM_Emulate_Init();
     I2C1_Initialize();
-    __delay_ms(10);
-    VDDTG_EN_SetHigh();
 } // </editor-fold>
 
 public void StatusLED_SetState(sled_t Set) // <editor-fold defaultstate="collapsed" desc="Set state of status LED">
@@ -88,86 +128,3 @@ LOOP:
             break;
     }
 } // </editor-fold>
-
-//public void SOFTPORT_Initialize(void)
-//{
-//    if(Kit_Is_Registed)
-//        UART2_Initialize();
-//    else
-//    {
-//        ;
-//    }
-//}
-//
-//public bool SOFTPORT_IsRxReady(void)
-//{
-//    if(Kit_Is_Registed)
-//        return UART2_IsRxReady();
-//    else
-//    {
-//        return 0;
-//    }
-//}
-//
-//public uint8_t SOFTPORT_Read(void)
-//{
-//    if(Kit_Is_Registed)
-//        return UART2_Read();
-//    else
-//    {
-//        return 0;
-//    }
-//}
-//
-//public bool SOFTPORT_IsTxReady(void)
-//{
-//    if(Kit_Is_Registed)
-//        return UART2_IsTxReady();
-//    else
-//    {
-//        return 1;
-//    }
-//}
-//
-//public void SOFTPORT_Write(uint8_t Data)
-//{
-//    if(Kit_Is_Registed)
-//        UART2_Write(Data);
-//    else
-//    {
-//        ;
-//    }
-//}
-//
-//public void SOFTPORT_Enable(void)
-//{
-//    IEC1bits.U2TXIE=0;
-//    IEC1bits.U2RXIE=1;
-//    U2STASET=_U2STA_UTXEN_MASK;
-//    U2STASET=_U2STA_URXEN_MASK;
-//    U2MODESET=_U2MODE_ON_MASK;
-//}
-//
-//public void SOFTPORT_Disable(void)
-//{
-//    U2MODECLR=_U2MODE_ON_MASK;
-//    U2STACLR=_U2STA_UTXEN_MASK;
-//    U2STACLR=_U2STA_URXEN_MASK;
-//    IEC1bits.U2TXIE=0;
-//    IEC1bits.U2RXIE=0;
-//}
-//
-//public void SOFTPORT_SetBaudrate(uint32_t speed)
-//{
-//    if(Kit_Is_Registed)
-//    {
-//        if(U2MODEbits.BRGH)
-//            U2BRG=(SYS_CLK/(4*speed))-1;
-//        else
-//            U2BRG=(SYS_CLK/(16*speed))-1;
-//    }
-//    else
-//    {
-//        ;
-//    }
-//}

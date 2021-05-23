@@ -18,6 +18,8 @@
                 <sourceRootElem>cfg/bld</sourceRootElem>
                 <sourceRootElem>user/app</sourceRootElem>
                 <sourceRootElem>user/bld</sourceRootElem>
+                <sourceRootElem>../../Docs</sourceRootElem>
+                <sourceRootElem>../../HW/Product/Schematic</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

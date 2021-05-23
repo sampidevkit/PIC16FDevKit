@@ -4,8 +4,9 @@
 #include <stdbool.h>
 
 #define __PROJECT_NAME__                "PIC16 DEV KIT"
-#define __HARDWARE_ID__                 "SAMM-7x-F|R|T v2"
-#define __WEBSITE__                     "https://github.com/sampidevkit/PIC16FDevKit/tree/master"
+#define __HARDWARE_ID__                 "SAMM-7x-F|R|T v2.x"
+#define __WEBSITE__                     "https://bit.ly/3rMJ4hs"
+
 #define write_error_log(line)           do{uint32_t err=line; icsp_log(ICSP_LOG_INTERNAL_ERROR, &err, NULL, NULL);}while(0)
 #define ICSP_FileIo_Media_GetState()    MediaReady
 #define DRV_CONFIG_DRIVE_CAPACITY       4096 // *512 byte = useable drive volume

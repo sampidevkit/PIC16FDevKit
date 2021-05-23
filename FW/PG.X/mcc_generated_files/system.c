@@ -83,19 +83,19 @@
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"
-#include "coretimer.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
 #include "i2c1.h"
 #include "usb/usb.h"
-#include "memory/flash.h"
+#include "interrupt_manager.h"
+#include "exceptions.h"
 #include "uart2.h"
+#include "memory/flash.h"
+#include "coretimer.h"
 
 void SYSTEM_Initialize(void)
 {
     PIN_MANAGER_Initialize();
-    INTERRUPT_Initialize();
     CLOCK_Initialize();
+    INTERRUPT_Initialize();
     CORETIMER_Initialize();
     USBDeviceInit();
 #ifndef __BOOTLOADER__

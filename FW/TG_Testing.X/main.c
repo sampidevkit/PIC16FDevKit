@@ -108,10 +108,46 @@ void SRAM_Test(void)
 
 void Ext_Gpo_Test(void)
 {
+    static bool init=0;
     uint8_t gpio[4];
 
+    if(init==0) // Set tris
+    {
+        gpio[0]=0x10;
+        gpio[1]=0x00;
+
+        if(I2C_Master_Write(0x53, &gpio[0], 2)) // write address
+        {
+            if(I2C_Master_Read(0x53, &gpio[2], 1)) // read data
+            {
+                gpio[2]=0x00;
+
+                if(I2C_Master_Write(0x53, &gpio[0], 3))// write data
+                {
+                    init=1;
+                    printf("\nTRIS=%02X", gpio[2]);
+                }
+                else
+                {
+                    __debug(__LINE__);
+                    return;
+                }
+            }
+            else
+            {
+                __debug(__LINE__);
+                return;
+            }
+        }
+        else
+        {
+            __debug(__LINE__);
+            return;
+        }
+    }
+
     gpio[0]=0x10;
-    gpio[1]=0x00;
+    gpio[1]=0x02;
 
     if(I2C_Master_Write(0x53, &gpio[0], 2)) // write address
     {
@@ -120,7 +156,7 @@ void Ext_Gpo_Test(void)
             gpio[2]^=0xFF;
 
             if(I2C_Master_Write(0x53, &gpio[0], 3))// write data
-                printf("\nGPO=%02X", gpio[2]);
+                printf("\nLAT=%02X", gpio[2]);
             else
                 __debug(__LINE__);
         }

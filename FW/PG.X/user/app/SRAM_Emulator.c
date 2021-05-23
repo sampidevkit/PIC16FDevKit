@@ -1,31 +1,78 @@
 #include "libcomp.h"
 #include "SRAM_Emulator.h"
 
-#define EMULATE_SRAM_SIZE 4100
+// Extern variables
+volatile uint8_t EMULATE_SRAM_Memory[EMULATE_SRAM_SIZE];
+
+#define TRISX EMULATE_SRAM_Memory[4096]
+#define PORTX EMULATE_SRAM_Memory[4097]
+#define LATX EMULATE_SRAM_Memory[4098]
 
 static bool addressState=true;
 static uint16_t address, addrByteCount;
 static uint8_t i2c1_slaveWriteData=0xAA;
-static uint8_t EMULATE_SRAM_Memory[EMULATE_SRAM_SIZE];
 
 void SRAM_Emulate_Init(void)
 {
-    memset((void*) EMULATE_SRAM_Memory, 0x00, membersof(EMULATE_SRAM_Memory));
+    memset((void*) EMULATE_SRAM_Memory, 0x00, EMULATE_SRAM_SIZE);
+    TRISX=0b11111111;
+    PORTX=0b11111100;
+    LATX=0b11111100;
 }
 
 void SRAM_Emulate_Deinit(void)
 {
-    Ext_GPIO0_Write(0);
-    Ext_GPIO1_Write(0);
+    TRISX=0b11111111;
+    PORTX=0b11111100;
+    LATX=0b11111100;
+}
+
+uint8_t SRAM_Emulate_TRIS_Read(void)
+{
+    uint8_t value=TRISX_EXT_GPIO0;
+
+    value<<=1;
+    value|=TRISX_EXT_GPIO1;
+
+    return value;
+}
+
+uint8_t SRAM_Emulate_PORT_Read(void)
+{
+    uint8_t value=PORTX_EXT_GPIO0;
+
+    value<<=1;
+    value|=PORTX_EXT_GPIO1;
+
+    return value;
+}
+
+uint8_t SRAM_Emulate_LAT_Read(void)
+{
+    uint8_t value=LATX_EXT_GPIO0;
+
+    value<<=1;
+    value|=LATX_EXT_GPIO1;
+
+    return value;
 }
 
 void SRAM_Emulate_Tasks(void)
 {
-    if((EMULATE_SRAM_Memory[4096]&0x01)!=Ext_GPIO0_Read())
-        Ext_GPIO0_Toggle();
+    if(SRAM_Emulate_TRIS_Read()!=TRISX)
+    {
+        TRISX_EXT_GPIO0=(bool) (TRISX&1);
+        TRISX_EXT_GPIO1=(bool) ((TRISX>>1)&1);
+    }
 
-    if(((EMULATE_SRAM_Memory[4096]>>1)&0x01)!=Ext_GPIO1_Read())
-        Ext_GPIO1_Toggle();
+    if(SRAM_Emulate_LAT_Read()!=LATX)
+    {
+        LATX_EXT_GPIO0=(bool) (LATX&1);
+        LATX_EXT_GPIO1=(bool) ((LATX>>1)&1);
+    }
+
+    if(PORTX!=SRAM_Emulate_PORT_Read())
+        PORTX=SRAM_Emulate_PORT_Read();
 }
 
 bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
@@ -34,7 +81,7 @@ bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
     {
         case I2C1_SLAVE_TRANSMIT_REQUEST_DETECTED:
             // set up the slave driver buffer transmit pointer
-            I2C1_ReadPointerSet(&EMULATE_SRAM_Memory[address++]);
+            I2C1_ReadPointerSet((uint8_t*) (&EMULATE_SRAM_Memory[address++]));
 
             if(address>=EMULATE_SRAM_SIZE)
                 address=0;

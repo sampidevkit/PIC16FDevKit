@@ -32,8 +32,7 @@ Họ vi điều khiển PIC16F1887x là họ vi điều khiển 8-bit thế hệ
 
 ### 4.1. Môi Trường Lập Trình MPLAB X IDE
 ![](https://microchipdeveloper.com/local--files/mplabx:lesson1-7/mplabx-start-page.PNG)
-Môi trường lập trình MPLAB X IDE sử dụng mã nguồn của Netbeans, giao diện thân thiện và dễ sử dụng. Tải về và hướng dẫn cài đặt tại đây: </br>
-[Installing MPLAB® X IDE](https://microchipdeveloper.com/mplabx:installation). </br>
+Môi trường lập trình MPLAB X IDE sử dụng mã nguồn của Netbeans, giao diện thân thiện và dễ sử dụng. Tải về và hướng dẫn cài đặt tại đây: [Installing MPLAB® X IDE](https://microchipdeveloper.com/mplabx:installation). </br>
 Khuyến cáo: Sử dụng Windows 64bit với RAM tối thiểu 4GB và ổ cứng trống từ 20GB.
 
 ### 4.2. Trình Biên Dịch MPLAB XC8
@@ -41,14 +40,12 @@ Nếu sử dụng ngôn ngữ lập trình C để lập trình cho Kit, bạn c
 ![](https://microchipdeveloper.com/local--files/mplabx:lesson1-4/CompilerWork2.png)
 </br>Sau đó, nó sẽ chuyển mã assembly sang mã máy dưới dạng file HEX. Bạn cũng có thể sử dụng XC8 để biên dịch cho mã nguồn được viết trực tiếp bằng assembly. 
 ![](https://microchipdeveloper.com/local--files/mplabx:lesson1-4/HEXFile.png)
-</br>Trình biên dịch có thể sử dụng miễn phí, không giới hạn code size, chỉ giới hạn các cấp độ tối ưu mã nguồn. Chức năng tối ưu mã nguồn sử dụng trong sản xuất, không cần thiết trong học tập. Tải về và hướng dẫn cài đặt tại đây: </br>
-[Installing MPLAB® XC8 Compiler](https://microchipdeveloper.com/xc8:installation).
+</br>Trình biên dịch có thể sử dụng miễn phí, không giới hạn code size, chỉ giới hạn các cấp độ tối ưu mã nguồn. Chức năng tối ưu mã nguồn sử dụng trong sản xuất, không cần thiết trong học tập. Tải về và hướng dẫn cài đặt tại đây: [Installing MPLAB® XC8 Compiler](https://microchipdeveloper.com/xc8:installation).
 
 ### 4.3. Công Cụ Cấu Hình và Tạo Code Mẫu MPLAB Code Configurator (MCC)
 MCC là một plugin của MPLAB X IDE, hỗ trợ tạo cấu hình chip, cấu hình các ngoại vi và các API để người dùng sử dụng mà không mất nhiều thời gian xây dựng chúng. </br>
 ![](https://microchipdeveloper.com/local--files/mplabx:mcc/mccscreen.png)
-</br>Tải về và hướng dẫn cài đặt tại đây: </br>
-[Install MPLAB® Code Configurator (MCC)](https://microchipdeveloper.com/install:mcc).
+</br>Tải về và hướng dẫn cài đặt tại đây: [Install MPLAB® Code Configurator (MCC)](https://microchipdeveloper.com/install:mcc).
 
 ## 5. Mạch Nạp Tích Hợp
 
@@ -66,21 +63,6 @@ Khi nạp thành công, kết nối kit với máy tính bằng cáp micro USB b
 Mở ổ đĩa này, bạn sẽ thấy file SAMPIDevKit_INFO.txt chứa nội dung như sau: </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_INFO.png?raw=true) </br>
 Nếu có lỗi xảy ra, xem ở mục 5.3.
-
-### 5.2. Kích Hoạt
-Vì lý do nhiều đối tượng sử dụng thiết kế để thương mại mà không xin phép nên cần có biện pháp hạn chế. Mỗi kit sẽ có 1 key kích hoạt riêng biệt, sử dụng cho tất cả các lần nạp lại chương trình mạch nạp. Sau khi kích hoạt, kit sẽ sử dụng được các chức năng như SRAM, UART, GPO mở rộng.
-
-* Trên máy tính, vào Control Panel --> Hardware and Sound --> Device Manager --> Ports (COM & LPT).
-* Kết nối Kit với máy tính, kiểm tra port vừa hiển thị. </br>
-![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/Ports.png?raw=true)
-* Bật [serial port terminal](https://drive.google.com/file/d/1q5kwt-kHbh_pl_llgluEFrfX2FJnvJZG/view?usp=sharing), mở port tương ứng của kit với các giá trị cấu hình port mặc định. </br>
-![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/TerminalOpen.png?raw=true)
-* Bấm tổ hợp phím [ALT] + [P], cấu hình như sau: </br>
-![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/TerminalCfg.png?raw=true)
-* Nhập vào **AT+UDID** --> Send. Ghi lại chuỗi kí tự phản hồi. *Lưu ý: Lấy chuỗi kí tự phản hồi của lần gửi lệnh **AT+UDID** sau cùng.*
-* Sử dụng chuỗi kí tự phản hồi này gửi đến địa chỉ email sampidevkit@gmail.com với tiêu đề "PIC16DevKit Registration".
-* Khi nhận được chuỗi kí tự kích hoạt từ email phản hồi, bạn nhập vào **AT+REG="chuỗi kí tự"**, kết quả trả về OK là thành công. </br>
-***Mỗi địa chỉ email chỉ được dùng để kích hoạt 1 kit***
 
 ### 5.2. Cập Nhật Chương Trình Mạch Nạp
 Để cập nhật chương trình mới cho chip nạp, bạn có thể thực hiện như mục 5.1 hoặc thực hiện như sau: </br>

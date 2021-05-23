@@ -62,8 +62,8 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.USBDEVICELite.USBDEVICELite" version="1.27.0"/>
       <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" version="1.170.0"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.USBDEVICELite.USBDEVICELite" version="1.27.0"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2256,7 +2256,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PMDCON"/>
-         <value>0</value>
+         <value>2048</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PWRCON"/>
@@ -2496,7 +2496,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PMDCON" settingAlias="PMDLOCK"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="PWRCON" settingAlias="RETEN"/>
@@ -9610,7 +9610,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>72a384e0734c500ed497b935dfbca5d3928ca7c3019b42890dd7df6f65816add</hash>
+         <hash>cd21c61faa797a17255b345eac35f2a8e14798ac6b954736db01c08c0a1b3198</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -9634,7 +9634,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>ca91298a39ed8a7729bb67493bc2d3eb961c5c8c630d0369b2bb27bb139fc72e</hash>
+         <hash>9309eacec6f5ee7236ba552ec54fca2471bb05a8521291fc500874d6be5025da</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.h</file>
@@ -9669,6 +9669,10 @@
          <hash>d64db3cf284d8c70d94e24a044cdbb2bc5363d5aa92ad1cc21f1633b09d0221c</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>4a760c2b81dcade9f01bc54e5cc8fd6e52bab42206943983238111fb546a3f96</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\usb\usb_device.h</file>
          <hash>d52cca783292c65509a0a32dcee70eb352e4684078896bb9cb790123ba9cff1b</hash>
       </entry>
@@ -9681,20 +9685,16 @@
          <hash>0ad4cd0fcabb6a55f92d6edc075ba6b4410315ad671fd140cc31928bddef27f0</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>4a760c2b81dcade9f01bc54e5cc8fd6e52bab42206943983238111fb546a3f96</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\usb\usb_hal.h</file>
          <hash>4e4ccc67c8e238ad1033ff8b9d04be5e9f00ba01ee536ac25d203cba119fe24b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>f67907613cbfbe49f7c6a4d0ae8cb207734aacf4e117fd257f742686b7cf7504</hash>
+         <hash>b76b93c0058ee332eb6aa7e78dc8184047860005fd524f4cab852d1554a2e49f</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\usb\utilities\mchpwinusb_template.inf</file>
-         <hash>762b20d32bce3cc09da902b439b21242efabb14c2e02f0590b0c9c8b5df9f5f5</hash>
+         <hash>8942dfbaafd0c103190aa6af3bd35e0144a4ded9860d6d00c9947a7ffeec8391</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\coretimer.c</file>

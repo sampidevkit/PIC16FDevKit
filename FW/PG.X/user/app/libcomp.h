@@ -78,13 +78,5 @@ public void SoftwareReset(void);
 public void Change_I2C_To_ICSP(void);
 public void Change_ICSP_To_I2C(void);
 public void StatusLED_SetState(sled_t State);
-//public void SOFTPORT_Initialize(void);
-//public bool SOFTPORT_IsRxReady(void);
-//public uint8_t SOFTPORT_Read(void);
-//public bool SOFTPORT_IsTxReady(void);
-//public void SOFTPORT_Write(uint8_t Data);
-//public void SOFTPORT_Enable(void);
-//public void SOFTPORT_Disable(void);
-//public void SOFTPORT_SetBaudrate(uint32_t speed);
 
 #endif
