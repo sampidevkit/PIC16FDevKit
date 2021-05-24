@@ -133,7 +133,7 @@ sd003={
 void USER_USB_Device_LoadUDID(void)
 {
     uint32_t udID;
-    uint8_t i, c;
+    uint8_t i;
 
     udID=UDID1;
 
