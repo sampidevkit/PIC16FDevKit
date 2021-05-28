@@ -56,7 +56,7 @@ Chương trình mạch nạp chỉ cần nạp 1 lần. Các công cụ cần ch
 Pin2-MCLR, Pin4-PGC, Pin6-PGD, Pin8-VDD (3V3), Pin7-GND </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/ICSP.png?raw=true)
 * Cáp micro USB: Kết nối Kit với nguồn USB 5V bất kỳ. Nếu sử dụng nguồn điện 3.3V cấp từ mạch nạp thì không cần sử dụng cáp micro USB.
-* File chương trình tải về từ [master/FW/PG_APP.X/Bootloader_Application.hex](https://github.com/sampidevkit/PIC16FDevKit/raw/master/FW/PG_APP.X/Bootloader_Application.hex).
+* File chương trình tải về từ [master/FW/PG.X/Production.hex](https://github.com/sampidevkit/PIC16FDevKit/raw/master/FW/PG.X/Production.hex).
 * MCU là PIC32MM0064GPM028.
 Khi nạp thành công, kết nối kit với máy tính bằng cáp micro USB bạn sẽ thấy xuất hiện ổ đĩa như sau: </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_MSD_APP.png?raw=true) </br>
@@ -69,7 +69,7 @@ Nếu có lỗi xảy ra, xem ở mục 5.3.
 * Kết nối kit với máy tính bằng cáp micro USB.
 * Nhấn giữ nút RESET đến khi các đèn STT, RLED, BLED cùng sáng (khoảng 5s).
 * Vào My Computer/ This PC sẽ thấy xuất hiện ổ đĩa BOOTLOADER.
-* Tải File chương trình về từ [master/FW/PG_APP.X/Bootloader_Application.hex](https://github.com/sampidevkit/PIC16FDevKit/raw/master/FW/PG_APP.X/Bootloader_Application.hex) và lưu vào ổ đĩa BOOTLOADER. </br>
+* Tải File chương trình về từ [master/FW/PG.X/app.hex](https://raw.githubusercontent.com/sampidevkit/PIC16FDevKit/master/FW/PG.X/app.hex) và lưu vào ổ đĩa BOOTLOADER. </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/SAMPIDevKit_MSD_BLD.png?raw=true)
 * Sau khi lưu, kit sẽ tự khởi động lại và hoạt động với chương trình mới. Nếu có lỗi xảy ra, xem ở mục 5.3.
 
@@ -83,7 +83,7 @@ Nếu có lỗi xảy ra, xem ở mục 5.3.
 ## 6. Hướng Dẫn Lập Trình Cơ Bản
 [Xem tại đây](https://github.com/sampidevkit/PIC16FDevKit/blob/master/FW/README.md).
 
-## 6. Tài Liệu Kỹ Thuật:
+## 7. Tài Liệu Kỹ Thuật:
 * [Target MCU PIC16LF18877](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF1885777_Data_Sheet_40001825F.pdf).
 * [PIC16LF18877 Programming Specification](https://ww1.microchip.com/downloads/en/DeviceDoc/40001753B.pdf).
 * [Programmer MCU PIC32MM0064GPM028](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC32MM0256GPM064-Family-Data-Sheet-DS60001387D.pdf).
