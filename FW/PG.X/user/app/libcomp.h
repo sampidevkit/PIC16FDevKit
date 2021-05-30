@@ -78,5 +78,6 @@ public void SoftwareReset(void);
 public void Change_I2C_To_ICSP(void);
 public void Change_ICSP_To_I2C(void);
 public void StatusLED_SetState(sled_t State);
+public bool ProgButton_GetState(void);
 
 #endif

@@ -12,52 +12,37 @@ static bool addressState=true;
 static uint16_t address, addrByteCount;
 static uint8_t i2c1_slaveWriteData=0xAA;
 
-void SRAM_Emulate_Init(void)
+private uint8_t SRAM_Emulate_TRIS_Read(void)
 {
-    memset((void*) EMULATE_SRAM_Memory, 0x00, EMULATE_SRAM_SIZE);
-    TRISX=0b11111111;
-    PORTX=0b11111100;
-    LATX=0b11111100;
-}
-
-void SRAM_Emulate_Deinit(void)
-{
-    TRISX=0b11111111;
-    PORTX=0b11111100;
-    LATX=0b11111100;
-}
-
-uint8_t SRAM_Emulate_TRIS_Read(void)
-{
-    uint8_t value=TRISX_EXT_GPIO0;
+    uint8_t value=TRISX_EXT_GPIO1;
 
     value<<=1;
-    value|=TRISX_EXT_GPIO1;
+    value|=TRISX_EXT_GPIO0;
 
     return value;
 }
 
-uint8_t SRAM_Emulate_PORT_Read(void)
+private uint8_t SRAM_Emulate_PORT_Read(void)
 {
-    uint8_t value=PORTX_EXT_GPIO0;
+    uint8_t value=PORTX_EXT_GPIO1;
 
     value<<=1;
-    value|=PORTX_EXT_GPIO1;
+    value|=PORTX_EXT_GPIO0;
 
     return value;
 }
 
-uint8_t SRAM_Emulate_LAT_Read(void)
+private uint8_t SRAM_Emulate_LAT_Read(void)
 {
-    uint8_t value=LATX_EXT_GPIO0;
+    uint8_t value=LATX_EXT_GPIO1;
 
     value<<=1;
-    value|=LATX_EXT_GPIO1;
+    value|=LATX_EXT_GPIO0;
 
     return value;
 }
 
-void SRAM_Emulate_Tasks(void)
+public new_simple_task_t(SRAM_Emulate_Tasks)
 {
     if(SRAM_Emulate_TRIS_Read()!=TRISX)
     {
@@ -65,7 +50,7 @@ void SRAM_Emulate_Tasks(void)
         TRISX_EXT_GPIO1=(bool) ((TRISX>>1)&1);
     }
 
-    if(SRAM_Emulate_LAT_Read()!=LATX)
+    if(SRAM_Emulate_PORT_Read()!=LATX)
     {
         LATX_EXT_GPIO0=(bool) (LATX&1);
         LATX_EXT_GPIO1=(bool) ((LATX>>1)&1);
@@ -73,9 +58,32 @@ void SRAM_Emulate_Tasks(void)
 
     if(PORTX!=SRAM_Emulate_PORT_Read())
         PORTX=SRAM_Emulate_PORT_Read();
+
+    Task_Done();
 }
 
-bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
+public void SRAM_Emulate_Init(void)
+{
+    TRISX_EXT_GPIO0=1;
+    TRISX_EXT_GPIO1=1;
+    memset((void*) EMULATE_SRAM_Memory, 0x00, EMULATE_SRAM_SIZE);
+    TRISX=0b11111111;
+    PORTX=0b00000000;
+    LATX=0b00000000;
+    TaskManager_Create_NewSimpleTask(SRAM_Emulate_Tasks);
+}
+
+public void SRAM_Emulate_Deinit(void)
+{
+    TaskManager_End_Task(SRAM_Emulate_Tasks);
+    TRISX=0b11111111;
+    PORTX=0b00000000;
+    LATX=0b00000000;
+    TRISX_EXT_GPIO0=0;
+    TRISX_EXT_GPIO1=0;
+}
+
+public bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
 {
     switch(status)
     {

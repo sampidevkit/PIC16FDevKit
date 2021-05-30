@@ -12,7 +12,7 @@ public void LibComp_Initialize(void) // <editor-fold defaultstate="collapsed" de
 
 void __debug(uint16_t line)
 {
-    printf("\n%ld", line);
+    printf("\n%04X", line);
 }
 
 bool I2C_Master_Write(uint8_t SlvAddr, uint8_t *pData, uint8_t Len)

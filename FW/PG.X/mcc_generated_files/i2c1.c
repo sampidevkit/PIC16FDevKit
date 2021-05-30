@@ -161,8 +161,8 @@ void I2C1_Initialize(void)
     I2C1STAT = 0x00;
     // I2CADD 83; 
     I2C1_SlaveAddressSet(0x53);
-    // AMSK 127; 
-    I2C1_SlaveAddressMaskSet(0x7F);
+    // AMSK 0; 
+    I2C1_SlaveAddressMaskSet(0x00);
 
     // make sure this is set first
     i2c1_slave_state = S_SLAVE_IDLE;

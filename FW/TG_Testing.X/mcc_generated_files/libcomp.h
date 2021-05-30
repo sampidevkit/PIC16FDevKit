@@ -10,6 +10,7 @@
 #include "examples/i2c1_master_example.h"
 /* ************************************************************ SAMPI Library */
 #include "common/LibDef.h"
+#include "common/UserFunctions.h"
 #include "rtcc/RV3028C7.h"
 /* ************************************************************** Application */
 

@@ -109,35 +109,21 @@ void SRAM_Test(void)
 void Ext_Gpo_Test(void)
 {
     static bool init=0;
-    uint8_t gpio[4];
+    uint8_t gpio[5];
 
     if(init==0) // Set tris
     {
+        // TRIS register address
         gpio[0]=0x10;
         gpio[1]=0x00;
+        gpio[2]=0x00; // tris value
+        gpio[3]=0x00; // port value
+        gpio[4]=0x01; // lat value
 
-        if(I2C_Master_Write(0x53, &gpio[0], 2)) // write address
+        if(I2C_Master_Write(0x53, &gpio[0], 5)) // write address
         {
-            if(I2C_Master_Read(0x53, &gpio[2], 1)) // read data
-            {
-                gpio[2]=0x00;
-
-                if(I2C_Master_Write(0x53, &gpio[0], 3))// write data
-                {
-                    init=1;
-                    printf("\nTRIS=%02X", gpio[2]);
-                }
-                else
-                {
-                    __debug(__LINE__);
-                    return;
-                }
-            }
-            else
-            {
-                __debug(__LINE__);
-                return;
-            }
+            init=1;
+            printf("\nGPIO init");
         }
         else
         {
@@ -145,20 +131,44 @@ void Ext_Gpo_Test(void)
             return;
         }
     }
-
+    // LAT register address
     gpio[0]=0x10;
-    gpio[1]=0x02;
+    gpio[1]=0x00;
 
     if(I2C_Master_Write(0x53, &gpio[0], 2)) // write address
     {
-        if(I2C_Master_Read(0x53, &gpio[2], 1)) // read data
+        if(I2C_Master_Read(0x53, &gpio[2], 3)) // read data
         {
-            gpio[2]^=0xFF;
+            printf("\nTRIS=%02X", gpio[2]);
+            printf("\nPORT=%02X", gpio[3]);
+            printf("\nLAT=%02X, ", gpio[4]);
+            gpio[0]=0x10;
+            gpio[1]=0x02;
+            gpio[2]=gpio[4]^0xFF; // toggle
 
             if(I2C_Master_Write(0x53, &gpio[0], 3))// write data
-                printf("\nLAT=%02X", gpio[2]);
+                printf("nLAT=%02X", gpio[2]);
             else
                 __debug(__LINE__);
+        }
+        else
+            __debug(__LINE__);
+    }
+    else
+        __debug(__LINE__);
+}
+
+void RPR5021_Test(void)
+{
+    uint8_t buf[2];
+    // LAT register address
+    buf[0]=0x92;
+
+    if(I2C_Master_Write(0x38, &buf[0], 1)) // write address
+    {
+        if(I2C_Master_Read(0x38, &buf[1], 1)) // read data
+        {
+            printf("\nRPR5021=%02X", buf[1]);
         }
         else
             __debug(__LINE__);
@@ -225,6 +235,7 @@ void main(void)
             Temperature_Test();
             Flash_Test();
             RTC_Test();
+            RPR5021_Test();
             SRAM_Test();
             Ext_Gpo_Test();
         }

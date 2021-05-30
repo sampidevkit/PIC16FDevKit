@@ -6,10 +6,12 @@
                    projectFiles="true">
       <logicalFolder name="f2" displayName="Configure" projectFiles="true">
         <itemPath>cfg/RV3028C7_Cfg.h</itemPath>
+        <itemPath>cfg/Common_Lib_Cfg.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Library" projectFiles="true">
         <logicalFolder name="common" displayName="common" projectFiles="true">
           <itemPath>../Library/common/LibDef.h</itemPath>
+          <itemPath>../Library/common/UserFunctions.h</itemPath>
         </logicalFolder>
         <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
           <itemPath>../Library/rtcc/RV3028C7.h</itemPath>
@@ -40,6 +42,9 @@
     </logicalFolder>
     <logicalFolder name="SourceFiles" displayName="Source" projectFiles="true">
       <logicalFolder name="f1" displayName="Library" projectFiles="true">
+        <logicalFolder name="f1" displayName="common" projectFiles="true">
+          <itemPath>../Library/common/UserFunctions.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
           <itemPath>../Library/rtcc/RV3028C7.c</itemPath>
         </logicalFolder>
@@ -127,7 +132,7 @@
         <property key="call-prologues" value="false"/>
         <property key="default-bitfield-type" value="true"/>
         <property key="default-char-type" value="true"/>
-        <property key="define-macros" value=""/>
+        <property key="define-macros" value="COMMON_LIB_CFG"/>
         <property key="disable-optimizations" value="true"/>
         <property key="extra-include-directories"
                   value="mcc_generated_files;..\Library;cfg"/>
@@ -146,9 +151,9 @@
         <property key="optimization-level" value="-O0"/>
         <property key="optimization-speed" value="false"/>
         <property key="optimization-stable-enable" value="false"/>
-        <property key="pack-struct" value="true"/>
         <property key="preprocess-assembler" value="true"/>
         <property key="short-enums" value="true"/>
+        <property key="tentative-definitions" value=""/>
         <property key="undefine-macros" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
@@ -188,14 +193,14 @@
         <property key="fill-flash-options-increment" value=""/>
         <property key="fill-flash-options-seq" value=""/>
         <property key="fill-flash-options-what" value="0"/>
-        <property key="format-hex-file-for-download" value="false"/>
+        <property key="format-hex-file-for-download" value="true"/>
         <property key="initialize-data" value="true"/>
         <property key="input-libraries" value="libm"/>
         <property key="keep-generated-startup.as" value="false"/>
         <property key="link-in-c-library" value="true"/>
         <property key="link-in-c-library-gcc" value=""/>
         <property key="link-in-peripheral-library" value="false"/>
-        <property key="managed-stack" value="false"/>
+        <property key="managed-stack" value="true"/>
         <property key="opt-xc8-linker-file" value="false"/>
         <property key="opt-xc8-linker-link_startup" value="false"/>
         <property key="opt-xc8-linker-serial" value=""/>
@@ -1138,6 +1143,7 @@
       </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </XC8-CO>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>

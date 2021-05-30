@@ -73,8 +73,8 @@ typedef union {
 #define LATX_EXT_GPIO1         LATBbits.LATB14
 
 /**************************************************************************** */
-void SRAM_Emulate_Init(void);
-void SRAM_Emulate_Deinit(void);
-void SRAM_Emulate_Tasks(void);
+public void SRAM_Emulate_Init(void);
+public void SRAM_Emulate_Deinit(void);
+public void SRAM_Emulate_Tasks(void*);
 
 #endif

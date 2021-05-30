@@ -21,30 +21,36 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
         case 1:
         case 2:
         case 3:
-            if(Sw1_Is_Pressed())
+            if(Sw1_Is_Pressed()) // Reset target MCU
             {
                 MediaReady=0;
                 ICSP_Init(1);
-                DoNext=5;
+                DoNext=9;
+                RLED_EXT_SetHigh();
+                GLED_EXT_SetHigh();
                 Tick_Timer_Reset(Tick);
                 ICSP_MCLR_SetLow();
                 ICSP_MCLR_SetDigitalOutput();
+                break;
             }
-            else if(Sw3_Is_Pressed())
+
+            if(Sw3_Is_Pressed()) // Erase target MCU
             {
                 DoNext++;
                 Tick_Timer_Reset(Tick);
             }
             else if(DoNext>0)
             {
-                if(Tick_Timer_Is_Over_Ms(Tick, 1000))
+                if(Tick_Timer_Is_Over_Ms(Tick, 500))
                     DoNext=0;
             }
             break;
 
-        case 4:
+        case 4: // Erase target MCU
             MediaReady=0;
             ICSP_Init(0);
+            RLED_EXT_SetHigh();
+            GLED_EXT_SetHigh();
             Tick_Timer_Reset(Tick);
             ICSP_MCLR_SetLow();
             ICSP_MCLR_SetDigitalOutput();
@@ -52,6 +58,18 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             break;
 
         case 5:
+        case 6:
+        case 7:
+        case 8:
+            if(Tick_Timer_Is_Over_Ms(Tick, 250))
+            {
+                DoNext++;
+                RLED_EXT_Toggle();
+                GLED_EXT_Toggle();
+            }
+            break;
+
+        case 9:
             if(Tick_Timer_Is_Over_Ms(Tick, 500))
             {
                 ICSP_Deinit();
@@ -69,11 +87,8 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
 
     if(Sw2_Is_Pressed())
     {
-        RLED_EXT_SetLow();
-        GLED_EXT_SetLow();
         MediaReady=0;
+        SRAM_Emulate_Deinit();
         SoftwareReset();
     }
-    
-    SRAM_Emulate_Tasks();
 } // </editor-fold>

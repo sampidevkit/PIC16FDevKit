@@ -49,6 +49,7 @@
 */
 
 #include "coretimer.h"
+#include "libcomp.h"
 
 /**
   Section: Core Timer Module APIs
@@ -91,7 +92,7 @@ void __attribute__ ((vector(_CORE_TIMER_VECTOR), interrupt(IPL1SOFT))) _CORE_TIM
 
    IFS0CLR= 1 << _IFS0_CTIF_POSITION;
    // Add your custom code here
-
+   Tick_Timer_CallBack();
 }
 
 /**
