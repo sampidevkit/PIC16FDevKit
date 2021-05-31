@@ -75,10 +75,14 @@ Nếu có lỗi xảy ra, xem ở mục 5.3.
 
 ### 5.3 Các Trạng Thái LED Lỗi
 * Lỗi khi ghi file hex vào ổ đĩa của kit: File nạp không đúng định dạng hoặc sự cố kết nối USB.
-* Chế độ bootloader: RLED, BLED sáng, STT led ON=500ms, OFF=500ms.
-* Chế độ chờ: Led STT nháy với chu kì ON=10ms, OFF=1990ms
-* Lỗi không nhận chip: Led STT nháy với chu kì ON=500ms, OFF=1500ms
-* Truyền nhận dữ liệu UART: Led STT nháy 1 lần TON=5ms.
+* Chế độ bootloader: RLED, GLED sáng, STT led ON=500ms, OFF=500ms. </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/BldMode.gif?raw=true)
+* Chế độ chờ: Led STT nháy với chu kì ON=10ms, OFF=1990ms. </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/IdleMode.gif?raw=true)
+* Lỗi không nhận chip: Led STT nháy với chu kì ON=500ms, OFF=1500ms. </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/IcspErr.gif?raw=true)
+* Truyền nhận dữ liệu UART: Led STT nháy 1 lần TON=5ms. </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/UartXfer.gif?raw=true)
 
 ## 6. Hướng Dẫn Lập Trình Cơ Bản
 [Xem tại đây](https://github.com/sampidevkit/PIC16FDevKit/blob/master/FW/README.md).
