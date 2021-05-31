@@ -75,7 +75,7 @@ Nếu có lỗi xảy ra, xem ở mục 5.3.
 
 ### 5.3 Các Trạng Thái LED Lỗi
 * Lỗi khi ghi file hex vào ổ đĩa của kit: File nạp không đúng định dạng hoặc sự cố kết nối USB.
-* Chế độ bootloader: RLED, GLED sáng, STT led ON=500ms, OFF=500ms. </br>
+* Chế độ bootloader - nhấn giữ nút RESET trong 3s: RLED, GLED sáng, STT led ON=500ms, OFF=500ms. </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/BldMode.gif?raw=true)
 * Chế độ chờ: Led STT nháy với chu kì ON=10ms, OFF=1990ms. </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/IdleMode.gif?raw=true)
@@ -83,6 +83,10 @@ Nếu có lỗi xảy ra, xem ở mục 5.3.
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/IcspErr.gif?raw=true)
 * Truyền nhận dữ liệu UART: Led STT nháy 1 lần TON=5ms. </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/UartXfer.gif?raw=true)
+* Reset target chip - khi nhấn giữ nút RESET khoảng 200ms: Led STT, RLED, GLED sáng 500ms. </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/Reset.gif?raw=true)
+* Erase target chip - khi nhấn nhanh 4 lần nút RESET: Led STT sáng, RLED và GLED nháy 3 lần 250ms sau đó cả 3 cùng sáng trong 500ms. </br>
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/Reset.gif?raw=true)
 
 ## 6. Hướng Dẫn Lập Trình Cơ Bản
 [Xem tại đây](https://github.com/sampidevkit/PIC16FDevKit/blob/master/FW/README.md).
