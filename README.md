@@ -86,10 +86,10 @@ Nếu có lỗi xảy ra, xem ở mục 5.3.
 * Reset target chip - khi nhấn giữ nút RESET khoảng 200ms: Led STT, RLED, GLED sáng 500ms. </br>
 ![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/Reset.gif?raw=true)
 * Erase target chip - khi nhấn nhanh 4 lần nút RESET: Led STT sáng, RLED và GLED nháy 3 lần 250ms sau đó cả 3 cùng sáng trong 500ms. </br>
-![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/Reset.gif?raw=true)
+![](https://github.com/sampidevkit/PIC16FDevKit/blob/master/Docs/Erase.gif?raw=true)
 
 ## 6. Hướng Dẫn Lập Trình Cơ Bản
-[Xem tại đây](https://github.com/sampidevkit/PIC16FDevKit/blob/master/FW/README.md).
+[Xem tại đây](https://github.com/sampidevkit/PIC16FDevKit/blob/docs/README.md).
 
 ## 7. Tài Liệu Kỹ Thuật:
 * [Target MCU PIC16LF18877](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF1885777_Data_Sheet_40001825F.pdf).
