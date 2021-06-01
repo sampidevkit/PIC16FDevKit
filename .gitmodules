@@ -1,6 +1,6 @@
 [submodule "HW/model3d"]
 	path = HW/model3d
-	url = ../Model3D.git
+	url = https://sampidevkit@bitbucket.org/sampicontributors/model3d.git
 [submodule "FW/Library/bootloader"]
 	path = FW/Library/bootloader
 	url = https://sampidevkit@bitbucket.org/sampicontributors/bootloader.git
