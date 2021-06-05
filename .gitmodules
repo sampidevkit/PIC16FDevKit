@@ -34,3 +34,6 @@
 [submodule "FW/Library/rtcc"]
 	path = FW/Library/rtcc
 	url = https://sampidevkit@bitbucket.org/sampicontributors/rtcc.git
+[submodule "FW/Library/sensors"]
+	path = FW/Library/sensors
+	url = https://sampidevkit@bitbucket.org/sampicontributors/sensors.git
