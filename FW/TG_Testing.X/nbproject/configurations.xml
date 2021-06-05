@@ -5,7 +5,13 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f2" displayName="Configure" projectFiles="true">
-        <itemPath>cfg/RV3028C7_Cfg.h</itemPath>
+        <logicalFolder name="f1" displayName="SubCfg" projectFiles="true">
+          <itemPath>cfg/RV3028C7_Cfg.h</itemPath>
+          <itemPath>cfg/MCP970X_Cfg.h</itemPath>
+          <itemPath>cfg/samm_7x_frt_cfg.h</itemPath>
+          <itemPath>cfg/SST25xx_Cfg.h</itemPath>
+          <itemPath>cfg/Tick_Timer_Cfg.h</itemPath>
+        </logicalFolder>
         <itemPath>cfg/Common_Lib_Cfg.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Library" projectFiles="true">
@@ -13,8 +19,18 @@
           <itemPath>../Library/common/LibDef.h</itemPath>
           <itemPath>../Library/common/UserFunctions.h</itemPath>
         </logicalFolder>
+        <logicalFolder name="memory" displayName="memory" projectFiles="true">
+          <itemPath>../Library/memory/SST25xx.h</itemPath>
+          <itemPath>../Library/memory/samm_7x_frt.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
           <itemPath>../Library/rtcc/RV3028C7.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="f1" displayName="sensors" projectFiles="true">
+          <itemPath>../Library/sensors/MCP970x.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="system" displayName="system" projectFiles="true">
+          <itemPath>../Library/system/TickTimer.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -45,8 +61,18 @@
         <logicalFolder name="f1" displayName="common" projectFiles="true">
           <itemPath>../Library/common/UserFunctions.c</itemPath>
         </logicalFolder>
+        <logicalFolder name="memory" displayName="memory" projectFiles="true">
+          <itemPath>../Library/memory/SST25xx.c</itemPath>
+          <itemPath>../Library/memory/samm_7x_frt.c</itemPath>
+        </logicalFolder>
         <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
           <itemPath>../Library/rtcc/RV3028C7.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
+          <itemPath>../Library/sensors/MCP970X.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="system" displayName="system" projectFiles="true">
+          <itemPath>../Library/system/TickTimer.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -82,6 +108,10 @@
     <Elem>.</Elem>
     <Elem>../Library/rtcc</Elem>
     <Elem>../Library/common</Elem>
+    <Elem>../Library/sensors</Elem>
+    <Elem>../Library/memory</Elem>
+    <Elem>../Library/programmer</Elem>
+    <Elem>../Library/system</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -133,7 +163,7 @@
         <property key="default-bitfield-type" value="true"/>
         <property key="default-char-type" value="true"/>
         <property key="define-macros" value="COMMON_LIB_CFG"/>
-        <property key="disable-optimizations" value="true"/>
+        <property key="disable-optimizations" value="false"/>
         <property key="extra-include-directories"
                   value="mcc_generated_files;..\Library;cfg"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
@@ -141,14 +171,14 @@
         <property key="garbage-collect-functions" value="true"/>
         <property key="identifier-length" value="255"/>
         <property key="local-generation" value="false"/>
-        <property key="operation-mode" value="free"/>
+        <property key="operation-mode" value="std"/>
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
         <property key="optimization-assembler" value="true"/>
         <property key="optimization-assembler-files" value="true"/>
         <property key="optimization-debug" value="false"/>
         <property key="optimization-invariant-enable" value="false"/>
         <property key="optimization-invariant-value" value="16"/>
-        <property key="optimization-level" value="-O0"/>
+        <property key="optimization-level" value="-O2"/>
         <property key="optimization-speed" value="false"/>
         <property key="optimization-stable-enable" value="false"/>
         <property key="preprocess-assembler" value="true"/>

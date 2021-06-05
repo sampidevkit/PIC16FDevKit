@@ -16,6 +16,10 @@
                 <sourceRootElem>.</sourceRootElem>
                 <sourceRootElem>../Library/rtcc</sourceRootElem>
                 <sourceRootElem>../Library/common</sourceRootElem>
+                <sourceRootElem>../Library/sensors</sourceRootElem>
+                <sourceRootElem>../Library/memory</sourceRootElem>
+                <sourceRootElem>../Library/programmer</sourceRootElem>
+                <sourceRootElem>../Library/system</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
