@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../Library/common/UserFunctions.c ../Library/rtcc/RV3028C7.c mcc_generated_files/examples/i2c1_master_example.c mcc_generated_files/mcc.c mcc_generated_files/device_config.c mcc_generated_files/eusart.c mcc_generated_files/pin_manager.c mcc_generated_files/interrupt_manager.c mcc_generated_files/adcc.c mcc_generated_files/i2c1_master.c mcc_generated_files/spi2.c mcc_generated_files/fvr.c mcc_generated_files/libcomp.c mcc_generated_files/tmr0.c main.c ../Library/sensors/MCP970X.c ../Library/memory/SST25xx.c ../Library/system/TickTimer.c ../Library/memory/samm_7x_frt.c
+SOURCEFILES_QUOTED_IF_SPACED=../Library/common/UserFunctions.c ../Library/memory/SST25xx.c ../Library/rtcc/RV3028C7.c ../Library/sensors/MCP970X.c ../Library/system/TickTimer.c mcc_generated_files/examples/i2c1_master_example.c mcc_generated_files/mcc.c mcc_generated_files/device_config.c mcc_generated_files/eusart.c mcc_generated_files/pin_manager.c mcc_generated_files/interrupt_manager.c mcc_generated_files/adcc.c mcc_generated_files/i2c1_master.c mcc_generated_files/spi2.c mcc_generated_files/fvr.c mcc_generated_files/libcomp.c mcc_generated_files/tmr0.c main.c ../Library/memory/samm7x.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1129169394/UserFunctions.p1 ${OBJECTDIR}/_ext/647320325/RV3028C7.p1 ${OBJECTDIR}/mcc_generated_files/examples/i2c1_master_example.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/eusart.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/mcc_generated_files/i2c1_master.p1 ${OBJECTDIR}/mcc_generated_files/spi2.p1 ${OBJECTDIR}/mcc_generated_files/fvr.p1 ${OBJECTDIR}/mcc_generated_files/libcomp.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/_ext/385455158/MCP970X.p1 ${OBJECTDIR}/_ext/852111068/SST25xx.p1 ${OBJECTDIR}/_ext/661682606/TickTimer.p1 ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1129169394/UserFunctions.p1.d ${OBJECTDIR}/_ext/647320325/RV3028C7.p1.d ${OBJECTDIR}/mcc_generated_files/examples/i2c1_master_example.p1.d ${OBJECTDIR}/mcc_generated_files/mcc.p1.d ${OBJECTDIR}/mcc_generated_files/device_config.p1.d ${OBJECTDIR}/mcc_generated_files/eusart.p1.d ${OBJECTDIR}/mcc_generated_files/pin_manager.p1.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1.d ${OBJECTDIR}/mcc_generated_files/adcc.p1.d ${OBJECTDIR}/mcc_generated_files/i2c1_master.p1.d ${OBJECTDIR}/mcc_generated_files/spi2.p1.d ${OBJECTDIR}/mcc_generated_files/fvr.p1.d ${OBJECTDIR}/mcc_generated_files/libcomp.p1.d ${OBJECTDIR}/mcc_generated_files/tmr0.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1129169394/UserFunctions.p1 ${OBJECTDIR}/_ext/852111068/SST25xx.p1 ${OBJECTDIR}/_ext/647320325/RV3028C7.p1 ${OBJECTDIR}/_ext/385455158/MCP970X.p1 ${OBJECTDIR}/_ext/661682606/TickTimer.p1 ${OBJECTDIR}/mcc_generated_files/examples/i2c1_master_example.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/eusart.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/mcc_generated_files/i2c1_master.p1 ${OBJECTDIR}/mcc_generated_files/spi2.p1 ${OBJECTDIR}/mcc_generated_files/fvr.p1 ${OBJECTDIR}/mcc_generated_files/libcomp.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/_ext/852111068/samm7x.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1129169394/UserFunctions.p1.d ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d ${OBJECTDIR}/_ext/647320325/RV3028C7.p1.d ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d ${OBJECTDIR}/mcc_generated_files/examples/i2c1_master_example.p1.d ${OBJECTDIR}/mcc_generated_files/mcc.p1.d ${OBJECTDIR}/mcc_generated_files/device_config.p1.d ${OBJECTDIR}/mcc_generated_files/eusart.p1.d ${OBJECTDIR}/mcc_generated_files/pin_manager.p1.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1.d ${OBJECTDIR}/mcc_generated_files/adcc.p1.d ${OBJECTDIR}/mcc_generated_files/i2c1_master.p1.d ${OBJECTDIR}/mcc_generated_files/spi2.p1.d ${OBJECTDIR}/mcc_generated_files/fvr.p1.d ${OBJECTDIR}/mcc_generated_files/libcomp.p1.d ${OBJECTDIR}/mcc_generated_files/tmr0.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/_ext/852111068/samm7x.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1129169394/UserFunctions.p1 ${OBJECTDIR}/_ext/647320325/RV3028C7.p1 ${OBJECTDIR}/mcc_generated_files/examples/i2c1_master_example.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/eusart.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/mcc_generated_files/i2c1_master.p1 ${OBJECTDIR}/mcc_generated_files/spi2.p1 ${OBJECTDIR}/mcc_generated_files/fvr.p1 ${OBJECTDIR}/mcc_generated_files/libcomp.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/_ext/385455158/MCP970X.p1 ${OBJECTDIR}/_ext/852111068/SST25xx.p1 ${OBJECTDIR}/_ext/661682606/TickTimer.p1 ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1
+OBJECTFILES=${OBJECTDIR}/_ext/1129169394/UserFunctions.p1 ${OBJECTDIR}/_ext/852111068/SST25xx.p1 ${OBJECTDIR}/_ext/647320325/RV3028C7.p1 ${OBJECTDIR}/_ext/385455158/MCP970X.p1 ${OBJECTDIR}/_ext/661682606/TickTimer.p1 ${OBJECTDIR}/mcc_generated_files/examples/i2c1_master_example.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/eusart.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/adcc.p1 ${OBJECTDIR}/mcc_generated_files/i2c1_master.p1 ${OBJECTDIR}/mcc_generated_files/spi2.p1 ${OBJECTDIR}/mcc_generated_files/fvr.p1 ${OBJECTDIR}/mcc_generated_files/libcomp.p1 ${OBJECTDIR}/mcc_generated_files/tmr0.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/_ext/852111068/samm7x.p1
 
 # Source Files
-SOURCEFILES=../Library/common/UserFunctions.c ../Library/rtcc/RV3028C7.c mcc_generated_files/examples/i2c1_master_example.c mcc_generated_files/mcc.c mcc_generated_files/device_config.c mcc_generated_files/eusart.c mcc_generated_files/pin_manager.c mcc_generated_files/interrupt_manager.c mcc_generated_files/adcc.c mcc_generated_files/i2c1_master.c mcc_generated_files/spi2.c mcc_generated_files/fvr.c mcc_generated_files/libcomp.c mcc_generated_files/tmr0.c main.c ../Library/sensors/MCP970X.c ../Library/memory/SST25xx.c ../Library/system/TickTimer.c ../Library/memory/samm_7x_frt.c
+SOURCEFILES=../Library/common/UserFunctions.c ../Library/memory/SST25xx.c ../Library/rtcc/RV3028C7.c ../Library/sensors/MCP970X.c ../Library/system/TickTimer.c mcc_generated_files/examples/i2c1_master_example.c mcc_generated_files/mcc.c mcc_generated_files/device_config.c mcc_generated_files/eusart.c mcc_generated_files/pin_manager.c mcc_generated_files/interrupt_manager.c mcc_generated_files/adcc.c mcc_generated_files/i2c1_master.c mcc_generated_files/spi2.c mcc_generated_files/fvr.c mcc_generated_files/libcomp.c mcc_generated_files/tmr0.c main.c ../Library/memory/samm7x.c
 
 
 
@@ -122,6 +122,14 @@ ${OBJECTDIR}/_ext/1129169394/UserFunctions.p1: ../Library/common/UserFunctions.c
 	@-${MV} ${OBJECTDIR}/_ext/1129169394/UserFunctions.d ${OBJECTDIR}/_ext/1129169394/UserFunctions.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1129169394/UserFunctions.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/_ext/852111068/SST25xx.p1: ../Library/memory/SST25xx.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/852111068" 
+	@${RM} ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/852111068/SST25xx.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/852111068/SST25xx.p1 ../Library/memory/SST25xx.c 
+	@-${MV} ${OBJECTDIR}/_ext/852111068/SST25xx.d ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/_ext/647320325/RV3028C7.p1: ../Library/rtcc/RV3028C7.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/_ext/647320325" 
 	@${RM} ${OBJECTDIR}/_ext/647320325/RV3028C7.p1.d 
@@ -129,6 +137,22 @@ ${OBJECTDIR}/_ext/647320325/RV3028C7.p1: ../Library/rtcc/RV3028C7.c  nbproject/M
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/647320325/RV3028C7.p1 ../Library/rtcc/RV3028C7.c 
 	@-${MV} ${OBJECTDIR}/_ext/647320325/RV3028C7.d ${OBJECTDIR}/_ext/647320325/RV3028C7.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/647320325/RV3028C7.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/385455158/MCP970X.p1: ../Library/sensors/MCP970X.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/385455158" 
+	@${RM} ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/385455158/MCP970X.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/385455158/MCP970X.p1 ../Library/sensors/MCP970X.c 
+	@-${MV} ${OBJECTDIR}/_ext/385455158/MCP970X.d ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/661682606/TickTimer.p1: ../Library/system/TickTimer.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/661682606" 
+	@${RM} ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/661682606/TickTimer.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/661682606/TickTimer.p1 ../Library/system/TickTimer.c 
+	@-${MV} ${OBJECTDIR}/_ext/661682606/TickTimer.d ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/mcc_generated_files/examples/i2c1_master_example.p1: mcc_generated_files/examples/i2c1_master_example.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/examples" 
@@ -234,37 +258,13 @@ ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/385455158/MCP970X.p1: ../Library/sensors/MCP970X.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/_ext/385455158" 
-	@${RM} ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/385455158/MCP970X.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/385455158/MCP970X.p1 ../Library/sensors/MCP970X.c 
-	@-${MV} ${OBJECTDIR}/_ext/385455158/MCP970X.d ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/852111068/SST25xx.p1: ../Library/memory/SST25xx.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/852111068/samm7x.p1: ../Library/memory/samm7x.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/_ext/852111068" 
-	@${RM} ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/852111068/SST25xx.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/852111068/SST25xx.p1 ../Library/memory/SST25xx.c 
-	@-${MV} ${OBJECTDIR}/_ext/852111068/SST25xx.d ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/661682606/TickTimer.p1: ../Library/system/TickTimer.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/_ext/661682606" 
-	@${RM} ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/661682606/TickTimer.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/661682606/TickTimer.p1 ../Library/system/TickTimer.c 
-	@-${MV} ${OBJECTDIR}/_ext/661682606/TickTimer.d ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1: ../Library/memory/samm_7x_frt.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/_ext/852111068" 
-	@${RM} ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1 ../Library/memory/samm_7x_frt.c 
-	@-${MV} ${OBJECTDIR}/_ext/852111068/samm_7x_frt.d ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/_ext/852111068/samm7x.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/852111068/samm7x.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/852111068/samm7x.p1 ../Library/memory/samm7x.c 
+	@-${MV} ${OBJECTDIR}/_ext/852111068/samm7x.d ${OBJECTDIR}/_ext/852111068/samm7x.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/852111068/samm7x.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/_ext/1129169394/UserFunctions.p1: ../Library/common/UserFunctions.c  nbproject/Makefile-${CND_CONF}.mk 
@@ -275,6 +275,14 @@ ${OBJECTDIR}/_ext/1129169394/UserFunctions.p1: ../Library/common/UserFunctions.c
 	@-${MV} ${OBJECTDIR}/_ext/1129169394/UserFunctions.d ${OBJECTDIR}/_ext/1129169394/UserFunctions.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/1129169394/UserFunctions.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/_ext/852111068/SST25xx.p1: ../Library/memory/SST25xx.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/852111068" 
+	@${RM} ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/852111068/SST25xx.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/852111068/SST25xx.p1 ../Library/memory/SST25xx.c 
+	@-${MV} ${OBJECTDIR}/_ext/852111068/SST25xx.d ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/_ext/647320325/RV3028C7.p1: ../Library/rtcc/RV3028C7.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/_ext/647320325" 
 	@${RM} ${OBJECTDIR}/_ext/647320325/RV3028C7.p1.d 
@@ -282,6 +290,22 @@ ${OBJECTDIR}/_ext/647320325/RV3028C7.p1: ../Library/rtcc/RV3028C7.c  nbproject/M
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/647320325/RV3028C7.p1 ../Library/rtcc/RV3028C7.c 
 	@-${MV} ${OBJECTDIR}/_ext/647320325/RV3028C7.d ${OBJECTDIR}/_ext/647320325/RV3028C7.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/_ext/647320325/RV3028C7.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/385455158/MCP970X.p1: ../Library/sensors/MCP970X.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/385455158" 
+	@${RM} ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/385455158/MCP970X.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/385455158/MCP970X.p1 ../Library/sensors/MCP970X.c 
+	@-${MV} ${OBJECTDIR}/_ext/385455158/MCP970X.d ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/_ext/661682606/TickTimer.p1: ../Library/system/TickTimer.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/661682606" 
+	@${RM} ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/661682606/TickTimer.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/661682606/TickTimer.p1 ../Library/system/TickTimer.c 
+	@-${MV} ${OBJECTDIR}/_ext/661682606/TickTimer.d ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/mcc_generated_files/examples/i2c1_master_example.p1: mcc_generated_files/examples/i2c1_master_example.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/examples" 
@@ -387,37 +411,13 @@ ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/_ext/385455158/MCP970X.p1: ../Library/sensors/MCP970X.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/_ext/385455158" 
-	@${RM} ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/385455158/MCP970X.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/385455158/MCP970X.p1 ../Library/sensors/MCP970X.c 
-	@-${MV} ${OBJECTDIR}/_ext/385455158/MCP970X.d ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/385455158/MCP970X.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/852111068/SST25xx.p1: ../Library/memory/SST25xx.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/_ext/852111068/samm7x.p1: ../Library/memory/samm7x.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/_ext/852111068" 
-	@${RM} ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/852111068/SST25xx.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/852111068/SST25xx.p1 ../Library/memory/SST25xx.c 
-	@-${MV} ${OBJECTDIR}/_ext/852111068/SST25xx.d ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/852111068/SST25xx.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/661682606/TickTimer.p1: ../Library/system/TickTimer.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/_ext/661682606" 
-	@${RM} ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/661682606/TickTimer.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/661682606/TickTimer.p1 ../Library/system/TickTimer.c 
-	@-${MV} ${OBJECTDIR}/_ext/661682606/TickTimer.d ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/661682606/TickTimer.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1: ../Library/memory/samm_7x_frt.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/_ext/852111068" 
-	@${RM} ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1.d 
-	@${RM} ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1 ../Library/memory/samm_7x_frt.c 
-	@-${MV} ${OBJECTDIR}/_ext/852111068/samm_7x_frt.d ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/_ext/852111068/samm_7x_frt.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/_ext/852111068/samm7x.p1.d 
+	@${RM} ${OBJECTDIR}/_ext/852111068/samm7x.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -DCOMMON_LIB_CFG -xassembler-with-cpp -I"mcc_generated_files" -I"../Library" -I"cfg" -mwarn=0 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mdownload -mstackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/_ext/852111068/samm7x.p1 ../Library/memory/samm7x.c 
+	@-${MV} ${OBJECTDIR}/_ext/852111068/samm7x.d ${OBJECTDIR}/_ext/852111068/samm7x.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/_ext/852111068/samm7x.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

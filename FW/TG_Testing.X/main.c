@@ -1,14 +1,5 @@
 #include "libcomp.h"
 
-// Reset to 00:00:00:00, Saturday, Jan, 1st, 2000
-#define Set_Default_DateTime(Tm)    \
-    Tm.tm_hour=0;\
-    Tm.tm_min=0;\
-    Tm.tm_sec=0;\
-    Tm.tm_wday=6;\
-    Tm.tm_mday=1;\
-    Tm.tm_year=0;
-
 bool Button_is_pressed(void)
 {
     static bool prv=1;

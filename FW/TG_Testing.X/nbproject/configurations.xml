@@ -8,9 +8,9 @@
         <logicalFolder name="f1" displayName="SubCfg" projectFiles="true">
           <itemPath>cfg/RV3028C7_Cfg.h</itemPath>
           <itemPath>cfg/MCP970X_Cfg.h</itemPath>
-          <itemPath>cfg/samm_7x_frt_cfg.h</itemPath>
           <itemPath>cfg/SST25xx_Cfg.h</itemPath>
           <itemPath>cfg/Tick_Timer_Cfg.h</itemPath>
+          <itemPath>cfg/samm7x_cfg.h</itemPath>
         </logicalFolder>
         <itemPath>cfg/Common_Lib_Cfg.h</itemPath>
       </logicalFolder>
@@ -63,7 +63,7 @@
         </logicalFolder>
         <logicalFolder name="memory" displayName="memory" projectFiles="true">
           <itemPath>../Library/memory/SST25xx.c</itemPath>
-          <itemPath>../Library/memory/samm_7x_frt.c</itemPath>
+          <itemPath>../Library/memory/samm7x.c</itemPath>
         </logicalFolder>
         <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
           <itemPath>../Library/rtcc/RV3028C7.c</itemPath>
