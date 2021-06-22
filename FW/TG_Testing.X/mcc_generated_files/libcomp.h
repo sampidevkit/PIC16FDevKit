@@ -13,7 +13,7 @@
 #include "common/UserFunctions.h"
 #include "rtcc/RV3028C7.h"
 #include "memory/SST25xx.h"
-#include "memory/samm_7x_frt.h"
+#include "memory/samm7x.h"
 #include "system/TickTimer.h"
 /* ************************************************************** Application */
 

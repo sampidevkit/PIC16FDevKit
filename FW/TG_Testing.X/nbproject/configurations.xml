@@ -21,7 +21,7 @@
         </logicalFolder>
         <logicalFolder name="memory" displayName="memory" projectFiles="true">
           <itemPath>../Library/memory/SST25xx.h</itemPath>
-          <itemPath>../Library/memory/samm_7x_frt.h</itemPath>
+          <itemPath>../Library/memory/samm7x.h</itemPath>
         </logicalFolder>
         <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
           <itemPath>../Library/rtcc/RV3028C7.h</itemPath>
@@ -57,6 +57,9 @@
                    projectFiles="true">
     </logicalFolder>
     <logicalFolder name="SourceFiles" displayName="Source" projectFiles="true">
+      <logicalFolder name="f2" displayName="Configure" projectFiles="true">
+        <itemPath>cfg/samm7x_cfg.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="Library" projectFiles="true">
         <logicalFolder name="f1" displayName="common" projectFiles="true">
           <itemPath>../Library/common/UserFunctions.c</itemPath>
