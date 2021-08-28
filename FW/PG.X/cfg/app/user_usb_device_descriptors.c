@@ -181,7 +181,7 @@ const struct
 sd001={
     sizeof (sd001), USB_DESCRIPTOR_STRING,
     {
-        'R', 'P', ' ', 'E', 'l', 'e', 'c', 't', 'r', 'o', 'n', 'i', 'c', 's'
+        'P', 'L', ' ', 'E', 'l', 'e', 'c', 't', 'r', 'o', 'n', 'i', 'c', 's'
     }
 };
 
@@ -191,13 +191,13 @@ const struct
 {
     uint8_t bLength;
     uint8_t bDscType;
-    uint16_t string[11];
+    uint16_t string[13];
 }
 
 sd002={
     sizeof (sd002), USB_DESCRIPTOR_STRING,
     {
-        'R', 'P', 'C', ' ', 'D', 'e', 'v', ' ', 'K', 'i', 't'
+        'S', 'A', 'M', 'P', 'I', ' ', 'D', 'e', 'v', ' ', 'K', 'i', 't'
     }
 };
 
