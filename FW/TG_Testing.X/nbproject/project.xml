@@ -20,6 +20,8 @@
                 <sourceRootElem>../Library/memory</sourceRootElem>
                 <sourceRootElem>../Library/programmer</sourceRootElem>
                 <sourceRootElem>../Library/system</sourceRootElem>
+                <sourceRootElem>../../Docs</sourceRootElem>
+                <sourceRootElem>../../HW/Product/Schematic</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

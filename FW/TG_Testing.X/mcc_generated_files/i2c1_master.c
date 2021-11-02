@@ -98,7 +98,7 @@ typedef struct
 } i2c1_status_t;
 
 static void I2C1_SetCallback(i2c1_callbackIndex_t idx, i2c1_callback_t cb, void *ptr);
-static void I2C1_Poller(void);
+static void I2C1_MasterIsr(void);
 static inline void I2C1_MasterFsm(void);
 
 /* I2C1 interfaces */
@@ -199,8 +199,10 @@ i2c1_error_t I2C1_Open(i2c1_address_t address)
         I2C1_Status.callbackTable[I2C1_TIMEOUT]=I2C1_CallbackReturnReset;
         I2C1_Status.callbackPayload[I2C1_TIMEOUT] = NULL;
         
+        I2C1_SetInterruptHandler(I2C1_MasterIsr);
         I2C1_MasterClearIrq();
         I2C1_MasterOpen();
+        I2C1_MasterEnableIrq();
         returnValue = I2C1_NOERR;
     }
     return returnValue;
@@ -238,7 +240,6 @@ i2c1_error_t I2C1_MasterOperation(bool read)
             I2C1_Status.state = I2C1_SEND_ADR_WRITE;
         }
         I2C1_MasterStart();
-        I2C1_Poller();
     }
     return returnValue;
 }
@@ -295,6 +296,11 @@ void I2C1_SetTimeoutCallback(i2c1_callback_t cb, void *ptr)
     I2C1_SetCallback(I2C1_TIMEOUT, cb, ptr);
 }
 
+void I2C1_SetInterruptHandler(void (* InterruptHandler)(void))
+{
+    MSSP1_InterruptHandler = InterruptHandler;
+}
+
 static void I2C1_SetCallback(i2c1_callbackIndex_t idx, i2c1_callback_t cb, void *ptr)
 {
     if(cb)
@@ -309,13 +315,9 @@ static void I2C1_SetCallback(i2c1_callbackIndex_t idx, i2c1_callback_t cb, void 
     }
 }
 
-static void I2C1_Poller(void)
+static void I2C1_MasterIsr()
 {
-    while(I2C1_Status.busy)
-    {
-        I2C1_MasterWaitForEvent();
-        I2C1_MasterFsm();
-    }
+    I2C1_MasterFsm();
 }
 
 static inline void I2C1_MasterFsm(void)
@@ -435,7 +437,6 @@ static i2c1_fsm_states_t I2C1_DO_RX_EMPTY(void)
             I2C1_MasterEnableRestart();
             return I2C1_SEND_RESTART_READ;
         case I2C1_CONTINUE:
-            // Avoid the counter stop condition , Counter is incremented by 1
             return I2C1_RX;
         default:
         case I2C1_STOP:
@@ -616,6 +617,7 @@ static inline void I2C1_MasterClearBusCollision(void)
 {
     PIR3bits.BCL1IF = 0;
 }
+
 
 static inline bool I2C1_MasterIsRxBufFull(void)
 {

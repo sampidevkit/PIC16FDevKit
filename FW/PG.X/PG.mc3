@@ -1,4 +1,5 @@
-<config configName="default" projectName="PG" configVersion="1.1" device="PIC32MM0064GPM028" deviceLibraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" coreVersion="5.1.0">
+<config configName="default" projectName="PG" configVersion="1.1" device="PIC32MM0064GPM028" deviceLibraryClass="com.microchip.mcc.mcu16.Mcu16PeripheralLibrary" coreVersion="5.3.3">
+   <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>CDCDevice</string>
@@ -9619,7 +9620,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>3caa26cab3765f41a84b7c3882ecea41f54a0a8750fc103c2ed2db0381836280</hash>
+         <hash>f1ea29544668821a9938bd4e6a7453f1029fb452aecbac5ba1c6a57e71ef1394</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -9634,16 +9635,16 @@
          <hash>0ddc1ebe9576cccbc026fccbf0240687ee2a3c9d60067fbba0a057e20ce5911c</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\memory\flash.c</file>
-         <hash>10162269ef26e2be17cc73730649b40b949fd6382692aefcf0bb627ad334506b</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\usb\usb_descriptors.c</file>
          <hash>9021c68530905d354ad4a3a0d5e09de0b8ba75ae6a320e5e4381484dcf1a601a</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\memory\flash.c</file>
+         <hash>10162269ef26e2be17cc73730649b40b949fd6382692aefcf0bb627ad334506b</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>db6f3b83c368c575e20452d6a7d14cb5339bdb8f5de4b5563b8f12dcbfba3a02</hash>
+         <hash>e6b027b494ad681628b4008f52218f1c7b9e97bf45abe2a312343972516eb91b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.h</file>
@@ -9699,11 +9700,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>643625c38ff0faf019dfc200bec3f4720d74c05ceb88ffc34c1c9063f5fd44bb</hash>
+         <hash>daa275e117a097ad32f403b08ce2c3f64f4b048be1263c717d33e75712c05659</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\usb\utilities\mchpwinusb_template.inf</file>
-         <hash>4d4a96116f38d69f7da319f8658d5dd2986ec1542f1e9fd9aba593073bc23874</hash>
+         <hash>d9d6e0566933acc5a1aaa7d4e0de9ca89b8687c83e6691cf298564676a6f521b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\coretimer.c</file>

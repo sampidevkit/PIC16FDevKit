@@ -80,6 +80,37 @@
 // FSEC
 #pragma config CP = ON    //Code Protection Enable bit->Code protection is enabled
 
+// USERID stores Part number
+/*
+ Bit 15-13: Flash memory option
+            000: No flash
+            001: SST25VF020
+            010: SST25VF040
+            011: W25Q32 (selected)
+            100: W25Q16
+            101: GD25Q32
+            110: GD25Q64
+            111: RFU
+ Bit 12-11: RTCC chip option
+            00: No RTCC
+            01: RV-8263-C7 (selected)
+            10: RV-8803-C7
+            11: RFU
+ Bit 10-09: Thermal sensor option
+            00: No thermal sensor
+            01: MCP9700
+            10: MCP9701 (selected)
+            11: RFU
+ Bit 08-00: RFU (read as 0)
+ 
+ Ex part number: SAMM-77-FRT-6C00
+                 |    |  |   |--> W25Q32, RV-8263-C7, MCP9701
+                 |    |  |------> Flash, RTCC, Thermal sensor
+                 |    |---------> PIC16F18877 (defined in application project)
+                 |--------------> SAMPI Main board
+ */
+#pragma config USERID = 0x6C00
+
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"

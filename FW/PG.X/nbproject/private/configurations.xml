@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>0</defaultConf>
+  <defaultConf>1</defaultConf>
   <confs>
     <conf name="app" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>9015:=&lt;rev>0100:=&lt;man>Microchip Technology Incorporated:=&lt;prod>MPLAB ICD 4:=&lt;sn>JIT172820907:=&lt;drv>x:=&lt;xpt>b:=end</platformToolSN>
+      <platformToolSN>noToolString</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\xc32\v3.01\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
@@ -22,7 +22,7 @@
       </runprofile>
     </conf>
     <conf name="bld" type="2">
-      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>9015:=&lt;rev>0100:=&lt;man>Microchip Technology Incorporated:=&lt;prod>MPLAB ICD 4:=&lt;sn>JIT172820907:=&lt;drv>x:=&lt;xpt>b:=end</platformToolSN>
+      <platformToolSN>noToolString</platformToolSN>
       <languageToolchainDir>C:\Program Files\Microchip\xc32\v3.01\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>

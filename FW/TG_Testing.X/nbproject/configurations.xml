@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="f1" displayName="Documents" projectFiles="true">
+      <itemPath>../../Docs/PIC16LF1885777_Data_Sheet_40001825F.pdf</itemPath>
+      <itemPath>../../HW/Product/Schematic/PIC16DevKit.pdf</itemPath>
+      <itemPath>../../Docs/RV-8263-C7_App-Manual.pdf</itemPath>
+      <itemPath>../../Docs/w25q32jv dtr revf 02242017.pdf</itemPath>
+    </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f2" displayName="Configure" projectFiles="true">
         <logicalFolder name="f1" displayName="SubCfg" projectFiles="true">
-          <itemPath>cfg/RV3028C7_Cfg.h</itemPath>
           <itemPath>cfg/MCP970X_Cfg.h</itemPath>
-          <itemPath>cfg/SST25xx_Cfg.h</itemPath>
           <itemPath>cfg/Tick_Timer_Cfg.h</itemPath>
           <itemPath>cfg/samm7x_cfg.h</itemPath>
+          <itemPath>cfg/RV8263C7_Cfg.h</itemPath>
+          <itemPath>cfg/W25Qxx_Cfg.h</itemPath>
         </logicalFolder>
         <itemPath>cfg/Common_Lib_Cfg.h</itemPath>
       </logicalFolder>
@@ -20,11 +26,11 @@
           <itemPath>../Library/common/UserFunctions.h</itemPath>
         </logicalFolder>
         <logicalFolder name="memory" displayName="memory" projectFiles="true">
-          <itemPath>../Library/memory/SST25xx.h</itemPath>
           <itemPath>../Library/memory/samm7x.h</itemPath>
+          <itemPath>../Library/memory/W25Qxx.h</itemPath>
         </logicalFolder>
         <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
-          <itemPath>../Library/rtcc/RV3028C7.h</itemPath>
+          <itemPath>../Library/rtcc/RV8263C7.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="sensors" projectFiles="true">
           <itemPath>../Library/sensors/MCP970x.h</itemPath>
@@ -65,11 +71,11 @@
           <itemPath>../Library/common/UserFunctions.c</itemPath>
         </logicalFolder>
         <logicalFolder name="memory" displayName="memory" projectFiles="true">
-          <itemPath>../Library/memory/SST25xx.c</itemPath>
           <itemPath>../Library/memory/samm7x.c</itemPath>
+          <itemPath>../Library/memory/W25Qxx.c</itemPath>
         </logicalFolder>
         <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
-          <itemPath>../Library/rtcc/RV3028C7.c</itemPath>
+          <itemPath>../Library/rtcc/RV8263C7.c</itemPath>
         </logicalFolder>
         <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
           <itemPath>../Library/sensors/MCP970X.c</itemPath>
@@ -115,6 +121,8 @@
     <Elem>../Library/memory</Elem>
     <Elem>../Library/programmer</Elem>
     <Elem>../Library/system</Elem>
+    <Elem>../../Docs</Elem>
+    <Elem>../../HW/Product/Schematic</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -124,13 +132,13 @@
         <targetDevice>PIC16F18876</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>Simulator</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.32</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.6.143"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.8.149"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
