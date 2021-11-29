@@ -1,0 +1,9 @@
+*.workspace 
+!spec/*.workspace
+
+# Maven
+target/
+dist/
+debug/
+build/
+Project Backups/

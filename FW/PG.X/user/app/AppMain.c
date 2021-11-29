@@ -89,6 +89,6 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
     {
         MediaReady=0;
         SRAM_Emulate_Deinit();
-        SoftwareReset();
+        SYS_SoftReset();
     }
 } // </editor-fold>

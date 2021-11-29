@@ -3,6 +3,7 @@
 
 #include <xc.h>
 // Library configure
+#define ICSP_LOG_HW_INFO
 #define ICSP_LOG_LEN                    APP_BUFFER_LOG_LEN
 #define Icsp_Log_Buffer                 App_Log_Buffer       
 //#define ICSP_Shared_IO_Module_Enable()  do{LATAbits.LATA4=1; TRISAbits.TRISA4=0; KIT_USB_Device_CDC_Uart_Enable();}while(0)

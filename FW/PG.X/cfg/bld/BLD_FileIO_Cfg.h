@@ -1,9 +1,12 @@
 #ifndef BLD_FILEIO_CFG_H
 #define BLD_FILEIO_CFG_H
 
+#define __FIXED_INFO_SIZE__
+#define __INFO_ADDRESS__            0x9D00C000
 #define __PROJECT_NAME__            "SAMPI BOOTLOADER"
 #define __HARDWARE_ID__             "SAMM-7x-F|R|T v2.x"
 #define __WEBSITE__                 "https://bit.ly/3rMJ4hs"
+#define __OWNER__                   "Administrator"
 //#define BLD_FileIo_Log_Buffer       App_Log_Buffer // defined in libcomp.h
 
 #define DRV_CONFIG_DRIVE_CAPACITY   4096 // *512 byte = useable drive volume

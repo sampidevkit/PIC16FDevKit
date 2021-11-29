@@ -437,11 +437,11 @@ inline static void RFU_A1_SetValue(bool value)
   @Example
     <code>
     // Set RA4 high (1)
-    RFU_A4_SetHigh();
+    BOOT_N_SetHigh();
     </code>
 
 */
-#define RFU_A4_SetHigh()          ( LATASET = (1 << 4) )
+#define BOOT_N_SetHigh()          ( LATASET = (1 << 4) )
 /**
   @Summary
     Sets the GPIO pin, RA4, low using LATA4.
@@ -461,11 +461,11 @@ inline static void RFU_A1_SetValue(bool value)
   @Example
     <code>
     // Set RA4 low (0)
-    RFU_A4_SetLow();
+    BOOT_N_SetLow();
     </code>
 
 */
-#define RFU_A4_SetLow()           ( LATACLR = (1 << 4) )
+#define BOOT_N_SetLow()           ( LATACLR = (1 << 4) )
 
 /**
   @Summary
@@ -486,19 +486,19 @@ inline static void RFU_A1_SetValue(bool value)
   @Example
     <code>
     // Set RA4 to low.
-    RFU_A4_SetValue(false);
+    BOOT_N_SetValue(false);
     </code>
 
 */
-inline static void RFU_A4_SetValue(bool value)
+inline static void BOOT_N_SetValue(bool value)
 {
   if(value)
   {
-    RFU_A4_SetHigh();
+    BOOT_N_SetHigh();
   }
   else
   {
-    RFU_A4_SetLow();
+    BOOT_N_SetLow();
   }
 }
 
@@ -521,11 +521,11 @@ inline static void RFU_A4_SetValue(bool value)
   @Example
     <code>
     // Toggle RA4
-    RFU_A4_Toggle();
+    BOOT_N_Toggle();
     </code>
 
 */
-#define RFU_A4_Toggle()           ( LATAINV = (1 << 4) )
+#define BOOT_N_Toggle()           ( LATAINV = (1 << 4) )
 /**
   @Summary
     Reads the value of the GPIO pin, RA4.
@@ -547,11 +547,11 @@ inline static void RFU_A4_SetValue(bool value)
     uint16_t portValue;
 
     // Read RA4
-    postValue = RFU_A4_GetValue();
+    postValue = BOOT_N_GetValue();
     </code>
 
 */
-#define RFU_A4_GetValue()         PORTAbits.RA4
+#define BOOT_N_GetValue()         PORTAbits.RA4
 /**
   @Summary
     Configures the GPIO pin, RA4, as an input.
@@ -571,11 +571,11 @@ inline static void RFU_A4_SetValue(bool value)
   @Example
     <code>
     // Sets the RA4 as an input
-    RFU_A4_SetDigitalInput();
+    BOOT_N_SetDigitalInput();
     </code>
 
 */
-#define RFU_A4_SetDigitalInput()   ( TRISASET = (1 << 4) )
+#define BOOT_N_SetDigitalInput()   ( TRISASET = (1 << 4) )
 /**
   @Summary
     Configures the GPIO pin, RA4, as an output.
@@ -595,11 +595,11 @@ inline static void RFU_A4_SetValue(bool value)
   @Example
     <code>
     // Sets the RA4 as an output
-    RFU_A4_SetDigitalOutput();
+    BOOT_N_SetDigitalOutput();
     </code>
 
 */
-#define RFU_A4_SetDigitalOutput()   ( TRISACLR = (1 << 4) )
+#define BOOT_N_SetDigitalOutput()   ( TRISACLR = (1 << 4) )
 /**
   @Summary
     Sets the GPIO pin, RB0, high using LATB0.
@@ -1529,11 +1529,11 @@ inline static void VDDTG_EN_SetValue(bool value)
   @Example
     <code>
     // Set RB2 high (1)
-    nVICSP_EN_SetHigh();
+    VICSP_EN_N_SetHigh();
     </code>
 
 */
-#define nVICSP_EN_SetHigh()          ( LATBSET = (1 << 2) )
+#define VICSP_EN_N_SetHigh()          ( LATBSET = (1 << 2) )
 /**
   @Summary
     Sets the GPIO pin, RB2, low using LATB2.
@@ -1553,11 +1553,11 @@ inline static void VDDTG_EN_SetValue(bool value)
   @Example
     <code>
     // Set RB2 low (0)
-    nVICSP_EN_SetLow();
+    VICSP_EN_N_SetLow();
     </code>
 
 */
-#define nVICSP_EN_SetLow()           ( LATBCLR = (1 << 2) )
+#define VICSP_EN_N_SetLow()           ( LATBCLR = (1 << 2) )
 
 /**
   @Summary
@@ -1578,19 +1578,19 @@ inline static void VDDTG_EN_SetValue(bool value)
   @Example
     <code>
     // Set RB2 to low.
-    nVICSP_EN_SetValue(false);
+    VICSP_EN_N_SetValue(false);
     </code>
 
 */
-inline static void nVICSP_EN_SetValue(bool value)
+inline static void VICSP_EN_N_SetValue(bool value)
 {
   if(value)
   {
-    nVICSP_EN_SetHigh();
+    VICSP_EN_N_SetHigh();
   }
   else
   {
-    nVICSP_EN_SetLow();
+    VICSP_EN_N_SetLow();
   }
 }
 
@@ -1613,11 +1613,11 @@ inline static void nVICSP_EN_SetValue(bool value)
   @Example
     <code>
     // Toggle RB2
-    nVICSP_EN_Toggle();
+    VICSP_EN_N_Toggle();
     </code>
 
 */
-#define nVICSP_EN_Toggle()           ( LATBINV = (1 << 2) )
+#define VICSP_EN_N_Toggle()           ( LATBINV = (1 << 2) )
 /**
   @Summary
     Reads the value of the GPIO pin, RB2.
@@ -1639,11 +1639,11 @@ inline static void nVICSP_EN_SetValue(bool value)
     uint16_t portValue;
 
     // Read RB2
-    postValue = nVICSP_EN_GetValue();
+    postValue = VICSP_EN_N_GetValue();
     </code>
 
 */
-#define nVICSP_EN_GetValue()         PORTBbits.RB2
+#define VICSP_EN_N_GetValue()         PORTBbits.RB2
 /**
   @Summary
     Configures the GPIO pin, RB2, as an input.
@@ -1663,11 +1663,11 @@ inline static void nVICSP_EN_SetValue(bool value)
   @Example
     <code>
     // Sets the RB2 as an input
-    nVICSP_EN_SetDigitalInput();
+    VICSP_EN_N_SetDigitalInput();
     </code>
 
 */
-#define nVICSP_EN_SetDigitalInput()   ( TRISBSET = (1 << 2) )
+#define VICSP_EN_N_SetDigitalInput()   ( TRISBSET = (1 << 2) )
 /**
   @Summary
     Configures the GPIO pin, RB2, as an output.
@@ -1687,11 +1687,11 @@ inline static void nVICSP_EN_SetValue(bool value)
   @Example
     <code>
     // Sets the RB2 as an output
-    nVICSP_EN_SetDigitalOutput();
+    VICSP_EN_N_SetDigitalOutput();
     </code>
 
 */
-#define nVICSP_EN_SetDigitalOutput()   ( TRISBCLR = (1 << 2) )
+#define VICSP_EN_N_SetDigitalOutput()   ( TRISBCLR = (1 << 2) )
 /**
   @Summary
     Sets the GPIO pin, RB3, high using LATB3.
@@ -1711,11 +1711,11 @@ inline static void nVICSP_EN_SetValue(bool value)
   @Example
     <code>
     // Set RB3 high (1)
-    nPG_INT_SetHigh();
+    PG_INT_N_SetHigh();
     </code>
 
 */
-#define nPG_INT_SetHigh()          ( LATBSET = (1 << 3) )
+#define PG_INT_N_SetHigh()          ( LATBSET = (1 << 3) )
 /**
   @Summary
     Sets the GPIO pin, RB3, low using LATB3.
@@ -1735,11 +1735,11 @@ inline static void nVICSP_EN_SetValue(bool value)
   @Example
     <code>
     // Set RB3 low (0)
-    nPG_INT_SetLow();
+    PG_INT_N_SetLow();
     </code>
 
 */
-#define nPG_INT_SetLow()           ( LATBCLR = (1 << 3) )
+#define PG_INT_N_SetLow()           ( LATBCLR = (1 << 3) )
 
 /**
   @Summary
@@ -1760,19 +1760,19 @@ inline static void nVICSP_EN_SetValue(bool value)
   @Example
     <code>
     // Set RB3 to low.
-    nPG_INT_SetValue(false);
+    PG_INT_N_SetValue(false);
     </code>
 
 */
-inline static void nPG_INT_SetValue(bool value)
+inline static void PG_INT_N_SetValue(bool value)
 {
   if(value)
   {
-    nPG_INT_SetHigh();
+    PG_INT_N_SetHigh();
   }
   else
   {
-    nPG_INT_SetLow();
+    PG_INT_N_SetLow();
   }
 }
 
@@ -1795,11 +1795,11 @@ inline static void nPG_INT_SetValue(bool value)
   @Example
     <code>
     // Toggle RB3
-    nPG_INT_Toggle();
+    PG_INT_N_Toggle();
     </code>
 
 */
-#define nPG_INT_Toggle()           ( LATBINV = (1 << 3) )
+#define PG_INT_N_Toggle()           ( LATBINV = (1 << 3) )
 /**
   @Summary
     Reads the value of the GPIO pin, RB3.
@@ -1821,11 +1821,11 @@ inline static void nPG_INT_SetValue(bool value)
     uint16_t portValue;
 
     // Read RB3
-    postValue = nPG_INT_GetValue();
+    postValue = PG_INT_N_GetValue();
     </code>
 
 */
-#define nPG_INT_GetValue()         PORTBbits.RB3
+#define PG_INT_N_GetValue()         PORTBbits.RB3
 /**
   @Summary
     Configures the GPIO pin, RB3, as an input.
@@ -1845,11 +1845,11 @@ inline static void nPG_INT_SetValue(bool value)
   @Example
     <code>
     // Sets the RB3 as an input
-    nPG_INT_SetDigitalInput();
+    PG_INT_N_SetDigitalInput();
     </code>
 
 */
-#define nPG_INT_SetDigitalInput()   ( TRISBSET = (1 << 3) )
+#define PG_INT_N_SetDigitalInput()   ( TRISBSET = (1 << 3) )
 /**
   @Summary
     Configures the GPIO pin, RB3, as an output.
@@ -1869,11 +1869,11 @@ inline static void nPG_INT_SetValue(bool value)
   @Example
     <code>
     // Sets the RB3 as an output
-    nPG_INT_SetDigitalOutput();
+    PG_INT_N_SetDigitalOutput();
     </code>
 
 */
-#define nPG_INT_SetDigitalOutput()   ( TRISBCLR = (1 << 3) )
+#define PG_INT_N_SetDigitalOutput()   ( TRISBCLR = (1 << 3) )
 /**
   @Summary
     Sets the GPIO pin, RB4, high using LATB4.
@@ -1893,11 +1893,11 @@ inline static void nPG_INT_SetValue(bool value)
   @Example
     <code>
     // Set RB4 high (1)
-    nTG_MCLR_SetHigh();
+    TG_MCLR_N_SetHigh();
     </code>
 
 */
-#define nTG_MCLR_SetHigh()          ( LATBSET = (1 << 4) )
+#define TG_MCLR_N_SetHigh()          ( LATBSET = (1 << 4) )
 /**
   @Summary
     Sets the GPIO pin, RB4, low using LATB4.
@@ -1917,11 +1917,11 @@ inline static void nPG_INT_SetValue(bool value)
   @Example
     <code>
     // Set RB4 low (0)
-    nTG_MCLR_SetLow();
+    TG_MCLR_N_SetLow();
     </code>
 
 */
-#define nTG_MCLR_SetLow()           ( LATBCLR = (1 << 4) )
+#define TG_MCLR_N_SetLow()           ( LATBCLR = (1 << 4) )
 
 /**
   @Summary
@@ -1942,19 +1942,19 @@ inline static void nPG_INT_SetValue(bool value)
   @Example
     <code>
     // Set RB4 to low.
-    nTG_MCLR_SetValue(false);
+    TG_MCLR_N_SetValue(false);
     </code>
 
 */
-inline static void nTG_MCLR_SetValue(bool value)
+inline static void TG_MCLR_N_SetValue(bool value)
 {
   if(value)
   {
-    nTG_MCLR_SetHigh();
+    TG_MCLR_N_SetHigh();
   }
   else
   {
-    nTG_MCLR_SetLow();
+    TG_MCLR_N_SetLow();
   }
 }
 
@@ -1977,11 +1977,11 @@ inline static void nTG_MCLR_SetValue(bool value)
   @Example
     <code>
     // Toggle RB4
-    nTG_MCLR_Toggle();
+    TG_MCLR_N_Toggle();
     </code>
 
 */
-#define nTG_MCLR_Toggle()           ( LATBINV = (1 << 4) )
+#define TG_MCLR_N_Toggle()           ( LATBINV = (1 << 4) )
 /**
   @Summary
     Reads the value of the GPIO pin, RB4.
@@ -2003,11 +2003,11 @@ inline static void nTG_MCLR_SetValue(bool value)
     uint16_t portValue;
 
     // Read RB4
-    postValue = nTG_MCLR_GetValue();
+    postValue = TG_MCLR_N_GetValue();
     </code>
 
 */
-#define nTG_MCLR_GetValue()         PORTBbits.RB4
+#define TG_MCLR_N_GetValue()         PORTBbits.RB4
 /**
   @Summary
     Configures the GPIO pin, RB4, as an input.
@@ -2027,11 +2027,11 @@ inline static void nTG_MCLR_SetValue(bool value)
   @Example
     <code>
     // Sets the RB4 as an input
-    nTG_MCLR_SetDigitalInput();
+    TG_MCLR_N_SetDigitalInput();
     </code>
 
 */
-#define nTG_MCLR_SetDigitalInput()   ( TRISBSET = (1 << 4) )
+#define TG_MCLR_N_SetDigitalInput()   ( TRISBSET = (1 << 4) )
 /**
   @Summary
     Configures the GPIO pin, RB4, as an output.
@@ -2051,11 +2051,11 @@ inline static void nTG_MCLR_SetValue(bool value)
   @Example
     <code>
     // Sets the RB4 as an output
-    nTG_MCLR_SetDigitalOutput();
+    TG_MCLR_N_SetDigitalOutput();
     </code>
 
 */
-#define nTG_MCLR_SetDigitalOutput()   ( TRISBCLR = (1 << 4) )
+#define TG_MCLR_N_SetDigitalOutput()   ( TRISBCLR = (1 << 4) )
 /**
   @Summary
     Sets the GPIO pin, RB5, high using LATB5.
@@ -2439,11 +2439,11 @@ inline static void RFU_B7_SetValue(bool value)
   @Example
     <code>
     // Set RC9 high (1)
-    nPG_BT_SetHigh();
+    PG_BT_N_SetHigh();
     </code>
 
 */
-#define nPG_BT_SetHigh()          ( LATCSET = (1 << 9) )
+#define PG_BT_N_SetHigh()          ( LATCSET = (1 << 9) )
 /**
   @Summary
     Sets the GPIO pin, RC9, low using LATC9.
@@ -2463,11 +2463,11 @@ inline static void RFU_B7_SetValue(bool value)
   @Example
     <code>
     // Set RC9 low (0)
-    nPG_BT_SetLow();
+    PG_BT_N_SetLow();
     </code>
 
 */
-#define nPG_BT_SetLow()           ( LATCCLR = (1 << 9) )
+#define PG_BT_N_SetLow()           ( LATCCLR = (1 << 9) )
 
 /**
   @Summary
@@ -2488,19 +2488,19 @@ inline static void RFU_B7_SetValue(bool value)
   @Example
     <code>
     // Set RC9 to low.
-    nPG_BT_SetValue(false);
+    PG_BT_N_SetValue(false);
     </code>
 
 */
-inline static void nPG_BT_SetValue(bool value)
+inline static void PG_BT_N_SetValue(bool value)
 {
   if(value)
   {
-    nPG_BT_SetHigh();
+    PG_BT_N_SetHigh();
   }
   else
   {
-    nPG_BT_SetLow();
+    PG_BT_N_SetLow();
   }
 }
 
@@ -2523,11 +2523,11 @@ inline static void nPG_BT_SetValue(bool value)
   @Example
     <code>
     // Toggle RC9
-    nPG_BT_Toggle();
+    PG_BT_N_Toggle();
     </code>
 
 */
-#define nPG_BT_Toggle()           ( LATCINV = (1 << 9) )
+#define PG_BT_N_Toggle()           ( LATCINV = (1 << 9) )
 /**
   @Summary
     Reads the value of the GPIO pin, RC9.
@@ -2549,11 +2549,11 @@ inline static void nPG_BT_SetValue(bool value)
     uint16_t portValue;
 
     // Read RC9
-    postValue = nPG_BT_GetValue();
+    postValue = PG_BT_N_GetValue();
     </code>
 
 */
-#define nPG_BT_GetValue()         PORTCbits.RC9
+#define PG_BT_N_GetValue()         PORTCbits.RC9
 /**
   @Summary
     Configures the GPIO pin, RC9, as an input.
@@ -2573,11 +2573,11 @@ inline static void nPG_BT_SetValue(bool value)
   @Example
     <code>
     // Sets the RC9 as an input
-    nPG_BT_SetDigitalInput();
+    PG_BT_N_SetDigitalInput();
     </code>
 
 */
-#define nPG_BT_SetDigitalInput()   ( TRISCSET = (1 << 9) )
+#define PG_BT_N_SetDigitalInput()   ( TRISCSET = (1 << 9) )
 /**
   @Summary
     Configures the GPIO pin, RC9, as an output.
@@ -2597,11 +2597,11 @@ inline static void nPG_BT_SetValue(bool value)
   @Example
     <code>
     // Sets the RC9 as an output
-    nPG_BT_SetDigitalOutput();
+    PG_BT_N_SetDigitalOutput();
     </code>
 
 */
-#define nPG_BT_SetDigitalOutput()   ( TRISCCLR = (1 << 9) )
+#define PG_BT_N_SetDigitalOutput()   ( TRISCCLR = (1 << 9) )
 
 /**
     Section: Function Prototypes

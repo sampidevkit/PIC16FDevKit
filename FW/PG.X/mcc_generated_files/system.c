@@ -18,7 +18,7 @@
     The generated drivers are tested against the following:
         Compiler          :  XC16 v1.61
         MPLAB             :  MPLAB X v5.45
-*/
+ */
 
 /*
     (c) 2020 Microchip Technology Inc. and its subsidiaries. You may use this
@@ -40,10 +40,10 @@
 
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
-*/
+ */
 
 // Configuration bits: selected in the GUI
-
+#ifdef __BOOTLOADER__
 // FDEVOPT
 #pragma config SOSCHP = OFF    //Secondary Oscillator High Power Enable bit->SOSC oprerates in normal power mode.
 #pragma config ALTI2C = OFF    //Alternate I2C1 Pins Location Enable bit->Primary I2C1 pins are used
@@ -82,45 +82,54 @@
 
 // USERID stores Part number
 /*
- Bit 15-13: Flash memory option
-            000: No flash
-            001: SST25VF020
-            010: SST25VF040
-            011: W25Q32 (selected)
-            100: W25Q16
-            101: GD25Q32
-            110: GD25Q64
-            111: RFU
- Bit 12-11: RTCC chip option
+ Bit 15-12: Flash memory option
+            0000: No flash
+            0001: SST25VF020B
+            0010: SST25VF040B (selected)
+            0011: SST25VF080B
+            0100: SST25VF016B
+            0101: SST25VF032B
+            0110: SST25VF064B
+            0111: SST25PF020B
+            1000: SST25PF040C
+            1001: SST25PF080B
+            1010: RFU
+            1011: RFU
+            1100: W25Q32
+            1101: W25Q16
+            1110: GD25Q32
+            1111: GD25Q64
+ Bit 11-10: RTCC chip option
             00: No RTCC
             01: RV-8263-C7 (selected)
             10: RV-8803-C7
             11: RFU
- Bit 10-09: Thermal sensor option
+ Bit 09-08: Thermal sensor option
             00: No thermal sensor
             01: MCP9700
             10: MCP9701 (selected)
             11: RFU
- Bit 08-00: RFU (read as 0)
+ Bit 07-00: RFU (read as 0)
  
- Ex part number: SAMM-77-FRT-6C00
-                 |    |  |   |--> W25Q32, RV-8263-C7, MCP9701
+ Ex part number: SAMM-77-FRT-2600
+                 |    |  |   |--> SST25VF040B, RV-8263-C7, MCP9701
                  |    |  |------> Flash, RTCC, Thermal sensor
                  |    |---------> PIC16F18877 (defined in application project)
                  |--------------> SAMPI Main board
  */
-#pragma config USERID = 0x6C00
+#pragma config USERID = 0x2600
+#endif
 
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"
-#include "i2c1.h"
-#include "coretimer.h"
 #include "memory/flash.h"
+#include "coretimer.h"
 #include "uart2.h"
+#include "usb/usb.h"
+#include "i2c1.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
-#include "usb/usb.h"
 
 void SYSTEM_Initialize(void)
 {
@@ -138,4 +147,4 @@ void SYSTEM_Initialize(void)
 
 /**
  End of File
-*/
+ */

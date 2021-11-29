@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>TG</name>
+            <creation-uuid>6cf3314f-c4d1-4050-bfca-b0b46e895bda</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
+            <asminc-extensions/>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>../Library/rtcc</sourceRootElem>
+                <sourceRootElem>../Library/common</sourceRootElem>
+                <sourceRootElem>../Library/sensors</sourceRootElem>
+                <sourceRootElem>../Library/memory</sourceRootElem>
+                <sourceRootElem>../Library/programmer</sourceRootElem>
+                <sourceRootElem>../Library/system</sourceRootElem>
+                <sourceRootElem>../../Docs</sourceRootElem>
+                <sourceRootElem>../../HW/Product/Schematic</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
