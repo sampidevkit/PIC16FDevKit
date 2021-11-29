@@ -15,30 +15,19 @@
         <logicalFolder name="f1" displayName="SubCfg" projectFiles="true">
           <itemPath>cfg/MCP970X_Cfg.h</itemPath>
           <itemPath>cfg/Tick_Timer_Cfg.h</itemPath>
-          <itemPath>cfg/samm7x_cfg.h</itemPath>
           <itemPath>cfg/RV8263C7_Cfg.h</itemPath>
           <itemPath>cfg/SST25_Cfg.h</itemPath>
+          <itemPath>cfg/SAMM7X_cfg.h</itemPath>
         </logicalFolder>
-        <itemPath>cfg/Common_Lib_Cfg.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="f1" displayName="Library" projectFiles="true">
-        <logicalFolder name="common" displayName="common" projectFiles="true">
-          <itemPath>../Library/common/LibDef.h</itemPath>
-          <itemPath>../Library/common/UserFunctions.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="memory" displayName="memory" projectFiles="true">
-          <itemPath>../Library/memory/samm7x.h</itemPath>
-          <itemPath>../Library/memory/W25Qxx.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
-          <itemPath>../Library/rtcc/RV8263C7.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="f1" displayName="sensors" projectFiles="true">
-          <itemPath>../Library/sensors/MCP970x.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="system" displayName="system" projectFiles="true">
-          <itemPath>../Library/system/TickTimer.h</itemPath>
-        </logicalFolder>
+      <logicalFolder name="lib" displayName="Lib" projectFiles="true">
+        <itemPath>lib/Buttons.h</itemPath>
+        <itemPath>lib/LibDef.h</itemPath>
+        <itemPath>lib/MCP970x.h</itemPath>
+        <itemPath>lib/RV8263C7.h</itemPath>
+        <itemPath>lib/SAMM7x.h</itemPath>
+        <itemPath>lib/SST25.h</itemPath>
+        <itemPath>lib/TickTimer.h</itemPath>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
@@ -64,22 +53,13 @@
                    projectFiles="true">
     </logicalFolder>
     <logicalFolder name="SourceFiles" displayName="Source" projectFiles="true">
-      <logicalFolder name="f1" displayName="Library" projectFiles="true">
-        <logicalFolder name="f1" displayName="common" projectFiles="true">
-          <itemPath>../Library/common/UserFunctions.c</itemPath>
-        </logicalFolder>
-        <logicalFolder name="memory" displayName="memory" projectFiles="true">
-          <itemPath>../Library/memory/samm7x.c</itemPath>
-        </logicalFolder>
-        <logicalFolder name="rtcc" displayName="rtcc" projectFiles="true">
-          <itemPath>../Library/rtcc/RV8263C7.c</itemPath>
-        </logicalFolder>
-        <logicalFolder name="sensors" displayName="sensors" projectFiles="true">
-          <itemPath>../Library/sensors/MCP970X.c</itemPath>
-        </logicalFolder>
-        <logicalFolder name="system" displayName="system" projectFiles="true">
-          <itemPath>../Library/system/TickTimer.c</itemPath>
-        </logicalFolder>
+      <logicalFolder name="lib" displayName="Lib" projectFiles="true">
+        <itemPath>lib/Buttons.c</itemPath>
+        <itemPath>lib/RV8263C7.c</itemPath>
+        <itemPath>lib/SAMM7x.c</itemPath>
+        <itemPath>lib/SST25.c</itemPath>
+        <itemPath>lib/TickTimer.c</itemPath>
+        <itemPath>lib/MCP970x.c</itemPath>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
@@ -170,10 +150,9 @@
         <property key="call-prologues" value="false"/>
         <property key="default-bitfield-type" value="true"/>
         <property key="default-char-type" value="true"/>
-        <property key="define-macros" value="COMMON_LIB_CFG"/>
+        <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="false"/>
-        <property key="extra-include-directories"
-                  value="mcc_generated_files;..\Library;cfg"/>
+        <property key="extra-include-directories" value="cfg;lib;mcc_generated_files"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>

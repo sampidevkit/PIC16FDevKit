@@ -9,12 +9,12 @@
 #include "mcc.h"
 #include "examples/i2c1_master_example.h"
 /* ************************************************************ SAMPI Library */
-#include "common/LibDef.h"
-#include "common/UserFunctions.h"
-#include "rtcc/RV8263C7.h"
-#include "memory/SST25xx.h"
-#include "memory/samm7x.h"
-#include "system/TickTimer.h"
+#include "SST25.h"
+#include "SAMM7x.h"
+#include "MCP970x.h"
+#include "Buttons.h"
+#include "RV8263C7.h"
+#include "TickTimer.h"
 /* ************************************************************** Application */
 
 // Clock sources
