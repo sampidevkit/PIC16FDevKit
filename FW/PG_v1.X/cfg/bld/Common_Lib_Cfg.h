@@ -55,7 +55,7 @@
 //#include "Indicator_Cfg.h"
 
 /* ********************************************************************** Kit */
-#include "kit_usb_cfg.h"
+//#include "kit_usb_cfg.h"
 //#include "kit_rs232_win32_cfg.h"
 #include "kit_cfg.h"
 

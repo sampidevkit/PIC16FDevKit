@@ -162,25 +162,25 @@ public uint8_t Hardware_Info(uint8_t *pD) // <editor-fold defaultstate="collapse
 
 public void Change_I2C_To_ICSP(void) // <editor-fold defaultstate="collapsed" desc="Change I2C to ICSP">
 {
-    CNPUBSET=(3<<8); // pull-up RB8, RB9
+    CNPUBSET=(3<<4); // pull-up RB4, RB5 (PGD, PGC)
     VICSP_EN_N_SetLow(); // disable power of I2C slaver
     VICSP_EN_N_SetDigitalOutput();
     // clear the master interrupt flag
-    IFS2bits.I2C1SIF=0;
+    IFS2bits.I2C2SIF=0;
     // enable the master interrupt
-    IEC2bits.I2C1SIE=0;
+    IEC2bits.I2C2SIE=0;
     // OFF I2C module
-    I2C1CONbits.ON=0;
+    I2C2CONbits.ON=0;
     SRAM_Emulate_Deinit();
 } // </editor-fold>
 
 public void Change_ICSP_To_I2C(void) // <editor-fold defaultstate="collapsed" desc="Change ICSP to I2C">
 {
-    CNPUBCLR=(3<<8); // no pull-up RB8, RB9
+    CNPUBCLR=(3<<4); // no pull-up RB4, RB5 (PGD, PGC)
     VICSP_EN_N_SetHigh();
     VICSP_EN_N_SetDigitalInput();
     SRAM_Emulate_Init();
-    I2C1_Initialize();
+    I2C2_Initialize();
 } // </editor-fold>
 
 public void StatusLED_SetState(sled_t Set) // <editor-fold defaultstate="collapsed" desc="Set state of status LED">

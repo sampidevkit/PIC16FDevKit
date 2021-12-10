@@ -39,7 +39,6 @@
           <itemPath>cfg/bld/fileio_lite_cfg.h</itemPath>
           <itemPath>cfg/bld/files_lite_cfg.h</itemPath>
           <itemPath>cfg/bld/kit_cfg.h</itemPath>
-          <itemPath>cfg/bld/kit_usb_cfg.h</itemPath>
           <itemPath>cfg/bld/usb_device_msd_cfg.h</itemPath>
           <itemPath>cfg/bld/user_usb_device_config.h</itemPath>
         </logicalFolder>
@@ -110,7 +109,6 @@
         </logicalFolder>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
         <itemPath>mcc_generated_files/clock.h</itemPath>
-        <itemPath>mcc_generated_files/i2c1.h</itemPath>
         <itemPath>mcc_generated_files/exceptions.h</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
@@ -118,6 +116,7 @@
         <itemPath>mcc_generated_files/watchdog.h</itemPath>
         <itemPath>mcc_generated_files/system.h</itemPath>
         <itemPath>mcc_generated_files/uart2.h</itemPath>
+        <itemPath>mcc_generated_files/i2c2.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="User" projectFiles="true">
         <logicalFolder name="f1" displayName="Application" projectFiles="true">
@@ -208,7 +207,6 @@
           <itemPath>mcc_generated_files/usb/usb_device.c</itemPath>
           <itemPath>mcc_generated_files/usb/usb_device_generic.c</itemPath>
         </logicalFolder>
-        <itemPath>mcc_generated_files/i2c1.c</itemPath>
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
         <itemPath>mcc_generated_files/exceptions.c</itemPath>
@@ -217,6 +215,7 @@
         <itemPath>mcc_generated_files/coretimer.c</itemPath>
         <itemPath>mcc_generated_files/mcc.c</itemPath>
         <itemPath>mcc_generated_files/system.c</itemPath>
+        <itemPath>mcc_generated_files/i2c2.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="User" projectFiles="true">
         <logicalFolder name="f1" displayName="Application" projectFiles="true">
@@ -850,22 +849,6 @@
         </C32Global>
       </item>
       <item path="cfg/bld/kit_cfg.h" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
-      </item>
-      <item path="cfg/bld/kit_usb_cfg.h" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -2109,37 +2092,9 @@
         <C32Global>
         </C32Global>
       </item>
-      <item path="mcc_generated_files/i2c1.c" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      <item path="mcc_generated_files/i2c2.c" ex="true" overriding="false">
       </item>
-      <item path="mcc_generated_files/i2c1.h" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      <item path="mcc_generated_files/i2c2.h" ex="true" overriding="false">
       </item>
       <item path="mcc_generated_files/uart2.c" ex="true" overriding="false">
         <C32>

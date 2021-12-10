@@ -19,12 +19,12 @@
 #define ICSP_DownloadPE()               1 // set 1 if without PE
 #define ICSP_BlankCheck()               1 // set 1 if not implemented
 // PGD I/O configure
-#define ICSP_PGD_SetDigitalInput()      (TRISBSET=(1<<8))
-#define ICSP_PGD_SetDigitalOutput()     (TRISBCLR=(1<<8))
-#define ICSP_PGD_GetValue()             PORTBbits.RB8
-#define ICSP_PGD_SetHigh()              (LATBSET=(1<<8))
-#define ICSP_PGD_SetLow()               (LATBCLR=(1<<8))
-#define ICSP_PGD_Toggle()               (LATBINV=(1<<8))
+#define ICSP_PGD_SetDigitalInput()      (TRISBSET=(1<<4))
+#define ICSP_PGD_SetDigitalOutput()     (TRISBCLR=(1<<4))
+#define ICSP_PGD_GetValue()             PORTBbits.RB4
+#define ICSP_PGD_SetHigh()              (LATBSET=(1<<4))
+#define ICSP_PGD_SetLow()               (LATBCLR=(1<<4))
+#define ICSP_PGD_Toggle()               (LATBINV=(1<<4))
 
 inline static void ICSP_PGD_SetValue(bool value) {
     if (value) {
@@ -38,12 +38,12 @@ inline static void ICSP_PGD_SetValue(bool value) {
     while (ICSP_PGD_GetValue() != value);
 }
 // PGC I/O configure
-#define ICSP_PGC_SetDigitalInput()      (TRISBSET=(1<<9))
-#define ICSP_PGC_SetDigitalOutput()     (TRISBCLR=(1<<9))
-#define ICSP_PGC_GetValue()             PORTBbits.RB9
-#define ICSP_PGC_SetHigh()              (LATBSET=(1<<9))
-#define ICSP_PGC_SetLow()               (LATBCLR=(1<<9))
-#define ICSP_PGC_Toggle()               (LATBINV=(1<<9))
+#define ICSP_PGC_SetDigitalInput()      (TRISBSET=(1<<5))
+#define ICSP_PGC_SetDigitalOutput()     (TRISBCLR=(1<<5))
+#define ICSP_PGC_GetValue()             PORTBbits.RB5
+#define ICSP_PGC_SetHigh()              (LATBSET=(1<<5))
+#define ICSP_PGC_SetLow()               (LATBCLR=(1<<5))
+#define ICSP_PGC_Toggle()               (LATBINV=(1<<5))
 
 inline static void ICSP_PGC_SetValue(bool value) {
     if (value) {
@@ -57,12 +57,12 @@ inline static void ICSP_PGC_SetValue(bool value) {
     while (ICSP_PGC_GetValue() != value);
 }
 // MCLR I/O configure
-#define ICSP_MCLR_SetDigitalInput()      (TRISBSET=(1<<4))
-#define ICSP_MCLR_SetDigitalOutput()     (TRISBCLR=(1<<4))
-#define ICSP_MCLR_GetValue()             PORTBbits.RB4
-#define ICSP_MCLR_SetHigh()              (LATBSET=(1<<4))
-#define ICSP_MCLR_SetLow()               (LATBCLR=(1<<4))
-#define ICSP_MCLR_Toggle()               (LATBINV=(1<<4))
+#define ICSP_MCLR_SetDigitalInput()      (TRISASET=(1<<2))
+#define ICSP_MCLR_SetDigitalOutput()     (TRISACLR=(1<<2))
+#define ICSP_MCLR_GetValue()             PORTAbits.RA2
+#define ICSP_MCLR_SetHigh()              do{LATASET=(1<<2); LATBSET=(1<<0);}while(0) // Set high ARD_RESET_N
+#define ICSP_MCLR_SetLow()               do{LATACLR=(1<<2); LATBCLR=(1<<0);}while(0) // Set low ARD_RESET_N
+#define ICSP_MCLR_Toggle()               do{LATAINV=(1<<2); LATBINV=(1<<0);}while(0) // Set toggle ARD_RESET_N
 
 inline static void ICSP_MCLR_SetValue(bool value) {
     if (value) {
@@ -76,4 +76,43 @@ inline static void ICSP_MCLR_SetValue(bool value) {
     while (ICSP_MCLR_GetValue() != value);
 }
 
+// VDDTG_EN I/O configure
+#define VDDTG_EN_SetDigitalInput()      
+#define VDDTG_EN_SetDigitalOutput()     
+#define VDDTG_EN_GetValue()             0
+#define VDDTG_EN_SetHigh()              
+#define VDDTG_EN_SetLow()               
+#define VDDTG_EN_Toggle()               
+
+inline static void VDDTG_EN_SetValue(bool value) {
+    if (value) {
+        VDDTG_EN_SetDigitalInput();
+        VDDTG_EN_SetHigh();
+    } else {
+        VDDTG_EN_SetLow();
+        VDDTG_EN_SetDigitalOutput();
+    }
+
+    while (VDDTG_EN_GetValue() != value);
+}
+
+// VICSP_EN_N I/O configure
+#define VICSP_EN_N_SetDigitalInput()      
+#define VICSP_EN_N_SetDigitalOutput()     
+#define VICSP_EN_N_GetValue()             0
+#define VICSP_EN_N_SetHigh()              
+#define VICSP_EN_N_SetLow()               
+#define VICSP_EN_N_Toggle()               
+
+inline static void VICSP_EN_N_SetValue(bool value) {
+    if (value) {
+        VICSP_EN_N_SetDigitalInput();
+        VICSP_EN_N_SetHigh();
+    } else {
+        VICSP_EN_N_SetLow();
+        VICSP_EN_N_SetDigitalOutput();
+    }
+
+    while (VICSP_EN_N_GetValue() != value);
+}
 #endif

@@ -4,7 +4,7 @@
 #define __FIXED_INFO_SIZE__
 #define __INFO_ADDRESS__            0x9D00C000
 #define __PROJECT_NAME__            "SAMPI BOOTLOADER"
-#define __HARDWARE_ID__             "SAMM-7x-F|R|T v2.x"
+#define __HARDWARE_ID__             "SAMM-5x v1.x"
 #define __WEBSITE__                 "https://bit.ly/3rMJ4hs"
 #define __OWNER__                   "Administrator"
 //#define BLD_FileIo_Log_Buffer       App_Log_Buffer // defined in libcomp.h

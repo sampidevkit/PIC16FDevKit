@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 /* ************************************************************** MCC Library */
-#include "i2c1.h"
+#include "i2c2.h"
 #include "clock.h"
 #include "uart2.h"
 #include "system.h"

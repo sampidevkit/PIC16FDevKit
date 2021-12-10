@@ -31,8 +31,12 @@ typedef union {
     };
 } __TRISXbits_t;
 
-#define TRISX_EXT_GPIO0         TRISBbits.TRISB13
-#define TRISX_EXT_GPIO1         TRISBbits.TRISB14
+#define TRISX_EXT_GPIO0         TRISAbits.TRISA0
+#define TRISX_EXT_GPIO1         TRISAbits.TRISA1
+#define TRISX_EXT_GPIO2         TRISBbits.TRISB9
+#define TRISX_EXT_GPIO3         TRISBbits.TRISB8
+#define TRISX_EXT_GPIO4         TRISBbits.TRISB7
+#define TRISX_EXT_GPIO5         TRISBbits.TRISB14
 
 /************************************************************** PORT REGISTER */
 typedef union {
@@ -50,8 +54,12 @@ typedef union {
     };
 } __PORTXbits_t;
 
-#define PORTX_EXT_GPIO0         PORTBbits.RB13
-#define PORTX_EXT_GPIO1         PORTBbits.RB14
+#define PORTX_EXT_GPIO0         PORTAbits.RA0
+#define PORTX_EXT_GPIO1         PORTAbits.RA1
+#define PORTX_EXT_GPIO2         PORTBbits.RB9
+#define PORTX_EXT_GPIO3         PORTBbits.RB8
+#define PORTX_EXT_GPIO4         PORTBbits.RB7
+#define PORTX_EXT_GPIO5         PORTBbits.RB14
 
 /*************************************************************** LAT REGISTER */
 typedef union {
@@ -69,8 +77,12 @@ typedef union {
     };
 } __LATXbits_t;
 
-#define LATX_EXT_GPIO0         LATBbits.LATB13
-#define LATX_EXT_GPIO1         LATBbits.LATB14
+#define LATX_EXT_GPIO0         LATAbits.LATA0
+#define LATX_EXT_GPIO1         LATAbits.LATA1
+#define LATX_EXT_GPIO2         LATBbits.LATB9
+#define LATX_EXT_GPIO3         LATBbits.LATB8
+#define LATX_EXT_GPIO4         LATBbits.LATB7
+#define LATX_EXT_GPIO5         LATBbits.LATB14
 
 /**************************************************************************** */
 public void SRAM_Emulate_Init(void);

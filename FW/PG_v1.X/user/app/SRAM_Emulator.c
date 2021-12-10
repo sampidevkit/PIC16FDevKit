@@ -14,8 +14,16 @@ static uint8_t i2c1_slaveWriteData=0xAA;
 
 private uint8_t SRAM_Emulate_TRIS_Read(void)
 {
-    uint8_t value=TRISX_EXT_GPIO1;
+    uint8_t value=TRISX_EXT_GPIO5;
 
+    value<<=1;
+    value|=TRISX_EXT_GPIO4;
+    value<<=1;
+    value|=TRISX_EXT_GPIO3;
+    value<<=1;
+    value|=TRISX_EXT_GPIO2;
+    value<<=1;
+    value|=TRISX_EXT_GPIO1;
     value<<=1;
     value|=TRISX_EXT_GPIO0;
 
@@ -24,8 +32,16 @@ private uint8_t SRAM_Emulate_TRIS_Read(void)
 
 private uint8_t SRAM_Emulate_PORT_Read(void)
 {
-    uint8_t value=PORTX_EXT_GPIO1;
+    uint8_t value=PORTX_EXT_GPIO5;
 
+    value<<=1;
+    value|=PORTX_EXT_GPIO4;
+    value<<=1;
+    value|=PORTX_EXT_GPIO3;
+    value<<=1;
+    value|=PORTX_EXT_GPIO2;
+    value<<=1;
+    value|=PORTX_EXT_GPIO1;
     value<<=1;
     value|=PORTX_EXT_GPIO0;
 
@@ -34,8 +50,16 @@ private uint8_t SRAM_Emulate_PORT_Read(void)
 
 private uint8_t SRAM_Emulate_LAT_Read(void)
 {
-    uint8_t value=LATX_EXT_GPIO1;
+    uint8_t value=LATX_EXT_GPIO5;
 
+    value<<=1;
+    value|=LATX_EXT_GPIO4;
+    value<<=1;
+    value|=LATX_EXT_GPIO3;
+    value<<=1;
+    value|=LATX_EXT_GPIO2;
+    value<<=1;
+    value|=LATX_EXT_GPIO1;
     value<<=1;
     value|=LATX_EXT_GPIO0;
 
@@ -48,12 +72,20 @@ public new_simple_task_t(SRAM_Emulate_Tasks)
     {
         TRISX_EXT_GPIO0=(bool) (TRISX&1);
         TRISX_EXT_GPIO1=(bool) ((TRISX>>1)&1);
+        TRISX_EXT_GPIO2=(bool) ((TRISX>>2)&1);
+        TRISX_EXT_GPIO3=(bool) ((TRISX>>3)&1);
+        TRISX_EXT_GPIO4=(bool) ((TRISX>>4)&1);
+        TRISX_EXT_GPIO5=(bool) ((TRISX>>5)&1);
     }
 
     if(SRAM_Emulate_PORT_Read()!=LATX)
     {
         LATX_EXT_GPIO0=(bool) (LATX&1);
         LATX_EXT_GPIO1=(bool) ((LATX>>1)&1);
+        LATX_EXT_GPIO2=(bool) ((LATX>>1)&1);
+        LATX_EXT_GPIO3=(bool) ((LATX>>1)&1);
+        LATX_EXT_GPIO4=(bool) ((LATX>>1)&1);
+        LATX_EXT_GPIO5=(bool) ((LATX>>1)&1);
     }
 
     if(PORTX!=SRAM_Emulate_PORT_Read())
@@ -66,6 +98,10 @@ public void SRAM_Emulate_Init(void)
 {
     TRISX_EXT_GPIO0=1;
     TRISX_EXT_GPIO1=1;
+    TRISX_EXT_GPIO2=1;
+    TRISX_EXT_GPIO3=1;
+    TRISX_EXT_GPIO4=1;
+    TRISX_EXT_GPIO5=1;
     memset((void*) EMULATE_SRAM_Memory, 0x00, EMULATE_SRAM_SIZE);
     TRISX=0b11111111;
     PORTX=0b00000000;
@@ -81,28 +117,32 @@ public void SRAM_Emulate_Deinit(void)
     LATX=0b00000000;
     TRISX_EXT_GPIO0=0;
     TRISX_EXT_GPIO1=0;
+    TRISX_EXT_GPIO2=0;
+    TRISX_EXT_GPIO3=0;
+    TRISX_EXT_GPIO4=0;
+    TRISX_EXT_GPIO5=0;
 }
 
-public bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
+public bool I2C2_StatusCallback(I2C2_SLAVE_DRIVER_STATUS status)
 {
     switch(status)
     {
-        case I2C1_SLAVE_TRANSMIT_REQUEST_DETECTED:
+        case I2C2_SLAVE_TRANSMIT_REQUEST_DETECTED:
             // set up the slave driver buffer transmit pointer
-            I2C1_ReadPointerSet((uint8_t*) (&EMULATE_SRAM_Memory[address++]));
+            I2C2_ReadPointerSet((uint8_t*) (&EMULATE_SRAM_Memory[address++]));
 
             if(address>=EMULATE_SRAM_SIZE)
                 address=0;
             break;
 
-        case I2C1_SLAVE_RECEIVE_REQUEST_DETECTED:
+        case I2C2_SLAVE_RECEIVE_REQUEST_DETECTED:
             addrByteCount=0;
             addressState=true;
             // set up the slave driver buffer receive pointer
-            I2C1_WritePointerSet(&i2c1_slaveWriteData);
+            I2C2_WritePointerSet(&i2c1_slaveWriteData);
             break;
 
-        case I2C1_SLAVE_RECEIVED_DATA_DETECTED:
+        case I2C2_SLAVE_RECEIVED_DATA_DETECTED:
             if(addressState==true)
             {
                 // get the address of the memory being written

@@ -1,18 +1,18 @@
 
 /**
-  I2C1 Generated Driver API Header File
+  I2C2 Generated Driver API Header File
 
   @Company
     Microchip Technology Inc.
 
   @File Name
-    i2c1.h
+    i2c2.h
 
   @Summary
-    This is the generated header file for the I2C1 driver using PIC24 / dsPIC33 / PIC32MM MCUs
+    This is the generated header file for the I2C2 driver using PIC24 / dsPIC33 / PIC32MM MCUs
 
   @Description
-    This header file provides APIs for driver for I2C1.
+    This header file provides APIs for driver for I2C2.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.170.0
         Device            :  PIC32MM0064GPM028
@@ -43,8 +43,8 @@
     TERMS.
 */
 
-#ifndef _I2C1_H
-#define _I2C1_H
+#ifndef _I2C2_H
+#define _I2C2_H
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -68,7 +68,7 @@
   @Description
     This defines the different status that the slave driver has
     detected over the i2c bus. The status is passed to the
-    I2C1_StatusCallback() callback function that is implemented by
+    I2C2_StatusCallback() callback function that is implemented by
     the user of the slave driver as a parameter to inform the user
     that there was a change in the status of the driver due to
     transactions on the i2c bus. User of the slave driver can use these
@@ -80,49 +80,49 @@ typedef enum
 {
     /* This state indicates that the slave driver has detected a transmit request from the master.
        The next transaction will be a read transaction. Application should prime the transmit
-       buffer with the valid data to be sent to the master using the: I2C1_ReadPointerSet()
+       buffer with the valid data to be sent to the master using the: I2C2_ReadPointerSet()
        
      */
-    I2C1_SLAVE_TRANSMIT_REQUEST_DETECTED,
+    I2C2_SLAVE_TRANSMIT_REQUEST_DETECTED,
             
     /* This state indicates that the slave driver has detected a reception request from the master.
        The next transaction will be a write transaction. Application should set up the receive 
-       buffer by setting the location of the receive buffer using the: I2C1_WritePointerSet()
+       buffer by setting the location of the receive buffer using the: I2C2_WritePointerSet()
      */
-    I2C1_SLAVE_RECEIVE_REQUEST_DETECTED,
+    I2C2_SLAVE_RECEIVE_REQUEST_DETECTED,
 
     /* This state indicates that the slave driver has received data from the master.
        Application can use this status to process the received data set up the receive
        buffer in anticipation of next reception in case the master sends more data. 
-       See I2C1_SLAVE_RECEIVE_REQUEST_DETECTED.
+       See I2C2_SLAVE_RECEIVE_REQUEST_DETECTED.
      */
-    I2C1_SLAVE_RECEIVED_DATA_DETECTED,
+    I2C2_SLAVE_RECEIVED_DATA_DETECTED,
             
     /* This state indicates that the slave driver has detected the most significant
        byte of the 10-bit slave address. Another transaction with the least 
        significant byte of the 10-bit address with a read/write request will
        be detected next. This second detection is automatically done by the 
        driver which may return one of the following:
-           a. I2C1_SLAVE_RECEIVE_REQUEST_DETECTED
-           b. I2C1_SLAVE_TRANSMIT_REQUEST_DETECTED
-           c. I2C1_SLAVE_10BIT_RECEIVE_REQUEST_DETECTED
+           a. I2C2_SLAVE_RECEIVE_REQUEST_DETECTED
+           b. I2C2_SLAVE_TRANSMIT_REQUEST_DETECTED
+           c. I2C2_SLAVE_10BIT_RECEIVE_REQUEST_DETECTED
        a or b is detected depending on the read/write bit of the received 
        control data. If c is detected next, the master decided to resend
        the most significant address.  
      */
-    I2C1_SLAVE_10BIT_RECEIVE_REQUEST_DETECTED,
+    I2C2_SLAVE_10BIT_RECEIVE_REQUEST_DETECTED,
 
-} I2C1_SLAVE_DRIVER_STATUS;
+} I2C2_SLAVE_DRIVER_STATUS;
 
 
-#define I2C1_SLAVE_DEFAULT_ADDRESS          99
+#define I2C2_SLAVE_DEFAULT_ADDRESS          99
 
 /**
     @Summary
-        Initializes and enables the i2c slave instance : 1
+        Initializes and enables the i2c slave instance : 2
 
     @Description
-        This routine initializes the i2c slave driver instance for : 1
+        This routine initializes the i2c slave driver instance for : 2
         index, making it ready for clients to open and use it.
 
     @Preconditions
@@ -141,19 +141,19 @@ typedef enum
             uint8_t SlaveWriteBuffer;
 
             // initialize the i2c slave driver    
-            I2C1_Initialize();
+            I2C2_Initialize();
     
             // set up the slave driver
  
             // initialize the location of the read buffer
-            I2C1_ReadPointerSet(SlaveReadBuffer);
+            I2C2_ReadPointerSet(SlaveReadBuffer);
             // initialize the location of the write buffer
-            I2C1_WritePointerSet(SlaveWriteBuffer);
+            I2C2_WritePointerSet(SlaveWriteBuffer);
   
         </code>
 */
 
-void I2C1_Initialize(void);
+void I2C2_Initialize(void);
 
 
 
@@ -178,12 +178,12 @@ void I2C1_Initialize(void);
 
     @Example
         <code>
-            Refer to I2C1_SlaveAddressSet() for an example	
+            Refer to I2C2_SlaveAddressSet() for an example	
         </code>
 
 */
 
-void I2C1_SlaveAddressMaskSet(
+void I2C2_SlaveAddressMaskSet(
                                 uint16_t mask);
 
 
@@ -216,18 +216,18 @@ void I2C1_SlaveAddressMaskSet(
     @Example
         <code>
             // initialize the i2c slave driver    
-            I2C1_Initialize();
+            I2C2_Initialize();
  
             // set the slave address and address mask if the default
             // values set in the initialize is not the desired values.
-            I2C1_SlaveAddressMaskSet(0x0xF);
-            I2C1_SlaveAddressSet(0x3C);
+            I2C2_SlaveAddressMaskSet(0x0xF);
+            I2C2_SlaveAddressSet(0x3C);
  
         </code>
 
 */
 
-void I2C1_SlaveAddressSet(
+void I2C2_SlaveAddressSet(
                                 uint16_t address);
 
 /**
@@ -251,12 +251,12 @@ void I2C1_SlaveAddressSet(
 
     @Example
         <code>
-            Refer to I2C1_Initialize() for an example	
+            Refer to I2C2_Initialize() for an example	
         </code>
 
 */
 
-void I2C1_ReadPointerSet(uint8_t *p);
+void I2C2_ReadPointerSet(uint8_t *p);
 
 
 /**
@@ -280,12 +280,12 @@ void I2C1_ReadPointerSet(uint8_t *p);
 
     @Example
         <code>
-            Refer to I2C1_Initialize() for an example	
+            Refer to I2C2_Initialize() for an example	
         </code>
 
 */
 
-void I2C1_WritePointerSet(uint8_t *p);
+void I2C2_WritePointerSet(uint8_t *p);
 
 
 /**
@@ -313,12 +313,12 @@ void I2C1_WritePointerSet(uint8_t *p);
         <code>
             uint8_t *pReadBuffer;
  
-            pReadBuffer = I2C1_ReadPointerGet();
+            pReadBuffer = I2C2_ReadPointerGet();
         </code>
 
 */
 
-uint8_t *I2C1_ReadPointerGet(void);
+uint8_t *I2C2_ReadPointerGet(void);
 
 
 /**
@@ -346,13 +346,13 @@ uint8_t *I2C1_ReadPointerGet(void);
         <code>
             uint8_t *pWriteBuffer;
  
-            pWriteBuffer = I2C1_WritePointerGet();
+            pWriteBuffer = I2C2_WritePointerGet();
  
         </code>
 
 */
 
-uint8_t *I2C1_WritePointerGet(void);
+uint8_t *I2C2_WritePointerGet(void);
 
 
 /**
@@ -396,9 +396,9 @@ uint8_t *I2C1_WritePointerGet(void);
 
             // Example implementation of the callback
 
-            static uint8_t i2c1_slaveWriteData = 0xAA;
+            static uint8_t i2c2_slaveWriteData = 0xAA;
 
-            bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
+            bool I2C2_StatusCallback(I2C2_SLAVE_DRIVER_STATUS status)
             {
 
                 // this emulates the slave device memory where data written to slave
@@ -420,37 +420,37 @@ uint8_t *I2C1_WritePointerGet(void);
 
                 switch (status)
                 {
-                    case I2C1_SLAVE_TRANSMIT_REQUEST_DETECTED:
+                    case I2C2_SLAVE_TRANSMIT_REQUEST_DETECTED:
 
                         // set up the slave driver buffer transmit pointer
-                        I2C1_ReadPointerSet(&EMULATE_EEPROM_Memory[address]);
+                        I2C2_ReadPointerSet(&EMULATE_EEPROM_Memory[address]);
                         address++;
 
                         break;
 
-                    case I2C1_SLAVE_RECEIVE_REQUEST_DETECTED:
+                    case I2C2_SLAVE_RECEIVE_REQUEST_DETECTED:
 
                         addrByteCount = 0;
                         addressState = true;
 
                         // set up the slave driver buffer receive pointer
-                        I2C1_WritePointerSet(&i2c1_slaveWriteData);
+                        I2C2_WritePointerSet(&i2c2_slaveWriteData);
 
                         break;
 
-                    case I2C1_SLAVE_RECEIVED_DATA_DETECTED:
+                    case I2C2_SLAVE_RECEIVED_DATA_DETECTED:
 
                         if (addressState == true)
                         {
                             // get the address of the memory being written
                             if (addrByteCount == 0)
                             {
-                                address = (i2c1_slaveWriteData << 8) & 0xFF00;
+                                address = (i2c2_slaveWriteData << 8) & 0xFF00;
                                 addrByteCount++;
                             }
                             else if (addrByteCount == 1)
                             {
-                                address = address | i2c1_slaveWriteData;
+                                address = address | i2c2_slaveWriteData;
                                 addrByteCount = 0;
                                 addressState = false;
                             }
@@ -458,12 +458,12 @@ uint8_t *I2C1_WritePointerGet(void);
                         else // if (addressState == false)
                         {
                             // set the memory with the received data
-                            EMULATE_EEPROM_Memory[address] = i2c1_slaveWriteData;
+                            EMULATE_EEPROM_Memory[address] = i2c2_slaveWriteData;
                         }
 
                         break;
 
-                    case I2C1_SLAVE_10BIT_RECEIVE_REQUEST_DETECTED:
+                    case I2C2_SLAVE_10BIT_RECEIVE_REQUEST_DETECTED:
 
                         // do something here when 10-bit address is detected
 
@@ -483,8 +483,8 @@ uint8_t *I2C1_WritePointerGet(void);
 
  */
 
-//#pragma message "I2C1_StatusCallback() is an Application implemented function. If this function is already implemented, you can turn off this message by deleting or commenting out this message."
-bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status);
+//#pragma message "I2C2_StatusCallback() is an Application implemented function. If this function is already implemented, you can turn off this message by deleting or commenting out this message."
+bool I2C2_StatusCallback(I2C2_SLAVE_DRIVER_STATUS status);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -492,4 +492,4 @@ bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status);
 
 #endif
 
-#endif  // _I2C1_H
+#endif  // _I2C2_H

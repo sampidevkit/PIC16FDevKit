@@ -26,8 +26,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
                 MediaReady=0;
                 ICSP_Init(1);
                 DoNext=9;
-                RLED_EXT_SetHigh();
-                GLED_EXT_SetHigh();
+                PG_LED2_SetHigh();
                 Tick_Timer_Reset(Tick);
                 ICSP_MCLR_SetLow();
                 ICSP_MCLR_SetDigitalOutput();
@@ -49,8 +48,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
         case 4: // Erase target MCU
             MediaReady=0;
             ICSP_Init(0);
-            RLED_EXT_SetHigh();
-            GLED_EXT_SetHigh();
+            PG_LED2_SetHigh();
             Tick_Timer_Reset(Tick);
             ICSP_MCLR_SetLow();
             ICSP_MCLR_SetDigitalOutput();
@@ -64,8 +62,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             if(Tick_Timer_Is_Over_Ms(Tick, 250))
             {
                 DoNext++;
-                RLED_EXT_Toggle();
-                GLED_EXT_Toggle();
+                PG_LED2_Toggle();
             }
             break;
 

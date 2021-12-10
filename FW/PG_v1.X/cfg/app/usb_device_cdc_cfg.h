@@ -20,9 +20,9 @@
 #define USB_CDC_TX_BUFFER                   256
 #define USB_CDC_RX_BUFFER                   256
 
-#define USB_CDC_RXD_LedSetHigh()            StatusLED_SetState(SLED_ONESHOT)
-#define USB_CDC_RXD_LedSetLow()             StatusLED_SetState(SLED_IDLE)
-#define USB_CDC_TXD_LedSetHigh()            StatusLED_SetState(SLED_ONESHOT)
-#define USB_CDC_TXD_LedSetLow()             StatusLED_SetState(SLED_IDLE)
+#define USB_CDC_RXD_LedSetHigh()            Indicator_SetState(1, 5, 1, 1)
+#define USB_CDC_RXD_LedSetLow()             
+#define USB_CDC_TXD_LedSetHigh()            Indicator_SetState(1, 5, 1, 1)
+#define USB_CDC_TXD_LedSetLow()             
 
 #endif
