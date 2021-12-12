@@ -83,9 +83,9 @@
 // USERID stores Part number
 /*
  Bit 15-12: Flash memory option
-            0000: No flash
+            0000: No flash      (selected)
             0001: SST25VF020B
-            0010: SST25VF040B (selected)
+            0010: SST25VF040B
             0011: SST25VF080B
             0100: SST25VF016B
             0101: SST25VF032B
@@ -100,36 +100,35 @@
             1110: GD25Q32
             1111: GD25Q64
  Bit 11-10: RTCC chip option
-            00: No RTCC
-            01: RV-8263-C7 (selected)
+            00: No RTCC     (selected)
+            01: RV-8263-C7
             10: RV-8803-C7
             11: RFU
  Bit 09-08: Thermal sensor option
-            00: No thermal sensor
+            00: No thermal sensor (selected)
             01: MCP9700
-            10: MCP9701 (selected)
+            10: MCP9701
             11: RFU
  Bit 07-00: RFU (read as 0)
  
- Ex part number: SAMM-77-FRT-2600
-                 |    |  |   |--> SST25VF040B, RV-8263-C7, MCP9701
-                 |    |  |------> Flash, RTCC, Thermal sensor
-                 |    |---------> PIC16F18877 (defined in application project)
+ Ex part number: SAMM-7x-0000
+                 |    |  |------> No flash, No RTCC, No thermal sensor
+                 |    |---------> PIC16F1887x (defined in application project)
                  |--------------> SAMPI Main board
  */
-#pragma config USERID = 0x2600
+#pragma config USERID = 0x0000
 #endif
 
 #include "pin_manager.h"
 #include "clock.h"
 #include "system.h"
+#include "memory/flash.h"
 #include "coretimer.h"
+#include "usb/usb.h"
+#include "i2c2.h"
+#include "uart2.h"
 #include "interrupt_manager.h"
 #include "exceptions.h"
-#include "uart2.h"
-#include "i2c2.h"
-#include "usb/usb.h"
-#include "memory/flash.h"
 
 void SYSTEM_Initialize(void)
 {

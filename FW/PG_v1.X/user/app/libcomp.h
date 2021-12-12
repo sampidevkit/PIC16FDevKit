@@ -58,7 +58,7 @@
 #define Enable_Coretimer_Interrupt()    (IEC0SET=_IEC0_CTIE_MASK)
 #define Clear_Coretimer_Interrupt()     (IFS0CLR=_IFS0_CTIF_MASK)
 // INFO.txt file
-#define APP_BUFFER_LOG_LEN              128
+#define APP_BUFFER_LOG_LEN              256
 extern uint8_t App_Log_Buffer[APP_BUFFER_LOG_LEN];
 // ICSP FileIO
 extern bool MediaReady;
@@ -74,9 +74,9 @@ typedef enum {
 
 public void DummyInterruptHandler(void);
 public void LibComp_Initialize(void);
-public uint8_t Hardware_Info(uint8_t *pD);
-public void Change_I2C_To_ICSP(void);
-public void Change_ICSP_To_I2C(void);
+public int Hardware_Info(uint8_t *pD);
+public void Change_Mode_To_ICSP(void);
+public void Change_Mode_To_Running(void);
 public void StatusLED_SetState(sled_t State);
 public bool ProgButton_GetState(void);
 

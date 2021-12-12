@@ -8,7 +8,7 @@
 
 //#define __PROJECT_NAME__                "PIC16 DEV KIT"
 //#define __HARDWARE_ID__                 "SAMM-5x v1.x"
-//#define __WEBSITE__                     "https://bit.ly/3rMJ4hs"
+#define __WEBSITE__                     "https://bit.ly/3rMJ4hs"
 
 #define write_error_log(line)           do{uint32_t err=line; icsp_log(ICSP_LOG_INTERNAL_ERROR, &err, NULL, NULL);}while(0)
 #define ICSP_FileIo_Media_GetState()    MediaReady

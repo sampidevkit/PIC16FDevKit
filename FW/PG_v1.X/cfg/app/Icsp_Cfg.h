@@ -8,8 +8,8 @@
 #define Icsp_Log_Buffer                 App_Log_Buffer       
 //#define ICSP_Shared_IO_Module_Enable()  do{LATAbits.LATA4=1; TRISAbits.TRISA4=0; KIT_USB_Device_CDC_Uart_Enable();}while(0)
 //#define ICSP_Shared_IO_Module_Disable() do{TRISAbits.TRISA4=1; KIT_USB_Device_CDC_Uart_Disable();}while(0)
-#define ICSP_Shared_IO_Module_Enable()  Change_ICSP_To_I2C()
-#define ICSP_Shared_IO_Module_Disable() Change_I2C_To_ICSP()
+#define ICSP_Shared_IO_Module_Enable()  Change_Mode_To_Running()
+#define ICSP_Shared_IO_Module_Disable() Change_Mode_To_ICSP()
 #define ICSP_Begin_Callback()           StatusLED_SetState(SLED_ACTIVE)
 #define ICSP_Error_Callback()           StatusLED_SetState(SLED_FAIL)
 #define ICSP_End_Callback()             StatusLED_SetState(SLED_IDLE)

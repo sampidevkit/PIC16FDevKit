@@ -179,7 +179,7 @@ void I2C2_Initialize(void)
 }
 
 
-void __attribute__ ((vector(_I2C2_SLAVE_VECTOR), interrupt(IPL1SOFT))) _I2C2_SLAVE ( void )
+void __attribute__ ((vector(_I2C2_SLAVE_VECTOR), interrupt(IPL3SOFT))) _I2C2_SLAVE ( void )
 {
 
     static bool  prior_address_match = false;

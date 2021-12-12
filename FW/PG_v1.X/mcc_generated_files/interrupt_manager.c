@@ -78,13 +78,13 @@ void INTERRUPT_Initialize (void)
     //    Sub Priority: 0
         IPC14bits.U2RXIS = 0;
     //    MICI: I2C 2 Master
-    //    Priority: 1
-        IPC17bits.I2C2MIP = 1;
-    //    Sub Priority: 0
-        IPC17bits.I2C2MIS = 0;
+    //    Priority: 3
+        IPC17bits.I2C2MIP = 3;
+    //    Sub Priority: 1
+        IPC17bits.I2C2MIS = 1;
     //    SICI: I2C 2 Slave
-    //    Priority: 1
-        IPC17bits.I2C2SIP = 1;
+    //    Priority: 3
+        IPC17bits.I2C2SIP = 3;
     //    Sub Priority: 0
         IPC17bits.I2C2SIS = 0;
 #endif

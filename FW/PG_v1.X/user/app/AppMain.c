@@ -17,6 +17,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
 {
     switch(DoNext)
     {
+        default:
         case 0:
         case 1:
         case 2:
@@ -71,14 +72,11 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             {
                 ICSP_Deinit();
                 DoNext=0;
+                PG_LED2_SetLow();
                 ICSP_MCLR_SetHigh();
                 ICSP_MCLR_SetDigitalInput();
                 MediaReady=1;
             }
-            break;
-
-        default:
-            DoNext=0;
             break;
     }
 

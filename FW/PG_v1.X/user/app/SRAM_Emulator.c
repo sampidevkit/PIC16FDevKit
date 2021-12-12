@@ -10,7 +10,7 @@ volatile uint8_t EMULATE_SRAM_Memory[EMULATE_SRAM_SIZE];
 
 static bool addressState=true;
 static uint16_t address, addrByteCount;
-static uint8_t i2c1_slaveWriteData=0xAA;
+static uint8_t i2c2_slaveWriteData=0xAA;
 
 private uint8_t SRAM_Emulate_TRIS_Read(void)
 {
@@ -139,7 +139,7 @@ public bool I2C2_StatusCallback(I2C2_SLAVE_DRIVER_STATUS status)
             addrByteCount=0;
             addressState=true;
             // set up the slave driver buffer receive pointer
-            I2C2_WritePointerSet(&i2c1_slaveWriteData);
+            I2C2_WritePointerSet(&i2c2_slaveWriteData);
             break;
 
         case I2C2_SLAVE_RECEIVED_DATA_DETECTED:
@@ -148,12 +148,12 @@ public bool I2C2_StatusCallback(I2C2_SLAVE_DRIVER_STATUS status)
                 // get the address of the memory being written
                 if(addrByteCount==0)
                 {
-                    address=(i2c1_slaveWriteData<<8) & 0xFF00;
+                    address=(i2c2_slaveWriteData<<8) & 0xFF00;
                     addrByteCount++;
                 }
                 else if(addrByteCount==1)
                 {
-                    address=address|i2c1_slaveWriteData;
+                    address=address|i2c2_slaveWriteData;
                     addrByteCount=0;
                     addressState=false;
                 }
@@ -164,7 +164,7 @@ public bool I2C2_StatusCallback(I2C2_SLAVE_DRIVER_STATUS status)
             else // if (addressState == false)
             {
                 // set the memory with the received data
-                EMULATE_SRAM_Memory[address++]=i2c1_slaveWriteData;
+                EMULATE_SRAM_Memory[address++]=i2c2_slaveWriteData;
 
                 if(address>=EMULATE_SRAM_SIZE)
                     address=0;
