@@ -10,7 +10,7 @@ public void APP_Main_Initialize(void) // <editor-fold defaultstate="collapsed" d
     ButtonApi_Init();
     Tick_Timer_Reset(Tick);
     StatusLED_SetState(SLED_IDLE);
-    MediaReady=1;
+    MediaWriteProtect=0;
 } // </editor-fold>
 
 public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="Application Main Task">
@@ -23,18 +23,17 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
         case 3:
             if(Sw1_Is_Pressed()) // Reset target MCU
             {
-                MediaReady=0;
+                MediaWriteProtect=1;
                 ICSP_Init(1);
-                DoNext=9;
+                ICSP_MCLR_SetLow();
+                ICSP_MCLR_SetDigitalOutput();
                 RLED_EXT_SetHigh();
                 GLED_EXT_SetHigh();
                 Tick_Timer_Reset(Tick);
-                ICSP_MCLR_SetLow();
-                ICSP_MCLR_SetDigitalOutput();
-                break;
+                ICSP_VDDTG_EN_SetLow();
+                DoNext=9;
             }
-
-            if(Sw3_Is_Pressed()) // Erase target MCU
+            else if(Sw3_Is_Pressed()) // Erase target MCU
             {
                 DoNext++;
                 Tick_Timer_Reset(Tick);
@@ -47,13 +46,14 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             break;
 
         case 4: // Erase target MCU
-            MediaReady=0;
+            MediaWriteProtect=1;
             ICSP_Init(0);
+            ICSP_MCLR_SetLow();
+            ICSP_MCLR_SetDigitalOutput();
             RLED_EXT_SetHigh();
             GLED_EXT_SetHigh();
             Tick_Timer_Reset(Tick);
-            ICSP_MCLR_SetLow();
-            ICSP_MCLR_SetDigitalOutput();
+            ICSP_VDDTG_EN_SetLow();
             DoNext=5;
             break;
 
@@ -70,24 +70,39 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             break;
 
         case 9:
-            if(Tick_Timer_Is_Over_Ms(Tick, 500))
+            ICSP_MCLR_SetDigitalInput();
+
+            if(ICSP_MCLR_GetValue()==0)
             {
-                ICSP_Deinit();
-                DoNext=0;
-                ICSP_MCLR_SetHigh();
-                ICSP_MCLR_SetDigitalInput();
-                MediaReady=1;
+                if(Tick_Timer_Is_Over_Ms(Tick, 100))
+                {
+                    ICSP_VDDTG_EN_SetHigh();
+                    DoNext=10;
+                }
             }
+            else
+                Tick_Timer_Reset(Tick);
+
+            ICSP_MCLR_SetDigitalOutput();
             break;
 
+        case 10:
         default:
-            DoNext=0;
+            if(Tick_Timer_Is_Over_Ms(Tick, 400))
+            {
+                ICSP_Deinit();
+                MediaWriteProtect=0;
+                DoNext=0;
+            }
             break;
     }
 
     if(Sw2_Is_Pressed())
     {
-        MediaReady=0;
+        MediaWriteProtect=0;
+        ICSP_MCLR_SetLow();
+        ICSP_MCLR_SetDigitalOutput();
+        ICSP_VDDTG_EN_SetLow();
         SRAM_Emulate_Deinit();
         SYS_SoftReset();
     }

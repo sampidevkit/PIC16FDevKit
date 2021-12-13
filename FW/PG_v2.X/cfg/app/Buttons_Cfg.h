@@ -9,7 +9,7 @@
 #define SW2_TIME_MODE_EDGE_H2L  TIME_MODE_EDGE_H2L
 #define SW2_GetValue            ProgButton_GetState
 // Erase target MCU
-#define SW3_TIMEOUT             50 // ms
-#define SW3_TIME_MODE_EDGE_H2L  TIME_MODE_EDGE_H2L
+#define SW3_TIMEOUT             10 // ms
+#define SW3_TIME_MODE_EDGE_H2L  TIME_MODE_EDGE_L2H
 #define SW3_GetValue            ProgButton_GetState
 #endif

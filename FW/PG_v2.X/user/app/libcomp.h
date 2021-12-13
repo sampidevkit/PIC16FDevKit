@@ -61,7 +61,7 @@
 #define APP_BUFFER_LOG_LEN              128
 extern uint8_t App_Log_Buffer[APP_BUFFER_LOG_LEN];
 // ICSP FileIO
-extern bool MediaReady;
+extern bool MediaWriteProtect;
 // States of status LED
 
 typedef enum {
@@ -74,9 +74,9 @@ typedef enum {
 
 public void DummyInterruptHandler(void);
 public void LibComp_Initialize(void);
-public uint8_t Hardware_Info(uint8_t *pD);
-public void Change_I2C_To_ICSP(void);
-public void Change_ICSP_To_I2C(void);
+public int Hardware_Info(uint8_t *pD);
+public void Change_Mode_To_ICSP(void);
+public void Change_Mode_To_Running(void);
 public void StatusLED_SetState(sled_t State);
 public bool ProgButton_GetState(void);
 
