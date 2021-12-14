@@ -143,7 +143,7 @@ adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
     // Start the conversion
     ADCON0bits.ADGO = 1;
 
-
+    __delay_us(100);
     // Wait for the conversion to finish
     while (ADCON0bits.ADGO)
     {

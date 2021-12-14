@@ -9620,7 +9620,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>0802eae2789a0fc8954ac5be18e994bb4e8b84f71299242ff965cb75dee02b03</hash>
+         <hash>cc52d2f4e02cab50c42e27449019e5eaefd47414381d4c0e46480bd71f1e6ebe</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\clock.h</file>
@@ -9644,19 +9644,19 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>dac9705083fc0af940908b0ec23f066fe9ecad0279a2e6bba68bf3c85a3309e6</hash>
+         <hash>73a31b8c358d3caa7e0b4ac37885e5d4cafa4d3178b667a5dbd4d51a21b508a2</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.h</file>
          <hash>499d271b005b07e248900177e3c9d6b924b10a9da204576e6463df437c1b3fd3</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\usb\usb.h</file>
-         <hash>516175b3ebdccc6914985b0a6405f461fa928e8d23ae19ef3a93ececfd9c1339</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\uart2.h</file>
          <hash>7af7e01e2c9ae785cacb041852b4bf25ea635f3c463e98674a8ae864b0caed99</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\usb\usb.h</file>
+         <hash>516175b3ebdccc6914985b0a6405f461fa928e8d23ae19ef3a93ececfd9c1339</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\exceptions.c</file>
@@ -9671,12 +9671,12 @@
          <hash>eae482e385b5aadabecc1c839785b10e6fb0654592b20e63f9cfe761f4500007</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\usb\usb_device.c</file>
-         <hash>386906dcfa271ae2d841b1610df4299ecb586ef8485f04273a6c649c11a5449b</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\uart2.c</file>
          <hash>d64db3cf284d8c70d94e24a044cdbb2bc5363d5aa92ad1cc21f1633b09d0221c</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\usb\usb_device.c</file>
+         <hash>386906dcfa271ae2d841b1610df4299ecb586ef8485f04273a6c649c11a5449b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\usb\usb_device.h</file>
@@ -9704,7 +9704,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\usb\utilities\mchpwinusb_template.inf</file>
-         <hash>ba102bcbca733863f5f15aaa7de16b38b4168e6b1818e5646800e5ae0786dd90</hash>
+         <hash>955624a58d79d44ef08006ce356be45215bc687474234961aa56dbdc453131ed</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\coretimer.c</file>

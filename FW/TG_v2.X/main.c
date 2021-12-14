@@ -1,76 +1,224 @@
-/**
-  Generated Main Source File
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    main.c
-
-  Summary:
-    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
-
-  Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
-    Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
-        Device            :  PIC16F18877
-        Driver Version    :  2.00
-*/
-
-/*
-    (c) 2018 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
-    may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
-    FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
-    SOFTWARE.
-*/
-
 #include "mcc_generated_files/mcc.h"
+#include "mcc_generated_files/spi2.h"
+#include "mcc_generated_files/pin_manager.h"
+#include "mcc_generated_files/examples/i2c1_master_example.h"
 
-/*
-                         Main application
- */
+#define MCP9701_ADC_RES_BIT 10
+#define MCP9701_ADC_VREF    2048 // FVR output 1
+#define TICK_PER_MS         4 // LFINTOSC/4/TMR0_Prescaler/1000  
+#define Tick_Reset(cxt)     cxt.Over=1
+
+typedef enum
+{
+    EXP_TRIS=4096,
+    EXP_PORT,
+    EXP_LAT
+} exp_gpio_reg_t;
+
+typedef struct
+{
+    bool Over;
+    uint16_t Begin;
+    uint16_t End;
+} tick_t;
+
+static bool Tick_Is_Over(tick_t *pTick, uint16_t ms) // <editor-fold defaultstate="collapsed" desc="Check timeout">
+{
+    if(pTick->Over==1)
+    {
+        pTick->Begin=TMR0_ReadTimer();
+        pTick->End=ms*TICK_PER_MS;
+        pTick->Over=0;
+    }
+
+    if((TMR0_ReadTimer()-pTick->Begin)>=pTick->End)
+        pTick->Over=1;
+
+    return pTick->Over;
+} // </editor-fold>
+
+static bool UBT_Is_Pressed(void) // <editor-fold defaultstate="collapsed" desc="Button UP">
+{
+    static bool prv=1;
+    static uint8_t t=0;
+
+    if(prv!=UBT_N_GetValue())
+    {
+        if(prv==1)
+        {
+            if(++t>100) // check 100 cycles
+            {
+                prv=0;
+                return 1;
+            }
+        }
+        else
+            prv=1;
+    }
+    else if(t>0)
+        t=0;
+
+    return 0;
+} // </editor-fold>
+
+static float MCP9701_GetTemp(void) // <editor-fold defaultstate="collapsed" desc="Thermal sensor">
+{
+    int32_t tmp=ADCC_GetSingleConversion(MCP970X);
+    // convert to mV
+    tmp*=MCP9701_ADC_VREF;
+    tmp>>=MCP9701_ADC_RES_BIT; // mV=(ADCvalue*Vref)>>ADC_resolution
+    // Offset 500mV at 0 C degree
+    tmp-=500;
+    // Resolution MCP9701: 19.5mV/C degree
+    return (((float) tmp)/19.5f);
+} // </editor-fold>
+
+static void ExternalSRAM_Write(uint16_t SramAddr, uint8_t d) // <editor-fold defaultstate="collapsed" desc="Write data to external SRAM">
+{
+    uint8_t buff[4];
+
+    buff[0]=(uint8_t) (SramAddr<<8); // MSB of SRAM address
+    buff[1]=(uint8_t) SramAddr; // LSB of SRAM address
+    buff[2]=d; // data
+    I2C1_WriteNBytes(0x53, buff, 3);
+} // </editor-fold>
+
+static uint8_t ExternalSRAM_Read(uint16_t SramAddr) // <editor-fold defaultstate="collapsed" desc="Read data from external SRAM">
+{
+    uint8_t buff[2];
+
+    buff[0]=(uint8_t) (SramAddr<<8); // MSB of SRAM address
+    buff[1]=(uint8_t) SramAddr; // LSB of SRAM address
+    I2C1_WriteNBytes(0x53, buff, 2);
+    I2C1_ReadNBytes(0x53, &buff[0], 1);
+
+    return buff[0];
+} // </editor-fold>
+
+static void ExpanderGPIO_Write(exp_gpio_reg_t Reg, uint8_t val) // <editor-fold defaultstate="collapsed" desc="Read expander GPIO">
+{
+    uint8_t buff[4];
+
+    buff[0]=(uint8_t) (Reg<<8); // MSB of SRAM address
+    buff[1]=(uint8_t) Reg; // LSB of SRAM address
+    buff[2]=val; // data
+    I2C1_WriteNBytes(0x53, buff, 3);
+} // </editor-fold>
+
+static uint8_t ExpanderGPIO_Read(exp_gpio_reg_t Reg) // <editor-fold defaultstate="collapsed" desc="Read expander GPIO">
+{
+    uint8_t buff[2];
+
+    buff[0]=(uint8_t) (Reg<<8); // MSB of expander GPIO register address
+    buff[1]=(uint8_t) Reg; // LSB of expander GPIO register address
+    I2C1_WriteNBytes(0x53, buff, 2);
+    I2C1_ReadNBytes(0x53, &buff[0], 1);
+
+    return buff[0];
+} // </editor-fold>
+
+static void ExpanderGPIO_SetBit(exp_gpio_reg_t Reg, uint8_t Bit, uint8_t logic) // <editor-fold defaultstate="collapsed" desc="Set 1 bit of expander IO register">
+{
+    uint8_t regVal=ExpanderGPIO_Read(Reg);
+
+    if(logic==1) // set bit
+        regVal|=(1<<Bit);
+    else if(logic==0) // clear bit
+        regVal&=~(1<<Bit);
+    else // toggle bit
+        regVal^=(1<<Bit);
+
+    ExpanderGPIO_Write(Reg, regVal);
+} // </editor-fold>
+
+static void SST_Flash_GetID(uint8_t *pD) // <editor-fold defaultstate="collapsed" desc="Get flash JEDEC ID">
+{
+    SPI2_Open(SPI2_DEFAULT);
+    FLASH_CS_N_SetLow();
+    SPI2_ExchangeByte(0x9F); // JEDEC ID command
+    *pD=SPI2_ExchangeByte(0xFF);
+    pD++;
+    *pD=SPI2_ExchangeByte(0xFF);
+    pD++;
+    *pD=SPI2_ExchangeByte(0xFF);
+    FLASH_CS_N_SetHigh();
+    SPI2_Close();
+} // </editor-fold>
+
 void main(void)
 {
-    // initialize the device
+    uint16_t i;
+    tick_t Tick;
+    uint8_t x, DoNext=0;
+
     SYSTEM_Initialize();
+    Tick_Reset(Tick);
+    VDDSS_EN_N_SetLow(); // Enable Sensor VDD
+    INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
+    //ExpanderGPIO_Write(EXP_TRIS, 0);
+    //ExpanderGPIO_Write(EXP_LAT, 0);
 
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
-
-    while (1)
+    while(1)
     {
-        // Add your application code
+        CLRWDT();
+        BLED_Toggle();
+        printf("\nHello");
+        __delay_ms(50);
+//        switch(DoNext)
+//        {
+//            default:
+//                if(UBT_Is_Pressed())
+//                {
+//                    i=0;
+//                    DoNext=1;
+//                    ExpanderGPIO_SetBit(EXP_LAT, 0, 1);
+//                }
+//                break;
+//
+//            case 1: // Write data to SRAM
+//                ExternalSRAM_Write(i, (uint8_t) i);
+//
+//                if(++i>=4096)
+//                {
+//                    i=0;
+//                    DoNext=2;
+//                    printf("\nWrite SRAM: Done");
+//                }
+//                break;
+//
+//            case 2:
+//                x=ExternalSRAM_Read(i);
+//
+//                if(x!=(uint8_t) i)
+//                    printf("\nSRAM Error %04X: %02X", i, x);
+//
+//                if(++i>=4096)
+//                {
+//                    i=0;
+//                    DoNext=0;
+//                    ExpanderGPIO_SetBit(EXP_LAT, 0, 0);
+//                    printf("\nRead SRAM: Done");
+//                }
+//                break;
+//        }
+//
+//        if(Tick_Is_Over(&Tick, 500))
+//        {
+//            uint8_t JedecID[4];
+//
+//            ExpanderGPIO_SetBit(EXP_LAT, 0, 2);
+//            SST_Flash_GetID(JedecID);
+//            printf("\nFlash ID: %02X%02X%02X", JedecID[0], JedecID[1], JedecID[2]);
+//            printf("\nTemperature: %.1f", MCP9701_GetTemp());
+//        }
+
+//        while(EUSART_is_rx_ready()) // UART echo
+//        {
+//            if(EUSART_is_tx_ready())
+//                EUSART_Write(EUSART_Read());
+//            else
+//                break;
+//        }
     }
 }
-/**
- End of File
-*/

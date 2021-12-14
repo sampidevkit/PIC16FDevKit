@@ -209,7 +209,6 @@
           <itemPath>mcc_generated_files/usb/usb_device_generic.c</itemPath>
         </logicalFolder>
         <itemPath>mcc_generated_files/i2c1.c</itemPath>
-        <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
         <itemPath>mcc_generated_files/exceptions.c</itemPath>
         <itemPath>mcc_generated_files/uart2.c</itemPath>
@@ -217,6 +216,7 @@
         <itemPath>mcc_generated_files/coretimer.c</itemPath>
         <itemPath>mcc_generated_files/mcc.c</itemPath>
         <itemPath>mcc_generated_files/system.c</itemPath>
+        <itemPath>mcc_generated_files/pin_manager.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="User" projectFiles="true">
         <logicalFolder name="f1" displayName="Application" projectFiles="true">
@@ -257,7 +257,7 @@
         <targetDevice>PIC32MM0064GPM028</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>snap</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>3.01</languageToolchainVersion>
         <platform>3</platform>
@@ -2287,6 +2287,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d00ffff"/>
         <property key="memories.rww" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="F:/Git/SAMPI/P16DK/P16F1887x/FW/PG_v2.X/debug/bld/PG_v2_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
