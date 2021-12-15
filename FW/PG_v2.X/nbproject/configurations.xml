@@ -50,6 +50,7 @@
           <itemPath>../Library/bootloader/BLD_Nvm.h</itemPath>
           <itemPath>../Library/bootloader/BLD_Target_Device.h</itemPath>
           <itemPath>../Library/bootloader/Bootloader.h</itemPath>
+          <itemPath>../Library/bootloader/BLD_Nvm_PIC32.h</itemPath>
         </logicalFolder>
         <logicalFolder name="buttons" displayName="buttons" projectFiles="true">
           <itemPath>../Library/buttons/ButtonApi.h</itemPath>
@@ -151,9 +152,9 @@
       <logicalFolder name="Library" displayName="Library" projectFiles="true">
         <logicalFolder name="bootloader" displayName="bootloader" projectFiles="true">
           <itemPath>../Library/bootloader/BLD_FileIO.c</itemPath>
-          <itemPath>../Library/bootloader/BLD_Nvm.c</itemPath>
           <itemPath>../Library/bootloader/Bootloader.c</itemPath>
           <itemPath>../Library/bootloader/asm.S</itemPath>
+          <itemPath>../Library/bootloader/BLD_Nvm_PIC32.c</itemPath>
         </logicalFolder>
         <logicalFolder name="buttons" displayName="buttons" projectFiles="true">
           <itemPath>../Library/buttons/ButtonApi.c</itemPath>
@@ -308,21 +309,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item path="../Library/bootloader/BLD_Nvm.c" ex="true" overriding="false">
-        <C32>
-        </C32>
-        <C32-AR>
-        </C32-AR>
-        <C32-AS>
-        </C32-AS>
-        <C32-CO>
-        </C32-CO>
-        <C32-LD>
-        </C32-LD>
-        <C32CPP>
-        </C32CPP>
-        <C32Global>
-        </C32Global>
+      <item path="../Library/bootloader/BLD_Nvm_PIC32.c" ex="true" overriding="false">
       </item>
       <item path="../Library/bootloader/Bootloader.c" ex="true" overriding="false">
         <C32>

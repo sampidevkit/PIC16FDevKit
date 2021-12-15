@@ -97,7 +97,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             break;
     }
 
-    if(Sw2_Is_Pressed())
+    if(Sw2_Is_Pressed()||(BOOT_N_GetValue()==0))
     {
         MediaWriteProtect=0;
         ICSP_MCLR_SetLow();

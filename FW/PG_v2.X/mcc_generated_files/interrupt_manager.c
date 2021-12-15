@@ -60,12 +60,6 @@ void INTERRUPT_Initialize (void)
         IPC0bits.CTIP = 1;
     //    Sub Priority: 0
         IPC0bits.CTIS = 0;
-#ifndef __BOOTLOADER__
-    //    MICI: I2C 1 Master
-    //    Priority: 3
-        IPC16bits.I2C1MIP = 3;
-    //    Sub Priority: 1
-        IPC16bits.I2C1MIS = 1;
     //    SICI: I2C 1 Slave
     //    Priority: 3
         IPC16bits.I2C1SIP = 3;
@@ -86,5 +80,4 @@ void INTERRUPT_Initialize (void)
         IPC14bits.U2RXIP = 2;
     //    Sub Priority: 0
         IPC14bits.U2RXIS = 0;
-#endif
 }

@@ -67,13 +67,10 @@ inline static void ICSP_PGC_SetValue(bool value) {
 #define ICSP_MCLR_Toggle()                  (LATBINV=(1<<4))
 
 inline static void ICSP_MCLR_SetValue(bool value) {
-    if (value) {
-        ICSP_MCLR_SetDigitalInput();
+    if (value)
         ICSP_MCLR_SetHigh();
-    } else {
+    else
         ICSP_MCLR_SetLow();
-        ICSP_MCLR_SetDigitalOutput();
-    }
 
     while (ICSP_MCLR_GetValue() != value);
 }
@@ -86,13 +83,10 @@ inline static void ICSP_MCLR_SetValue(bool value) {
 #define ICSP_VDDTG_EN_Toggle()              (LATBINV=(1<<15))
 
 inline static void ICSP_VDDTG_EN_SetValue(bool value) {
-    if (value) {
-        ICSP_VDDTG_EN_SetDigitalInput();
+    if (value)
         ICSP_VDDTG_EN_SetHigh();
-    } else {
+    else
         ICSP_VDDTG_EN_SetLow();
-        ICSP_VDDTG_EN_SetDigitalOutput();
-    }
 
     while (ICSP_VDDTG_EN_GetValue() != value);
 }
@@ -105,13 +99,10 @@ inline static void ICSP_VDDTG_EN_SetValue(bool value) {
 #define ICSP_VBUS_EN_N_Toggle()             (LATBINV=(1<<2))
 
 inline static void ICSP_VBUS_EN_N_SetValue(bool value) {
-    if (value) {
-        ICSP_VBUS_EN_N_SetDigitalInput();
+    if (value)
         ICSP_VBUS_EN_N_SetHigh();
-    } else {
+    else
         ICSP_VBUS_EN_N_SetLow();
-        ICSP_VBUS_EN_N_SetDigitalOutput();
-    }
 
     while (ICSP_VBUS_EN_N_GetValue() != value);
 }

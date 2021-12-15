@@ -28,6 +28,7 @@
         <itemPath>mcc_generated_files/eusart.h</itemPath>
         <itemPath>mcc_generated_files/tmr0.h</itemPath>
       </logicalFolder>
+      <itemPath>RV8263C7.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -54,6 +55,7 @@
         <itemPath>mcc_generated_files/tmr0.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
+      <itemPath>RV8263C7.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -66,6 +68,9 @@
   <sourceRootList>
     <Elem>../../HW/Product/Schematic</Elem>
     <Elem>../../Docs</Elem>
+    <Elem>../Library/rtcc</Elem>
+    <Elem>../Library/common</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -118,7 +123,8 @@
         <property key="default-char-type" value="true"/>
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories"
+                  value="cfg;mcc_generated_files;..\Library"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>

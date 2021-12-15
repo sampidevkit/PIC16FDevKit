@@ -1,8 +1,5 @@
-#include <time.h>
-#include "mcc_generated_files/mcc.h"
-#include "mcc_generated_files/spi2.h"
-#include "mcc_generated_files/pin_manager.h"
-#include "mcc_generated_files/examples/i2c1_master_example.h"
+#include "mcc.h"
+#include "RV8263C7.h"
 
 #define MCP9701_ADC_RES_BIT 10
 #define MCP9701_ADC_VREF    2048 // FVR output 1
@@ -78,7 +75,7 @@ static void ExternalSRAM_Write(uint16_t SramAddr, uint8_t d) // <editor-fold def
 {
     uint8_t buff[4];
 
-    buff[0]=(uint8_t) (SramAddr<<8); // MSB of SRAM address
+    buff[0]=(uint8_t) (SramAddr>>8); // MSB of SRAM address
     buff[1]=(uint8_t) SramAddr; // LSB of SRAM address
     buff[2]=d; // data
     I2C1_WriteNBytes(0x53, buff, 3);
@@ -88,7 +85,7 @@ static uint8_t ExternalSRAM_Read(uint16_t SramAddr) // <editor-fold defaultstate
 {
     uint8_t buff[2];
 
-    buff[0]=(uint8_t) (SramAddr<<8); // MSB of SRAM address
+    buff[0]=(uint8_t) (SramAddr>>8); // MSB of SRAM address
     buff[1]=(uint8_t) SramAddr; // LSB of SRAM address
     I2C1_WriteNBytes(0x53, buff, 2);
     I2C1_ReadNBytes(0x53, &buff[0], 1);
@@ -100,7 +97,7 @@ static void ExpanderGPIO_Write(exp_gpio_reg_t Reg, uint8_t val) // <editor-fold 
 {
     uint8_t buff[4];
 
-    buff[0]=(uint8_t) (Reg<<8); // MSB of SRAM address
+    buff[0]=(uint8_t) (Reg>>8); // MSB of SRAM address
     buff[1]=(uint8_t) Reg; // LSB of SRAM address
     buff[2]=val; // data
     I2C1_WriteNBytes(0x53, buff, 3);
@@ -110,7 +107,7 @@ static uint8_t ExpanderGPIO_Read(exp_gpio_reg_t Reg) // <editor-fold defaultstat
 {
     uint8_t buff[2];
 
-    buff[0]=(uint8_t) (Reg<<8); // MSB of expander GPIO register address
+    buff[0]=(uint8_t) (Reg>>8); // MSB of expander GPIO register address
     buff[1]=(uint8_t) Reg; // LSB of expander GPIO register address
     I2C1_WriteNBytes(0x53, buff, 2);
     I2C1_ReadNBytes(0x53, &buff[0], 1);
@@ -146,16 +143,6 @@ static void SST_Flash_GetID(uint8_t *pD) // <editor-fold defaultstate="collapsed
     SPI2_Close();
 } // </editor-fold>
 
-static void RV8263C7_Init(void) // <editor-fold defaultstate="collapsed" desc="RTCC init">
-{
-
-} // </editor-fold>
-
-static void RV8263C7_Get(struct tm *pD) // <editor-fold defaultstate="collapsed" desc="Get RTC">
-{
-
-} // </editor-fold>
-
 static void RV8263C7_Isr(void) // <editor-fold defaultstate="collapsed" desc="RTCC ISR">
 {
     BLED_Toggle();
@@ -177,6 +164,7 @@ void main(void)
     IOCAF3_SetInterruptHandler(RV8263C7_Isr);
     ExpanderGPIO_Write(EXP_TRIS, 0);
     ExpanderGPIO_Write(EXP_LAT, 0);
+    printf("\nRunning\n");
 
     while(1)
     {
@@ -187,13 +175,18 @@ void main(void)
             default:
                 if(UBT_Is_Pressed())
                 {
+                    rtcc_t Rtcc;
                     uint8_t JedecID[4];
-                    
+
                     i=0;
                     DoNext=1;
                     ExpanderGPIO_SetBit(EXP_LAT, 0, 1);
                     SST_Flash_GetID(JedecID);
                     printf("\nFlash ID: %02X%02X%02X", JedecID[0], JedecID[1], JedecID[2]);
+                    RV8263C7_GetRtcc(&Rtcc);
+                    printf("\n%02d:%02d:%02d-", Rtcc.hour, Rtcc.min, Rtcc.sec);
+                    printf("%02d/%02d/20%02d", Rtcc.day, Rtcc.month, Rtcc.year);
+                    printf("\nTemperature: %.1f", MCP9701_GetTemp());
                 }
                 break;
 
@@ -230,13 +223,9 @@ void main(void)
 
             if(RtcTrig)
             {
-                struct tm Tm;
-                
+                RV8263C7_RegSet(RV8263C7_REG_TMR_VALUE, 1); // reload TMR value
+                RV8263C7_RegSet(RV8263C7_REG_CONTROL2, 0b00000111); // clear interrupt flag
                 ExpanderGPIO_SetBit(EXP_LAT, 1, 2);
-                RV8263C7_Get(&Tm);
-                printf("\n%02d:%02d:%02d-", Tm.tm_hour, Tm.tm_min, Tm.tm_sec);
-                printf("\n%02d/%02d/%04d-", Tm.tm_mday, Tm.tm_mon, Tm.tm_year);
-                printf("\nTemperature: %.1f", MCP9701_GetTemp());
             }
         }
 

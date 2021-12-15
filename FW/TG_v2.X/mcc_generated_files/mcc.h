@@ -55,10 +55,11 @@
 #include "interrupt_manager.h"
 #include "spi2.h"
 #include "i2c1_master.h"
-#include "fvr.h"
 #include "adcc.h"
+#include "fvr.h"
 #include "tmr0.h"
 #include "eusart.h"
+#include "examples/i2c1_master_example.h"
 
 
 

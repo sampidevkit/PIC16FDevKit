@@ -15,7 +15,7 @@ public void LibComp_Initialize(void) // <editor-fold defaultstate="collapsed" de
 public int Hardware_Info(uint8_t *pD) // <editor-fold defaultstate="collapsed" desc="Get hardware info">
 {
     /* Sample hardware info
-            PIC16F Dev Kit SAMM-5x v1.x\n
+            PIC16F Dev Kit SAMM-7x v2.x\n
             Owner: SAMPI\n
             BLD Rel: Dec 11 2021-21:13:4
      -->    APP Rel: mmm dd yyyy-H:m:s

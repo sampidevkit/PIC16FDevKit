@@ -15,6 +15,9 @@
             <sourceRootList>
                 <sourceRootElem>../../HW/Product/Schematic</sourceRootElem>
                 <sourceRootElem>../../Docs</sourceRootElem>
+                <sourceRootElem>../Library/rtcc</sourceRootElem>
+                <sourceRootElem>../Library/common</sourceRootElem>
+                <sourceRootElem>.</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
