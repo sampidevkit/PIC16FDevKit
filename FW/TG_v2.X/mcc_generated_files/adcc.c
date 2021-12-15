@@ -99,8 +99,8 @@ void ADCC_Initialize(void)
     ADCLK = 0x00;
     // ADGO stop; ADFM right; ADON enabled; ADCONT disabled; ADCS FRC; 
     ADCON0 = 0x94;
-    // ADACQ 0; 
-    ADACQ = 0x00;
+    // ADACQ 16; 
+    ADACQ = 0x10;
     
 
 }
@@ -143,7 +143,7 @@ adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
     // Start the conversion
     ADCON0bits.ADGO = 1;
 
-    __delay_us(100);
+
     // Wait for the conversion to finish
     while (ADCON0bits.ADGO)
     {

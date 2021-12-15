@@ -1,3 +1,4 @@
+#include <time.h>
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/spi2.h"
 #include "mcc_generated_files/pin_manager.h"
@@ -68,7 +69,7 @@ static float MCP9701_GetTemp(void) // <editor-fold defaultstate="collapsed" desc
     tmp*=MCP9701_ADC_VREF;
     tmp>>=MCP9701_ADC_RES_BIT; // mV=(ADCvalue*Vref)>>ADC_resolution
     // Offset 500mV at 0 C degree
-    tmp-=500;
+    tmp-=400;
     // Resolution MCP9701: 19.5mV/C degree
     return (((float) tmp)/19.5f);
 } // </editor-fold>
@@ -145,80 +146,106 @@ static void SST_Flash_GetID(uint8_t *pD) // <editor-fold defaultstate="collapsed
     SPI2_Close();
 } // </editor-fold>
 
+static void RV8263C7_Init(void) // <editor-fold defaultstate="collapsed" desc="RTCC init">
+{
+
+} // </editor-fold>
+
+static void RV8263C7_Get(struct tm *pD) // <editor-fold defaultstate="collapsed" desc="Get RTC">
+{
+
+} // </editor-fold>
+
+static void RV8263C7_Isr(void) // <editor-fold defaultstate="collapsed" desc="RTCC ISR">
+{
+    BLED_Toggle();
+} // </editor-fold>
+
 void main(void)
 {
     uint16_t i;
     tick_t Tick;
+    bool RtcTrig=0;
     uint8_t x, DoNext=0;
 
     SYSTEM_Initialize();
-    Tick_Reset(Tick);
+    //Tick_Reset(Tick);
     VDDSS_EN_N_SetLow(); // Enable Sensor VDD
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
-    //ExpanderGPIO_Write(EXP_TRIS, 0);
-    //ExpanderGPIO_Write(EXP_LAT, 0);
+    RV8263C7_Init();
+    IOCAF3_SetInterruptHandler(RV8263C7_Isr);
+    ExpanderGPIO_Write(EXP_TRIS, 0);
+    ExpanderGPIO_Write(EXP_LAT, 0);
 
     while(1)
     {
         CLRWDT();
-        BLED_Toggle();
-        printf("\nHello");
-        __delay_ms(50);
-//        switch(DoNext)
-//        {
-//            default:
-//                if(UBT_Is_Pressed())
-//                {
-//                    i=0;
-//                    DoNext=1;
-//                    ExpanderGPIO_SetBit(EXP_LAT, 0, 1);
-//                }
-//                break;
-//
-//            case 1: // Write data to SRAM
-//                ExternalSRAM_Write(i, (uint8_t) i);
-//
-//                if(++i>=4096)
-//                {
-//                    i=0;
-//                    DoNext=2;
-//                    printf("\nWrite SRAM: Done");
-//                }
-//                break;
-//
-//            case 2:
-//                x=ExternalSRAM_Read(i);
-//
-//                if(x!=(uint8_t) i)
-//                    printf("\nSRAM Error %04X: %02X", i, x);
-//
-//                if(++i>=4096)
-//                {
-//                    i=0;
-//                    DoNext=0;
-//                    ExpanderGPIO_SetBit(EXP_LAT, 0, 0);
-//                    printf("\nRead SRAM: Done");
-//                }
-//                break;
-//        }
-//
-//        if(Tick_Is_Over(&Tick, 500))
-//        {
-//            uint8_t JedecID[4];
-//
-//            ExpanderGPIO_SetBit(EXP_LAT, 0, 2);
-//            SST_Flash_GetID(JedecID);
-//            printf("\nFlash ID: %02X%02X%02X", JedecID[0], JedecID[1], JedecID[2]);
-//            printf("\nTemperature: %.1f", MCP9701_GetTemp());
-//        }
 
-//        while(EUSART_is_rx_ready()) // UART echo
-//        {
-//            if(EUSART_is_tx_ready())
-//                EUSART_Write(EUSART_Read());
-//            else
-//                break;
-//        }
+        switch(DoNext)
+        {
+            default:
+                if(UBT_Is_Pressed())
+                {
+                    uint8_t JedecID[4];
+                    
+                    i=0;
+                    DoNext=1;
+                    ExpanderGPIO_SetBit(EXP_LAT, 0, 1);
+                    SST_Flash_GetID(JedecID);
+                    printf("\nFlash ID: %02X%02X%02X", JedecID[0], JedecID[1], JedecID[2]);
+                }
+                break;
+
+            case 1: // Write data to SRAM
+                ExternalSRAM_Write(i, (uint8_t) i);
+
+                if(++i>=4096)
+                {
+                    i=0;
+                    DoNext=2;
+                    printf("\nWrite SRAM: Done");
+                }
+                break;
+
+            case 2:
+                x=ExternalSRAM_Read(i);
+
+                if(x!=(uint8_t) i)
+                    printf("\nSRAM Error %04X: %02X", i, x);
+
+                if(++i>=4096)
+                {
+                    i=0;
+                    DoNext=0;
+                    ExpanderGPIO_SetBit(EXP_LAT, 0, 0);
+                    printf("\nRead SRAM: Done");
+                }
+                break;
+        }
+
+        if(RtcTrig!=BLED_GetValue())
+        {
+            RtcTrig=BLED_GetValue();
+
+            if(RtcTrig)
+            {
+                struct tm Tm;
+                
+                ExpanderGPIO_SetBit(EXP_LAT, 1, 2);
+                RV8263C7_Get(&Tm);
+                printf("\n%02d:%02d:%02d-", Tm.tm_hour, Tm.tm_min, Tm.tm_sec);
+                printf("\n%02d/%02d/%04d-", Tm.tm_mday, Tm.tm_mon, Tm.tm_year);
+                printf("\nTemperature: %.1f", MCP9701_GetTemp());
+            }
+        }
+
+        while(EUSART_is_rx_ready()) // UART echo
+        {
+            if(EUSART_is_tx_ready())
+                EUSART_Write(EUSART_Read());
+            else
+                break;
+        }
     }
 }

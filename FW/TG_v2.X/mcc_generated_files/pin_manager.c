@@ -51,6 +51,8 @@
 
 
 
+void (*IOCAF3_InterruptHandler)(void);
+
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -79,7 +81,7 @@ void PIN_MANAGER_Initialize(void)
     ANSELC = 0xFF;
     ANSELB = 0x06;
     ANSELE = 0x07;
-    ANSELA = 0xFD;
+    ANSELA = 0xF5;
 
     /**
     WPUx registers
@@ -118,10 +120,23 @@ void PIN_MANAGER_Initialize(void)
     INLVLE = 0x0F;
 
 
+    /**
+    IOCx registers 
+    */
+    //interrupt on change for group IOCAF - flag
+    IOCAFbits.IOCAF3 = 0;
+    //interrupt on change for group IOCAN - negative
+    IOCANbits.IOCAN3 = 1;
+    //interrupt on change for group IOCAP - positive
+    IOCAPbits.IOCAP3 = 1;
 
 
 
+    // register default IOC callback functions at runtime; use these methods to register a custom function
+    IOCAF3_SetInterruptHandler(IOCAF3_DefaultInterruptHandler);
    
+    // Enable IOCI interrupt 
+    PIE0bits.IOCIE = 1; 
     
 	
     RXPPS = 0x0C;   //RB4->EUSART:RX;    
@@ -138,6 +153,41 @@ void PIN_MANAGER_Initialize(void)
   
 void PIN_MANAGER_IOC(void)
 {   
+	// interrupt on change for pin IOCAF3
+    if(IOCAFbits.IOCAF3 == 1)
+    {
+        IOCAF3_ISR();  
+    }	
+}
+
+/**
+   IOCAF3 Interrupt Service Routine
+*/
+void IOCAF3_ISR(void) {
+
+    // Add custom IOCAF3 code
+
+    // Call the interrupt handler for the callback registered at runtime
+    if(IOCAF3_InterruptHandler)
+    {
+        IOCAF3_InterruptHandler();
+    }
+    IOCAFbits.IOCAF3 = 0;
+}
+
+/**
+  Allows selecting an interrupt handler for IOCAF3 at application runtime
+*/
+void IOCAF3_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCAF3_InterruptHandler = InterruptHandler;
+}
+
+/**
+  Default interrupt handler for IOCAF3
+*/
+void IOCAF3_DefaultInterruptHandler(void){
+    // add your IOCAF3 interrupt custom code
+    // or set custom function using IOCAF3_SetInterruptHandler()
 }
 
 /**

@@ -85,6 +85,26 @@
 #define BLED_SetAnalogMode()      do { ANSELAbits.ANSA1 = 1; } while(0)
 #define BLED_SetDigitalMode()     do { ANSELAbits.ANSA1 = 0; } while(0)
 
+// get/set RTCC_INT aliases
+#define RTCC_INT_TRIS                 TRISAbits.TRISA3
+#define RTCC_INT_LAT                  LATAbits.LATA3
+#define RTCC_INT_PORT                 PORTAbits.RA3
+#define RTCC_INT_WPU                  WPUAbits.WPUA3
+#define RTCC_INT_OD                   ODCONAbits.ODCA3
+#define RTCC_INT_ANS                  ANSELAbits.ANSA3
+#define RTCC_INT_SetHigh()            do { LATAbits.LATA3 = 1; } while(0)
+#define RTCC_INT_SetLow()             do { LATAbits.LATA3 = 0; } while(0)
+#define RTCC_INT_Toggle()             do { LATAbits.LATA3 = ~LATAbits.LATA3; } while(0)
+#define RTCC_INT_GetValue()           PORTAbits.RA3
+#define RTCC_INT_SetDigitalInput()    do { TRISAbits.TRISA3 = 1; } while(0)
+#define RTCC_INT_SetDigitalOutput()   do { TRISAbits.TRISA3 = 0; } while(0)
+#define RTCC_INT_SetPullup()          do { WPUAbits.WPUA3 = 1; } while(0)
+#define RTCC_INT_ResetPullup()        do { WPUAbits.WPUA3 = 0; } while(0)
+#define RTCC_INT_SetPushPull()        do { ODCONAbits.ODCA3 = 0; } while(0)
+#define RTCC_INT_SetOpenDrain()       do { ODCONAbits.ODCA3 = 1; } while(0)
+#define RTCC_INT_SetAnalogMode()      do { ANSELAbits.ANSA3 = 1; } while(0)
+#define RTCC_INT_SetDigitalMode()     do { ANSELAbits.ANSA3 = 0; } while(0)
+
 // get/set FLASH_CS_N aliases
 #define FLASH_CS_N_TRIS                 TRISBbits.TRISB0
 #define FLASH_CS_N_LAT                  LATBbits.LATB0
@@ -272,6 +292,90 @@ void PIN_MANAGER_Initialize (void);
     PIN_MANAGER_IOC();
  */
 void PIN_MANAGER_IOC(void);
+
+
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Interrupt on Change Handler for the IOCAF3 pin functionality
+ * @Example
+    IOCAF3_ISR();
+ */
+void IOCAF3_ISR(void);
+
+/**
+  @Summary
+    Interrupt Handler Setter for IOCAF3 pin interrupt-on-change functionality
+
+  @Description
+    Allows selecting an interrupt handler for IOCAF3 at application runtime
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    InterruptHandler function pointer.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF3_SetInterruptHandler(MyInterruptHandler);
+
+*/
+void IOCAF3_SetInterruptHandler(void (* InterruptHandler)(void));
+
+/**
+  @Summary
+    Dynamic Interrupt Handler for IOCAF3 pin
+
+  @Description
+    This is a dynamic interrupt handler to be used together with the IOCAF3_SetInterruptHandler() method.
+    This handler is called every time the IOCAF3 ISR is executed and allows any function to be registered at runtime.
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF3_SetInterruptHandler(IOCAF3_InterruptHandler);
+
+*/
+extern void (*IOCAF3_InterruptHandler)(void);
+
+/**
+  @Summary
+    Default Interrupt Handler for IOCAF3 pin
+
+  @Description
+    This is a predefined interrupt handler to be used together with the IOCAF3_SetInterruptHandler() method.
+    This handler is called every time the IOCAF3 ISR is executed. 
+    
+  @Preconditions
+    Pin Manager intializer called
+
+  @Returns
+    None.
+
+  @Param
+    None.
+
+  @Example
+    PIN_MANAGER_Initialize();
+    IOCAF3_SetInterruptHandler(IOCAF3_DefaultInterruptHandler);
+
+*/
+void IOCAF3_DefaultInterruptHandler(void);
 
 
 
