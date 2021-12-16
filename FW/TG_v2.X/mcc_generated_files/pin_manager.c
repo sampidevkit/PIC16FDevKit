@@ -69,7 +69,7 @@ void PIN_MANAGER_Initialize(void)
     TRISx registers
     */
     TRISE = 0x07;
-    TRISA = 0xFD;
+    TRISA = 0xCD;
     TRISB = 0xD6;
     TRISC = 0xFF;
     TRISD = 0xB6;
@@ -88,8 +88,8 @@ void PIN_MANAGER_Initialize(void)
     */
     WPUD = 0x08;
     WPUE = 0x00;
-    WPUB = 0xC0;
-    WPUA = 0x00;
+    WPUB = 0xD0;
+    WPUA = 0x08;
     WPUC = 0x00;
 
     /**
@@ -128,7 +128,7 @@ void PIN_MANAGER_Initialize(void)
     //interrupt on change for group IOCAN - negative
     IOCANbits.IOCAN3 = 1;
     //interrupt on change for group IOCAP - positive
-    IOCAPbits.IOCAP3 = 1;
+    IOCAPbits.IOCAP3 = 0;
 
 
 
@@ -142,9 +142,11 @@ void PIN_MANAGER_Initialize(void)
     RXPPS = 0x0C;   //RB4->EUSART:RX;    
     SSP1CLKPPS = 0x0F;   //RB7->MSSP1:SCL1;    
     SSP2DATPPS = 0x1F;   //RD7->MSSP2:SDI2;    
+    RA4PPS = 0x01;   //RA4->CLC1:CLC1OUT;    
     RB6PPS = 0x15;   //RB6->MSSP1:SDA1;    
     RB7PPS = 0x14;   //RB7->MSSP1:SCL1;    
     RB5PPS = 0x10;   //RB5->EUSART:TX;    
+    RA5PPS = 0x02;   //RA5->CLC2:CLC2OUT;    
     RB3PPS = 0x16;   //RB3->MSSP2:SCK2;    
     RD6PPS = 0x17;   //RD6->MSSP2:SDO2;    
     SSP1DATPPS = 0x0E;   //RB6->MSSP1:SDA1;    

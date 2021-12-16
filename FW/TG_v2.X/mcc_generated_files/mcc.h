@@ -53,13 +53,15 @@
 #include <stdbool.h>
 #include <conio.h>
 #include "interrupt_manager.h"
-#include "spi2.h"
 #include "i2c1_master.h"
-#include "adcc.h"
-#include "fvr.h"
+#include "spi2.h"
 #include "tmr0.h"
+#include "fvr.h"
+#include "adcc.h"
+#include "clc2.h"
+#include "clc1.h"
 #include "eusart.h"
-#include "examples/i2c1_master_example.h"
+#include "clkref.h"
 
 
 

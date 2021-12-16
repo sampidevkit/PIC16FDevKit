@@ -27,6 +27,9 @@
         <itemPath>mcc_generated_files/i2c1_master.h</itemPath>
         <itemPath>mcc_generated_files/eusart.h</itemPath>
         <itemPath>mcc_generated_files/tmr0.h</itemPath>
+        <itemPath>mcc_generated_files/clkref.h</itemPath>
+        <itemPath>mcc_generated_files/clc2.h</itemPath>
+        <itemPath>mcc_generated_files/clc1.h</itemPath>
       </logicalFolder>
       <itemPath>RV8263C7.h</itemPath>
     </logicalFolder>
@@ -53,6 +56,9 @@
         <itemPath>mcc_generated_files/eusart.c</itemPath>
         <itemPath>mcc_generated_files/adcc.c</itemPath>
         <itemPath>mcc_generated_files/tmr0.c</itemPath>
+        <itemPath>mcc_generated_files/clc2.c</itemPath>
+        <itemPath>mcc_generated_files/clc1.c</itemPath>
+        <itemPath>mcc_generated_files/clkref.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>RV8263C7.c</itemPath>
@@ -86,7 +92,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.7.146"/>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.6.143"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

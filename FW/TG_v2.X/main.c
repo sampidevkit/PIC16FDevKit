@@ -148,12 +148,41 @@ static void RV8263C7_Isr(void) // <editor-fold defaultstate="collapsed" desc="RT
     BLED_Toggle();
 } // </editor-fold>
 
-void main(void)
+static void SK9822_Write(uint8_t Brightness, uint8_t Red, uint8_t Green, uint8_t Blue) // <editor-fold defaultstate="collapsed" desc="Addressable RGB led">
+{
+    SPI2_Open(SPI2_DEFAULT);
+    CLC2CONbits.EN=1;
+    CLKRCONbits.CLKREN=0; // disable CLKR_OUT
+    Brightness|=0b11100000;
+    // Start frame: 32 bits 0
+    SPI2_ExchangeByte(0x00);
+    SPI2_ExchangeByte(0x00);
+    SPI2_ExchangeByte(0x00);
+    SPI2_ExchangeByte(0x00);
+    // Brightness
+    SPI2_ExchangeByte(Brightness);
+    // Blue
+    SPI2_ExchangeByte(Blue);
+    // Green
+    SPI2_ExchangeByte(Green);
+    // Red
+    SPI2_ExchangeByte(Red);
+    // End frame: 32 bits 1
+    SPI2_ExchangeByte(0xFF);
+    SPI2_ExchangeByte(0xFF);
+    SPI2_ExchangeByte(0xFF);
+    SPI2_ExchangeByte(0xFF);
+    SPI2_Close();
+    CLC2CONbits.EN=0;
+    CLKRCONbits.CLKREN=1; // enable CLKR_OUT
+} // </editor-fold>
+
+void main(void) // <editor-fold defaultstate="collapsed" desc="Main">
 {
     uint16_t i;
     tick_t Tick;
     bool RtcTrig=0;
-    uint8_t x, DoNext=0;
+    uint8_t x, DoNext=0, Brightness=15, Red=0, Green=0, Blue=0;
 
     SYSTEM_Initialize();
     //Tick_Reset(Tick);
@@ -163,7 +192,7 @@ void main(void)
     RV8263C7_Init();
     IOCAF3_SetInterruptHandler(RV8263C7_Isr);
     ExpanderGPIO_Write(EXP_TRIS, 0);
-    ExpanderGPIO_Write(EXP_LAT, 0);
+    ExpanderGPIO_Write(EXP_LAT, 2);
     printf("\nRunning\n");
 
     while(1)
@@ -220,13 +249,24 @@ void main(void)
         if(RtcTrig!=BLED_GetValue())
         {
             RtcTrig=BLED_GetValue();
+            RV8263C7_RegSet(RV8263C7_REG_TMR_VALUE, 1); // reload TMR value
+            RV8263C7_RegSet(RV8263C7_REG_CONTROL2, 0b00000111); // clear interrupt flag
+            ExpanderGPIO_SetBit(EXP_LAT, 1, 2);
+        }
 
-            if(RtcTrig)
+        if(Tick_Is_Over(&Tick, 100))
+        {
+            Red+=3;
+            Green+=5;
+            Blue+=7;
+
+            if((Red|Green|Blue)==0)
             {
-                RV8263C7_RegSet(RV8263C7_REG_TMR_VALUE, 1); // reload TMR value
-                RV8263C7_RegSet(RV8263C7_REG_CONTROL2, 0b00000111); // clear interrupt flag
-                ExpanderGPIO_SetBit(EXP_LAT, 1, 2);
+                if(++Brightness>31)
+                    Brightness=1;
             }
+
+            SK9822_Write(Brightness, Red, Green, Blue);
         }
 
         while(EUSART_is_rx_ready()) // UART echo
@@ -237,4 +277,4 @@ void main(void)
                 break;
         }
     }
-}
+} // </editor-fold>

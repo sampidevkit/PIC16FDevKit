@@ -105,6 +105,30 @@
 #define RTCC_INT_SetAnalogMode()      do { ANSELAbits.ANSA3 = 1; } while(0)
 #define RTCC_INT_SetDigitalMode()     do { ANSELAbits.ANSA3 = 0; } while(0)
 
+// get/set RA4 procedures
+#define RA4_SetHigh()            do { LATAbits.LATA4 = 1; } while(0)
+#define RA4_SetLow()             do { LATAbits.LATA4 = 0; } while(0)
+#define RA4_Toggle()             do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0)
+#define RA4_GetValue()              PORTAbits.RA4
+#define RA4_SetDigitalInput()    do { TRISAbits.TRISA4 = 1; } while(0)
+#define RA4_SetDigitalOutput()   do { TRISAbits.TRISA4 = 0; } while(0)
+#define RA4_SetPullup()             do { WPUAbits.WPUA4 = 1; } while(0)
+#define RA4_ResetPullup()           do { WPUAbits.WPUA4 = 0; } while(0)
+#define RA4_SetAnalogMode()         do { ANSELAbits.ANSA4 = 1; } while(0)
+#define RA4_SetDigitalMode()        do { ANSELAbits.ANSA4 = 0; } while(0)
+
+// get/set RA5 procedures
+#define RA5_SetHigh()            do { LATAbits.LATA5 = 1; } while(0)
+#define RA5_SetLow()             do { LATAbits.LATA5 = 0; } while(0)
+#define RA5_Toggle()             do { LATAbits.LATA5 = ~LATAbits.LATA5; } while(0)
+#define RA5_GetValue()              PORTAbits.RA5
+#define RA5_SetDigitalInput()    do { TRISAbits.TRISA5 = 1; } while(0)
+#define RA5_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
+#define RA5_SetPullup()             do { WPUAbits.WPUA5 = 1; } while(0)
+#define RA5_ResetPullup()           do { WPUAbits.WPUA5 = 0; } while(0)
+#define RA5_SetAnalogMode()         do { ANSELAbits.ANSA5 = 1; } while(0)
+#define RA5_SetDigitalMode()        do { ANSELAbits.ANSA5 = 0; } while(0)
+
 // get/set FLASH_CS_N aliases
 #define FLASH_CS_N_TRIS                 TRISBbits.TRISB0
 #define FLASH_CS_N_LAT                  LATBbits.LATB0

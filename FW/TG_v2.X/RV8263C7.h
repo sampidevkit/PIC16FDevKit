@@ -2,6 +2,7 @@
 #define RV8263C7_H
 
 #include <time.h>
+#include "examples/i2c1_master_example.h"
 
 #define RV8263C7_SLAVE_ADDR         0b01010001
 /* **************************************************** REGISTER ORGANIZATION */

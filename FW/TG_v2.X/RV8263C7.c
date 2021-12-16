@@ -1,6 +1,4 @@
-#include "mcc.h"
 #include "RV8263C7.h"
-#include "examples/i2c1_master_example.h"
 
 #define __debug(...)    //printf(__VA_ARGS__)
 #define __ndb(...)      //printf(__VA_ARGS__)
@@ -40,15 +38,26 @@ static void RV8263C7_RMW(uint8_t reg, uint8_t set, uint8_t mask) // <editor-fold
 void RV8263C7_Init(void) // <editor-fold defaultstate="collapsed" desc="Initialize">
 {
     RV8263C7_SetHourMode(RV8263C7_H24);
-    // 1Hz, enable TMR, enable interrupt, interval mode
+    // Unused: 000
+    // Timer Clock Frequency: 10-1Hz
+    // Timer Enable: 1-Enable
+    // Timer Interrupt Enable: 1-Interrupt generated from timer
+    // Timer Interrupt Mode: 0-Interval Mode. Interrupt follows Timer Flag TF
     RV8263C7_RegSet(RV8263C7_REG_TMR_MODE, 0b00010110);
-    RV8263C7_RegSet(RV8263C7_REG_TMR_VALUE, 1); // set TMR value
-    RV8263C7_RegSet(RV8263C7_REG_CONTROL2, 0b00000111); // clear interrupt flag
+    // set TMR value
+    RV8263C7_RegSet(RV8263C7_REG_TMR_VALUE, 1);
+    // Alarm Interrupt: 0-Disable
+    // Alarm Flag: 0-Cleared
+    // Minute Interrupt: 0-Disable
+    // Half Minute Interrupt: 0-Disable
+    // Timer Flag: 0-Cleared
+    // CLKOUT Frequency: 111-CLKOUT low
+    RV8263C7_RegSet(RV8263C7_REG_CONTROL2, 0b00000111);
 } // </editor-fold>
 
 void RV8263C7_SetHourMode(bool H24_12) // <editor-fold defaultstate="collapsed" desc="Set hour mode">
 {
-    RV8263C7_RMW(RV8263C7_REG_CONTROL1, (uint8_t)(H24_12<<RV8263C7_CONTROL1_H12_24_POS), RV8263C7_CONTROL1_H12_24_MASK);
+    RV8263C7_RMW(RV8263C7_REG_CONTROL1, (uint8_t) (H24_12<<RV8263C7_CONTROL1_H12_24_POS), RV8263C7_CONTROL1_H12_24_MASK);
 } // </editor-fold>
 
 void RV8263C7_RegSet(uint8_t reg, uint8_t val) // <editor-fold defaultstate="collapsed" desc="Set a register">
@@ -66,7 +75,7 @@ void RV8263C7_RegGet(uint8_t reg, uint8_t *pVal) // <editor-fold defaultstate="c
 
 void RV8263C7_SetClockOut(uint8_t mode) // <editor-fold defaultstate="collapsed" desc="Set clock output frequency">
 {
-    RV8263C7_RMW(RV8263C7_REG_CONTROL2, (uint8_t)(mode<<RV8263C7_CONTROL2_FD_POS), RV8263C7_CONTROL2_FD_MASK);
+    RV8263C7_RMW(RV8263C7_REG_CONTROL2, (uint8_t) (mode<<RV8263C7_CONTROL2_FD_POS), RV8263C7_CONTROL2_FD_MASK);
 } // </editor-fold>
 
 void RV8263C7_SoftReset(void) // <editor-fold defaultstate="collapsed" desc="RTC chip software reset">

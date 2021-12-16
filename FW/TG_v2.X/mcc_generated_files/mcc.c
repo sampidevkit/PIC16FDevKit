@@ -55,9 +55,12 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     FVR_Initialize();
+    CLC1_Initialize();
     ADCC_Initialize();
+    CLC2_Initialize();
     TMR0_Initialize();
     EUSART_Initialize();
+    CLKREF_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
