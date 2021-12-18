@@ -1,6 +1,9 @@
 #ifndef ICSP_FILEIO_CFG_H
 #define ICSP_FILEIO_CFG_H
 
+#include <stdbool.h>
+#include <stdint.h>
+
 #define USE_BLD_INFO
 #define __INFO_ADDRESS__                    0x9D00C000
 #define __WEBSITE__                         "https://bit.ly/3rMJ4hs"
@@ -13,5 +16,13 @@
 #define DRV_NUM_RESERVED_SECTORS            1
 #define DRV_NUM_VBR_SECTORS                 1
 #define DRV_NUM_FAT_SECTORS                 1
+
+// INFO.txt file
+#define APP_BUFFER_LOG_LEN                  128
+// ICSP FileIO
+extern bool MediaWriteProtect;
+extern uint8_t App_Log_Buffer[APP_BUFFER_LOG_LEN];
+
+int Hardware_Info(uint8_t *pD);
 
 #endif

@@ -2,6 +2,9 @@
 #define ICSP_CFG_H
 
 #include <xc.h>
+#include <stdint.h>
+#include <stdbool.h>
+
 // Library configure
 #define ICSP_LOG_HW_INFO
 #define ICSP_LOG_LEN                        APP_BUFFER_LOG_LEN
@@ -106,5 +109,8 @@ inline static void ICSP_VBUS_EN_N_SetValue(bool value) {
 
     while (ICSP_VBUS_EN_N_GetValue() != value);
 }
+
+void Change_Mode_To_ICSP(void);
+void Change_Mode_To_Running(void);
 
 #endif

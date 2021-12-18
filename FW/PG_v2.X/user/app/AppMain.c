@@ -15,6 +15,9 @@ public void APP_Main_Initialize(void) // <editor-fold defaultstate="collapsed" d
 
 public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="Application Main Task">
 {
+    if(Sw4_Is_Pressed())
+        DoNext=5;
+
     switch(DoNext)
     {
         case 0:
@@ -23,15 +26,8 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
         case 3:
             if(Sw1_Is_Pressed()) // Reset target MCU
             {
-                MediaWriteProtect=1;
-                ICSP_Init(1);
-                ICSP_MCLR_SetLow();
-                ICSP_MCLR_SetDigitalOutput();
-                RLED_EXT_SetHigh();
-                GLED_EXT_SetHigh();
+                DoNext=5;
                 Tick_Timer_Reset(Tick);
-                ICSP_VDDTG_EN_SetLow();
-                DoNext=9;
             }
             else if(Sw3_Is_Pressed()) // Erase target MCU
             {
@@ -54,13 +50,24 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             GLED_EXT_SetHigh();
             Tick_Timer_Reset(Tick);
             ICSP_VDDTG_EN_SetLow();
-            DoNext=5;
+            DoNext=6;
             break;
 
-        case 5:
+        case 5: // Reset target MCU
+            MediaWriteProtect=1;
+            ICSP_Init(1);
+            ICSP_MCLR_SetLow();
+            ICSP_MCLR_SetDigitalOutput();
+            RLED_EXT_SetHigh();
+            GLED_EXT_SetHigh();
+            ICSP_VDDTG_EN_SetLow();
+            DoNext=10;
+            break;
+
         case 6:
         case 7:
         case 8:
+        case 9:
             if(Tick_Timer_Is_Over_Ms(Tick, 250))
             {
                 DoNext++;
@@ -69,7 +76,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             }
             break;
 
-        case 9:
+        case 10:
             ICSP_MCLR_SetDigitalInput();
 
             if(ICSP_MCLR_GetValue()==0)
@@ -77,7 +84,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
                 if(Tick_Timer_Is_Over_Ms(Tick, 100))
                 {
                     ICSP_VDDTG_EN_SetHigh();
-                    DoNext=10;
+                    DoNext=11;
                 }
             }
             else
@@ -86,7 +93,7 @@ public void APP_Main_Tasks(void) // <editor-fold defaultstate="collapsed" desc="
             ICSP_MCLR_SetDigitalOutput();
             break;
 
-        case 10:
+        case 11:
         default:
             if(Tick_Timer_Is_Over_Ms(Tick, 400))
             {

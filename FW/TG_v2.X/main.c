@@ -185,14 +185,17 @@ void main(void) // <editor-fold defaultstate="collapsed" desc="Main">
     uint8_t x, DoNext=0, Brightness=15, Red=0, Green=0, Blue=0;
 
     SYSTEM_Initialize();
-    //Tick_Reset(Tick);
+    Tick_Reset(Tick);
     VDDSS_EN_N_SetLow(); // Enable Sensor VDD
+    UBT_N_SetLow();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
     RV8263C7_Init();
     IOCAF3_SetInterruptHandler(RV8263C7_Isr);
     ExpanderGPIO_Write(EXP_TRIS, 0);
     ExpanderGPIO_Write(EXP_LAT, 2);
+    __delay_ms(500);
+    UBT_N_SetHigh();
     printf("\nRunning\n");
 
     while(1)

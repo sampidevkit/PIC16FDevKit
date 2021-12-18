@@ -12,7 +12,7 @@ static bool addressState=true;
 static uint16_t address, addrByteCount;
 static uint8_t i2c1_slaveWriteData=0xAA;
 
-private uint8_t SRAM_Emulate_TRIS_Read(void)
+private uint8_t SRAM_Emulate_TRIS_Read(void) // <editor-fold defaultstate="collapsed" desc="TRIS register">
 {
     uint8_t value=TRISX_EXT_GPIO1;
 
@@ -20,9 +20,9 @@ private uint8_t SRAM_Emulate_TRIS_Read(void)
     value|=TRISX_EXT_GPIO0;
 
     return value;
-}
+} // </editor-fold>
 
-private uint8_t SRAM_Emulate_PORT_Read(void)
+private uint8_t SRAM_Emulate_PORT_Read(void) // <editor-fold defaultstate="collapsed" desc="PORT register">
 {
     uint8_t value=PORTX_EXT_GPIO1;
 
@@ -30,9 +30,9 @@ private uint8_t SRAM_Emulate_PORT_Read(void)
     value|=PORTX_EXT_GPIO0;
 
     return value;
-}
+} // </editor-fold>
 
-private uint8_t SRAM_Emulate_LAT_Read(void)
+private uint8_t SRAM_Emulate_LAT_Read(void) // <editor-fold defaultstate="collapsed" desc="LAT register">
 {
     uint8_t value=LATX_EXT_GPIO1;
 
@@ -40,9 +40,9 @@ private uint8_t SRAM_Emulate_LAT_Read(void)
     value|=LATX_EXT_GPIO0;
 
     return value;
-}
+} // </editor-fold>
 
-public new_simple_task_t(SRAM_Emulate_Tasks)
+public new_simple_task_t(SRAM_Emulate_Tasks) // <editor-fold defaultstate="collapsed" desc="SRAM emulate tasks">
 {
     if(SRAM_Emulate_TRIS_Read()!=TRISX)
     {
@@ -60,9 +60,9 @@ public new_simple_task_t(SRAM_Emulate_Tasks)
         PORTX=SRAM_Emulate_PORT_Read();
 
     Task_Done();
-}
+} // </editor-fold>
 
-public void SRAM_Emulate_Init(void)
+public void SRAM_Emulate_Init(void) // <editor-fold defaultstate="collapsed" desc="SRAM emulate initialize">
 {
     TRISX_EXT_GPIO0=1;
     TRISX_EXT_GPIO1=1;
@@ -71,9 +71,9 @@ public void SRAM_Emulate_Init(void)
     PORTX=0b00000000;
     LATX=0b00000000;
     TaskManager_Create_NewSimpleTask(SRAM_Emulate_Tasks);
-}
+} // </editor-fold>
 
-public void SRAM_Emulate_Deinit(void)
+public void SRAM_Emulate_Deinit(void) // <editor-fold defaultstate="collapsed" desc="SRAM emulate deinitialize">
 {
     TaskManager_End_Task(SRAM_Emulate_Tasks);
     TRISX=0b11111111;
@@ -81,9 +81,9 @@ public void SRAM_Emulate_Deinit(void)
     LATX=0b00000000;
     TRISX_EXT_GPIO0=0;
     TRISX_EXT_GPIO1=0;
-}
+} // </editor-fold>
 
-public bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
+public bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status) // <editor-fold defaultstate="collapsed" desc="I2C callback">
 {
     switch(status)
     {
@@ -136,4 +136,4 @@ public bool I2C1_StatusCallback(I2C1_SLAVE_DRIVER_STATUS status)
     }
 
     return true;
-}
+} // </editor-fold>

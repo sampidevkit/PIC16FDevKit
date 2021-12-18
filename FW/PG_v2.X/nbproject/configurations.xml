@@ -144,6 +144,10 @@
       <logicalFolder name="f1" displayName="Configure" projectFiles="true">
         <logicalFolder name="f1" displayName="Application" projectFiles="true">
           <itemPath>cfg/app/user_usb_device_descriptors.c</itemPath>
+          <itemPath>cfg/app/Buttons_cfg.c</itemPath>
+          <itemPath>cfg/app/Icsp_Cfg.c</itemPath>
+          <itemPath>cfg/app/Indicator_Cfg.c</itemPath>
+          <itemPath>cfg/app/ICSP_FileIO_Cfg.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="Bootloader" projectFiles="true">
           <itemPath>cfg/bld/user_usb_device_descriptors.c</itemPath>
@@ -310,6 +314,20 @@
         </C32Global>
       </item>
       <item path="../Library/bootloader/BLD_Nvm_PIC32.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="../Library/bootloader/Bootloader.c" ex="true" overriding="false">
         <C32>
@@ -1029,6 +1047,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d00ffff"/>
         <property key="memories.rww" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="F:/Github/SAMPIDevKit/PIC16DevKit/PIC16F1887x/FW/PG.X/debug/app/PG_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -1842,6 +1862,8 @@
         <C32Global>
         </C32Global>
       </item>
+      <item path="cfg/app/Buttons_cfg.c" ex="true" overriding="false">
+      </item>
       <item path="cfg/app/Common_Lib_Cfg.h" ex="true" overriding="false">
         <C32>
         </C32>
@@ -1873,6 +1895,8 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="cfg/app/ICSP_FileIO_Cfg.c" ex="true" overriding="false">
       </item>
       <item path="cfg/app/ICSP_FileIO_Cfg.h" ex="true" overriding="false">
         <C32>
@@ -1906,6 +1930,8 @@
         <C32Global>
         </C32Global>
       </item>
+      <item path="cfg/app/Icsp_Cfg.c" ex="true" overriding="false">
+      </item>
       <item path="cfg/app/Icsp_Cfg.h" ex="true" overriding="false">
         <C32>
         </C32>
@@ -1921,6 +1947,8 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="cfg/app/Indicator_Cfg.c" ex="true" overriding="false">
       </item>
       <item path="cfg/app/Indicator_Cfg.h" ex="true" overriding="false">
         <C32>

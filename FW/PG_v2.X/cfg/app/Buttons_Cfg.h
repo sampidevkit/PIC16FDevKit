@@ -1,5 +1,8 @@
 #ifndef BUTTONS_CFG_H
 #define BUTTONS_CFG_H
+
+#include <stdbool.h>
+
 // Reset target MCU
 #define SW1_TIMEOUT             200 // ms
 #define SW1_TIME_MODE_EDGE_H2L  TIME_MODE_EDGE_H2L
@@ -12,4 +15,12 @@
 #define SW3_TIMEOUT             10 // ms
 #define SW3_TIME_MODE_EDGE_H2L  TIME_MODE_EDGE_L2H
 #define SW3_GetValue            ProgButton_GetState
+// ICSP uninitialized check
+#define SW4_TIMEOUT             500 // ms
+#define SW4_TIME_MODE_EDGE_H2L  TIME_MODE_EDGE_H2L
+#define SW4_GetValue            ICSP_Uninitialized_Check
+
+bool ProgButton_GetState(void);
+bool ICSP_Uninitialized_Check(void);
+
 #endif
