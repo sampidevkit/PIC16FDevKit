@@ -14,14 +14,14 @@ CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/deviceinfoeditor
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
 CND_PACKAGE_NAME_Debug=deviceinfoeditor.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/deviceinfoeditor.tar
-# Release configuration
-CND_PLATFORM_Release=MinGW-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=deviceinfoeditor
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/deviceinfoeditor
-CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
-CND_PACKAGE_NAME_Release=deviceinfoeditor.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/deviceinfoeditor.tar
+# Debug2 configuration
+CND_PLATFORM_Debug2=MinGW-Windows
+CND_ARTIFACT_DIR_Debug2=dist/Debug2/MinGW-Windows
+CND_ARTIFACT_NAME_Debug2=deviceinfoeditor
+CND_ARTIFACT_PATH_Debug2=dist/Debug2/MinGW-Windows/deviceinfoeditor
+CND_PACKAGE_DIR_Debug2=dist/Debug2/MinGW-Windows/package
+CND_PACKAGE_NAME_Debug2=deviceinfoeditor.tar
+CND_PACKAGE_PATH_Debug2=dist/Debug2/MinGW-Windows/package/deviceinfoeditor.tar
 #
 # include compiler specific variables
 #

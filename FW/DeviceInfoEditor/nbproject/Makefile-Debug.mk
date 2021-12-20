@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/bcb23e0e/UserFunctions.o \
+	${OBJECTDIR}/_ext/39a81379/HexParsing.o \
 	${OBJECTDIR}/main.o
 
 
@@ -62,10 +64,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deviceinfoeditor.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/deviceinfoeditor ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/_ext/bcb23e0e/UserFunctions.o: ../Library/common/UserFunctions.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/bcb23e0e
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Icfg -I../Library -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/bcb23e0e/UserFunctions.o ../Library/common/UserFunctions.c
+
+${OBJECTDIR}/_ext/39a81379/HexParsing.o: ../Library/programmer/HexParsing.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/39a81379
+	${RM} "$@.d"
+	$(COMPILE.c) -g -Icfg -I../Library -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/39a81379/HexParsing.o ../Library/programmer/HexParsing.c
+
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g -Icfg -I../Library -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:

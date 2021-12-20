@@ -4,4 +4,4 @@
 # NOCDDL
 #
 # Debug configuration
-# Release configuration
+# Debug2 configuration

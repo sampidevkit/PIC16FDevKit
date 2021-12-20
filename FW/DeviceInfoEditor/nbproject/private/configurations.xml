@@ -36,7 +36,7 @@
         </environment>
       </runprofile>
     </conf>
-    <conf name="Release" type="1">
+    <conf name="Debug2" type="1">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <platform>3</platform>
