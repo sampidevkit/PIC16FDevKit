@@ -16,14 +16,8 @@ int8_t DATA_Write(uint32_t Addr, uint8_t *pData, uint8_t Len) // <editor-fold de
 {
     if((Addr>=BEGIN_ADDR)&&(Addr<END_ADDR))
     {
-        //uint8_t i;
-
         ModLen=Len;
         ModIdx=(uint8_t) (Addr-BEGIN_ADDR);
-
-        //        for(i=0; i<Len; i++)
-        //            ModHex[ModIdx+i]=*pData++;
-
         mod=1;
     }
 
@@ -56,148 +50,180 @@ uint8_t Ascii2Hex(uint8_t *pD) // <editor-fold defaultstate="collapsed" desc="Co
 
 int main(int argc, char** argv)
 {
+    uint8_t *p;
+    uint8_t c, i, j, k;
+    FILE *pHex, *pTemplate, *pNewHex, *pUser;
+    char footer[128], new_file_name[64], user_name[64];
+
     if(argc!=4)
     {
         printf("Incorrect inputs");
-        printf("\nHELP:\n<hex file> <template> <user name>");
+        printf("\nHELP:\n<hex file> <template file> <user name file>");
         goto EXIT;
     }
 
-    //FILE *pHex=fopen("..\\PG_v2.X\\bld.hex", "r");
-    FILE *pHex=fopen(argv[1], "r");
-    FILE *pTemplate=fopen(argv[2], "r");
+    pUser=fopen(argv[3], "r");
 
-    char new_file_name[64];
-
-    sprintf(new_file_name, "%s.hex", argv[3]);
-    str_remove(new_file_name, '"');
-
-    FILE *pNewHex=fopen(new_file_name, "w+");
-
-    if(pHex==NULL)
+    if(pUser==NULL)
     {
-        printf("\nHex file not found");
+        printf("\nCan not open User name file");
         goto EXIT;
     }
 
-    if(pTemplate==NULL)
+    while(1)
     {
-        printf("\nTemplate file not found");
-        goto EXIT;
-    }
+        i=0;
+        memset(user_name, 0x00, (size_t) membersof(user_name));
 
-    if(pNewHex==NULL)
-    {
-        printf("\nCan not create new hex file");
-        goto EXIT;
-    }
-
-    uint8_t c, i, j, k;
-
-    mod=0;
-    RawLen=0;
-    ModTotalLen=9;
-    memset(RawHex, 0x00, sizeof (RawHex));
-    memset(ModHex, 0x00, sizeof (ModHex));
-
-    i=0;
-
-    do
-    {
-        c=(uint8_t) fgetc(pTemplate);
-        ModHex[i++]=c;
-
-        if(i>=sizeof (ModHex))
-            break;
-    }
-    while((c!=0x00)||(c!=0xFF)||(c!=EOF));
-
-    uint8_t *p=strstr(ModHex, "BLD Rel: ");
-
-    if(p==NULL)
-    {
-        printf("\nNo \"BLD Rel: \" in template file");
-        goto EXIT;
-    }
-
-    uint8_t footer[128];
-
-    strcpy(footer, p);
-    p=strstr(ModHex, "Owner: ");
-
-    if(p==NULL)
-    {
-        printf("\nNo \"Owner: \" in template file");
-        goto EXIT;
-    }
-    
-    p+=7;
-    
-    while(*p!=0x00)
-    {
-        *p=0x00;
-        p++;
-    }
-
-    i=strlen(ModHex);
-    sprintf(&ModHex[i], "%s\n%s", argv[3], footer);
-    //sprintf(ModHex, "Arsenal up against Wolfs burg in tricky Champions League quarters tie\n");
-
-    printf("\nNew info:\n%s\n", ModHex);
-
-    do
-    {
-        c=(uint8_t) fgetc(pHex);
-        HEXPARSE_Tasks(c);
-
-        if((c==':')||(c==0x00)||(c==0xFF)||(c==EOF))
+        do
         {
-            if(mod!=0)
+            c=fgetc(pUser);
+            user_name[i++]=c;
+        }
+        while((c!=0x00)&&(c!=0xFF)&&(c!=EOF)&&(c!='\n'));
+
+        if(i<=1)
+            goto EXIT;
+        
+        if(user_name[i-1]==0xFF)
+            user_name[i-1]=0x00;
+
+        pHex=fopen(argv[1], "r");
+
+        if(pHex==NULL)
+        {
+            printf("\nCan not open Hex file");
+            goto EXIT;
+        }
+
+        pTemplate=fopen(argv[2], "r");
+
+        if(pTemplate==NULL)
+        {
+            printf("\nCan not open Template file");
+            goto EXIT;
+        }
+
+        str_remove(user_name, '"');
+        str_remove(user_name, '\r');
+        str_remove(user_name, '\n');
+        sprintf(new_file_name, "%s.hex", user_name);
+        pNewHex=fopen(new_file_name, "w+");
+
+        if(pNewHex==NULL)
+        {
+            printf("\nCan not create new hex file");
+            goto EXIT;
+        }
+
+        mod=0;
+        RawLen=0;
+        ModTotalLen=9;
+        memset(RawHex, 0x00, (size_t) membersof(RawHex));
+        memset(ModHex, 0x00, (size_t) membersof(ModHex));
+
+        i=0;
+
+        do
+        {
+            c=(uint8_t) fgetc(pTemplate);
+            ModHex[i++]=c;
+
+            if(i>=(size_t) membersof(ModHex))
+                break;
+        }
+        while((c!=0x00)&&(c!=0xFF)&&(c!=EOF));
+
+        p=strstr(ModHex, "BLD Rel: ");
+
+        if(p==NULL)
+        {
+            printf("\nNo \"BLD Rel: \" in template file");
+            goto EXIT;
+        }
+
+        memset(footer, 0x00, (size_t) membersof(footer));
+        strcpy(footer, p);
+        p=strstr(ModHex, "Owner: ");
+
+        if(p==NULL)
+        {
+            printf("\nNo \"Owner: \" in template file");
+            goto EXIT;
+        }
+
+        p+=7;
+
+        while(*p!=0x00)
+        {
+            *p=0x00;
+            p++;
+        }
+
+        i=strlen(ModHex);
+        sprintf(&ModHex[i], "%s\n%s", user_name, footer);
+
+        printf("\nNew info:\n%s\n", ModHex);
+        PrintHex(ModHex, DATA_LEN, 8);
+
+        do
+        {
+            c=(uint8_t) fgetc(pHex);
+            HEXPARSE_Tasks(c);
+
+            if((c==':')||(c==0x00)||(c==0xFF)||(c==EOF))
             {
-                j=0;
-
-                for(i=1; i<ModTotalLen; i+=2)
+                if(mod!=0)
                 {
-                    k=Ascii2Hex(&RawHex[i]);
-                    j+=k;
+                    j=0;
 
-                    //printf("\n%c%c, %02X", RawHex[i], RawHex[i+1], k);
+                    for(i=1; i<ModTotalLen; i+=2)
+                    {
+                        k=Ascii2Hex(&RawHex[i]);
+                        j+=k;
+                    }
+
+                    j=(0xFF-j);
+                    j++;
+
+                    RawHex[ModTotalLen++]=Bcd2Hex(j>>4);
+                    RawHex[ModTotalLen++]=Bcd2Hex(j&0x0F);
+                    RawHex[ModTotalLen++]='\n';
+                    RawHex[ModTotalLen++]=0x00;
+
+                    ModTotalLen=9;
+                    mod=0;
                 }
 
-                j=(0xFF-j);
-                j++;
-
-                RawHex[ModTotalLen++]=Bcd2Hex(j>>4);
-                RawHex[ModTotalLen++]=Bcd2Hex(j&0x0F);
-                RawHex[ModTotalLen++]='\n';
-                RawHex[ModTotalLen++]=0x00;
-
-                ModTotalLen=9;
-                mod=0;
+                fprintf(pNewHex, "%s", RawHex);
+                memset(RawHex, 0x00, (size_t) membersof(RawHex));
+                RawLen=0;
             }
 
-            fprintf(pNewHex, "%s", RawHex);
-            memset(RawHex, 0x00, sizeof (RawHex));
-            RawLen=0;
-        }
+            RawHex[RawLen++]=c;
 
-        RawHex[RawLen++]=c;
-
-        if(mod==1)
-        {
-            for(i=0; i<ModLen; i++)
+            if(mod==1)
             {
-                j=2*i+9;
-                k=ModHex[ModIdx+i];
-                RawHex[j]=Bcd2Hex(k>>4);
-                RawHex[j+1]=Bcd2Hex(k&0x0F);
-                ModTotalLen+=2;
-            }
+                for(i=0; i<ModLen; i++)
+                {
+                    j=2*i+9;
+                    k=ModHex[ModIdx+i];
+                    RawHex[j]=Bcd2Hex(k>>4);
+                    RawHex[j+1]=Bcd2Hex(k&0x0F);
+                    ModTotalLen+=2;
+                }
 
-            mod=2;
+                mod=2;
+            }
         }
+        while((c!=0xFF)&&(c!=0x00)&&(c!=EOF));
+
+        if(pHex)
+            fclose(pHex);
+
+        if(pNewHex)
+            fclose(pNewHex);
     }
-    while((c!=0xFF)&&(c!=0x00));
 
 EXIT:
     if(pHex)
@@ -206,12 +232,11 @@ EXIT:
     if(pTemplate)
         fclose(pTemplate);
 
-
     if(pNewHex)
         fclose(pNewHex);
 
-    //printf("\nPress any key to exit...");
-    //getchar();
+    if(pUser)
+        fclose(pUser);
 
     return (EXIT_SUCCESS);
 }

@@ -1,5 +1,7 @@
 @echo off
 
+copy dist\Debug\MinGW-Windows\deviceinfoeditor.exe deviceinfoeditor.exe
+
 del /f /s /q ".\dist"
 
 del /f /s /q ".\build"
