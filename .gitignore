@@ -1,6 +1,9 @@
 *.workspace 
 !spec/*.workspace
 
+*.bak 
+!spec/*.bak
+
 # Maven
 target/
 dist/
