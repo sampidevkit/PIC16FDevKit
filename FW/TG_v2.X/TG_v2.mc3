@@ -6995,7 +6995,7 @@
          <value>SMT2 enabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="ADCACTPPS%aux6"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="ADCACTPPS%aux10"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
@@ -7007,35 +7007,35 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN0PPS%aux2"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN0PPS%aux1"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN0PPS%aux7"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN0PPS%aux5"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN1PPS%aux3"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN1PPS%aux2"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN1PPS%aux8"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN1PPS%aux6"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN2PPS%aux4"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN2PPS%aux3"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN2PPS%aux9"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN2PPS%aux7"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN3PPS%aux10"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN3PPS%aux4"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN3PPS%aux5"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="CLCIN3PPS%aux8"/>
          <value>%DESELECT%</value>
       </entry>
       <entry>
@@ -7339,7 +7339,7 @@
          <value>disabled</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RXPPS%aux1"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RXPPS%aux9"/>
          <value>12</value>
       </entry>
       <entry>
@@ -13605,12 +13605,12 @@
          <hash>02569e0a284d39f91afbab28ce42f45fd65081750ff3c47d8d51242c6f8ed484</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\eusart.h</file>
-         <hash>280993dcee4c8ceca6e4e311b3010e9373240b39b867777fd8940c1972c6c9e3</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\clc2.c</file>
          <hash>fa23c0a6fd716b9114b172c667f2eef8d9526b8df00a00a9dc00f2784b9c761d</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\eusart.h</file>
+         <hash>280993dcee4c8ceca6e4e311b3010e9373240b39b867777fd8940c1972c6c9e3</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\fvr.h</file>
@@ -13625,12 +13625,12 @@
          <hash>4d3061e717667e5d6187cc928c915dcee18c928ec428c05c13776f5119f570ca</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\fvr.c</file>
-         <hash>cf204698f3111ec25c54ebe795e080eccfa851862346a1c6c6051b3823371acc</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\clc1.c</file>
          <hash>2c967bea738ea4596a2d36c1fed9e1467164df17478dad1938f160cb5f3fb48b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\fvr.c</file>
+         <hash>cf204698f3111ec25c54ebe795e080eccfa851862346a1c6c6051b3823371acc</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\i2c1_master.h</file>
@@ -13645,12 +13645,12 @@
          <hash>52b494d243cc5e5ec672e3719829035c3475b30720508587844b263287c68c2b</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\i2c1_master.c</file>
-         <hash>b08233721adeab1d33c8edef8f04b060290559dff38c8120579e88f53464a06b</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\clc1.h</file>
          <hash>a68a7a00e10ce19621ae1da46704bd29f5c7338489c4cad93019d7bc047baa37</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\i2c1_master.c</file>
+         <hash>b08233721adeab1d33c8edef8f04b060290559dff38c8120579e88f53464a06b</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>

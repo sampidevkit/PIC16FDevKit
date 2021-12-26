@@ -37,6 +37,13 @@ static void RV8263C7_RMW(uint8_t reg, uint8_t set, uint8_t mask) // <editor-fold
 
 void RV8263C7_Init(void) // <editor-fold defaultstate="collapsed" desc="Initialize">
 {
+    uint8_t reg;
+    
+    RV8263C7_RegGet(RV8263C7_REG_CONTROL1, &reg);
+    
+    if((reg&RV8263C7_CONTROL1_STOP_MASK)==RV8263C7_CONTROL1_STOP_MASK)
+        RV8263C7_RegSet(RV8263C7_REG_CONTROL1, 0x58); // reset clock datasheet pg.11/61
+        
     RV8263C7_SetHourMode(RV8263C7_H24);
     // Unused: 000
     // Timer Clock Frequency: 10-1Hz

@@ -143,6 +143,67 @@ static void SST_Flash_GetID(uint8_t *pD) // <editor-fold defaultstate="collapsed
     SPI2_Close();
 } // </editor-fold>
 
+static bool LeapYear(uint16_t Year) // <editor-fold defaultstate="collapsed" desc="Check leap year">
+{
+    bool leap=0;
+
+    if((Year%4)==0)
+    {
+        if((Year%100)==0)
+        {
+            if((Year%400)==0)
+                leap=1;
+        }
+        else
+            leap=1;
+    }
+
+    return leap;
+} // </editor-fold>
+
+static bool ValidDateTimeCheck(const rtcc_t *pD) // <editor-fold defaultstate="collapsed" desc="Check valid date time">
+{
+    if(pD->sec>59)
+        return 0;
+
+    if(pD->min>59)
+        return 0;
+
+    if(pD->hour>23)
+        return 0;
+
+    if((pD->month==0)||(pD->month>12))
+        return 0;
+
+    switch(pD->month)
+    {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            if(pD->day>30)
+                return 0;
+            break;
+
+        case 2:
+            if(LeapYear(2000+pD->year))
+            {
+                if(pD->day>29)
+                    return 0;
+            }
+            else if(pD->day>28)
+                return 0;
+            break;
+
+        default:
+            if(pD->day>31)
+                return 0;
+            break;
+    }
+
+    return 1;
+} // </editor-fold>
+
 static void RV8263C7_Isr(void) // <editor-fold defaultstate="collapsed" desc="RTCC ISR">
 {
     BLED_Toggle();
@@ -196,7 +257,8 @@ void main(void) // <editor-fold defaultstate="collapsed" desc="Main">
     ExpanderGPIO_Write(EXP_LAT, 2);
     __delay_ms(500);
     UBT_N_SetHigh();
-    printf("\nRunning\n");
+    printf("\nTest Program: ");
+    printf("%s-%s\n", __DATE__, __TIME__);
 
     while(1)
     {
@@ -208,16 +270,34 @@ void main(void) // <editor-fold defaultstate="collapsed" desc="Main">
                 if(UBT_Is_Pressed())
                 {
                     rtcc_t Rtcc;
-                    uint8_t JedecID[4];
+                    uint8_t Tmp[4];
+                    uint32_t JedecID;
 
                     i=0;
                     DoNext=1;
                     ExpanderGPIO_SetBit(EXP_LAT, 0, 1);
-                    SST_Flash_GetID(JedecID);
-                    printf("\nFlash ID: %02X%02X%02X", JedecID[0], JedecID[1], JedecID[2]);
+                    SST_Flash_GetID(Tmp);
+                    JedecID=Tmp[0];
+                    JedecID<<=8;
+                    JedecID|=Tmp[1];
+                    JedecID<<=8;
+                    JedecID|=Tmp[2];
+
+                    if((JedecID!=0)&&(JedecID!=0x00FFFFFF))
+                        printf("\nFlash ID: %02X%02X%02X", Tmp[0], Tmp[1], Tmp[2]);
+                    else
+                        printf("\nFlash error");
+
                     RV8263C7_GetRtcc(&Rtcc);
-                    printf("\n%02d:%02d:%02d-", Rtcc.hour, Rtcc.min, Rtcc.sec);
-                    printf("%02d/%02d/20%02d", Rtcc.day, Rtcc.month, Rtcc.year);
+
+                    if(ValidDateTimeCheck(&Rtcc))
+                    {
+                        printf("\n%02d:%02d:%02d-", Rtcc.hour, Rtcc.min, Rtcc.sec);
+                        printf("%02d/%02d/20%02d", Rtcc.day, Rtcc.month, Rtcc.year);
+                    }
+                    else
+                        printf("\nRTCC error");
+
                     printf("\nTemperature: %.1f", MCP9701_GetTemp());
                 }
                 break;
