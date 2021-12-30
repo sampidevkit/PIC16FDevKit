@@ -1863,6 +1863,20 @@
         </C32Global>
       </item>
       <item path="cfg/app/Buttons_cfg.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="cfg/app/Common_Lib_Cfg.h" ex="true" overriding="false">
         <C32>
@@ -1897,6 +1911,20 @@
         </C32Global>
       </item>
       <item path="cfg/app/ICSP_FileIO_Cfg.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="cfg/app/ICSP_FileIO_Cfg.h" ex="true" overriding="false">
         <C32>
@@ -1931,6 +1959,20 @@
         </C32Global>
       </item>
       <item path="cfg/app/Icsp_Cfg.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="cfg/app/Icsp_Cfg.h" ex="true" overriding="false">
         <C32>
@@ -1949,6 +1991,20 @@
         </C32Global>
       </item>
       <item path="cfg/app/Indicator_Cfg.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
       </item>
       <item path="cfg/app/Indicator_Cfg.h" ex="true" overriding="false">
         <C32>
