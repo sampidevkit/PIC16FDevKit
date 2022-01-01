@@ -243,6 +243,7 @@
       <itemPath>PG.mc3</itemPath>
       <itemPath>CleanDist.bat</itemPath>
       <itemPath>App.bat</itemPath>
+      <itemPath>../TG_v2.X/Download2Kit.bat</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
