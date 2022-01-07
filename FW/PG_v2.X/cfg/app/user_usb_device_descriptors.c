@@ -14,7 +14,7 @@ const USB_DEVICE_DESCRIPTOR device_dsc={
     0x02, // Subclass code
     0x01, // Protocol code
     USB_EP0_BUFF_SIZE, // Max packet size for EP0, see usb_config.h
-    0x0C00, // Vendor ID  "Microchip Technology Inc"
+    0x0C00, // Vendor ID  "SAMPI Dev Kit"
     0x0123, // Product ID RS232 Emulation
     0x0001, // Device release number in BCD format
     0x01, // Manufacturer string index
