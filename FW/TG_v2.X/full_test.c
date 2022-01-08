@@ -238,12 +238,12 @@ static void SK9822_Write(uint8_t Brightness, uint8_t Red, uint8_t Green, uint8_t
     CLKRCONbits.CLKREN=1; // enable CLKR_OUT
 } // </editor-fold>
 
-void main(void) // <editor-fold defaultstate="collapsed" desc="Main">
+void main(void) // <editor-fold defaultstate="collapsed" desc="Main function">
 {
-    uint16_t i;
-    tick_t Tick;
-    bool RtcTrig=0;
-    uint8_t x, DoNext=0, Brightness=15, Red=0, Green=0, Blue=0;
+    static uint16_t i;
+    static tick_t Tick;
+    static bool RtcTrig=0;
+    static uint8_t x, DoNext=0, Brightness=15, Red=0, Green=0, Blue=0;
 
     SYSTEM_Initialize();
     Tick_Reset(Tick);
@@ -251,12 +251,14 @@ void main(void) // <editor-fold defaultstate="collapsed" desc="Main">
     UBT_N_SetLow();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
+
     RV8263C7_Init();
     IOCAF3_SetInterruptHandler(RV8263C7_Isr);
     ExpanderGPIO_Write(EXP_TRIS, 0);
     ExpanderGPIO_Write(EXP_LAT, 2);
     __delay_ms(500);
     UBT_N_SetHigh();
+
     printf("\nTest Program: ");
     printf("%s-%s\n", __DATE__, __TIME__);
 

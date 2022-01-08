@@ -21,7 +21,15 @@
             </sourceRootList>
             <confList>
                 <confElem>
-                    <name>default</name>
+                    <name>full_test</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>led_test</name>
+                    <type>2</type>
+                </confElem>
+                <confElem>
+                    <name>uart_test</name>
                     <type>2</type>
                 </confElem>
             </confList>

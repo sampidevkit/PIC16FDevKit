@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=TG_v2.X
 
 # Active Configuration
-DEFAULTCONF=default
+DEFAULTCONF=uart_test
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=default 
+ALLCONFS=full_test led_test uart_test 
 
 
 # build
@@ -45,13 +45,17 @@ ALLCONFS=default
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=full_test clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=led_test clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=uart_test clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=full_test build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=led_test build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=uart_test build
 
 
 
