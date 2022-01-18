@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=TG_v2.X
 
 # Active Configuration
-DEFAULTCONF=uart_test
+DEFAULTCONF=full_test
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=full_test led_test uart_test 
+ALLCONFS=full_test led_test uart_test pwm_test 
 
 
 # build
@@ -48,6 +48,7 @@ ALLCONFS=full_test led_test uart_test
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=full_test clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=led_test clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=uart_test clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pwm_test clean
 
 
 
@@ -56,6 +57,7 @@ ALLCONFS=full_test led_test uart_test
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=full_test build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=led_test build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=uart_test build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pwm_test build
 
 
 

@@ -60,7 +60,7 @@
 #pragma config BOREN = ON    // Brown-out reset enable bits->Brown-out Reset Enabled, SBOREN bit is ignored
 #pragma config BORV = LO    // Brown-out Reset Voltage Selection->Brown-out Reset Voltage (VBOR) set to 1.9V on LF, and 2.45V on F Devices
 #pragma config ZCD = OFF    // Zero-cross detect disable->Zero-cross detect circuit is disabled at POR.
-#pragma config PPS1WAY = ON    // Peripheral Pin Select one-way control->The PPSLOCK bit can be cleared and set only once in software
+#pragma config PPS1WAY = OFF    // Peripheral Pin Select one-way control->The PPSLOCK bit can be set and cleared repeatedly by software
 #pragma config STVREN = ON    // Stack Overflow/Underflow Reset Enable bit->Stack Overflow or Underflow will cause a reset
 #pragma config DEBUG = OFF    // Background Debugger->Background Debugger disabled
 
@@ -76,5 +76,5 @@
 #pragma config LVP = ON    // Low Voltage Programming Enable bit->Low Voltage programming enabled. MCLR/Vpp pin function is MCLR.
 
 // CONFIG5
-#pragma config CP = OFF    // UserNVM Program memory code protection bit->Program Memory code protection disabled
-#pragma config CPD = OFF    // DataNVM code protection bit->Data EEPROM code protection disabled
+#pragma config CP = ON    // UserNVM Program memory code protection bit->Program Memory code protection enabled
+#pragma config CPD = ON    // DataNVM code protection bit->Data EEPROM code protection enabled

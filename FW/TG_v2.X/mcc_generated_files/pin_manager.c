@@ -45,14 +45,29 @@
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
 */
-
+#include <stdbool.h>
 #include "pin_manager.h"
 
 
 
-
+static bool GIE_Stt=0;
 void (*IOCAF3_InterruptHandler)(void);
 
+void PPS_UnLock(void)
+{
+    GIE_Stt=GIE;
+    PPSLOCK=0x55;
+    PPSLOCK=0xAA;
+    PPSLOCKbits.PPSLOCKED=0;
+}
+
+void PPS_Lock(void)
+{
+    PPSLOCK=0x55;
+    PPSLOCK=0xAA;
+    PPSLOCKbits.PPSLOCKED=1;
+    GIE=GIE_Stt;
+}
 
 void PIN_MANAGER_Initialize(void)
 {
@@ -60,7 +75,7 @@ void PIN_MANAGER_Initialize(void)
     LATx registers
     */
     LATE = 0x00;
-    LATD = 0x09;
+    LATD = 0x01;
     LATA = 0x00;
     LATB = 0x21;
     LATC = 0x00;
@@ -99,7 +114,7 @@ void PIN_MANAGER_Initialize(void)
     ODCONA = 0x00;
     ODCONB = 0x00;
     ODCONC = 0x00;
-    ODCOND = 0x08;
+    ODCOND = 0x00;
 
     /**
     SLRCONx registers
@@ -138,19 +153,22 @@ void PIN_MANAGER_Initialize(void)
     // Enable IOCI interrupt 
     PIE0bits.IOCIE = 1; 
     
-	
+	PPS_UnLock();
     RXPPS = 0x0C;   //RB4->EUSART:RX;    
     SSP1CLKPPS = 0x0F;   //RB7->MSSP1:SCL1;    
     SSP2DATPPS = 0x1F;   //RD7->MSSP2:SDI2;    
-    RA4PPS = 0x01;   //RA4->CLC1:CLC1OUT;    
     RB6PPS = 0x15;   //RB6->MSSP1:SDA1;    
     RB7PPS = 0x14;   //RB7->MSSP1:SCL1;    
     RB5PPS = 0x10;   //RB5->EUSART:TX;    
-    RA5PPS = 0x02;   //RA5->CLC2:CLC2OUT;    
-    RB3PPS = 0x16;   //RB3->MSSP2:SCK2;    
+    RA1PPS = 0x0F;   //RA1->PWM7:PWM7OUT;    
     RD6PPS = 0x17;   //RD6->MSSP2:SDO2;    
     SSP1DATPPS = 0x0E;   //RB6->MSSP1:SDA1;    
     SSP2CLKPPS = 0x0B;   //RB3->MSSP2:SCK2;    
+    RA4PPS = 0x01;   //RA4->CLC1:CLC1OUT;    
+    RD3PPS = 0x03;   //RD3->CLC3:CLC3OUT;    
+    RA5PPS = 0x02;   //RA5->CLC2:CLC2OUT;    
+    RB3PPS = 0x16;   //RB3->MSSP2:SCK2;    
+    PPS_Lock();
 }
   
 void PIN_MANAGER_IOC(void)

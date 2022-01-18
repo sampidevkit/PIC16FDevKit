@@ -293,6 +293,9 @@
 #define RD7_SetAnalogMode()         do { ANSELDbits.ANSD7 = 1; } while(0)
 #define RD7_SetDigitalMode()        do { ANSELDbits.ANSD7 = 0; } while(0)
 
+void PPS_Lock(void);
+void PPS_UnLock(void);
+
 /**
    @Param
     none

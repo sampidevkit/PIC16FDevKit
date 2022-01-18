@@ -16,3 +16,7 @@ CND_ARTIFACT_PATH_led_test=dist/led_test/production/TG_v2.X.production.hex
 CND_ARTIFACT_DIR_uart_test=dist/uart_test/production
 CND_ARTIFACT_NAME_uart_test=TG_v2.X.production.hex
 CND_ARTIFACT_PATH_uart_test=dist/uart_test/production/TG_v2.X.production.hex
+# pwm_test configuration
+CND_ARTIFACT_DIR_pwm_test=dist/pwm_test/production
+CND_ARTIFACT_NAME_pwm_test=TG_v2.X.production.hex
+CND_ARTIFACT_PATH_pwm_test=dist/pwm_test/production/TG_v2.X.production.hex

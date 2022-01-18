@@ -248,7 +248,14 @@ void main(void) // <editor-fold defaultstate="collapsed" desc="Main function">
     SYSTEM_Initialize();
     Tick_Reset(Tick);
     VDDSS_EN_N_SetLow(); // Enable Sensor VDD
+    PPS_UnLock();
+    RA1PPS=0x00; //RA1->GPIO;
+    RD3PPS=0x00; //RD3->GPIO;
+    PPS_Lock();
+    BLED_SetLow();
     UBT_N_SetLow();
+    BLED_SetDigitalOutput();
+    UBT_N_SetDigitalOutput();
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
 
@@ -258,6 +265,7 @@ void main(void) // <editor-fold defaultstate="collapsed" desc="Main function">
     ExpanderGPIO_Write(EXP_LAT, 2);
     __delay_ms(500);
     UBT_N_SetHigh();
+    UBT_N_SetDigitalInput();
 
     printf("\nTest Program: ");
     printf("%s-%s\n", __DATE__, __TIME__);
