@@ -43,27 +43,85 @@
 // Use project enums instead of #define for ON and OFF.
 
 #include <xc.h>
+#include <stdbool.h>
+#include <pic16f18877.h>
 
-#define _XTAL_FREQ 32000000 // Khai báo t?n s? dao ??ng ?ang s? d?ng
+#define _XTAL_FREQ 32000000 // System clock
+
+static bool SimpleButton_is_pressed(void)
+{
+    if(PORTDbits.RD3==0)
+        return 1;
+
+    return 0;
+}
+
+static bool LatchedButton_is_pressed(void)
+{
+    static bool prv_state=1; // init state of the button, set 1 if use pull-up resister, 0 if use pull-down resistor
+
+    if(prv_state!=PORTDbits.RD3) // compare previous state with present state of D3
+    {
+        prv_state=PORTDbits.RD3; // update new state
+
+        if(prv_state==0) // button is pressed
+            return 1;
+    }
+
+    return 0;
+}
+
+bool DebounceButton_is_pressed(void)
+{
+    static bool prv_state=1;
+    static uint16_t count=0;
+
+    if(prv_state!=PORTDbits.RD3)
+    {
+        if(prv_state==1)
+        {
+            if(++count>1000) // check in 1000 cycles
+            {
+                prv_state=0;
+                return 1;
+            }
+        }
+        else
+            prv_state=1;
+    }
+    else
+        count=0;
+
+    return 0;
+}
 
 void main(void)
 {
-    // C?u hình dao ??ng, datasheet trang 121-126
+    // Oscillator configure, datasheet trang 121-126
     OSCCON1=0x60; // NOSC HFINTOSC; NDIV 1; 
     OSCCON3=0x00; // CSWHOLD may proceed; SOSCPWR Low power; 
     OSCEN=0x00; // MFOEN disabled; LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 
     OSCFRQ=0x06; // HFFRQ 32_MHz;
     OSCTUNE=0x00; // HFTUN 0; 
 
-    // C?u hình GPIO
-    LATAbits.LATA1=0; // Pin A1 có tr?ng thái kh?i t?o là m?c th?p
-    TRISAbits.TRISA1=0; // Pin A1 là ngõ ra
-    ANSELAbits.ANSA1=0; // T?t ch?c n?ng analog ? pin A1
+    // GPIO configure
+    LATAbits.LATA1=0; // State of A1 is low
+    TRISAbits.TRISA1=0; // A1 is an output
+    ANSELAbits.ANSA1=0; // A1 signal is digital
+
+    TRISDbits.TRISD3=1; // D3 is an input
+    ANSELDbits.ANSD3=0; // D3 signal is digital
+    WPUDbits.WPUD3=1; // D3 uses pull-up resistor
 
     while(1)
     {
-        LATAbits.LATA1^=1; // Toggle pin A1
-        __delay_ms(250);
+        if(
+                //SimpleButton_is_pressed()
+                //LatchedButton_is_pressed())
+                DebounceButton_is_pressed())
+            LATAbits.LATA1^=1; // Toggle pin A1
+        
+        __delay_ms(1);
     }
 
     return;

@@ -4,7 +4,7 @@ LABCENTER PROTEUS TOOL INFORMATION FILE
 In case of difficulty, please e-mail support@labcenter.co.uk
 
 Tool set up for Proteus layout 'PIC16DevKit Mini.pdsprj'.
-CADCAM generated at 21:20:30 on Sunday, 16.01.2022.
+CADCAM generated at 08:23:10 on Tuesday, 25.01.2022.
 
 File List
 ---------
