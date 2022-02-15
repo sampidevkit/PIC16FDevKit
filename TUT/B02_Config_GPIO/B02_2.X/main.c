@@ -97,7 +97,7 @@ bool DebounceButton_is_pressed(void)
 
 void main(void)
 {
-    // Oscillator configure, datasheet trang 121-126
+    // Oscillator configure, data sheet pg. 121-126
     OSCCON1=0x60; // NOSC HFINTOSC; NDIV 1; 
     OSCCON3=0x00; // CSWHOLD may proceed; SOSCPWR Low power; 
     OSCEN=0x00; // MFOEN disabled; LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 
@@ -115,12 +115,15 @@ void main(void)
 
     while(1)
     {
-        if(
-                //SimpleButton_is_pressed()
-                //LatchedButton_is_pressed())
-                DebounceButton_is_pressed())
+#ifdef SIMPLE_BUTTON
+        if(SimpleButton_is_pressed())
+#elif defined(LATCHED_BUTTON)
+        if(LatchedButton_is_pressed())
+#else
+        if(DebounceButton_is_pressed())
+#endif
             LATAbits.LATA1^=1; // Toggle pin A1
-        
+
         __delay_ms(1);
     }
 

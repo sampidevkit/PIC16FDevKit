@@ -24,14 +24,14 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=B02_2.X
+PROJECTNAME=B03_1.X
 
 # Active Configuration
-DEFAULTCONF=Debounce
+DEFAULTCONF=default
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=Simple Latch Debounce 
+ALLCONFS=default 
 
 
 # build
@@ -45,17 +45,13 @@ ALLCONFS=Simple Latch Debounce
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Simple clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Latch clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Debounce clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Simple build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Latch build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Debounce build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
 
 
 

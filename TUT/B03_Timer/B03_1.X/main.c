@@ -46,6 +46,15 @@
 
 #define _XTAL_FREQ 32000000 // System clock
 
+void __interrupt() INTERRUPT_InterruptManager(void)
+{
+    if((PIE0bits.TMR0IE==1)&&(PIR0bits.TMR0IF==1))
+    {
+        PIR0bits.TMR0IF=0; // clear the TMR0 interrupt flag
+        LATAbits.LATA1^=1; // toggle A1
+    }
+}
+
 void main(void)
 {
     // Oscillator configure, data sheet pg. 121-126
@@ -60,10 +69,20 @@ void main(void)
     TRISAbits.TRISA1=0; // A1 is an output
     ANSELAbits.ANSA1=0; // A1 signal is digital
 
+    // Timer 0 configure
+    PMD1bits.TMR0MD=0; // TMR0MD TMR0 enabled
+    T0CON1=0x5E; // T0CS FOSC/4; T0CKPS 1:16384; T0ASYNC not synchronized;
+    TMR0H=0xFF; // TMR0 initialize value TMR0H 255;
+    TMR0L=0x00; // TMR0L 0; 
+    PIR0bits.TMR0IF=0; // Clear Interrupt flag before enabling the interrupt
+    PIE0bits.TMR0IE=1; // Enabling TMR0 interrupt
+    T0CON0=0x80; // T0OUTPS 1:1; T0EN enabled; T016BIT 8-bit; 
+    INTCONbits.PEIE=1; // enable peripheral interrupts
+    INTCONbits.GIE=1; // enable global interrupt
+
     while(1)
     {
-        LATAbits.LATA1^=1; // Toggle pin A1
-        __delay_ms(250);
+        // do nothing
     }
 
     return;

@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>B02_2</name>
+            <name>B03_1</name>
             <name>B02_1</name>
             <creation-uuid>b269c7f1-d80e-444a-bad4-b171cae9a955</creation-uuid>
             <make-project-type>0</make-project-type>
@@ -16,15 +16,7 @@
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>Simple</name>
-                    <type>2</type>
-                </confElem>
-                <confElem>
-                    <name>Latch</name>
-                    <type>2</type>
-                </confElem>
-                <confElem>
-                    <name>Debounce</name>
+                    <name>default</name>
                     <type>2</type>
                 </confElem>
             </confList>
