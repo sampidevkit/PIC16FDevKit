@@ -1,0 +1,39 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F18877
+CCSVerions=5.104
+Compiler=PCM
+CCSVersion=5.104
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[F:\Git\SAMPI\P16DK\P16F1887x\TUT\B01_GioiThieu\B01_CCS\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=20-03-2022
+D1_L=4
+D1_L1=[51111]Project Opened.
+D1_L2=[52529]Project Closed.
+D1_L3=[53161]Project Opened.
+D1_L4=[53243]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+Count=1
+[main.c]
+Type=4
+
+[defines]
+buildcount=3
+[Units]
+Count=1
+1=main (main)

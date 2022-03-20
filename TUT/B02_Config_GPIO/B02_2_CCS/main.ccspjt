@@ -1,0 +1,53 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F18877
+CCSVerions=5.104
+Compiler=PCM
+CCSVersion=5.104
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[F:\Git\SAMPI\P16DK\P16F1887x\TUT\B02_Config_GPIO\B02_1_CCS\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=20-03-2022
+D1_L=10
+D1_L1=[54969]Project Opened.
+D1_L2=[56475]Started Editing.
+D1_L3=[57099]Stopped Editing.
+D1_L4=[57125]Started Editing.
+D1_L5=[57360]Stopped Editing.
+TotalEdit=18
+TotalDebug=0
+D1_E=18
+D1_D=0
+D1_L6=[57361]Project Closed.
+D1_L7=[57453]Project Opened.
+D1_L8=[57546]Started Editing.
+D1_L9=[57997]Stopped Editing.
+D1_L10=[57997]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+Count=2
+2=C:\Program Files (x86)\PICC\Devices\16F18877.h
+t2=29
+3=C:\Program Files (x86)\PICC\Devices\16F18877.h
+t3=93
+[main.c]
+Type=4
+
+[defines]
+buildcount=11
+[Units]
+Count=1
+1=main (main)
