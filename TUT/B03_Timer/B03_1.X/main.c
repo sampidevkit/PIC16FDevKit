@@ -52,32 +52,32 @@ void __interrupt() INTERRUPT_InterruptManager(void)
     {
         PIR0bits.TMR0IF=0; // clear the TMR0 interrupt flag
         LATAbits.LATA1^=1; // toggle A1
+        TMR0L=205; // TMR0L 0; 
     }
 }
 
 void main(void)
 {
     // Oscillator configure, data sheet pg. 121-126
-    OSCCON1=0x60; // NOSC HFINTOSC; NDIV 1; 
-    OSCCON3=0x00; // CSWHOLD may proceed; SOSCPWR Low power; 
-    OSCEN=0x00; // MFOEN disabled; LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 
-    OSCFRQ=0x06; // HFFRQ 32_MHz;
-    OSCTUNE=0x00; // HFTUN 0; 
+    OSCCON1=0b01100000; // NOSC HFINTOSC; NDIV 1; 
+    OSCFRQ=0b00000110; // HFFRQ 32_MHz;
 
     // GPIO configure
-    LATAbits.LATA1=0; // State of A1 is low
-    TRISAbits.TRISA1=0; // A1 is an output
     ANSELAbits.ANSA1=0; // A1 signal is digital
+    TRISAbits.TRISA1=0; // A1 is an output
+    LATAbits.LATA1=0; // State of A1 is low
 
     // Timer 0 configure
     PMD1bits.TMR0MD=0; // TMR0MD TMR0 enabled
-    T0CON1=0x5E; // T0CS FOSC/4; T0CKPS 1:16384; T0ASYNC not synchronized;
+    T0CON0bits.T0EN=0; // disable TMR0
+    T0CON0=0b00000000; // T0OUTPS 1:1; T0EN disabled; T016BIT 8-bit; 
+    T0CON1=0b01011110; // T0CS FOSC/4; T0CKPS 1:16384; T0ASYNC not synchronized;
     TMR0H=0xFF; // TMR0 initialize value TMR0H 255;
-    TMR0L=0x00; // TMR0L 0; 
+    TMR0L=205; // TMR0L 0; 
     PIR0bits.TMR0IF=0; // Clear Interrupt flag before enabling the interrupt
     PIE0bits.TMR0IE=1; // Enabling TMR0 interrupt
-    T0CON0=0x80; // T0OUTPS 1:1; T0EN enabled; T016BIT 8-bit; 
-    INTCONbits.PEIE=1; // enable peripheral interrupts
+    T0CON0bits.T0EN=1; // enable TMR0
+    //INTCONbits.PEIE=1; // enable peripheral interrupts
     INTCONbits.GIE=1; // enable global interrupt
 
     while(1)
