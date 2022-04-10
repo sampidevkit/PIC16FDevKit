@@ -48,9 +48,10 @@
 
 void __interrupt() INTERRUPT_InterruptManager(void)
 {
-    if((PIE0bits.TMR0IE==1)&&(PIR0bits.TMR0IF==1))
+    if((INTCONbits.PEIE==1)&&(PIE4bits.TMR2IE==1)&&(PIR4bits.TMR2IF==1))
     {
-        PIR0bits.TMR0IF=0; // clear the TMR0 interrupt flag
+        PIR4bits.TMR2IF=0; // clear the TMR2 interrupt flag
+        // Do something
         LATAbits.LATA1^=1; // toggle A1
     }
 }
@@ -58,26 +59,26 @@ void __interrupt() INTERRUPT_InterruptManager(void)
 void main(void)
 {
     // Oscillator configure, data sheet pg. 121-126
-    OSCCON1=0x60; // NOSC HFINTOSC; NDIV 1; 
-    OSCCON3=0x00; // CSWHOLD may proceed; SOSCPWR Low power; 
-    OSCEN=0x00; // MFOEN disabled; LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 
-    OSCFRQ=0x06; // HFFRQ 32_MHz;
-    OSCTUNE=0x00; // HFTUN 0; 
+    OSCCON1=0b01100000; // NOSC HFINTOSC; NDIV 1; 
+    OSCFRQ=0b00000110; // HFFRQ 32_MHz;
 
     // GPIO configure
-    LATAbits.LATA1=0; // State of A1 is low
-    TRISAbits.TRISA1=0; // A1 is an output
     ANSELAbits.ANSA1=0; // A1 signal is digital
+    TRISAbits.TRISA1=0; // A1 is an output
+    LATAbits.LATA1=0; // State of A1 is low
 
-    // Timer 0 configure
-    PMD1bits.TMR0MD=0; // TMR0MD TMR0 enabled
-    T0CON1=0x5E; // T0CS FOSC/4; T0CKPS 1:16384; T0ASYNC not synchronized;
-    TMR0H=0xFF; // TMR0 initialize value TMR0H 255;
-    TMR0L=0x00; // TMR0L 0; 
-    PIR0bits.TMR0IF=0; // Clear Interrupt flag before enabling the interrupt
-    PIE0bits.TMR0IE=1; // Enabling TMR0 interrupt
-    T0CON0=0x80; // T0OUTPS 1:1; T0EN enabled; T016BIT 8-bit; 
-    INTCONbits.PEIE=1; // enable peripheral interrupts
+    // Timer 2 configure
+    PMD1bits.TMR2MD=0; // TMR2 module is enabled
+    T2CON=0b00011001; // Disable TMR2; CKPS 1:2; OUTPS 1:10;
+    T2CLKCON=0b00000100; // CS LFINTOSC; 
+    T2HLT=0b01000000; // CKPOL falling edge; Free running period
+    // TMR2 initialize value for 100ms overflow;
+    TMR2=0;
+    T2PR=154;
+    PIR4bits.TMR2IF=0; // Clear Interrupt flag
+    PIE4bits.TMR2IE=1; // Enabling TMR0 interrupt
+    T2CONbits.ON=1; // enable TMR2
+    INTCONbits.PEIE=1; // enable peripheral interrupt
     INTCONbits.GIE=1; // enable global interrupt
 
     while(1)

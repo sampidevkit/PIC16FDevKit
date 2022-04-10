@@ -51,8 +51,11 @@ void __interrupt() INTERRUPT_InterruptManager(void)
     if((PIE0bits.TMR0IE==1)&&(PIR0bits.TMR0IF==1))
     {
         PIR0bits.TMR0IF=0; // clear the TMR0 interrupt flag
+        // Reinitialize TMR0 value for 500ms overflow;
+        TMR0L=111;
+        TMR0H=248;
+        // Do something
         LATAbits.LATA1^=1; // toggle A1
-        TMR0L=205; // TMR0L 0; 
     }
 }
 
@@ -68,22 +71,19 @@ void main(void)
     LATAbits.LATA1=0; // State of A1 is low
 
     // Timer 0 configure
-    PMD1bits.TMR0MD=0; // TMR0MD TMR0 enabled
-    T0CON0bits.T0EN=0; // disable TMR0
-    T0CON0=0b00000000; // T0OUTPS 1:1; T0EN disabled; T016BIT 8-bit; 
-    T0CON1=0b01011110; // T0CS FOSC/4; T0CKPS 1:16384; T0ASYNC not synchronized;
-    TMR0H=0xFF; // TMR0 initialize value TMR0H 255;
-    TMR0L=205; // TMR0L 0; 
-    PIR0bits.TMR0IF=0; // Clear Interrupt flag before enabling the interrupt
+    PMD1bits.TMR0MD=0; // TMR0 module is enabled
+    T0CON0=0b00010000; // T0EN disabled; T016BIT 16-bit; T0OUTPS 1:1; 
+    T0CON1=0b10010011; // T0CS LFINTOSC; T0ASYNC not sync; T0CKPS 1:8; 
+    // TMR0 initialize value for 500ms overflow;
+    TMR0L=111;
+    TMR0H=248;
+    PIR0bits.TMR0IF=0; // Clear Interrupt flag
     PIE0bits.TMR0IE=1; // Enabling TMR0 interrupt
     T0CON0bits.T0EN=1; // enable TMR0
-    //INTCONbits.PEIE=1; // enable peripheral interrupts
     INTCONbits.GIE=1; // enable global interrupt
 
     while(1)
     {
         // do nothing
     }
-
-    return;
 }
