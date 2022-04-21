@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="65">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>main.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>main.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+      <itemPath>CleanDist.bat</itemPath>
+      <itemPath>Download2Kit.bat</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="default" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>PIC16F18877</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>noID</platformTool>
+        <languageToolchain>CCSC</languageToolchain>
+        <languageToolchainVersion>5.104</languageToolchainVersion>
+        <platform>3</platform>
+      </toolsSet>
+      <packs>
+        <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.13.178"/>
+      </packs>
+      <ScriptingSettings>
+      </ScriptingSettings>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+        <subordinates>
+        </subordinates>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep>copy ${ImagePath} ".\lastbuild.${OUTPUT_SUFFIX}"</makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>true</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <ccscompiler>
+        <property key="cc-compat" value="0"/>
+        <property key="ccs-insert-device" value="true"/>
+        <property key="close-after-compile" value="true"/>
+        <property key="compile-for-icd" value="false"/>
+        <property key="create-call-tree" value="true"/>
+        <property key="create-project-file" value="true"/>
+        <property key="create-stats-tree" value="true"/>
+        <property key="create-symbol-file" value="true"/>
+        <property key="debug-file" value="false"/>
+        <property key="errors-and-warnings" value="+EA"/>
+        <property key="extra-include-directories" value=""/>
+        <property key="keep-after-compile" value="false"/>
+        <property key="keep-for-xx-seconds" value=""/>
+        <property key="keep-if-errors" value="false"/>
+        <property key="keep-if-no-errors" value="false"/>
+        <property key="keep-scratch-files-on-disk" value="true"/>
+        <property key="list-file" value="+LN"/>
+        <property key="list-file-extension" value=""/>
+        <property key="old-error-file-format" value="false"/>
+        <property key="opt-level" value="9"/>
+        <property key="output-flags" value=""/>
+        <property key="preprocessor-macros-linux" value=""/>
+        <property key="preprocessor-macros-windows" value=""/>
+      </ccscompiler>
+    </conf>
+  </confs>
+</configurationDescriptor>
