@@ -1,6 +1,9 @@
 *.workspace 
 !spec/*.workspace
 
+*.drawio.bkp 
+!spec/*.drawio.bkp 
+
 *.bak 
 !spec/*.bak
 
