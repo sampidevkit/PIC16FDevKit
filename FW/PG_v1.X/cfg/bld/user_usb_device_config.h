@@ -119,6 +119,8 @@
 #define MSD_DATA_OUT_EP         1u
 //#define MSD_BUFFER_ADDRESS      0x600
 
+#ifndef __LANGUAGE_ASSEMBLY 
 void USER_USB_Device_LoadUDID(void);
+#endif
 
 #endif

@@ -1,0 +1,1 @@
+$(MP_EXTRA_AS_PRE)  -c -mprocessor=$(MP_PROCESSOR_OPTION)-DCOMMON_LIB_CFG -I"cfg/bld" -DXPRJ_bld=$(CND_CONF)    -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),--gdwarf-2,-I"cfg/bld" -I"mcc_generated_files" -I"mcc_generated_files/usb" -I"user/bld" -I"../Library" -I"../Library/usb",-I"cfg/bld" -mdfp="${DFP_DIR}"H:\PIC16FDevKit\FW\Library\bootloader\asm.S
