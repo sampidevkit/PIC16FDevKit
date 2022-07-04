@@ -1,11 +1,11 @@
 #ifndef SAMM_7X_FRT_CFG_H
 #define SAMM_7X_FRT_CFG_H
 /* *********************************************************** Configure Bits */
-#define USE_DEFAULT_CONFIG_1MHZ
-#define USE_DEFAULT_CONFIG_2MHZ
-#define USE_DEFAULT_CONFIG_4MHZ
-#define USE_DEFAULT_CONFIG_8MHZ
-#define USE_DEFAULT_CONFIG_16MHZ
+//#define USE_DEFAULT_CONFIG_1MHZ
+//#define USE_DEFAULT_CONFIG_2MHZ
+//#define USE_DEFAULT_CONFIG_4MHZ
+//#define USE_DEFAULT_CONFIG_8MHZ
+//#define USE_DEFAULT_CONFIG_16MHZ
 #define USE_DEFAULT_CONFIG_32MHZ
 /* ********************************************************************* GPIO */
 /* ********************************************************************* ADCC */
