@@ -1,0 +1,11 @@
+0
+MCP9701 TEMPERATURE SENSOR
+1
+0
+Temperature
+Signal 2
+Signal 3
+Signal 4
+Signal 5
+Signal 6
+AT

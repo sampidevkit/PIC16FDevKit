@@ -5,7 +5,7 @@
   <confs>
     <conf name="full_test" type="2">
       <platformToolSN>noToolString</platformToolSN>
-      <languageToolchainDir>C:\Program Files\Microchip\xc8\v2.35\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\xc8\v2.36\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -23,7 +23,7 @@
     </conf>
     <conf name="led_test" type="2">
       <platformToolSN>noToolString</platformToolSN>
-      <languageToolchainDir>C:\Program Files\Microchip\xc8\v2.35\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\xc8\v2.36\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -41,7 +41,7 @@
     </conf>
     <conf name="uart_test" type="2">
       <platformToolSN>noToolString</platformToolSN>
-      <languageToolchainDir>C:\Program Files\Microchip\xc8\v2.35\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\xc8\v2.36\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -59,7 +59,7 @@
     </conf>
     <conf name="pwm_test" type="2">
       <platformToolSN>noToolString</platformToolSN>
-      <languageToolchainDir>C:\Program Files\Microchip\xc8\v2.35\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\xc8\v2.36\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
