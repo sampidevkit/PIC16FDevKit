@@ -1,0 +1,4 @@
+[submodule "FW/Library"]
+	path = FW/Library
+	url = https://github.com/sampidevkit/Library.git
+	branch = feature/Legacy
