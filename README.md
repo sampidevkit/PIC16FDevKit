@@ -1,7 +1,7 @@
 # PIC16F877A MICROCONTROLLER DEVELOPMENT KIT
 
 ## 1. Sơ Đồ Khối
-
+![](Docs/Diagram.png)
 ## 2. Sơ Đồ Nguyên Lý
 
 ## 3. Vi Điều Khiển Chính PIC16F877A
