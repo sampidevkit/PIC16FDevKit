@@ -1,0 +1,24 @@
+# Maven 
+__Previews/
+History/
+build/
+dist/
+debug/
+Project Backups/
+.generated_files/
+*-backups/
+
+\#auto_saved_files\#
+!spec/\#auto_saved_files\#
+
+*.workspace
+!spec/*.workspace
+
+*.~(*).*
+!spec/*.~(*).*
+
+*.$*.*
+!spec/*.$*.*
+
+~*.lck
+!spec/~*.lck
