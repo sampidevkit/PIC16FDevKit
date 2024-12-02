@@ -19,9 +19,8 @@
 		(effects
 			(font
 				(face "Consolas")
-				(size 1.27 1.27)
+				(size 1.016 1.016)
 				(thickness 0.254)
-				(bold yes)
 			)
 		)
 		(uuid "84a2c12e-65ad-4dd1-962f-a0f5190cab78")
@@ -42,7 +41,9 @@
 			(at 25.4 62.7376 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
@@ -51,7 +52,8 @@
 			(at 25.4 89.5354 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left top)
 			)
@@ -80,7 +82,9 @@
 			(at 76.2 62.6741 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
@@ -89,7 +93,8 @@
 			(at 76.2 89.5989 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left top)
 			)
@@ -118,7 +123,9 @@
 			(at 76.2 24.6376 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
@@ -127,7 +134,8 @@
 			(at 76.2 51.4354 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left top)
 			)
@@ -156,7 +164,9 @@
 			(at 25.4 24.6376 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
@@ -165,7 +175,8 @@
 			(at 25.4 51.4354 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left top)
 			)

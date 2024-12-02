@@ -2388,8 +2388,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2401,8 +2401,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2414,8 +2414,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2427,9 +2427,9 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(face "Consolas")
+				(size 1.016 1.016)
 				(thickness 0.254)
-				(bold yes)
 			)
 			(justify left)
 		)
@@ -2441,8 +2441,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2454,8 +2454,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2467,8 +2467,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2480,8 +2480,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2493,8 +2493,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2506,8 +2506,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2519,8 +2519,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2532,8 +2532,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2545,8 +2545,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2558,8 +2558,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2571,8 +2571,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2584,8 +2584,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2597,8 +2597,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2610,8 +2610,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2623,8 +2623,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2636,8 +2636,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2649,8 +2649,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2662,8 +2662,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2675,8 +2675,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2688,8 +2688,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2701,8 +2701,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2714,8 +2714,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2727,8 +2727,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2740,8 +2740,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2753,9 +2753,9 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(face "Consolas")
+				(size 1.016 1.016)
 				(thickness 0.254)
-				(bold yes)
 			)
 			(justify right)
 		)
@@ -2767,8 +2767,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
@@ -2780,8 +2780,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2793,8 +2793,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2806,8 +2806,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2819,8 +2819,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2832,8 +2832,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2845,8 +2845,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2858,8 +2858,8 @@
 		(fields_autoplaced yes)
 		(effects
 			(font
-				(size 1.27 1.27)
-				(bold yes)
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify left)
 		)
@@ -2879,6 +2879,7 @@
 			(at 48.895 114.2999 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -2889,6 +2890,7 @@
 			(at 48.895 116.84 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -2898,7 +2900,8 @@
 			(at 51.435 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -2907,7 +2910,8 @@
 			(at 51.435 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -2916,7 +2920,8 @@
 			(at 51.435 102.87 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -2925,7 +2930,8 @@
 			(at 51.435 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -2934,7 +2940,8 @@
 			(at 46.99 116.84 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -2966,6 +2973,7 @@
 			(at 130.81 100.33 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -2976,6 +2984,7 @@
 			(at 130.81 102.8701 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify right)
@@ -2985,7 +2994,8 @@
 			(at 133.35 101.854 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -2994,7 +3004,8 @@
 			(at 133.35 101.854 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3003,7 +3014,8 @@
 			(at 144.78 101.6 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3012,7 +3024,8 @@
 			(at 133.35 101.6 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3021,7 +3034,8 @@
 			(at 136.525 102.87 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3054,7 +3068,9 @@
 			(at 36.83 106.68 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -3063,7 +3079,8 @@
 			(at 29.21 106.6799 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left)
 			)
@@ -3072,7 +3089,8 @@
 			(at 33.02 106.68 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3081,7 +3099,8 @@
 			(at 33.02 106.68 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3090,7 +3109,8 @@
 			(at 33.02 106.68 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3121,6 +3141,7 @@
 			(at 140.97 100.33 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -3131,6 +3152,7 @@
 			(at 140.97 102.8701 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify right)
@@ -3140,7 +3162,8 @@
 			(at 138.43 101.854 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3149,7 +3172,8 @@
 			(at 138.43 101.854 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3158,7 +3182,8 @@
 			(at 127 101.6 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3167,7 +3192,8 @@
 			(at 138.43 101.6 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3176,7 +3202,8 @@
 			(at 135.255 102.87 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3208,6 +3235,7 @@
 			(at 53.34 31.75 90)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -3217,6 +3245,7 @@
 			(at 53.34 34.29 90)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 			)
@@ -3225,7 +3254,8 @@
 			(at 53.34 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3234,7 +3264,8 @@
 			(at 53.34 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3243,7 +3274,8 @@
 			(at 40.64 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3252,7 +3284,8 @@
 			(at 53.34 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3261,7 +3294,8 @@
 			(at 54.61 32.385 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3294,7 +3328,9 @@
 			(at 43.18 44.45 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -3303,7 +3339,8 @@
 			(at 45.72 44.4499 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify right)
 			)
@@ -3312,7 +3349,8 @@
 			(at 49.53 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3321,7 +3359,8 @@
 			(at 49.53 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3330,7 +3369,8 @@
 			(at 49.53 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3361,7 +3401,9 @@
 			(at 146.05 54.61 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -3370,7 +3412,8 @@
 			(at 146.05 53.34 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3378,7 +3421,8 @@
 			(at 146.05 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3387,7 +3431,8 @@
 			(at 146.05 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3396,7 +3441,8 @@
 			(at 146.05 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3427,6 +3473,7 @@
 			(at 143.51 35.5599 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -3437,6 +3484,7 @@
 			(at 143.51 38.1 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -3446,7 +3494,8 @@
 			(at 146.05 37.084 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3455,7 +3504,8 @@
 			(at 146.05 37.084 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3464,7 +3514,8 @@
 			(at 134.62 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3473,7 +3524,8 @@
 			(at 146.05 36.83 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3482,7 +3534,8 @@
 			(at 142.875 38.1 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3515,6 +3568,7 @@
 			(at 57.15 114.2999 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -3525,6 +3579,7 @@
 			(at 57.15 116.84 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -3534,7 +3589,8 @@
 			(at 54.61 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3543,7 +3599,8 @@
 			(at 54.61 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3552,7 +3609,8 @@
 			(at 54.61 102.87 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3561,7 +3619,8 @@
 			(at 54.61 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3570,7 +3629,8 @@
 			(at 59.055 116.84 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3602,7 +3662,9 @@
 			(at 152.4 43.1799 90)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify right)
 			)
@@ -3611,7 +3673,8 @@
 			(at 152.4 45.7199 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify right)
 			)
@@ -3620,7 +3683,8 @@
 			(at 161.29 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3629,7 +3693,8 @@
 			(at 148.59 58.42 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3638,7 +3703,8 @@
 			(at 159.385 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3647,7 +3713,8 @@
 			(at 157.48 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3656,7 +3723,8 @@
 			(at 151.13 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3690,7 +3758,9 @@
 			(at 151.13 36.83 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -3699,7 +3769,8 @@
 			(at 151.13 27.94 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3707,7 +3778,8 @@
 			(at 151.13 33.02 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3716,7 +3788,8 @@
 			(at 151.13 33.02 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3725,7 +3798,8 @@
 			(at 151.13 33.02 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3756,7 +3830,9 @@
 			(at 165.1 54.61 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -3765,7 +3841,8 @@
 			(at 165.1 53.34 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3773,7 +3850,8 @@
 			(at 165.1 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3782,7 +3860,8 @@
 			(at 165.1 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3791,7 +3870,8 @@
 			(at 165.1 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3822,7 +3902,9 @@
 			(at 151.13 54.61 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -3831,7 +3913,8 @@
 			(at 151.13 53.34 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3839,7 +3922,8 @@
 			(at 151.13 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3848,7 +3932,8 @@
 			(at 151.13 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3857,7 +3942,8 @@
 			(at 151.13 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3887,6 +3973,7 @@
 			(at 153.67 35.5599 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -3897,6 +3984,7 @@
 			(at 153.67 38.1 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -3906,7 +3994,8 @@
 			(at 151.13 37.084 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3915,7 +4004,8 @@
 			(at 151.13 37.084 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3924,7 +4014,8 @@
 			(at 162.56 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3933,7 +4024,8 @@
 			(at 151.13 36.83 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -3942,7 +4034,8 @@
 			(at 154.305 38.1 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -3975,7 +4068,9 @@
 			(at 43.18 40.64 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -3984,7 +4079,8 @@
 			(at 45.72 40.6399 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify right)
 			)
@@ -3993,7 +4089,8 @@
 			(at 49.53 40.64 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4002,7 +4099,8 @@
 			(at 49.53 40.64 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4011,7 +4109,8 @@
 			(at 49.53 40.64 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4042,6 +4141,7 @@
 			(at 35.56 31.75 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -4051,6 +4151,7 @@
 			(at 35.56 34.29 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 			)
@@ -4059,7 +4160,8 @@
 			(at 39.37 33.02 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4068,7 +4170,8 @@
 			(at 39.37 33.02 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4077,7 +4180,8 @@
 			(at 39.37 45.72 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4086,7 +4190,8 @@
 			(at 39.37 33.02 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4095,7 +4200,8 @@
 			(at 43.815 31.75 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4128,6 +4234,7 @@
 			(at 41.275 114.2999 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -4138,6 +4245,7 @@
 			(at 41.275 116.84 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -4147,7 +4255,8 @@
 			(at 38.735 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4156,7 +4265,8 @@
 			(at 38.735 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4165,7 +4275,8 @@
 			(at 38.735 102.87 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4174,7 +4285,8 @@
 			(at 38.735 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4183,7 +4295,8 @@
 			(at 43.18 116.84 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4216,7 +4329,9 @@
 			(at 39.37 43.18 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -4225,7 +4340,8 @@
 			(at 39.37 41.91 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4233,7 +4349,8 @@
 			(at 39.37 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4242,7 +4359,8 @@
 			(at 39.37 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4251,7 +4369,8 @@
 			(at 39.37 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4283,6 +4402,7 @@
 			(at 33.02 114.2999 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -4293,6 +4413,7 @@
 			(at 33.02 116.84 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -4302,7 +4423,8 @@
 			(at 35.56 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4311,7 +4433,8 @@
 			(at 35.56 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4320,7 +4443,8 @@
 			(at 35.56 102.87 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4329,7 +4453,8 @@
 			(at 35.56 115.57 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4338,7 +4463,8 @@
 			(at 31.115 116.84 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4371,7 +4497,9 @@
 			(at 43.18 36.83 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -4380,7 +4508,8 @@
 			(at 45.72 36.8299 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify right)
 			)
@@ -4389,7 +4518,8 @@
 			(at 49.53 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4398,7 +4528,8 @@
 			(at 49.53 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4407,7 +4538,8 @@
 			(at 49.53 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4438,7 +4570,9 @@
 			(at 60.96 134.62 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -4447,7 +4581,8 @@
 			(at 60.96 133.35 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4455,7 +4590,8 @@
 			(at 60.96 128.27 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4464,7 +4600,8 @@
 			(at 60.96 128.27 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4473,7 +4610,8 @@
 			(at 60.96 128.27 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4504,6 +4642,7 @@
 			(at 36.83 24.1299 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -4514,6 +4653,7 @@
 			(at 36.83 26.67 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -4523,7 +4663,8 @@
 			(at 39.37 25.654 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4532,7 +4673,8 @@
 			(at 39.37 25.654 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4541,7 +4683,8 @@
 			(at 27.94 25.4 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4550,7 +4693,8 @@
 			(at 39.37 25.4 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4559,7 +4703,8 @@
 			(at 36.195 26.67 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4603,7 +4748,8 @@
 			(at 62.23 41.91 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left)
 			)
@@ -4612,7 +4758,8 @@
 			(at 58.42 40.64 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4621,7 +4768,8 @@
 			(at 58.42 40.64 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4630,7 +4778,8 @@
 			(at 58.42 40.64 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4639,7 +4788,8 @@
 			(at 58.42 40.64 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4648,7 +4798,8 @@
 			(at 58.42 40.64 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4685,7 +4836,9 @@
 			(at 51.435 125.73 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -4694,7 +4847,8 @@
 			(at 51.435 124.46 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4702,7 +4856,8 @@
 			(at 51.435 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4711,7 +4866,8 @@
 			(at 51.435 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4720,7 +4876,8 @@
 			(at 51.435 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4750,6 +4907,7 @@
 			(at 167.64 43.1799 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -4760,6 +4918,7 @@
 			(at 167.64 45.72 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -4769,7 +4928,8 @@
 			(at 165.1 44.704 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4778,7 +4938,8 @@
 			(at 165.1 44.704 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4787,7 +4948,8 @@
 			(at 176.53 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4796,7 +4958,8 @@
 			(at 165.1 44.45 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4805,7 +4968,8 @@
 			(at 168.275 45.72 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4838,7 +5002,9 @@
 			(at 39.37 25.4 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -4847,7 +5013,8 @@
 			(at 39.37 16.51 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4855,7 +5022,8 @@
 			(at 39.37 21.59 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4864,7 +5032,8 @@
 			(at 39.37 21.59 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4873,7 +5042,8 @@
 			(at 39.37 21.59 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4904,7 +5074,9 @@
 			(at 54.61 125.73 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -4913,7 +5085,8 @@
 			(at 54.61 124.46 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -4921,7 +5094,8 @@
 			(at 54.61 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4930,7 +5104,8 @@
 			(at 54.61 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4939,7 +5114,8 @@
 			(at 54.61 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4989,7 +5165,8 @@
 			(at 67.31 26.67 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -4998,7 +5175,8 @@
 			(at 67.31 26.67 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5007,7 +5185,8 @@
 			(at 67.31 26.67 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5155,6 +5334,7 @@
 			(at 53.34 46.99 90)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -5164,6 +5344,7 @@
 			(at 53.34 49.53 90)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 			)
@@ -5172,7 +5353,8 @@
 			(at 53.34 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5181,7 +5363,8 @@
 			(at 53.34 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5190,7 +5373,8 @@
 			(at 40.64 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5199,7 +5383,8 @@
 			(at 53.34 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5208,7 +5393,8 @@
 			(at 54.61 48.895 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -5241,6 +5427,7 @@
 			(at 142.24 43.18 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -5250,6 +5437,7 @@
 			(at 142.24 45.72 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 			)
@@ -5258,7 +5446,8 @@
 			(at 146.05 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5267,7 +5456,8 @@
 			(at 146.05 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5276,7 +5466,8 @@
 			(at 146.05 57.15 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5285,7 +5476,8 @@
 			(at 146.05 44.45 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5294,7 +5486,8 @@
 			(at 150.495 43.18 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -5327,6 +5520,7 @@
 			(at 170.18 36.2584 90)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -5337,7 +5531,8 @@
 			(at 170.18 38.7984 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left)
 			)
@@ -5346,7 +5541,8 @@
 			(at 161.925 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5355,7 +5551,8 @@
 			(at 165.1 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5364,7 +5561,8 @@
 			(at 165.1 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5373,7 +5571,8 @@
 			(at 165.1 36.83 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5407,7 +5606,9 @@
 			(at 38.735 125.73 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -5416,7 +5617,8 @@
 			(at 38.735 124.46 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -5424,7 +5626,8 @@
 			(at 38.735 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5433,7 +5636,8 @@
 			(at 38.735 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5442,7 +5646,8 @@
 			(at 38.735 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5473,7 +5678,9 @@
 			(at 35.56 125.73 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -5482,7 +5689,8 @@
 			(at 35.56 124.46 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -5490,7 +5698,8 @@
 			(at 35.56 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5499,7 +5708,8 @@
 			(at 35.56 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5508,7 +5718,8 @@
 			(at 35.56 119.38 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5539,7 +5750,9 @@
 			(at 53.34 110.49 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -5548,7 +5761,8 @@
 			(at 45.72 110.4899 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left)
 			)
@@ -5557,7 +5771,8 @@
 			(at 49.53 110.49 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5566,7 +5781,8 @@
 			(at 49.53 110.49 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5575,7 +5791,8 @@
 			(at 49.53 110.49 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5606,7 +5823,9 @@
 			(at 135.89 101.6 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -5615,7 +5834,8 @@
 			(at 135.89 92.71 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -5623,7 +5843,8 @@
 			(at 135.89 97.79 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5632,7 +5853,8 @@
 			(at 135.89 97.79 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -5641,7 +5863,8 @@
 			(at 135.89 97.79 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)

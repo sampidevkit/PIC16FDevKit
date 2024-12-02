@@ -149,6 +149,7 @@
 			(at 34.29 49.5299 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -159,6 +160,7 @@
 			(at 34.29 52.07 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -168,7 +170,8 @@
 			(at 31.75 50.8 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -177,7 +180,8 @@
 			(at 31.75 50.8 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -186,7 +190,8 @@
 			(at 31.75 38.1 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -195,7 +200,8 @@
 			(at 31.75 50.8 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -204,7 +210,8 @@
 			(at 36.195 52.07 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -238,6 +245,7 @@
 			(at 26.035 49.5299 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
 					(bold yes)
 				)
@@ -248,6 +256,7 @@
 			(at 26.035 52.07 0)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
@@ -257,7 +266,8 @@
 			(at 28.575 50.8 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -266,7 +276,8 @@
 			(at 28.575 50.8 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -275,7 +286,8 @@
 			(at 28.575 38.1 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -284,7 +296,8 @@
 			(at 28.575 50.8 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(hide yes)
 			)
@@ -293,7 +306,8 @@
 			(at 24.13 52.07 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
