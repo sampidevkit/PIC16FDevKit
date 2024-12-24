@@ -7,8 +7,8 @@
 	(lib_symbols)
 	(text_box "16F877--VDD [4~5.5]\n16F887--VDD [2~5.5]"
 		(exclude_from_sim no)
-		(at 79.375 26.67 0)
-		(size 25.4 6.35)
+		(at 101.6 54.61 0)
+		(size 31.75 6.35)
 		(stroke
 			(width 0.508)
 			(type default)
@@ -26,7 +26,7 @@
 		(uuid "84a2c12e-65ad-4dd1-962f-a0f5190cab78")
 	)
 	(sheet
-		(at 25.4 63.5)
+		(at 63.5 25.4)
 		(size 25.4 25.4)
 		(fields_autoplaced yes)
 		(stroke
@@ -37,8 +37,8 @@
 			(color 255 255 194 1.0000)
 		)
 		(uuid "6fab4358-8edb-4c81-8f5e-6901c5551004")
-		(property "Sheetname" "Programmer"
-			(at 25.4 62.7376 0)
+		(property "Sheetname" "PROGRAMMER"
+			(at 63.5 24.6376 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -48,8 +48,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Programmer.kicad_sch"
-			(at 25.4 89.5354 0)
+		(property "Sheetfile" "PROGRAMMER.kicad_sch"
+			(at 63.5 51.4354 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -67,48 +67,7 @@
 		)
 	)
 	(sheet
-		(at 76.2 63.5)
-		(size 31.75 25.4)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.381)
-			(type solid)
-		)
-		(fill
-			(color 255 255 194 1.0000)
-		)
-		(uuid "bff89f11-8f5f-4d91-b208-66dc95896c24")
-		(property "Sheetname" "AuxiliaryFunctions"
-			(at 76.2 62.6741 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "AuxiliaryFunctions.kicad_sch"
-			(at 76.2 89.5989 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a"
-					(page "5")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 76.2 25.4)
+		(at 101.6 25.4)
 		(size 31.75 25.4)
 		(fields_autoplaced yes)
 		(stroke
@@ -119,8 +78,8 @@
 			(color 255 255 194 1.0000)
 		)
 		(uuid "dceb7a93-1172-4461-96bc-c129bdd90128")
-		(property "Sheetname" "Target MCU"
-			(at 76.2 24.6376 0)
+		(property "Sheetname" "TARGET MCU"
+			(at 101.6 24.6376 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -130,8 +89,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Target_MCU.kicad_sch"
-			(at 76.2 51.4354 0)
+		(property "Sheetfile" "TARGET_MCU.kicad_sch"
+			(at 101.6 51.4354 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -160,7 +119,7 @@
 			(color 255 255 194 1.0000)
 		)
 		(uuid "de2da3ad-8ad5-46d6-911f-db99c6e172ab")
-		(property "Sheetname" "Power & Peripherals"
+		(property "Sheetname" "POWER"
 			(at 25.4 24.6376 0)
 			(effects
 				(font
@@ -171,7 +130,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Power_Peripherals.kicad_sch"
+		(property "Sheetfile" "POWER.kicad_sch"
 			(at 25.4 51.4354 0)
 			(effects
 				(font
