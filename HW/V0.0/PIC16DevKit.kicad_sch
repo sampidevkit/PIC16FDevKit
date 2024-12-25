@@ -42,8 +42,7 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
+					(size 1.016 1.016)
 				)
 				(justify left bottom)
 			)
@@ -83,8 +82,7 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
+					(size 1.016 1.016)
 				)
 				(justify left bottom)
 			)
@@ -124,8 +122,7 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
+					(size 1.016 1.016)
 				)
 				(justify left bottom)
 			)
