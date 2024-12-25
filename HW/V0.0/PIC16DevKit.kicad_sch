@@ -5,12 +5,132 @@
 	(uuid "17281b91-3f9a-4e36-96b2-66002b412b3a")
 	(paper "A4")
 	(lib_symbols)
+	(wire
+		(pts
+			(xy 50.8 29.845) (xy 63.5 29.845)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e9cf27b-7fc3-499e-9559-21eecbb1bfbb")
+	)
+	(wire
+		(pts
+			(xy 50.8 37.465) (xy 63.5 37.465)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "314d5dda-f995-4094-be94-5a6caf5f4f02")
+	)
+	(wire
+		(pts
+			(xy 88.9 40.64) (xy 101.6 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "421171c5-ee5a-4d61-9589-1417d3df9ca1")
+	)
+	(wire
+		(pts
+			(xy 88.9 35.56) (xy 101.6 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5528fb56-d061-4655-bf6a-cdb462ee75f7")
+	)
+	(wire
+		(pts
+			(xy 88.9 38.1) (xy 101.6 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bb8ab6c-2654-45d8-98ab-9448039c8509")
+	)
+	(wire
+		(pts
+			(xy 50.8 27.305) (xy 63.5 27.305)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fa62a38-b73a-4785-add6-5907634be2ec")
+	)
+	(wire
+		(pts
+			(xy 88.9 30.48) (xy 101.6 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88ae7243-b16f-48f1-9a66-2c85b5f89e42")
+	)
+	(wire
+		(pts
+			(xy 88.9 27.94) (xy 101.6 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a55e6d7-235b-4c8d-8999-4d40c1186df0")
+	)
+	(wire
+		(pts
+			(xy 88.9 33.02) (xy 101.6 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8e29503-6ca4-429e-83f9-48563ccefb3b")
+	)
+	(wire
+		(pts
+			(xy 50.8 32.385) (xy 63.5 32.385)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8ed9d68-d12d-425b-8fdc-b3ca6dbfcfdb")
+	)
+	(wire
+		(pts
+			(xy 50.8 34.925) (xy 63.5 34.925)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccd2ab9e-136c-400b-b786-039158432e78")
+	)
+	(wire
+		(pts
+			(xy 88.9 43.18) (xy 101.6 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eaaacc35-03c3-49cc-8a28-63f2a6ec9182")
+	)
 	(text_box "16F877--VDD [4~5.5]\n16F887--VDD [2~5.5]"
 		(exclude_from_sim no)
-		(at 101.6 54.61 0)
+		(at 101.6 78.74 0)
 		(size 31.75 6.35)
 		(stroke
-			(width 0.508)
+			(width 0)
 			(type default)
 		)
 		(fill
@@ -27,10 +147,10 @@
 	)
 	(sheet
 		(at 63.5 25.4)
-		(size 25.4 25.4)
+		(size 25.4 50.8)
 		(fields_autoplaced yes)
 		(stroke
-			(width 0.254)
+			(width 0)
 			(type solid)
 		)
 		(fill
@@ -38,17 +158,18 @@
 		)
 		(uuid "6fab4358-8edb-4c81-8f5e-6901c5551004")
 		(property "Sheetname" "PROGRAMMER"
-			(at 63.5 24.6376 0)
+			(at 63.5 24.6884 0)
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Sheetfile" "PROGRAMMER.kicad_sch"
-			(at 63.5 51.4354 0)
+			(at 63.5 76.683 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -56,6 +177,276 @@
 				)
 				(justify left top)
 			)
+		)
+		(pin "TG_SCL" input
+			(at 88.9 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "9768fd27-7c0f-4855-bbf0-44f23f4719a2")
+		)
+		(pin "SCL" output
+			(at 63.5 48.26 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1a86fc19-0385-4e6b-8024-245c8bb5af5e")
+		)
+		(pin "~{TG_PGD}" bidirectional
+			(at 88.9 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0f4d8f3f-6a9f-4dbc-be14-2452ea577d23")
+		)
+		(pin "~{TG_MCLR}" output
+			(at 88.9 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "bc13b3a4-6b08-4c53-a64a-5d0cd7538fbe")
+		)
+		(pin "TXD" input
+			(at 63.5 45.72 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "37025a0d-d432-44b2-88a4-b2cd691a58b3")
+		)
+		(pin "URX" output
+			(at 63.5 43.18 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "8beb965f-057f-4b2a-b666-859d35290a89")
+		)
+		(pin "TG_SDA" bidirectional
+			(at 88.9 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f682b5ec-efa7-465a-99ec-64f8cee95788")
+		)
+		(pin "CS" input
+			(at 63.5 40.64 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "96b8c998-3796-4087-824b-e044f7d39da9")
+		)
+		(pin "SDA" bidirectional
+			(at 63.5 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7f886b79-dbd3-4258-baf9-d1863fe80be1")
+		)
+		(pin "SDI" output
+			(at 63.5 50.8 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "fc1c3496-6ef1-4a07-aa79-de9667c22ac2")
+		)
+		(pin "SDO" input
+			(at 63.5 53.34 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3728c32a-4151-4e89-b21e-bcfa22a7b932")
+		)
+		(pin "SCK" input
+			(at 63.5 55.88 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "d03bb1af-ae93-4365-a935-e09fb7b1758d")
+		)
+		(pin "~{TG_PGC}" output
+			(at 88.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "925964dd-d020-4239-a572-6dd32b741e06")
+		)
+		(pin "RXD" input
+			(at 63.5 58.42 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "14aa0119-b4bd-442f-abc9-a2b3a104b79c")
+		)
+		(pin "USB_P" bidirectional
+			(at 63.5 27.305 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "559638e6-651c-4b90-9266-e2de1a9c11d4")
+		)
+		(pin "~{VTG_EN}" output
+			(at 63.5 34.925 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "aeff711a-94d4-4a5d-b9fe-1de395357717")
+		)
+		(pin "USB_N" bidirectional
+			(at 63.5 29.845 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "88fd0cb9-7cc1-45fc-a3eb-8b5128874def")
+		)
+		(pin "USB_VBUS" input
+			(at 63.5 32.385 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "16d5a2cc-a04d-4321-a8ee-36e895b51282")
+		)
+		(pin "VPP_EN" output
+			(at 63.5 37.465 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "fcedea6d-3d7b-4a87-a03e-db93455889ee")
+		)
+		(pin "PG_PGC" input
+			(at 88.9 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "11af6759-5f9d-4cbc-bf43-68b635c44f08")
+		)
+		(pin "PG_PGD" bidirectional
+			(at 88.9 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c9450309-015d-4fdb-8183-cdc657e03c44")
+		)
+		(pin "LED_BUSY" output
+			(at 63.5 63.5 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "402f7ddc-8374-465e-80d3-21a6a3822979")
+		)
+		(pin "~{BT_MODE}" input
+			(at 63.5 66.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f8a2092f-371b-4c23-9fb8-a26102c19b60")
+		)
+		(pin "~{PG_MCLR}" input
+			(at 88.9 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e7edc66a-37af-45d1-bb88-7de8ee695106")
+		)
+		(pin "LED_TGRDY" output
+			(at 63.5 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f5a69edb-a31d-4913-82c5-0365bea6a4ce")
+		)
+		(pin "~{TG_TXD}" input
+			(at 88.9 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e01d54c3-652c-42a8-b34c-d3e18b2f7797")
+		)
+		(pin "~{TG_RXD}" output
+			(at 88.9 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8eb5e212-7d02-46b2-bb18-815a9198e838")
 		)
 		(instances
 			(project "PIC16DevKit"
@@ -67,10 +458,10 @@
 	)
 	(sheet
 		(at 101.6 25.4)
-		(size 31.75 25.4)
+		(size 31.75 50.8)
 		(fields_autoplaced yes)
 		(stroke
-			(width 0.254)
+			(width 0)
 			(type solid)
 		)
 		(fill
@@ -78,17 +469,18 @@
 		)
 		(uuid "dceb7a93-1172-4461-96bc-c129bdd90128")
 		(property "Sheetname" "TARGET MCU"
-			(at 101.6 24.6376 0)
+			(at 101.6 24.6884 0)
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
 		)
 		(property "Sheetfile" "TARGET_MCU.kicad_sch"
-			(at 101.6 51.4354 0)
+			(at 101.6 76.683 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -96,6 +488,346 @@
 				)
 				(justify left top)
 			)
+		)
+		(pin "ULED" output
+			(at 133.35 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "fdf716f9-957f-4d7d-b03d-65cb85eea28f")
+		)
+		(pin "~{UBT}" input
+			(at 133.35 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "787ab28c-96ce-48b2-9df6-555d4ce7aad7")
+		)
+		(pin "SCL" output
+			(at 101.6 27.94 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2459a0d3-48d4-4bec-a1af-0df7d85b0127")
+		)
+		(pin "SDA" bidirectional
+			(at 101.6 30.48 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "8cb52f16-d5ca-4e0e-81bb-925393f19fbf")
+		)
+		(pin "PWM2" output
+			(at 133.35 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "01416f71-1455-4419-87f4-891df230eb5b")
+		)
+		(pin "SDO" output
+			(at 133.35 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "b8b7af94-c2ad-4b73-98ca-b49644d482c3")
+		)
+		(pin "TXD" output
+			(at 101.6 33.02 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "83ca7634-4d2b-4203-9c02-9fb06e4ad683")
+		)
+		(pin "PWM1" output
+			(at 133.35 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e5a4006c-661f-41a1-ab89-d6193538e31c")
+		)
+		(pin "RXD" input
+			(at 101.6 35.56 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "bf6892f6-eddc-4c8f-a299-3fb87a2a5828")
+		)
+		(pin "SDI" input
+			(at 133.35 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6cf87b48-a7c4-4386-9198-d0a69c7f9292")
+		)
+		(pin "PGC" input
+			(at 101.6 38.1 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2ed6adf9-8ad1-4c5c-8b2f-24bd7a2cc9a4")
+		)
+		(pin "PGD" bidirectional
+			(at 101.6 40.64 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "55107f3b-fe63-45a2-980c-1740242ebe4b")
+		)
+		(pin "SCLK" output
+			(at 133.35 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0c3e0e97-b85e-45f0-a90a-5a6ac2f4afd4")
+		)
+		(pin "T1CKI" input
+			(at 133.35 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "d5fa81ae-5489-422f-b8d6-0eb18378c9b6")
+		)
+		(pin "INT0" input
+			(at 133.35 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6a4f9540-e7aa-427a-a9c1-9a5611e92813")
+		)
+		(pin "~{CS}" output
+			(at 133.35 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "46828e63-0790-4784-8ee7-25deaa70fe5c")
+		)
+		(pin "INT1" input
+			(at 133.35 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "71f7bfa3-5865-403b-9ea0-cd0138d815bf")
+		)
+		(pin "INT2" input
+			(at 133.35 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "813f25ca-a121-4858-b8e2-a5863dc885ab")
+		)
+		(pin "AN3" input
+			(at 133.35 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e97de6e0-7d45-4135-bf48-625a8c0b7255")
+		)
+		(pin "T0CKI" input
+			(at 133.35 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "5f59b5c4-50fa-44b9-a349-80d60f64c929")
+		)
+		(pin "AN2" input
+			(at 133.35 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "85801132-03bf-4a68-91df-4d0d7a9711d4")
+		)
+		(pin "AN1" input
+			(at 133.35 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a6eefc8d-f73b-4bb0-88ed-a71a7ba8142b")
+		)
+		(pin "AN4" input
+			(at 133.35 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "33f3220d-e081-4f95-95d6-7b80d0aff875")
+		)
+		(pin "AN0" input
+			(at 133.35 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "35f28e87-87f7-4fe9-ab10-27c33f86d9af")
+		)
+		(pin "~{MCLR}" input
+			(at 101.6 43.18 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "eb1c0051-6094-449c-866b-eba495300c5a")
+		)
+		(pin "RD6" bidirectional
+			(at 101.6 73.66 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "eb83a01f-3d44-4c21-8f1b-8562d48e7b22")
+		)
+		(pin "RD7" bidirectional
+			(at 101.6 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "5035de56-7318-45ee-9835-a59becf43632")
+		)
+		(pin "RD5" bidirectional
+			(at 101.6 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7375bced-eb70-4901-bdee-329d3a0a9ec1")
+		)
+		(pin "RD2" bidirectional
+			(at 101.6 66.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "5aee6c53-6802-4261-bdae-7b45ffe4c18e")
+		)
+		(pin "RD3" bidirectional
+			(at 101.6 63.5 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "96be64c0-2c33-47a2-b218-4a9ea8bdf98a")
+		)
+		(pin "RD1" bidirectional
+			(at 101.6 60.96 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "20bc7ea9-add0-4dd5-904b-b78a74362886")
+		)
+		(pin "RD0" bidirectional
+			(at 101.6 58.42 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "95caea04-d0af-4a5b-a8fe-caea7c9ec53a")
+		)
+		(pin "RD4" bidirectional
+			(at 101.6 55.88 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f518b229-4dea-412f-b8cc-0fd7cb3a5aef")
+		)
+		(pin "AN5" input
+			(at 101.6 53.34 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2c159ba5-fb40-4215-adbb-74b8537f7da4")
 		)
 		(instances
 			(project "PIC16DevKit"
@@ -110,7 +842,7 @@
 		(size 25.4 25.4)
 		(fields_autoplaced yes)
 		(stroke
-			(width 0.254)
+			(width 0)
 			(type solid)
 		)
 		(fill
@@ -122,7 +854,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left bottom)
 			)
@@ -136,6 +869,56 @@
 				)
 				(justify left top)
 			)
+		)
+		(pin "USB_P" bidirectional
+			(at 50.8 27.305 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "6b0f85cc-eb54-4d2a-a023-ce15a2030c9c")
+		)
+		(pin "USB_N" bidirectional
+			(at 50.8 29.845 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "fb0a2ecd-215c-4741-8ab3-f529927e1043")
+		)
+		(pin "VPP_EN" input
+			(at 50.8 37.465 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "63fcceff-6ff1-482b-aac6-dda1dfbde762")
+		)
+		(pin "~{VTG_EN}" input
+			(at 50.8 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a6fe3e42-ba49-41ca-a22f-52a0e540ae81")
+		)
+		(pin "VBUS_SEN" output
+			(at 50.8 32.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "78091a84-c049-461a-b2b3-cfd89cd1249c")
 		)
 		(instances
 			(project "PIC16DevKit"

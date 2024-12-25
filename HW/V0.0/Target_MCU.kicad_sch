@@ -790,6 +790,256 @@
 				)
 			)
 		)
+		(symbol "SAMPI:BT2"
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BT"
+				(at -1.27 1.27 0)
+				(effects
+					(font
+						(size 1.5 1.5)
+						(bold yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "BT SMD2"
+				(at -3.175 -0.635 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "SWITCH TACTILE SPST-NO 0.05A 12V"
+				(at 0 -9.525 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MFT" "CUI"
+				(at 0 -9.525 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MNP" "TS02-66-100-BK-160-LCR-D"
+				(at -0.635 -9.525 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BT2_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -3.81) (xy -1.27 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.81) (xy 1.27 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BT2_1_0"
+				(rectangle
+					(start -1.905 -2.54)
+					(end 1.905 -5.08)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center -1.27 -3.81)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -0.381 -1.905)
+					(end 0.381 -3.175)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -3.81) (xy -1.905 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -3.175) (xy 1.27 -3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -3.81) (xy 1.905 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.27 -3.81)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -3.175 -3.81 0)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -1.27 -6.35 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.175 -3.81 180)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 1.27 -6.35 90)
+					(length 1.27)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "SAMPI:SIL10"
 			(pin_names hide)
 			(exclude_from_sim no)
@@ -2749,161 +2999,6 @@
 				)
 			)
 		)
-		(symbol "Triet_KiCAD_Sym:Switch_2P"
-			(pin_numbers hide)
-			(pin_names hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "SW"
-				(at 0 4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SW-2P"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Triet_KiCAD_Fprint:SW_2P_3.5x6"
-				(at 0 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at -13.97 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Switch_2P"
-				(at 0 -8.255 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "MPN" "SW603625R2"
-				(at 0 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Note" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Switch_2P_0_1"
-				(polyline
-					(pts
-						(xy -1.905 0.635) (xy 1.905 0.635)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Switch_2P_1_0"
-				(pin unspecified line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "Switch_2P_1_1"
-				(circle
-					(center -1.27 0)
-					(radius 0.0001)
-					(stroke
-						(width 0.762)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -0.635 1.27)
-					(end 0.635 0.635)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 0.0001)
-					(stroke
-						(width 0.762)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers hide)
@@ -3272,7 +3367,7 @@
 		(uuid "adbb8bf9-aed2-4938-9cf4-2b9423414a26")
 	)
 	(junction
-		(at 33.02 85.09)
+		(at 27.94 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aec1e406-12ec-4909-9abf-a89d93ce1ed6")
@@ -3290,7 +3385,7 @@
 		(uuid "c73914ae-0d20-4b83-94e9-16684e4dcfcb")
 	)
 	(junction
-		(at 38.1 85.09)
+		(at 33.02 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9fbe3b2-6089-4d67-b2a6-dce665a9d4f7")
@@ -3315,7 +3410,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 83.82) (xy 33.02 85.09)
+			(xy 27.94 83.82) (xy 27.94 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3355,13 +3450,23 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 83.82) (xy 38.1 85.09)
+			(xy 33.02 83.82) (xy 33.02 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "181dd86a-c515-413a-a32e-81accfcb874c")
+	)
+	(wire
+		(pts
+			(xy 36.83 93.98) (xy 36.83 93.345)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1921c63a-2719-48d8-8b32-287962cc7217")
 	)
 	(wire
 		(pts
@@ -3455,6 +3560,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.83 86.995) (xy 36.83 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "374580ca-a2c0-4bf8-8385-b619a59be5ec")
+	)
+	(wire
+		(pts
 			(xy 38.735 106.68) (xy 38.735 111.76)
 		)
 		(stroke
@@ -3505,7 +3620,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 85.09) (xy 33.02 85.09)
+			(xy 33.02 85.09) (xy 27.94 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3515,7 +3630,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 85.09) (xy 38.1 86.36)
+			(xy 33.02 85.09) (xy 33.02 88.9)
 		)
 		(stroke
 			(width 0)
@@ -3645,6 +3760,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 85.09) (xy 36.83 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9934f50a-6a69-4f3a-ae81-0647fc2f3ae8")
+	)
+	(wire
+		(pts
 			(xy 177.8 52.07) (xy 166.37 52.07)
 		)
 		(stroke
@@ -3682,6 +3807,16 @@
 			(type default)
 		)
 		(uuid "a5e47131-9888-45ce-9923-ffa98f49b7ac")
+	)
+	(wire
+		(pts
+			(xy 34.29 88.9) (xy 33.02 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a996f064-9726-4c8e-a708-0ae8a51f5c1c")
 	)
 	(wire
 		(pts
@@ -3725,7 +3860,7 @@
 	)
 	(wire
 		(pts
-			(xy 33.02 85.09) (xy 33.02 86.36)
+			(xy 27.94 85.09) (xy 27.94 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3815,6 +3950,26 @@
 	)
 	(wire
 		(pts
+			(xy 33.02 91.44) (xy 33.02 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3c262de-620c-4734-a128-00805639dbbe")
+	)
+	(wire
+		(pts
+			(xy 34.29 91.44) (xy 33.02 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f94362d6-1850-488a-8b28-4134cf70ccb1")
+	)
+	(wire
+		(pts
 			(xy 138.43 96.52) (xy 138.43 97.79)
 		)
 		(stroke
@@ -3838,7 +3993,7 @@
 	)
 	(hierarchical_label "~{UBT}"
 		(shape output)
-		(at 33.02 83.82 90)
+		(at 27.94 83.82 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4725,7 +4880,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -4760,12 +4916,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP_CER"
+		(property "Description" "CAP CER 0.1UF 50V X7R 0603"
 			(at 51.435 102.87 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Samsung"
+			(at 51.435 115.57 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "CL10B104KB8NNNC"
+			(at 51.435 115.57 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -4799,7 +4977,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 			)
 		)
@@ -4835,8 +5014,30 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "PCB 4-LAYER 1.6MM 1-0.5-0.5-1OZ BLACK&WHITE HALS"
 			(at 220.345 36.83 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "PCB.SAMM-877A"
+			(at 220.345 40.005 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "JLCPCB"
+			(at 220.345 40.005 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -4965,7 +5166,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 			)
 		)
@@ -4979,7 +5181,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SAMPI:HDM1x10x2.54_TH_RA"
+		(property "Footprint" "SAMPI:HDM1x10x2.54_TH"
 			(at 194.31 83.82 0)
 			(effects
 				(font
@@ -5001,8 +5203,30 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RECEPTACLE STRIP 10P 2.54MM PITC"
 			(at 194.31 83.82 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RS1-10-G"
+			(at 194.31 83.82 90)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Adam Tech"
+			(at 194.31 83.82 90)
 			(effects
 				(font
 					(face "Consolas")
@@ -5065,7 +5289,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify right)
 			)
@@ -5100,12 +5325,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
 			(at 144.78 101.6 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 133.35 101.6 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603FR-075K1L"
+			(at 133.35 101.6 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -5139,7 +5386,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -5211,7 +5459,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -5283,7 +5532,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify right)
 			)
@@ -5318,12 +5568,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
 			(at 127 101.6 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 138.43 101.6 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603FR-075K1L"
+			(at 138.43 101.6 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -5357,7 +5629,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 			)
 		)
@@ -5390,12 +5663,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP_CER"
+		(property "Description" "CAP CER 22PF 50V C0G/NP0 0603"
 			(at 33.02 36.83 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Walsin"
+			(at 45.72 36.83 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "0603N220J500CT"
+			(at 45.72 36.83 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -5429,7 +5724,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -5502,8 +5798,9 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
 					(thickness 0.254)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -5565,7 +5862,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 33.02 93.98 0)
+		(at 27.94 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5573,17 +5870,18 @@
 		(dnp no)
 		(uuid "35e7508d-346a-4536-a7f3-0bed3e070868")
 		(property "Reference" "#PWR050"
-			(at 33.02 100.33 0)
+			(at 27.94 100.33 0)
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
 		)
 		(property "Value" "GND"
-			(at 33.02 97.79 0)
+			(at 27.94 97.79 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -5592,7 +5890,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 93.98 0)
+			(at 27.94 93.98 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -5602,7 +5900,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 93.98 0)
+			(at 27.94 93.98 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -5612,7 +5910,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 33.02 93.98 0)
+			(at 27.94 93.98 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -5647,7 +5945,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -5682,12 +5981,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 162.56 17.78 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 162.56 29.21 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 162.56 29.21 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -5721,7 +6042,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -5756,12 +6078,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 162.56 71.12 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 162.56 82.55 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 162.56 82.55 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -5795,7 +6139,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -5830,12 +6175,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 162.56 55.88 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 162.56 67.31 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 162.56 67.31 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -5870,7 +6237,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -5905,12 +6273,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP_CER"
+		(property "Description" "CAP CER 10UF 6.3V X5R 0603"
 			(at 54.61 102.87 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Samsung"
+			(at 54.61 115.57 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "CL10A106MQ8NNNC"
+			(at 54.61 115.57 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -5944,7 +6334,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -5979,12 +6370,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 58.42 80.01 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 46.99 80.01 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 46.99 80.01 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -6005,83 +6418,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:Switch_2P")
-		(at 38.1 90.17 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "489ec048-25cf-49e1-9e62-6f289aea63cd")
-		(property "Reference" "SW1"
-			(at 43.18 88.9 90)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "UBT"
-			(at 43.18 91.44 90)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Triet_KiCAD_Fprint:SW_2P_3.5x6"
-			(at 27.94 90.17 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 40.64 104.14 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Switch_2P"
-			(at 29.845 90.17 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(hide yes)
-			)
-		)
-		(pin "B"
-			(uuid "916f06ca-8a02-4e9a-8f67-cc5e2c031090")
-		)
-		(pin "A"
-			(uuid "660f7945-7dd3-4ebd-b670-05220ccb7c8d")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
-		(at 38.1 76.2 0)
+		(at 33.02 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6089,17 +6427,18 @@
 		(dnp no)
 		(uuid "4946730c-3539-4028-ade2-191386b65d12")
 		(property "Reference" "#PWR047"
-			(at 38.1 80.01 0)
+			(at 33.02 80.01 0)
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
 		)
 		(property "Value" "+VDDTG"
-			(at 38.1 72.39 0)
+			(at 33.02 72.39 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6108,7 +6447,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 76.2 0)
+			(at 33.02 76.2 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6118,7 +6457,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 76.2 0)
+			(at 33.02 76.2 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6128,7 +6467,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 38.1 76.2 0)
+			(at 33.02 76.2 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6164,8 +6503,9 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
 					(thickness 0.254)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -6239,7 +6579,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -6309,7 +6650,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -6367,7 +6709,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 38.1 93.98 0)
+		(at 33.02 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6375,17 +6717,18 @@
 		(dnp no)
 		(uuid "5b8d9e81-952e-4767-863b-607a0b0fa77c")
 		(property "Reference" "#PWR051"
-			(at 38.1 100.33 0)
+			(at 33.02 100.33 0)
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
 		)
 		(property "Value" "GND"
-			(at 38.1 97.79 0)
+			(at 33.02 97.79 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6394,7 +6737,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 93.98 0)
+			(at 33.02 93.98 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6404,7 +6747,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 93.98 0)
+			(at 33.02 93.98 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6414,7 +6757,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 38.1 93.98 0)
+			(at 33.02 93.98 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6437,7 +6780,7 @@
 	)
 	(symbol
 		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 38.1 80.01 0)
+		(at 33.02 80.01 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6445,17 +6788,18 @@
 		(dnp no)
 		(uuid "5ccd914e-31bd-4885-a1f1-775611ad47b7")
 		(property "Reference" "R18"
-			(at 40.64 78.7399 0)
+			(at 35.56 78.7399 0)
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "10K"
-			(at 40.64 81.28 0)
+			(at 35.56 81.28 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -6465,7 +6809,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 38.1 80.264 90)
+			(at 33.02 80.264 90)
 			(effects
 				(font
 					(face "Consolas")
@@ -6475,7 +6819,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 80.264 90)
+			(at 33.02 80.264 90)
 			(effects
 				(font
 					(face "Consolas")
@@ -6484,12 +6828,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
-			(at 49.53 80.01 0)
+		(property "Description" "RES 10K OHM 5% 1/10W 0603"
+			(at 44.45 80.01 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 33.02 80.01 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-0710KL"
+			(at 33.02 80.01 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -6523,7 +6889,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -6594,7 +6961,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -6629,12 +6997,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 162.56 48.26 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 162.56 59.69 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 162.56 59.69 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -6668,7 +7058,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -6703,12 +7094,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 162.56 25.4 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 162.56 36.83 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 162.56 36.83 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -6742,7 +7155,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -6777,12 +7191,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 162.56 63.5 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 162.56 74.93 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 162.56 74.93 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -6817,7 +7253,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -6852,12 +7289,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP_CER"
+		(property "Description" "CAP CER 10UF 6.3V X5R 0603"
 			(at 38.735 102.87 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Samsung"
+			(at 38.735 115.57 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "CL10A106MQ8NNNC"
+			(at 38.735 115.57 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -6890,7 +7349,8 @@
 			(at 53.975 35.56 90)
 			(effects
 				(font
-					(size 1.5 1.5)
+					(face "Consolas")
+					(size 1.27 1.27)
 					(bold yes)
 				)
 			)
@@ -6899,7 +7359,9 @@
 			(at 54.61 38.1 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 			)
 		)
@@ -6907,7 +7369,9 @@
 			(at 45.72 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -6916,16 +7380,42 @@
 			(at 45.72 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "CRYSTAL 20.0000MHZ 16PF SMD"
 			(at 45.72 48.26 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Diodes"
+			(at 45.72 48.26 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "FL2000038"
+			(at 45.72 48.26 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -6967,7 +7457,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -7002,12 +7493,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP_CER"
+		(property "Description" "CAP CER 0.1UF 50V X7R 0603"
 			(at 35.56 102.87 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Samsung"
+			(at 35.56 115.57 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "CL10B104KB8NNNC"
+			(at 35.56 115.57 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -7041,7 +7554,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7111,7 +7625,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7181,7 +7696,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7252,7 +7768,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7322,7 +7839,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -7357,12 +7875,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 162.56 33.02 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 162.56 44.45 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 162.56 44.45 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -7396,7 +7936,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7467,7 +8008,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7538,7 +8080,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -7573,12 +8116,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES SMD"
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
 			(at 162.56 40.64 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 162.56 52.07 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 162.56 52.07 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -7612,7 +8177,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7683,7 +8249,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7740,6 +8307,114 @@
 		)
 	)
 	(symbol
+		(lib_id "SAMPI:BT2")
+		(at 40.64 90.17 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cd396920-d616-4eea-a3fd-80ab27b822a4")
+		(property "Reference" "BT2"
+			(at 39.37 88.8999 90)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "UBT"
+			(at 39.37 91.4399 90)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Liem:SW6x6-G"
+			(at 40.64 90.17 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 90.17 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "SWITCH TACTILE SPST-NO 0.05A 12V"
+			(at 31.115 90.17 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "CUI"
+			(at 31.115 90.17 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "TS04-66-73-BK-100-SMT"
+			(at 31.115 89.535 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "239f4766-0514-4b7f-a793-3ba2dffbead5")
+		)
+		(pin "4"
+			(uuid "3242f82f-4490-47d2-9395-818eae0f89fe")
+		)
+		(pin "2"
+			(uuid "d3681e56-c50c-495d-8639-cf180617d9af")
+		)
+		(pin "3"
+			(uuid "5f4ebbcd-8704-40a9-952d-6ce556826ba8")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "BT2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 54.61 40.64 90)
 		(mirror x)
@@ -7754,7 +8429,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7825,7 +8501,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -7896,7 +8573,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 			)
 		)
@@ -7943,7 +8621,9 @@
 			(at 67.31 25.4 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -7952,7 +8632,9 @@
 			(at 67.31 25.4 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -8113,7 +8795,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 			)
 		)
@@ -8146,12 +8829,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP_CER"
+		(property "Description" "CAP CER 22PF 50V C0G/NP0 0603"
 			(at 33.02 44.45 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Walsin"
+			(at 45.72 44.45 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "0603N220J500CT"
+			(at 45.72 44.45 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -8173,7 +8878,7 @@
 	)
 	(symbol
 		(lib_id "Triet_KiCAD_Sym:CAP_CER")
-		(at 33.02 90.17 0)
+		(at 27.94 90.17 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8182,16 +8887,17 @@
 		(dnp no)
 		(uuid "e261a82f-4627-4915-b596-343fd2d4b123")
 		(property "Reference" "C17"
-			(at 29.21 88.9 0)
+			(at 24.13 88.9 0)
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 			)
 		)
 		(property "Value" "100nF"
-			(at 29.21 91.44 0)
+			(at 24.13 91.44 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -8200,7 +8906,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:CAP0603"
-			(at 33.02 90.17 0)
+			(at 27.94 90.17 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -8210,7 +8916,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 33.02 90.17 0)
+			(at 27.94 90.17 0)
 			(effects
 				(font
 					(face "Consolas")
@@ -8219,12 +8925,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP_CER"
-			(at 33.02 102.87 0)
+		(property "Description" "CAP CER 0.1UF 50V X7R 0603"
+			(at 27.94 102.87 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Samsung"
+			(at 27.94 90.17 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "CL10B104KB8NNNC"
+			(at 27.94 90.17 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -8258,7 +8986,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -8316,6 +9045,77 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 36.83 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f518eb07-34c6-4062-8427-8a1b323890ba")
+		(property "Reference" "#PWR072"
+			(at 36.83 100.33 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 36.83 97.79 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 93.98 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 93.98 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 36.83 93.98 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "100dcb7c-5786-4a08-8b6c-e288e6c7854e")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Triet_KiCAD_Sym:LED")
 		(at 46.99 90.17 270)
 		(unit 1)
@@ -8330,7 +9130,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(justify left)
 			)
@@ -8365,12 +9166,34 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Led Red"
+		(property "Description" "LED GREEN DIFFUSED 0603 SMD"
 			(at 46.99 90.17 0)
 			(effects
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFT" "Harvatek"
+			(at 46.99 90.17 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(hide yes)
+			)
+		)
+		(property "MNP" "B1911NG--20D000214U1930"
+			(at 46.99 90.17 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(hide yes)
 			)
@@ -8404,7 +9227,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -8474,7 +9298,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -8544,7 +9369,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
@@ -8615,7 +9441,8 @@
 			(effects
 				(font
 					(face "Consolas")
-					(size 1.016 1.016)
+					(size 1.27 1.27)
+					(bold yes)
 				)
 				(hide yes)
 			)
