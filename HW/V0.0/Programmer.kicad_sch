@@ -4065,7 +4065,7 @@
 	)
 	(hierarchical_label "SDO"
 		(shape input)
-		(at 232.41 34.29 0)
+		(at 244.475 20.955 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4131,7 +4131,7 @@
 	)
 	(hierarchical_label "VPP_EN"
 		(shape output)
-		(at 232.41 41.91 0)
+		(at 142.24 29.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4139,7 +4139,7 @@
 				(size 1.016 1.016)
 				(thickness 0.254)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "559dd21e-ad3f-49fe-a8a5-76ca61ddc85f")
 	)
@@ -4225,7 +4225,7 @@
 	)
 	(hierarchical_label "SDI"
 		(shape output)
-		(at 232.41 31.75 0)
+		(at 244.475 18.415 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4239,7 +4239,7 @@
 	)
 	(hierarchical_label "LED_BUSY"
 		(shape output)
-		(at 139.7 26.67 180)
+		(at 142.24 34.29 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4265,7 +4265,7 @@
 	)
 	(hierarchical_label "CS"
 		(shape output)
-		(at 232.41 36.83 0)
+		(at 242.57 23.495 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4359,14 +4359,14 @@
 	)
 	(hierarchical_label "LED_TGRDY"
 		(shape output)
-		(at 139.7 29.21 180)
+		(at 231.14 34.29 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(face "Consolas")
 				(size 1.016 1.016)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "beb44b93-b5cb-41ab-aa38-9a51ec9fac53")
 	)
@@ -4400,7 +4400,7 @@
 	)
 	(hierarchical_label "SCK"
 		(shape input)
-		(at 232.41 29.21 0)
+		(at 242.57 15.875 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4441,7 +4441,7 @@
 	)
 	(hierarchical_label "~{VTG_EN}"
 		(shape output)
-		(at 232.41 54.61 0)
+		(at 142.24 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4449,7 +4449,7 @@
 				(size 1.016 1.016)
 				(thickness 0.254)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "ec92a158-1db5-4927-8f23-334bfbcc400a")
 	)
@@ -7717,7 +7717,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "8875a2fe-eea1-44e8-a252-b0bfda1ed24b")
 		(property "Reference" "C27"
 			(at 121.285 60.9599 0)
@@ -8179,7 +8178,7 @@
 			(uuid "253e18a3-3baf-4298-8a85-5a6dc23536c7")
 		)
 		(instances
-			(project ""
+			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/6fab4358-8edb-4c81-8f5e-6901c5551004"
 					(reference "U6")
 					(unit 1)
@@ -8607,7 +8606,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a1c862fa-f000-4f7d-802f-2761055a8f50")
 		(property "Reference" "C25"
 			(at 105.41 60.9599 0)
@@ -10331,7 +10329,7 @@
 			(uuid "6255bbb3-2203-4508-982e-572adf96e810")
 		)
 		(instances
-			(project ""
+			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/6fab4358-8edb-4c81-8f5e-6901c5551004"
 					(reference "U11")
 					(unit 1)
@@ -11333,7 +11331,7 @@
 			(uuid "a840345e-d7a0-4ae0-847c-44ecb2f3bfe7")
 		)
 		(instances
-			(project ""
+			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/6fab4358-8edb-4c81-8f5e-6901c5551004"
 					(reference "BT1")
 					(unit 1)

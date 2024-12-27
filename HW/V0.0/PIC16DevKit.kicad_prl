@@ -1,10 +1,12 @@
 {
   "board": {
     "active_layer": 0,
-    "active_layer_preset": "All Layers",
-    "auto_track_width": true,
+    "active_layer_preset": "",
+    "auto_track_width": false,
     "hidden_netclasses": [],
-    "hidden_nets": [],
+    "hidden_nets": [
+      "GND"
+    ],
     "high_contrast_mode": 0,
     "net_color_mode": 1,
     "opacity": {
@@ -61,7 +63,6 @@
       34,
       35,
       36,
-      39,
       40
     ],
     "visible_layers": "fffffff_ffffffff",
@@ -78,6 +79,31 @@
     "version": 3
   },
   "project": {
-    "files": []
+    "files": [
+      {
+        "name": "PIC16DevKit.kicad_sch",
+        "open": false,
+        "window": {
+          "display": 0,
+          "maximized": false,
+          "pos_x": 952,
+          "pos_y": -8,
+          "size_x": 976,
+          "size_y": 1056
+        }
+      },
+      {
+        "name": "PIC16DevKit.kicad_pcb",
+        "open": false,
+        "window": {
+          "display": 1,
+          "maximized": true,
+          "pos_x": 1912,
+          "pos_y": -8,
+          "size_x": 1936,
+          "size_y": 1056
+        }
+      }
+    ]
   }
 }

@@ -10583,7 +10583,7 @@
 			(uuid "4fa96cdc-e79d-4ba5-aeb3-11e6b7824b40")
 		)
 		(instances
-			(project ""
+			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
 					(reference "J2")
 					(unit 1)
@@ -12540,7 +12540,7 @@
 			(uuid "eb80f242-d012-4f9a-8a32-772d6f5a2761")
 		)
 		(instances
-			(project ""
+			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
 					(reference "U1")
 					(unit 1)
@@ -12821,7 +12821,7 @@
 			(uuid "25014c89-e1dc-4613-8bee-a88ff3c5c23c")
 		)
 		(instances
-			(project ""
+			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
 					(reference "D3")
 					(unit 1)
