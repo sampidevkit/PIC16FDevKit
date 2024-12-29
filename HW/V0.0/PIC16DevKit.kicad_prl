@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 44,
+    "active_layer": 31,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_netclasses": [],
@@ -88,20 +88,20 @@
           "maximized": true,
           "pos_x": -8,
           "pos_y": -8,
-          "size_x": 1382,
-          "size_y": 752
+          "size_x": 1936,
+          "size_y": 1056
         }
       },
       {
         "name": "PIC16DevKit.kicad_pcb",
         "open": false,
         "window": {
-          "display": 0,
+          "display": 1,
           "maximized": true,
-          "pos_x": -8,
+          "pos_x": 1912,
           "pos_y": -8,
-          "size_x": 1382,
-          "size_y": 752
+          "size_x": 1936,
+          "size_y": 1056
         }
       }
     ]

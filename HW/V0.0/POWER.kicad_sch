@@ -1157,283 +1157,6 @@
 				)
 			)
 		)
-		(symbol "SAMPI:FET_N-CH"
-			(pin_names hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 1.27 1.27 0)
-				(effects
-					(font
-						(size 1.5 1.5)
-						(bold yes)
-					)
-					(justify right)
-				)
-			)
-			(property "Value" "MFET N"
-				(at 1.27 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify right)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "FET_N-CH_0_1"
-				(polyline
-					(pts
-						(xy 2.54 -5.461) (xy 2.54 -4.699)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -3.429) (xy 2.54 -4.191)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.159) (xy 2.54 -2.921)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.445 -4.445) (xy 5.715 -4.445)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.445 -3.175) (xy 5.715 -3.175)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -5.08) (xy 1.905 -5.08) (xy 1.905 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -3.81) (xy 3.81 -3.81) (xy 3.81 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -6.35) (xy 3.81 -5.08) (xy 2.54 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -5.715) (xy 5.08 -5.715) (xy 5.08 -4.445)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -1.905) (xy 5.08 -1.905) (xy 5.08 -3.175)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.81 -1.27) (xy 3.81 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 4.445 -4.445) (xy 5.08 -3.175) (xy 5.715 -4.445)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "FET_N-CH_1_1"
-				(polyline
-					(pts
-						(xy 3.302 -3.429) (xy 3.302 -4.191) (xy 2.921 -3.81) (xy 3.302 -3.429)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 3.81 -3.81)
-					(radius 2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin bidirectional line
-					(at 0 -5.08 0)
-					(length 1.27)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 3.81 -7.62 90)
-					(length 1.27)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 3.81 0 270)
-					(length 1.27)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "SAMPI:IND"
 			(pin_names hide)
 			(exclude_from_sim no)
@@ -4364,12 +4087,6 @@
 		(uuid "56e6d903-ee4f-4135-a43f-07c33873a256")
 	)
 	(junction
-		(at 161.29 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5f034f00-bb23-47a1-a610-c91b79130576")
-	)
-	(junction
 		(at 110.49 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4392,6 +4109,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "69f8fc19-0fea-4e00-9e84-29510a2e4f12")
+	)
+	(junction
+		(at 179.07 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "70e4af12-958e-413e-a4c0-57d5556dbce6")
 	)
 	(junction
 		(at 100.33 41.91)
@@ -4430,12 +4153,6 @@
 		(uuid "84858ef4-aa7e-4844-8d04-95ee59e27d86")
 	)
 	(junction
-		(at 179.07 53.34)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "85aecad7-18f0-462a-b2a3-9dc43f6a7df0")
-	)
-	(junction
 		(at 109.22 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4454,6 +4171,12 @@
 		(uuid "a2bdf6d1-21ac-4905-ad03-414fb986409a")
 	)
 	(junction
+		(at 147.32 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac8dcf59-5f69-400d-984d-067b6326ace8")
+	)
+	(junction
 		(at 67.31 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4470,6 +4193,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9ff3f1e-917b-4de4-bdea-2bbb4ffdc77b")
+	)
+	(junction
+		(at 167.64 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd61d39c-2d09-4903-a592-60cb7c357a41")
 	)
 	(junction
 		(at 58.42 44.45)
@@ -4555,16 +4284,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 52.07) (xy 179.07 53.34)
-		)
-		(stroke
-			(width 0.254)
-			(type default)
-		)
-		(uuid "0224238e-0df9-4da3-a6e5-d8acb172f4a6")
-	)
-	(wire
-		(pts
 			(xy 46.99 113.03) (xy 59.055 113.03)
 		)
 		(stroke
@@ -4592,6 +4311,16 @@
 			(type default)
 		)
 		(uuid "0aeff2a6-d61f-4daf-97f1-e820bf315943")
+	)
+	(wire
+		(pts
+			(xy 179.07 52.07) (xy 179.07 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bee10da-7b5e-435b-a64a-47a517febb1d")
 	)
 	(wire
 		(pts
@@ -4685,7 +4414,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 29.21) (xy 148.59 29.21)
+			(xy 139.7 29.21) (xy 147.32 29.21)
 		)
 		(stroke
 			(width 0.254)
@@ -4845,16 +4574,6 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 31.75) (xy 147.32 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33dd8c75-f37b-4419-8827-933d0abaa290")
-	)
-	(wire
-		(pts
 			(xy 127 97.79) (xy 127 99.06)
 		)
 		(stroke
@@ -4902,16 +4621,6 @@
 			(type default)
 		)
 		(uuid "39c7b347-8bed-47fb-ba90-bdaeacd4e79d")
-	)
-	(wire
-		(pts
-			(xy 147.32 63.5) (xy 161.29 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3e817093-ccf2-4ad6-8a27-76906547f25f")
 	)
 	(wire
 		(pts
@@ -5012,6 +4721,16 @@
 			(type default)
 		)
 		(uuid "4f23d50b-b1af-4e3d-8d8c-cde7cd221946")
+	)
+	(wire
+		(pts
+			(xy 167.64 63.5) (xy 168.91 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "521e4545-bdde-429b-b690-5d157e26eb64")
 	)
 	(wire
 		(pts
@@ -5335,6 +5054,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 29.21) (xy 148.59 29.21)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+		)
+		(uuid "890828bc-101e-41f5-a33c-aa0f1832b276")
+	)
+	(wire
+		(pts
 			(xy 49.53 97.79) (xy 48.26 97.79)
 		)
 		(stroke
@@ -5602,6 +5331,16 @@
 			(type default)
 		)
 		(uuid "c70bce19-8cd1-4564-aa5c-c7c530515d7a")
+	)
+	(wire
+		(pts
+			(xy 147.32 29.21) (xy 147.32 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb3061ad-6be3-47b9-b559-10b23ce1b68b")
 	)
 	(wire
 		(pts
@@ -5875,16 +5614,6 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 63.5) (xy 161.29 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb507ab4-a5cc-4e09-b915-0446b677c21b")
-	)
-	(wire
-		(pts
 			(xy 65.405 92.71) (xy 48.26 92.71)
 		)
 		(stroke
@@ -5987,7 +5716,7 @@
 	)
 	(hierarchical_label "~{VTG_EN}"
 		(shape input)
-		(at 165.1 69.85 0)
+		(at 168.91 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6841,7 +6570,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "14963a5d-0003-476f-895d-021a35cdb12c")
+		(uuid "17f0e5ff-fcd3-4e0b-9788-fbdf24a68480")
 		(property "Reference" "#PWR017"
 			(at 179.07 55.88 0)
 			(effects
@@ -6893,7 +6622,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c6fd2130-63c4-4a81-9d90-df835daa31ad")
+			(uuid "4b3515de-cea5-41d5-9f8f-5ccaeea66aee")
 		)
 		(instances
 			(project "PIC16DevKit"
@@ -7417,6 +7146,77 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 139.7 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "40e21b2f-06e7-465f-8d3b-02430e8e18ec")
+		(property "Reference" "#PWR03"
+			(at 139.7 31.75 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+VDDTG"
+			(at 139.7 24.13 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 27.94 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 27.94 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 139.7 27.94 0)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e06d790-ff9f-4acc-8eda-25077fe9b5c2")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 38.1 35.56 0)
 		(mirror y)
@@ -7579,111 +7379,6 @@
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
 					(reference "C12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SAMPI:FET_N-CH")
-		(at 165.1 64.77 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "46d24557-d9a2-4c10-a794-aab2c3fec106")
-		(property "Reference" "Q2"
-			(at 157.48 67.945 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SI2302"
-			(at 159.385 71.12 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "SAMPI:SOT23"
-			(at 165.1 64.77 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 64.77 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "MOSFET N-CH 20V 3A SOT23-3"
-			(at 165.1 64.77 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFT" "Micro Commercial"
-			(at 165.1 64.77 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(hide yes)
-			)
-		)
-		(property "MNP" "SI2302A-TP"
-			(at 165.1 64.77 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "632a0fc4-3b8d-4903-bcf9-95139e5c3c34")
-		)
-		(pin "1"
-			(uuid "754a6e51-de68-4f2d-98c6-591e5d202d28")
-		)
-		(pin "2"
-			(uuid "bc269128-33c2-461f-b996-c8627217dca1")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
-					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -8532,78 +8227,6 @@
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
 					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 161.29 72.39 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "67ec2546-e903-4110-8c7c-06dd96f73a78")
-		(property "Reference" "#PWR020"
-			(at 161.29 78.74 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 161.29 76.2 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 161.29 72.39 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 161.29 72.39 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 161.29 72.39 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b3f17526-5ead-4186-8cea-afb53deb26fb")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
-					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -10066,83 +9689,6 @@
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
 					(reference "#PWR032")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "+5V_1")
-		(lib_id "power:+5V")
-		(at 139.7 27.94 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a322e5f9-c52e-499a-96c5-d83f4678cf96")
-		(property "Reference" "#PWR03"
-			(at 139.7 31.75 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(thickness 0.254)
-					(bold yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 139.7 24.13 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 27.94 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 27.94 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 139.7 27.94 0)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "72b931fb-fbd5-42e4-8a16-0ee77f0f88fb")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/de2da3ad-8ad5-46d6-911f-db99c6e172ab"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)

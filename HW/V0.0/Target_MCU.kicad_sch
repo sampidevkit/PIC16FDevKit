@@ -6704,7 +6704,7 @@
 	)
 	(hierarchical_label "~{CS}"
 		(shape output)
-		(at 60.96 90.17 180)
+		(at 62.23 90.17 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6822,7 +6822,7 @@
 	)
 	(hierarchical_label "GPIO"
 		(shape output)
-		(at 60.325 93.98 180)
+		(at 62.23 93.98 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6875,7 +6875,7 @@
 	)
 	(hierarchical_label "SCLK"
 		(shape output)
-		(at 115.57 78.74 0)
+		(at 113.03 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7035,7 +7035,7 @@
 	)
 	(hierarchical_label "SDI"
 		(shape input)
-		(at 115.57 74.93 0)
+		(at 113.03 74.93 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10699,7 +10699,7 @@
 			(uuid "fa59cdcf-a8a3-42ea-bf71-62561b3b0064")
 		)
 		(instances
-			(project ""
+			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
 					(reference "J5")
 					(unit 1)
