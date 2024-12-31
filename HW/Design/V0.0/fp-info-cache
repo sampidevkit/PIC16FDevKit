@@ -1,4 +1,4 @@
-2135317815237716
+2131135030838863
 Liem
 6-WLCSP
 
@@ -1371,13 +1371,6 @@ SIM5320_ADAPTOR_LITE
 0
 36
 36
-Liem
-SIM7020E
-
-
-0
-42
-42
 Liem
 SIM8051-6-0-14-01-A_GCT
 
@@ -5817,13 +5810,6 @@ CAP-ALU-TH-DxP-10x5
 2
 2
 Triet_KiCAD_Fprint
-CAP-TANT-1411
-
-
-0
-2
-2
-Triet_KiCAD_Fprint
 CAP-TANT-1608
 
 
@@ -5846,6 +5832,13 @@ CAP-TANT-2312
 2
 Triet_KiCAD_Fprint
 CAP-TANT-3216
+
+
+0
+2
+2
+Triet_KiCAD_Fprint
+CAP-TANT-3528-1411
 
 
 0
@@ -5935,34 +5928,6 @@ DxRxC_18x9x12
 0
 2
 2
-Triet_KiCAD_Fprint
-Cap_MKP
-
-
-0
-0
-0
-Triet_KiCAD_Fprint
-Cap_MKP-S3
-
-
-0
-0
-0
-Triet_KiCAD_Fprint
-Cap_MKP-X2
-
-
-0
-0
-0
-Triet_KiCAD_Fprint
-Cap_MKPH
-
-
-0
-0
-0
 Triet_KiCAD_Fprint
 Capxon_DxL_3.0x5.5
 Capxon_DxL_3.0x5.5
@@ -6188,8 +6153,8 @@ FT232RQ
 33
 33
 Triet_KiCAD_Fprint
-FUSE 1812
-
+FUSE 1812 30V0.5A
+Fuse 1812 
 
 0
 2

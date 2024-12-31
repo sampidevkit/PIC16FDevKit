@@ -8325,7 +8325,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470uF"
+		(property "Value" "220uF"
 			(at 65.405 35.56 90)
 			(effects
 				(font
@@ -8336,7 +8336,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SAMPI:CAP_ELEC-8.3x8.3-DIA8.0"
+		(property "Footprint" "SAMPI:CAP_ELEC-6.6x6.6-DIA6.3"
 			(at 64.77 33.02 0)
 			(effects
 				(font
@@ -8358,7 +8358,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP ALUM 470UF 20% 16V SMD"
+		(property "Description" "CAP ALUM 220UF 20% 16V SMD"
 			(at 64.77 33.02 0)
 			(effects
 				(font
@@ -8380,7 +8380,7 @@
 				(hide yes)
 			)
 		)
-		(property "MNP" "EXV477M016A9MAA"
+		(property "MNP" "EEV227M016S9HAA"
 			(at 64.77 33.02 0)
 			(effects
 				(font
