@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "48b57724-0c53-4fa7-9465-6ee9b7385d4e")
 	(paper "A4")
+	(title_block
+		(title "PIC16F877A DEV KIT")
+		(date "2025-01-01")
+		(rev "0.0")
+		(company "SAMPI DEVELOPMENT KITS")
+		(comment 1 "P/N: SAMM-16F877A")
+	)
 	(lib_symbols
 		(symbol "+5V_1"
 			(power)
@@ -6531,7 +6538,7 @@
 	)
 	(hierarchical_label "INT0"
 		(shape output)
-		(at 194.31 130.81 0)
+		(at 194.31 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6636,7 +6643,7 @@
 	)
 	(hierarchical_label "INT1"
 		(shape output)
-		(at 194.31 128.27 0)
+		(at 194.31 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font

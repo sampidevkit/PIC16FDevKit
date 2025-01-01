@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 37,
+    "active_layer": 31,
     "active_layer_preset": "",
     "auto_track_width": false,
     "hidden_netclasses": [],
@@ -19,7 +19,7 @@
       "footprints": true,
       "graphics": true,
       "keepouts": true,
-      "lockedItems": true,
+      "lockedItems": false,
       "otherItems": true,
       "pads": true,
       "text": true,
@@ -79,24 +79,12 @@
   "project": {
     "files": [
       {
-        "name": "PIC16DevKit.kicad_pcb",
-        "open": false,
+        "name": "PIC16DevKit.kicad_sch",
+        "open": true,
         "window": {
           "display": 0,
           "maximized": true,
           "pos_x": -8,
-          "pos_y": -8,
-          "size_x": 1382,
-          "size_y": 752
-        }
-      },
-      {
-        "name": "PIC16DevKit.kicad_sch",
-        "open": true,
-        "window": {
-          "display": 1,
-          "maximized": true,
-          "pos_x": -1374,
           "pos_y": -8,
           "size_x": 1382,
           "size_y": 752

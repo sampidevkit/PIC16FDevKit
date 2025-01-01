@@ -4,6 +4,13 @@
 	(generator_version "8.0")
 	(uuid "ba4ac667-a93a-4dcf-a738-da282545e19f")
 	(paper "A4")
+	(title_block
+		(title "PIC16F877A DEV KIT")
+		(date "2025-01-01")
+		(rev "0.0")
+		(company "SAMPI DEVELOPMENT KITS")
+		(comment 1 "P/N: SAMM-16F877A")
+	)
 	(lib_symbols
 		(symbol "+5V_1"
 			(power)
