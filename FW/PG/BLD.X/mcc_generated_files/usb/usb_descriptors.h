@@ -51,21 +51,21 @@
  * @def STRING_MANUFACTURER
  * @brief Manufacturer String descriptor.
  */
-#define STRING_MANUFACTURER L"SAMPI Dev Kit"
+#define STRING_MANUFACTURER L"Microchip Technology Inc."
 
 /**
  * @ingroup usb_device_stack
  * @def STRING_PRODUCT
  * @brief Product String descriptor.
  */
-#define STRING_PRODUCT      L"PIC16F877A Evk"
+#define STRING_PRODUCT      L"CDC Class Demo"
 
 /**
  * @ingroup usb_device_stack
  * @def STRING_SERIAL
  * @brief Serial Number String descriptor.
  */
-#define STRING_SERIAL       L"1234567890"
+#define STRING_SERIAL       L"1234567890bacdef"
 
 /**
  * @ingroup usb_device_stack

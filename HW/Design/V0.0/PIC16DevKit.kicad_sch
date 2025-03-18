@@ -1,13 +1,13 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "17281b91-3f9a-4e36-96b2-66002b412b3a")
 	(paper "A4")
 	(title_block
 		(title "PIC16F877A DEV KIT")
-		(date "2025-01-01")
-		(rev "0.0")
+		(date "2025-03-18")
+		(rev "0.1")
 		(company "SAMPI DEVELOPMENT KITS")
 		(comment 1 "P/N: SAMM-16F877A")
 	)
@@ -129,6 +129,10 @@
 		(uuid "c84f6a07-993f-4f02-9816-a5b6a0e9bf17")
 	)
 	(no_connect
+		(at 63.5 46.355)
+		(uuid "ccb205ab-12ab-44e2-a151-bcb1c95a1aa8")
+	)
+	(no_connect
 		(at 133.35 71.755)
 		(uuid "cd0b9451-f730-41f9-85b4-5863c62d353d")
 	)
@@ -147,6 +151,16 @@
 	(no_connect
 		(at 133.35 66.675)
 		(uuid "f78b1236-0aa7-459f-95de-ee3bf54d0d5e")
+	)
+	(wire
+		(pts
+			(xy 50.8 37.465) (xy 63.5 37.465)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e2bb2ba-2b1c-4d34-9660-386ac1bf9951")
 	)
 	(wire
 		(pts
@@ -180,7 +194,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 37.465) (xy 63.5 37.465)
+			(xy 50.8 40.005) (xy 63.5 40.005)
 		)
 		(stroke
 			(width 0)
@@ -347,6 +361,16 @@
 			(type default)
 		)
 		(uuid "ccd2ab9e-136c-400b-b786-039158432e78")
+	)
+	(wire
+		(pts
+			(xy 50.8 42.545) (xy 63.5 42.545)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cef0c78b-20ac-4574-8053-672d8f8f9d4f")
 	)
 	(wire
 		(pts
@@ -1787,12 +1811,52 @@
 			"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"
-			"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"
+			"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"
 		)
 	)
 	(sheet
 		(at 63.5 25.4)
 		(size 25.4 33.655)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -1825,203 +1889,273 @@
 		)
 		(pin "SCL" input
 			(at 88.9 27.94 0)
+			(uuid "9768fd27-7c0f-4855-bbf0-44f23f4719a2")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "9768fd27-7c0f-4855-bbf0-44f23f4719a2")
 		)
 		(pin "TG_PGD" bidirectional
 			(at 88.9 47.625 0)
+			(uuid "0f4d8f3f-6a9f-4dbc-be14-2452ea577d23")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "0f4d8f3f-6a9f-4dbc-be14-2452ea577d23")
 		)
 		(pin "~{TG_MCLR}" output
 			(at 88.9 50.165 0)
+			(uuid "bc13b3a4-6b08-4c53-a64a-5d0cd7538fbe")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "bc13b3a4-6b08-4c53-a64a-5d0cd7538fbe")
 		)
 		(pin "SDA" bidirectional
 			(at 88.9 30.48 0)
+			(uuid "f682b5ec-efa7-465a-99ec-64f8cee95788")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "f682b5ec-efa7-465a-99ec-64f8cee95788")
 		)
 		(pin "TG_PGC" output
 			(at 88.9 45.085 0)
+			(uuid "925964dd-d020-4239-a572-6dd32b741e06")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "925964dd-d020-4239-a572-6dd32b741e06")
 		)
 		(pin "USB_P" bidirectional
 			(at 63.5 27.305 180)
+			(uuid "559638e6-651c-4b90-9266-e2de1a9c11d4")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "559638e6-651c-4b90-9266-e2de1a9c11d4")
 		)
 		(pin "~{VTG_EN}" output
 			(at 63.5 34.925 180)
+			(uuid "aeff711a-94d4-4a5d-b9fe-1de395357717")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "aeff711a-94d4-4a5d-b9fe-1de395357717")
 		)
 		(pin "USB_N" bidirectional
 			(at 63.5 29.845 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
 			(uuid "88fd0cb9-7cc1-45fc-a3eb-8b5128874def")
-		)
-		(pin "USB_VBUS" input
-			(at 63.5 32.385 180)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
+		)
+		(pin "VBUS_DET" input
+			(at 63.5 32.385 180)
 			(uuid "16d5a2cc-a04d-4321-a8ee-36e895b51282")
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(justify left)
+			)
 		)
 		(pin "VPP_EN" output
-			(at 63.5 37.465 180)
+			(at 63.5 40.005 180)
+			(uuid "fcedea6d-3d7b-4a87-a03e-db93455889ee")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "fcedea6d-3d7b-4a87-a03e-db93455889ee")
 		)
 		(pin "PG_UPDI" bidirectional
 			(at 88.9 53.975 0)
+			(uuid "c9450309-015d-4fdb-8183-cdc657e03c44")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "c9450309-015d-4fdb-8183-cdc657e03c44")
 		)
 		(pin "LED_BUSY" output
 			(at 63.5 48.895 180)
+			(uuid "402f7ddc-8374-465e-80d3-21a6a3822979")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "402f7ddc-8374-465e-80d3-21a6a3822979")
 		)
 		(pin "~{BT_MODE}" input
 			(at 63.5 53.975 180)
+			(uuid "f8a2092f-371b-4c23-9fb8-a26102c19b60")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "f8a2092f-371b-4c23-9fb8-a26102c19b60")
 		)
 		(pin "~{PG_RESET}" input
 			(at 88.9 56.515 0)
+			(uuid "e7edc66a-37af-45d1-bb88-7de8ee695106")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "e7edc66a-37af-45d1-bb88-7de8ee695106")
 		)
 		(pin "LED_TGRDY" output
 			(at 63.5 51.435 180)
+			(uuid "f5a69edb-a31d-4913-82c5-0365bea6a4ce")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "f5a69edb-a31d-4913-82c5-0365bea6a4ce")
 		)
 		(pin "RXD0" input
 			(at 88.9 35.56 0)
+			(uuid "e01d54c3-652c-42a8-b34c-d3e18b2f7797")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "e01d54c3-652c-42a8-b34c-d3e18b2f7797")
 		)
 		(pin "TXD0" output
 			(at 88.9 33.02 0)
+			(uuid "8eb5e212-7d02-46b2-bb18-815a9198e838")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "8eb5e212-7d02-46b2-bb18-815a9198e838")
 		)
 		(pin "RXD1" input
 			(at 88.9 40.64 0)
+			(uuid "c3bd6e2c-ce4c-43b9-84bc-28858dbe0fe6")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "c3bd6e2c-ce4c-43b9-84bc-28858dbe0fe6")
 		)
 		(pin "TXD1" output
 			(at 88.9 38.1 0)
+			(uuid "714f11e7-a054-40c3-9873-3cd1fb004a72")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "714f11e7-a054-40c3-9873-3cd1fb004a72")
 		)
 		(pin "TG_MCLR" output
 			(at 63.5 56.515 180)
+			(uuid "13175b14-dbc9-43f7-80e7-13c3e0fa9a89")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "13175b14-dbc9-43f7-80e7-13c3e0fa9a89")
+		)
+		(pin "VDDTG_SEN" input
+			(at 63.5 37.465 180)
+			(uuid "776afcea-65bf-4667-9f64-0034db5e8a8f")
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(pin "VPP_SEN" input
+			(at 63.5 42.545 180)
+			(uuid "b8b5011a-71c1-4d00-84bc-365cda365ac9")
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{BT_FNC}" output
+			(at 63.5 46.355 180)
+			(uuid "a220bdef-fb26-461b-8a5a-fd2cbb6c40e8")
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
 		)
 		(instances
 			(project "PIC16DevKit"
@@ -2034,6 +2168,10 @@
 	(sheet
 		(at 101.6 25.4)
 		(size 31.75 50.8)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2066,373 +2204,447 @@
 		)
 		(pin "ULED" output
 			(at 133.35 31.115 0)
+			(uuid "fdf716f9-957f-4d7d-b03d-65cb85eea28f")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "fdf716f9-957f-4d7d-b03d-65cb85eea28f")
 		)
 		(pin "~{UBT}" input
 			(at 133.35 33.655 0)
+			(uuid "787ab28c-96ce-48b2-9df6-555d4ce7aad7")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "787ab28c-96ce-48b2-9df6-555d4ce7aad7")
 		)
 		(pin "SCL" output
 			(at 101.6 27.94 180)
+			(uuid "2459a0d3-48d4-4bec-a1af-0df7d85b0127")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "2459a0d3-48d4-4bec-a1af-0df7d85b0127")
 		)
 		(pin "SDA" bidirectional
 			(at 101.6 30.48 180)
+			(uuid "8cb52f16-d5ca-4e0e-81bb-925393f19fbf")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "8cb52f16-d5ca-4e0e-81bb-925393f19fbf")
 		)
 		(pin "PWM2" output
 			(at 133.35 36.195 0)
+			(uuid "01416f71-1455-4419-87f4-891df230eb5b")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "01416f71-1455-4419-87f4-891df230eb5b")
 		)
 		(pin "SDO" output
 			(at 133.35 38.735 0)
+			(uuid "b8b7af94-c2ad-4b73-98ca-b49644d482c3")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "b8b7af94-c2ad-4b73-98ca-b49644d482c3")
 		)
 		(pin "TXD_MCU" output
 			(at 101.6 33.02 180)
+			(uuid "83ca7634-4d2b-4203-9c02-9fb06e4ad683")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "83ca7634-4d2b-4203-9c02-9fb06e4ad683")
 		)
 		(pin "PWM1" output
 			(at 133.35 41.275 0)
+			(uuid "e5a4006c-661f-41a1-ab89-d6193538e31c")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "e5a4006c-661f-41a1-ab89-d6193538e31c")
 		)
 		(pin "RXD_MCU" input
 			(at 101.6 35.56 180)
+			(uuid "bf6892f6-eddc-4c8f-a299-3fb87a2a5828")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "bf6892f6-eddc-4c8f-a299-3fb87a2a5828")
 		)
 		(pin "SDI" input
 			(at 133.35 43.815 0)
+			(uuid "6cf87b48-a7c4-4386-9198-d0a69c7f9292")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "6cf87b48-a7c4-4386-9198-d0a69c7f9292")
 		)
 		(pin "PGC{slash}UART_RX_IND" input
 			(at 101.6 45.085 180)
+			(uuid "2ed6adf9-8ad1-4c5c-8b2f-24bd7a2cc9a4")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "2ed6adf9-8ad1-4c5c-8b2f-24bd7a2cc9a4")
 		)
 		(pin "PGD{slash}UART_TX_SEL" bidirectional
 			(at 101.6 47.625 180)
+			(uuid "55107f3b-fe63-45a2-980c-1740242ebe4b")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "55107f3b-fe63-45a2-980c-1740242ebe4b")
 		)
 		(pin "SCLK" output
 			(at 133.35 46.355 0)
+			(uuid "0c3e0e97-b85e-45f0-a90a-5a6ac2f4afd4")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "0c3e0e97-b85e-45f0-a90a-5a6ac2f4afd4")
 		)
 		(pin "T1CKI" input
 			(at 133.35 48.895 0)
+			(uuid "d5fa81ae-5489-422f-b8d6-0eb18378c9b6")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "d5fa81ae-5489-422f-b8d6-0eb18378c9b6")
 		)
 		(pin "INT0" input
 			(at 133.35 51.435 0)
+			(uuid "6a4f9540-e7aa-427a-a9c1-9a5611e92813")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "6a4f9540-e7aa-427a-a9c1-9a5611e92813")
 		)
 		(pin "~{CS}" output
 			(at 133.35 53.975 0)
+			(uuid "46828e63-0790-4784-8ee7-25deaa70fe5c")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "46828e63-0790-4784-8ee7-25deaa70fe5c")
 		)
 		(pin "INT1" input
 			(at 133.35 56.515 0)
+			(uuid "71f7bfa3-5865-403b-9ea0-cd0138d815bf")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "71f7bfa3-5865-403b-9ea0-cd0138d815bf")
 		)
 		(pin "INT2" input
 			(at 133.35 59.055 0)
+			(uuid "813f25ca-a121-4858-b8e2-a5863dc885ab")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "813f25ca-a121-4858-b8e2-a5863dc885ab")
 		)
 		(pin "AN3" input
 			(at 133.35 61.595 0)
+			(uuid "e97de6e0-7d45-4135-bf48-625a8c0b7255")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "e97de6e0-7d45-4135-bf48-625a8c0b7255")
 		)
 		(pin "T0CKI" input
 			(at 133.35 64.135 0)
+			(uuid "5f59b5c4-50fa-44b9-a349-80d60f64c929")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "5f59b5c4-50fa-44b9-a349-80d60f64c929")
 		)
 		(pin "AN2" input
 			(at 133.35 66.675 0)
+			(uuid "85801132-03bf-4a68-91df-4d0d7a9711d4")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "85801132-03bf-4a68-91df-4d0d7a9711d4")
 		)
 		(pin "AN1" input
 			(at 133.35 69.215 0)
+			(uuid "a6eefc8d-f73b-4bb0-88ed-a71a7ba8142b")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "a6eefc8d-f73b-4bb0-88ed-a71a7ba8142b")
 		)
 		(pin "AN4" input
 			(at 133.35 71.755 0)
+			(uuid "33f3220d-e081-4f95-95d6-7b80d0aff875")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "33f3220d-e081-4f95-95d6-7b80d0aff875")
 		)
 		(pin "AN0" input
 			(at 133.35 74.295 0)
+			(uuid "35f28e87-87f7-4fe9-ab10-27c33f86d9af")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "35f28e87-87f7-4fe9-ab10-27c33f86d9af")
 		)
 		(pin "~{MCLR}" input
 			(at 101.6 50.165 180)
+			(uuid "eb1c0051-6094-449c-866b-eba495300c5a")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "eb1c0051-6094-449c-866b-eba495300c5a")
 		)
 		(pin "RD6" bidirectional
 			(at 101.6 74.295 180)
+			(uuid "eb83a01f-3d44-4c21-8f1b-8562d48e7b22")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "eb83a01f-3d44-4c21-8f1b-8562d48e7b22")
 		)
 		(pin "RD7" bidirectional
 			(at 101.6 71.755 180)
+			(uuid "5035de56-7318-45ee-9835-a59becf43632")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "5035de56-7318-45ee-9835-a59becf43632")
 		)
 		(pin "RD5" bidirectional
 			(at 101.6 69.215 180)
+			(uuid "7375bced-eb70-4901-bdee-329d3a0a9ec1")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "7375bced-eb70-4901-bdee-329d3a0a9ec1")
 		)
 		(pin "RD2" bidirectional
 			(at 101.6 66.675 180)
+			(uuid "5aee6c53-6802-4261-bdae-7b45ffe4c18e")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "5aee6c53-6802-4261-bdae-7b45ffe4c18e")
 		)
 		(pin "RD3" bidirectional
 			(at 101.6 64.135 180)
+			(uuid "96be64c0-2c33-47a2-b218-4a9ea8bdf98a")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "96be64c0-2c33-47a2-b218-4a9ea8bdf98a")
 		)
 		(pin "RD1" bidirectional
 			(at 101.6 61.595 180)
+			(uuid "20bc7ea9-add0-4dd5-904b-b78a74362886")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "20bc7ea9-add0-4dd5-904b-b78a74362886")
 		)
 		(pin "RD0" bidirectional
 			(at 101.6 59.055 180)
+			(uuid "95caea04-d0af-4a5b-a8fe-caea7c9ec53a")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "95caea04-d0af-4a5b-a8fe-caea7c9ec53a")
 		)
 		(pin "RD4" bidirectional
 			(at 101.6 56.515 180)
+			(uuid "f518b229-4dea-412f-b8cc-0fd7cb3a5aef")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "f518b229-4dea-412f-b8cc-0fd7cb3a5aef")
 		)
 		(pin "AN5" input
 			(at 101.6 53.975 180)
+			(uuid "2c159ba5-fb40-4215-adbb-74b8537f7da4")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "2c159ba5-fb40-4215-adbb-74b8537f7da4")
 		)
 		(pin "TXD" output
 			(at 101.6 38.1 180)
+			(uuid "ed1828b3-1474-4d5c-b85d-70d85328d5db")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "ed1828b3-1474-4d5c-b85d-70d85328d5db")
 		)
 		(pin "RXD" input
 			(at 101.6 40.64 180)
+			(uuid "3ed5e813-f546-43e0-b21e-d71be36b660e")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify left)
 			)
-			(uuid "3ed5e813-f546-43e0-b21e-d71be36b660e")
 		)
 		(pin "GPIO" input
 			(at 133.35 28.575 0)
+			(uuid "4c92b3da-827f-4eee-b536-7ebd72fec4ef")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "4c92b3da-827f-4eee-b536-7ebd72fec4ef")
 		)
 		(instances
 			(project "PIC16DevKit"
@@ -2445,6 +2657,10 @@
 	(sheet
 		(at 25.4 25.4)
 		(size 25.4 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -2477,53 +2693,83 @@
 		)
 		(pin "USB_P" bidirectional
 			(at 50.8 27.305 0)
+			(uuid "6b0f85cc-eb54-4d2a-a023-ce15a2030c9c")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "6b0f85cc-eb54-4d2a-a023-ce15a2030c9c")
 		)
 		(pin "USB_N" bidirectional
 			(at 50.8 29.845 0)
+			(uuid "fb0a2ecd-215c-4741-8ab3-f529927e1043")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "fb0a2ecd-215c-4741-8ab3-f529927e1043")
 		)
 		(pin "VPP_EN" input
-			(at 50.8 37.465 0)
+			(at 50.8 40.005 0)
+			(uuid "63fcceff-6ff1-482b-aac6-dda1dfbde762")
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
-			(uuid "63fcceff-6ff1-482b-aac6-dda1dfbde762")
 		)
 		(pin "~{VTG_EN}" input
 			(at 50.8 34.925 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
 			(uuid "a6fe3e42-ba49-41ca-a22f-52a0e540ae81")
-		)
-		(pin "VBUS_SEN" output
-			(at 50.8 32.385 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 				(justify right)
 			)
+		)
+		(pin "VBUS_DIV" output
+			(at 50.8 32.385 0)
 			(uuid "78091a84-c049-461a-b2b3-cfd89cd1249c")
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+				(justify right)
+			)
+		)
+		(pin "VDDTG_DIV" output
+			(at 50.8 37.465 0)
+			(uuid "c9ad5426-e004-4048-923f-8a9028839e27")
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(pin "VPP_DIV" output
+			(at 50.8 42.545 0)
+			(uuid "dcc15567-62e7-4fd6-a9a0-d6e6196bd4b8")
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
 		)
 		(instances
 			(project "PIC16DevKit"
@@ -2538,4 +2784,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

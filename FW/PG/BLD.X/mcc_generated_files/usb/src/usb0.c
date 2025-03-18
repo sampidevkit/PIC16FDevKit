@@ -46,7 +46,7 @@ void USB0_Initialize(void)
     USB0.INTCTRLA = 0xFE;
     // GNDONE disabled; SETUP enabled; TRNCOMPL enabled; 
     USB0.INTCTRLB = 0x21;
-    SYSCFG_UsbVregDisable();
+    SYSCFG_UsbVregEnable();
 }
 
 void USB0_TrnComplCallbackRegister(USB_cb_t cb)

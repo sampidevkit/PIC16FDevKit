@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: BLD
-creation_date: 2025-03-18T21:32:03.821+07:00[Asia/Bangkok]
+creation_date: 2025-03-18T15:21:37.178+07:00[Asia/Bangkok]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.25
@@ -37,4 +37,4 @@ modules:
 - {name: '@mchp-mcc/scf-avr8-usb-v1', type: MELODY, version: 1.0.0}
 - {name: '@mchp-mcc/scf-avr8-wwdt-v1', type: MELODY, version: 4.2.5}
 - {name: '@mchp-mcc/uart-driver', type: MELODY, version: 1.10.2}
-- {name: '@mchp-mcc/usb-device-stack', type: MELODY, version: 1.0.1}
+- {name: '@mchp-mcc/usb-device-stack', type: MELODY, version: 1.0.0}

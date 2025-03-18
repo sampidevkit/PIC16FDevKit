@@ -1,17 +1,15 @@
- /*
- * MAIN Generated Driver File
- * 
- * @file main.c
- * 
- * @defgroup main MAIN
- * 
- * @brief This is the generated driver implementation file for the MAIN driver.
- *
- * @version MAIN Driver Version 1.0.2
- *
- * @version Package Version: 3.1.2
-*/
 
+/**
+ * SYSCFG Generated Driver File
+ * 
+ * @file syscfg.c
+ * 
+ * @ingroup syscfg
+ * 
+ * @brief This is the generated driver implementation file for the SYSCFG driver.
+ *
+ * @version SYSCFG Driver Version 1.0.0
+*/
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
 
@@ -32,17 +30,35 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
+/**
+  Section: Included Files
 */
 
-int main(void)
-{
-    SYSTEM_Initialize();
+#include "../../system/utils/compiler.h"
+#include "../syscfg.h"
 
-    while(1)
-    {
-    }    
+/**
+  Section: SYSCFG APIs
+*/
+
+void SYSCFG_Initialize(void)
+{
+  SYSCFG.VUSBCTRL = (1 << SYSCFG_USBVREG_bp);  // USBVREG ENABLE;  
 }
+uint8_t SYSCFG_GetRevId(void)
+{
+  return SYSCFG.REVID;
+}
+inline void SYSCFG_UsbVregEnable(void)
+{
+  SYSCFG.VUSBCTRL = SYSCFG_USBVREG_bm;
+}
+inline void SYSCFG_UsbVregDisable(void)
+{
+  SYSCFG.VUSBCTRL = ~SYSCFG_USBVREG_bm;
+}
+
+/**
+ End of File
+*/
