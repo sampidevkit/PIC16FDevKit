@@ -7,7 +7,7 @@
  * 
  * @brief This is the generated driver implementation file for the POWER driver.
  *
- * @version POWER Driver Version 1.0.0
+ * @version POWER Driver Version 1.1.0
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -34,6 +34,7 @@
   Section: Included Files
 */
 #include <avr/io.h>
+#include <stddef.h>
 #include "../power.h"
 
 /**

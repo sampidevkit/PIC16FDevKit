@@ -10,6 +10,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>..</sourceRootElem>
+                <sourceRootElem>../../../HW/Production/V0.1/Sch</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

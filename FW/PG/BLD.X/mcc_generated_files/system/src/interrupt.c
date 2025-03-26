@@ -47,7 +47,6 @@ int8_t CPUINT_Initialize()
     //LVL1VEC 0; 
     CPUINT.LVL1VEC = 0x0;
 
-    ENABLE_INTERRUPTS(); 
         
     return 0;
 }

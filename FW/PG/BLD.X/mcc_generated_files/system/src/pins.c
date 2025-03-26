@@ -34,17 +34,10 @@
 
 #include "../pins.h"
 
-static void (*RXD1_InterruptHandler)(void);
-static void (*TXD1_InterruptHandler)(void);
-static void (*RXD0_InterruptHandler)(void);
-static void (*TXD0_InterruptHandler)(void);
-static void (*SCL_InterruptHandler)(void);
-static void (*SDA_InterruptHandler)(void);
 static void (*TG_PGC_InterruptHandler)(void);
 static void (*TG_PGD_InterruptHandler)(void);
 static void (*BT_FNC_N_InterruptHandler)(void);
 static void (*LED_TGRDY_InterruptHandler)(void);
-static void (*LED_BUSY_InterruptHandler)(void);
 static void (*TG_MCLR_InterruptHandler)(void);
 static void (*VTG_EN_N_InterruptHandler)(void);
 static void (*VPP_EN_InterruptHandler)(void);
@@ -55,13 +48,13 @@ void PIN_MANAGER_Initialize()
   /* OUT Registers Initialization */
     PORTA.OUT = 0x0;
     PORTC.OUT = 0x0;
-    PORTD.OUT = 0x58;
+    PORTD.OUT = 0x8;
     PORTF.OUT = 0x1;
 
   /* DIR Registers Initialization */
-    PORTA.DIR = 0x30;
+    PORTA.DIR = 0x10;
     PORTC.DIR = 0x0;
-    PORTD.DIR = 0x58;
+    PORTD.DIR = 0x8;
     PORTF.DIR = 0x3;
 
   /* PINxCTRL registers Initialization */
@@ -108,100 +101,15 @@ void PIN_MANAGER_Initialize()
     PORTMUX.USARTROUTEA = 0x13;
 
   // register default ISC callback functions at runtime; use these methods to register a custom function
-    RXD1_SetInterruptHandler(RXD1_DefaultInterruptHandler);
-    TXD1_SetInterruptHandler(TXD1_DefaultInterruptHandler);
-    RXD0_SetInterruptHandler(RXD0_DefaultInterruptHandler);
-    TXD0_SetInterruptHandler(TXD0_DefaultInterruptHandler);
-    SCL_SetInterruptHandler(SCL_DefaultInterruptHandler);
-    SDA_SetInterruptHandler(SDA_DefaultInterruptHandler);
     TG_PGC_SetInterruptHandler(TG_PGC_DefaultInterruptHandler);
     TG_PGD_SetInterruptHandler(TG_PGD_DefaultInterruptHandler);
     BT_FNC_N_SetInterruptHandler(BT_FNC_N_DefaultInterruptHandler);
     LED_TGRDY_SetInterruptHandler(LED_TGRDY_DefaultInterruptHandler);
-    LED_BUSY_SetInterruptHandler(LED_BUSY_DefaultInterruptHandler);
     TG_MCLR_SetInterruptHandler(TG_MCLR_DefaultInterruptHandler);
     VTG_EN_N_SetInterruptHandler(VTG_EN_N_DefaultInterruptHandler);
     VPP_EN_SetInterruptHandler(VPP_EN_DefaultInterruptHandler);
 }
 
-/**
-  Allows selecting an interrupt handler for RXD1 at application runtime
-*/
-void RXD1_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    RXD1_InterruptHandler = interruptHandler;
-}
-
-void RXD1_DefaultInterruptHandler(void)
-{
-    // add your RXD1 interrupt custom code
-    // or set custom function using RXD1_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for TXD1 at application runtime
-*/
-void TXD1_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    TXD1_InterruptHandler = interruptHandler;
-}
-
-void TXD1_DefaultInterruptHandler(void)
-{
-    // add your TXD1 interrupt custom code
-    // or set custom function using TXD1_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for RXD0 at application runtime
-*/
-void RXD0_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    RXD0_InterruptHandler = interruptHandler;
-}
-
-void RXD0_DefaultInterruptHandler(void)
-{
-    // add your RXD0 interrupt custom code
-    // or set custom function using RXD0_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for TXD0 at application runtime
-*/
-void TXD0_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    TXD0_InterruptHandler = interruptHandler;
-}
-
-void TXD0_DefaultInterruptHandler(void)
-{
-    // add your TXD0 interrupt custom code
-    // or set custom function using TXD0_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for SCL at application runtime
-*/
-void SCL_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    SCL_InterruptHandler = interruptHandler;
-}
-
-void SCL_DefaultInterruptHandler(void)
-{
-    // add your SCL interrupt custom code
-    // or set custom function using SCL_SetInterruptHandler()
-}
-/**
-  Allows selecting an interrupt handler for SDA at application runtime
-*/
-void SDA_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    SDA_InterruptHandler = interruptHandler;
-}
-
-void SDA_DefaultInterruptHandler(void)
-{
-    // add your SDA interrupt custom code
-    // or set custom function using SDA_SetInterruptHandler()
-}
 /**
   Allows selecting an interrupt handler for TG_PGC at application runtime
 */
@@ -255,19 +163,6 @@ void LED_TGRDY_DefaultInterruptHandler(void)
     // or set custom function using LED_TGRDY_SetInterruptHandler()
 }
 /**
-  Allows selecting an interrupt handler for LED_BUSY at application runtime
-*/
-void LED_BUSY_SetInterruptHandler(void (* interruptHandler)(void)) 
-{
-    LED_BUSY_InterruptHandler = interruptHandler;
-}
-
-void LED_BUSY_DefaultInterruptHandler(void)
-{
-    // add your LED_BUSY interrupt custom code
-    // or set custom function using LED_BUSY_SetInterruptHandler()
-}
-/**
   Allows selecting an interrupt handler for TG_MCLR at application runtime
 */
 void TG_MCLR_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -309,14 +204,6 @@ void VPP_EN_DefaultInterruptHandler(void)
 ISR(PORTA_PORT_vect)
 { 
     // Call the interrupt handler for the callback registered at runtime
-    if(VPORTA.INTFLAGS & PORT_INT3_bm)
-    {
-       SCL_InterruptHandler(); 
-    }
-    if(VPORTA.INTFLAGS & PORT_INT2_bm)
-    {
-       SDA_InterruptHandler(); 
-    }
     if(VPORTA.INTFLAGS & PORT_INT0_bm)
     {
        TG_PGC_InterruptHandler(); 
@@ -333,10 +220,6 @@ ISR(PORTA_PORT_vect)
     {
        LED_TGRDY_InterruptHandler(); 
     }
-    if(VPORTA.INTFLAGS & PORT_INT5_bm)
-    {
-       LED_BUSY_InterruptHandler(); 
-    }
     /* Clear interrupt flags */
     VPORTA.INTFLAGS = 0xff;
 }
@@ -350,22 +233,6 @@ ISR(PORTC_PORT_vect)
 ISR(PORTD_PORT_vect)
 { 
     // Call the interrupt handler for the callback registered at runtime
-    if(VPORTD.INTFLAGS & PORT_INT7_bm)
-    {
-       RXD1_InterruptHandler(); 
-    }
-    if(VPORTD.INTFLAGS & PORT_INT6_bm)
-    {
-       TXD1_InterruptHandler(); 
-    }
-    if(VPORTD.INTFLAGS & PORT_INT5_bm)
-    {
-       RXD0_InterruptHandler(); 
-    }
-    if(VPORTD.INTFLAGS & PORT_INT4_bm)
-    {
-       TXD0_InterruptHandler(); 
-    }
     if(VPORTD.INTFLAGS & PORT_INT3_bm)
     {
        TG_MCLR_InterruptHandler(); 

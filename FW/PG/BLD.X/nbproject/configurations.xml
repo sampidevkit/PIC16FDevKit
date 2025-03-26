@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="f1" displayName="Docs" projectFiles="true">
+      <itemPath>../../../HW/Production/V0.1/Sch/PIC16DevKit.pdf</itemPath>
+    </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
-        <logicalFolder name="i2c_client" displayName="i2c_client" projectFiles="true">
-          <itemPath>mcc_generated_files/i2c_client/i2c_client_types.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_client/i2c_client_interface.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_client/twi0.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
-          <itemPath>mcc_generated_files/nvm/nvm.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="power" displayName="power" projectFiles="true">
           <itemPath>mcc_generated_files/power/power.h</itemPath>
         </logicalFolder>
@@ -41,53 +36,10 @@
           <itemPath>mcc_generated_files/system/ccp.h</itemPath>
           <itemPath>mcc_generated_files/system/port.h</itemPath>
           <itemPath>mcc_generated_files/system/protected_io.h</itemPath>
-          <itemPath>mcc_generated_files/system/syscfg.h</itemPath>
           <itemPath>mcc_generated_files/system/system.h</itemPath>
         </logicalFolder>
         <logicalFolder name="timer" displayName="timer" projectFiles="true">
           <itemPath>mcc_generated_files/timer/rtc.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="uart" displayName="uart" projectFiles="true">
-          <itemPath>mcc_generated_files/uart/uart_drv_interface.h</itemPath>
-          <itemPath>mcc_generated_files/uart/usart1.h</itemPath>
-          <itemPath>mcc_generated_files/uart/uart_types.h</itemPath>
-          <itemPath>mcc_generated_files/uart/usart0.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="usb" displayName="usb" projectFiles="true">
-          <logicalFolder name="usb_cdc" displayName="usb_cdc" projectFiles="true">
-            <logicalFolder name="circular_buffer"
-                           displayName="circular_buffer"
-                           projectFiles="true">
-              <itemPath>mcc_generated_files/usb/usb_cdc/circular_buffer/circular_buffer.h</itemPath>
-            </logicalFolder>
-            <itemPath>mcc_generated_files/usb/usb_cdc/usb_cdc_virtual_serial_port.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_cdc/usb_protocol_cdc.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_cdc/usb_cdc.h</itemPath>
-          </logicalFolder>
-          <logicalFolder name="usb_common" displayName="usb_common" projectFiles="true">
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_requests_interface.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_events.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_common_elements.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_requests_device.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_requests.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_protocol_headers.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_requests_endpoint.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_transfer.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_descriptors.h</itemPath>
-          </logicalFolder>
-          <logicalFolder name="usb_peripheral"
-                         displayName="usb_peripheral"
-                         projectFiles="true">
-            <itemPath>mcc_generated_files/usb/usb_peripheral/usb_peripheral_endpoint.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_peripheral/usb_peripheral_read_write.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_peripheral/usb_peripheral.h</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_peripheral/usb_peripheral_avr_du.h</itemPath>
-          </logicalFolder>
-          <itemPath>mcc_generated_files/usb/usb0.h</itemPath>
-          <itemPath>mcc_generated_files/usb/usb_config.h</itemPath>
-          <itemPath>mcc_generated_files/usb/usb_device.h</itemPath>
-          <itemPath>mcc_generated_files/usb/usb_descriptors.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -107,16 +59,6 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
-        <logicalFolder name="i2c_client" displayName="i2c_client" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/i2c_client/src/twi0.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/nvm/src/nvm.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
         <logicalFolder name="power" displayName="power" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/power/src/power.c</itemPath>
@@ -126,7 +68,6 @@
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
             <itemPath>mcc_generated_files/system/src/system.c</itemPath>
-            <itemPath>mcc_generated_files/system/src/syscfg.c</itemPath>
             <itemPath>mcc_generated_files/system/src/interrupt.c</itemPath>
             <itemPath>mcc_generated_files/system/src/clock.c</itemPath>
             <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
@@ -138,51 +79,13 @@
             <itemPath>mcc_generated_files/timer/src/rtc.c</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="uart" displayName="uart" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/uart/src/usart0.c</itemPath>
-            <itemPath>mcc_generated_files/uart/src/usart1.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="usb" displayName="usb" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/usb/src/usb0.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="usb_cdc" displayName="usb_cdc" projectFiles="true">
-            <logicalFolder name="circular_buffer"
-                           displayName="circular_buffer"
-                           projectFiles="true">
-              <itemPath>mcc_generated_files/usb/usb_cdc/circular_buffer/circular_buffer.c</itemPath>
-            </logicalFolder>
-            <itemPath>mcc_generated_files/usb/usb_cdc/usb_cdc_virtual_serial_port.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_cdc/usb_cdc.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="usb_common" displayName="usb_common" projectFiles="true">
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_requests_interface.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_requests_device.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_events.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_requests.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_requests_endpoint.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_descriptors.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_common/usb_core_transfer.c</itemPath>
-          </logicalFolder>
-          <logicalFolder name="usb_peripheral"
-                         displayName="usb_peripheral"
-                         projectFiles="true">
-            <itemPath>mcc_generated_files/usb/usb_peripheral/usb_peripheral_endpoint.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_peripheral/usb_peripheral_read_write.c</itemPath>
-            <itemPath>mcc_generated_files/usb/usb_peripheral/usb_peripheral.c</itemPath>
-          </logicalFolder>
-          <itemPath>mcc_generated_files/usb/usb_device.c</itemPath>
-          <itemPath>mcc_generated_files/usb/usb_descriptors.c</itemPath>
-        </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
     <Elem>..</Elem>
+    <Elem>../../../HW/Production/V0.1/Sch</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -229,7 +132,6 @@
       </makeCustomizationType>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
-        <property key="appendMe" value=""/>
         <property key="asmlist" value="true"/>
         <property key="call-prologues" value="false"/>
         <property key="default-bitfield-type" value="true"/>
@@ -323,6 +225,73 @@
         <property key="program-the-device-with-default-config-words" value="false"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <Tool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
+        <property key="communication.activationmode" value="nohv"/>
+        <property key="communication.interface" value="updi"/>
+        <property key="communication.interface.jtag" value="2wire"/>
+        <property key="communication.speed" value="0.500"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="debugoptions.simultaneous.debug" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
+        <property key="freeze.timers" value="false"/>
+        <property key="lastid" value=""/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-7fff"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoImageName" value="BLD_ptg"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.ledbrightness" value="5"/>
+        <property key="programoptions.pgcconfig" value="pull down"/>
+        <property key="programoptions.pgcresistor.value" value="4.7"/>
+        <property key="programoptions.pgdconfig" value="pull down"/>
+        <property key="programoptions.pgdresistor.value" value="4.7"/>
+        <property key="programoptions.pgmentry.voltage" value="low"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value="1400-14ff"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.program.otpconfig" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.smart.program" value="When debugging only"/>
+        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="ptgProgramImage" value="true"/>
+        <property key="ptgSendImage" value="true"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
+        <property key="voltagevalue" value="5.0"/>
+      </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
         <property key="stack-guidance" value="false"/>
@@ -345,6 +314,75 @@
         <property key="user-pack-device-support" value=""/>
         <property key="wpo-lto" value="false"/>
       </XC8-config-global>
+      <pk4hybrid>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
+        <property key="ToolFirmwareFilePath"
+                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack"
+                  value="Press to select which tool pack to use"/>
+        <property key="communication.activationmode" value="nohv"/>
+        <property key="communication.interface" value="updi"/>
+        <property key="communication.interface.jtag" value="2wire"/>
+        <property key="communication.speed" value="0.500"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="debugoptions.simultaneous.debug" value="false"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
+        <property key="freeze.timers" value="false"/>
+        <property key="lastid" value=""/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges"
+                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-7fff"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="E:/Github/PIC16FDevKit/p16f877a/FW/PG/BLD.X/debug/default/BLD_ptg"/>
+        <property key="programmerToGoImageName" value="BLD_ptg"/>
+        <property key="programoptions.donoteraseauxmem" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.ledbrightness" value="5"/>
+        <property key="programoptions.pgcconfig" value="pull down"/>
+        <property key="programoptions.pgcresistor.value" value="4.7"/>
+        <property key="programoptions.pgdconfig" value="pull down"/>
+        <property key="programoptions.pgdresistor.value" value="4.7"/>
+        <property key="programoptions.pgmentry.voltage" value="low"/>
+        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value="1400-14ff"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.program.otpconfig" value="false"/>
+        <property key="programoptions.programcalmem" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="programoptions.smart.program" value="When debugging only"/>
+        <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="ptgProgramImage" value="true"/>
+        <property key="ptgSendImage" value="true"/>
+        <property key="toolpack.updateoptions"
+                  value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion"
+                  value="Press to select which tool pack to use"/>
+        <property key="voltagevalue" value="5.0"/>
+      </pk4hybrid>
     </conf>
   </confs>
 </configurationDescriptor>

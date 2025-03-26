@@ -45,18 +45,11 @@ static void (*bod_vlm_callback)(void) = NULL;
 void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
-    SYSCFG_Initialize();
     PIN_MANAGER_Initialize();
-    USB0_Initialize();
     BOD_Initialize();
-    I2C0_Client_Initialize();
-    NVM_Initialize();
     RTC_Initialize();
     SLPCTRL_Initialize();
-    USART0_Initialize();
-    USART1_Initialize();
     WDT_Initialize();
-    USBDevice_Initialize();
     CPUINT_Initialize();
 }
 

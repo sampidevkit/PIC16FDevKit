@@ -43,16 +43,9 @@ extern "C" {
 #include "../system/utils/compiler.h"
 #include "config_bits.h"
 #include "../system/pins.h"
-#include "../usb/usb0.h"
-#include "../i2c_client/twi0.h"
-#include "../nvm/nvm.h"
 #include "../timer/rtc.h"
-#include "../uart/usart0.h"
-#include "../uart/usart1.h"
-#include "../usb/usb_device.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
-#include "../system/syscfg.h"
 /**
  * @ingroup systemdriver
  * @brief Initializes the System module. This routine is called only once during system initialization, before calling any other API.

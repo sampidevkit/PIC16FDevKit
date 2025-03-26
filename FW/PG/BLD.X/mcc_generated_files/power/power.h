@@ -7,7 +7,7 @@
  * 
  * @brief This is the generated header file for the POWER driver.
  *
- * @version POWER Driver Version 1.0.0
+ * @version POWER Driver Version 1.1.0
  */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -43,6 +43,7 @@
 /**
   Section: POWER Enumerations
  */
+
 /**
  * @ingroup power
  * @enum power_mode_t
@@ -62,8 +63,8 @@ typedef enum
  */
 /**
  * @ingroup power
- * @brief  Enters and sets the mode in the Power module and puts the device to sleep, depending on the enum entered.
- * @param powerMode Enters different power modes, specified by an enum of the type power_mode_t.
+ * @brief  Enters and sets the mode in the Power module and puts the device in Sleep mode, depending on the enum entered.
+ * @param powerMode - Selected power mode as specified by an enum of the type power_mode_t
  * @retval True Enum is invalid
  * @retval False Enum is valid
  */ 
