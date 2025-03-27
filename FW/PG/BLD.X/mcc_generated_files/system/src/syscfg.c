@@ -1,15 +1,14 @@
+
 /**
- * CONFIGURATION BITS Generated Driver Source File
+ * SYSCFG Generated Driver File
  * 
- * @file config_bits.c
+ * @file syscfg.c
  * 
- * @ingroup config_bitsdriver
+ * @ingroup syscfg
  * 
- * @brief This file contains the API implementation for the Device Configuration Bits driver.
+ * @brief This is the generated driver implementation file for the SYSCFG driver.
  *
- * @version Driver Version 1.0.5
- *
- * @version Package Version 4.3.0
+ * @version SYSCFG Driver Version 1.0.0
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -32,19 +31,34 @@
     THIS SOFTWARE.
 */
 
-#include <avr/io.h>
+/**
+  Section: Included Files
+*/
+
+#include "../../system/utils/compiler.h"
+#include "../syscfg.h"
 
 /**
- * Configures the Fuse bits.
- */
-FUSES = 
+  Section: SYSCFG APIs
+*/
+
+void SYSCFG_Initialize(void)
 {
-  .BODCFG = ACTIVE_ENABLE_gc | LVL_BODLEVEL3_gc | SAMPFREQ_128Hz_gc | SLEEP_ENABLE_gc,
-  .BOOTSIZE = 0x20,
-  .CODESIZE = 0x0,
-  .OSCCFG = CLKSEL_OSCHF_gc,
-  .PDICFG = KEY_NOTACT_gc | LEVEL_BASIC_gc,
-  .SYSCFG0 = CRCSEL_CRC16_gc | CRCSRC_NOCRC_gc | RSTPINCFG_RST_gc | UPDIPINCFG_GPIO_gc,
-  .SYSCFG1 = SUT_64MS_gc | USBSINK_ENABLE_gc,
-  .WDTCFG = PERIOD_8KCLK_gc | WINDOW_OFF_gc,
-};
+  SYSCFG.VUSBCTRL = (0 << SYSCFG_USBVREG_bp);  // USBVREG DISABLE;  
+}
+uint8_t SYSCFG_GetRevId(void)
+{
+  return SYSCFG.REVID;
+}
+inline void SYSCFG_UsbVregEnable(void)
+{
+  SYSCFG.VUSBCTRL = SYSCFG_USBVREG_bm;
+}
+inline void SYSCFG_UsbVregDisable(void)
+{
+  SYSCFG.VUSBCTRL = ~SYSCFG_USBVREG_bm;
+}
+
+/**
+ End of File
+*/

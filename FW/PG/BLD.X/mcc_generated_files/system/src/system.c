@@ -34,74 +34,18 @@
 
 #include "../system.h"
 
-int8_t BOD_Initialize();
-
-int8_t SLPCTRL_Initialize();
-
 int8_t WDT_Initialize();
-
-static void (*bod_vlm_callback)(void) = NULL;
 
 void SYSTEM_Initialize(void)
 {
     CLOCK_Initialize();
+    SYSCFG_Initialize();
     PIN_MANAGER_Initialize();
-    BOD_Initialize();
-    RTC_Initialize();
-    SLPCTRL_Initialize();
+    USB0_Initialize();
     WDT_Initialize();
+    USBDevice_Initialize();
     CPUINT_Initialize();
 }
-
-int8_t BOD_Initialize()
-{
-    //SLEEP Enabled; 
-    ccp_write_io((void*)&(BOD.CTRLA),0x5);
-    //
-    BOD.CTRLB = 0x3;
-    //VLMCFG VDD falls below VLM threshold; VLMIE disabled; 
-    BOD.INTCTRL = 0x0;
-    //VLMIF disabled; 
-    BOD.INTFLAGS = 0x0;
-    //
-    BOD.STATUS = 0x0;
-    //VLMLVL VLM Disabled; 
-    BOD.VLMCTRLA = 0x0;
-
-    return 0;
-}
-
-void BOD_VLM_Set_Callback(void (*handler)(void))
-{
-	if(handler != NULL)
-    {
-		bod_vlm_callback = handler;
-	}
-}
-
-ISR(BOD_VLM_vect)
-{
-	if(bod_vlm_callback != NULL)
-    {
-        bod_vlm_callback();
-    }
-
-	/* The interrupt flag has to be cleared manually */
-	BOD.INTFLAGS = BOD_VLMIE_bm;
-}
-
-int8_t SLPCTRL_Initialize()
-{
-    //SEN disabled; SMODE IDLE; 
-    ccp_write_io((void*)&(SLPCTRL.CTRLA),0x0);
-    
-    //HTLLEN OFF; PMODE AUTO; 
-    ccp_write_io((void*)&(SLPCTRL.VREGCTRL),0x0);
-    
-
-    return 0;
-}
-
 
 int8_t WDT_Initialize()
 {

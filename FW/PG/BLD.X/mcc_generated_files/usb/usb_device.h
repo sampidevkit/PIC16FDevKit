@@ -1,15 +1,13 @@
 /**
- * CONFIGURATION BITS Generated Driver Source File
+ * USB_DEVICE_STACK Generated API Header File
  * 
- * @file config_bits.c
+ * @file usb_device.h
  * 
- * @ingroup config_bitsdriver
+ * @ingroup usb_device_stack
  * 
- * @brief This file contains the API implementation for the Device Configuration Bits driver.
+ * @brief Header file for the USB device setup.
  *
- * @version Driver Version 1.0.5
- *
- * @version Package Version 4.3.0
+ * @version USB_DEVICE_STACK Driver Version 1.0.0
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -32,19 +30,37 @@
     THIS SOFTWARE.
 */
 
-#include <avr/io.h>
+#ifndef USB_DEVICE_H
+#define USB_DEVICE_H
+
+#include <usb_common_elements.h>
+#include "usb_descriptors.h"
 
 /**
- * Configures the Fuse bits.
+ * @ingroup usb_device_stack
+ * @brief Initializes the USB device.
+ * @param None.
+ * @return None.
+ */ 
+void USBDevice_Initialize(void);
+
+/**
+ * @ingroup usb_device_stack
+ * @brief Handles the USB stack events and in progress transfers for the USB stack to function.
+ * @param None.
+ * @return SUCCESS or an Error code according to RETURN_CODE_t
  */
-FUSES = 
-{
-  .BODCFG = ACTIVE_ENABLE_gc | LVL_BODLEVEL3_gc | SAMPFREQ_128Hz_gc | SLEEP_ENABLE_gc,
-  .BOOTSIZE = 0x20,
-  .CODESIZE = 0x0,
-  .OSCCFG = CLKSEL_OSCHF_gc,
-  .PDICFG = KEY_NOTACT_gc | LEVEL_BASIC_gc,
-  .SYSCFG0 = CRCSEL_CRC16_gc | CRCSRC_NOCRC_gc | RSTPINCFG_RST_gc | UPDIPINCFG_GPIO_gc,
-  .SYSCFG1 = SUT_64MS_gc | USBSINK_ENABLE_gc,
-  .WDTCFG = PERIOD_8KCLK_gc | WINDOW_OFF_gc,
-};
+RETURN_CODE_t USBDevice_Handle(void);
+
+/**
+ * @ingroup usb_device_stack
+ * @brief Returns the status of the USB device.
+ * @param None.
+ * @return USB status code
+ */ 
+RETURN_CODE_t USBDevice_StatusGet(void);
+
+#endif // USB_DEVICE_H
+/**
+ End of File
+*/

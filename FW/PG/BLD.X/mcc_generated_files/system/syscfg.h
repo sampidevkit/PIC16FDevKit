@@ -1,14 +1,14 @@
 /**
- * POWER Generated API Header File
+ * SYSCFG Generated Driver API Header File
  * 
- * @file power.h
+ * @file syscfg.h
  * 
- * @defgroup  power POWER
+ * @defgroup  syscfg SYSCFG
  * 
- * @brief This is the generated header file for the POWER driver.
+ * @brief This is the generated header file for the SYSCFG driver
  *
- * @version POWER Driver Version 1.1.0
- */
+ * @version SYSCFG Driver Version 1.0.0
+*/
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
 
@@ -30,48 +30,54 @@
     THIS SOFTWARE.
 */
 
-#ifndef POWER_H
-#define POWER_H
+#ifndef SYSCFG_H
+#define SYSCFG_H
 
 /**
   Section: Included Files
- */
+*/
 
 #include <stdbool.h>
 #include <stdint.h>
 
 /**
-  Section: POWER Enumerations
- */
+  Section: SYSCFG APIs
+*/
 
 /**
- * @ingroup power
- * @enum power_mode_t
- * @brief Contains the available power modes.
- */
-typedef enum
-{
-    POWER_IDLE_MODE = 0 ,/** Sleep mode: IDLE */
-    POWER_STDBY_MODE = 1 ,/** Sleep mode: STDBY */
-    POWER_PDOWN_MODE = 2 
-} power_mode_t;
-
-
-
-/**
-  Section: POWER APIs
- */
-/**
- * @ingroup power
- * @brief  Enters and sets the mode in the Power module and puts the device in Sleep mode, depending on the enum entered.
- * @param powerMode - Selected power mode as specified by an enum of the type power_mode_t
- * @retval True Enum is invalid
- * @retval False Enum is valid
+ * @ingroup syscfg
+ * @brief  Initializes the SYSCFG driver. This routine is called only once during system initialization, before calling other APIs.
+ * @param None.
+ * @return None.
  */ 
-bool POWER_LowPowerModeEnter(power_mode_t powerMode);
+void SYSCFG_Initialize(void);
+
+/**
+ * @ingroup syscfg
+ * @brief  Returns the SYSCFG Revision ID.
+ * @param None.
+ * @return uint8_t
+ */ 
+uint8_t SYSCFG_GetRevId(void);
+
+/**
+ * @ingroup syscfg
+ * @brief  Enables the SYSCFG USB voltage regulator.
+ * @param None.
+ * @return None.
+ */ 
+ void SYSCFG_UsbVregEnable(void);
+
+/**
+ * @ingroup syscfg
+ * @brief  Disables the SYSCFG USB voltage regulator.
+ * @param None.
+ * @return None.
+ */ 
+void SYSCFG_UsbVregDisable(void);
 
 
-#endif // POWER_H
+#endif // SYSCFG_H
 /**
  End of File
- */
+*/

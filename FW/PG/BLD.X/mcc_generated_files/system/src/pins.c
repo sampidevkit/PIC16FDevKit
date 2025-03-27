@@ -37,7 +37,9 @@
 static void (*TG_PGC_InterruptHandler)(void);
 static void (*TG_PGD_InterruptHandler)(void);
 static void (*BT_FNC_N_InterruptHandler)(void);
+static void (*BOOT_N_InterruptHandler)(void);
 static void (*LED_TGRDY_InterruptHandler)(void);
+static void (*LED_BUSY_InterruptHandler)(void);
 static void (*TG_MCLR_InterruptHandler)(void);
 static void (*VTG_EN_N_InterruptHandler)(void);
 static void (*VPP_EN_InterruptHandler)(void);
@@ -52,7 +54,7 @@ void PIN_MANAGER_Initialize()
     PORTF.OUT = 0x1;
 
   /* DIR Registers Initialization */
-    PORTA.DIR = 0x10;
+    PORTA.DIR = 0x30;
     PORTC.DIR = 0x0;
     PORTD.DIR = 0x8;
     PORTF.DIR = 0x3;
@@ -89,7 +91,7 @@ void PIN_MANAGER_Initialize()
     PORTF.PIN4CTRL = 0x0;
     PORTF.PIN5CTRL = 0x0;
     PORTF.PIN6CTRL = 0x0;
-    PORTF.PIN7CTRL = 0x0;
+    PORTF.PIN7CTRL = 0x8;
 
   /* PORTMUX Initialization */
     PORTMUX.CCLROUTEA = 0x0;
@@ -104,7 +106,9 @@ void PIN_MANAGER_Initialize()
     TG_PGC_SetInterruptHandler(TG_PGC_DefaultInterruptHandler);
     TG_PGD_SetInterruptHandler(TG_PGD_DefaultInterruptHandler);
     BT_FNC_N_SetInterruptHandler(BT_FNC_N_DefaultInterruptHandler);
+    BOOT_N_SetInterruptHandler(BOOT_N_DefaultInterruptHandler);
     LED_TGRDY_SetInterruptHandler(LED_TGRDY_DefaultInterruptHandler);
+    LED_BUSY_SetInterruptHandler(LED_BUSY_DefaultInterruptHandler);
     TG_MCLR_SetInterruptHandler(TG_MCLR_DefaultInterruptHandler);
     VTG_EN_N_SetInterruptHandler(VTG_EN_N_DefaultInterruptHandler);
     VPP_EN_SetInterruptHandler(VPP_EN_DefaultInterruptHandler);
@@ -150,6 +154,19 @@ void BT_FNC_N_DefaultInterruptHandler(void)
     // or set custom function using BT_FNC_N_SetInterruptHandler()
 }
 /**
+  Allows selecting an interrupt handler for BOOT_N at application runtime
+*/
+void BOOT_N_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    BOOT_N_InterruptHandler = interruptHandler;
+}
+
+void BOOT_N_DefaultInterruptHandler(void)
+{
+    // add your BOOT_N interrupt custom code
+    // or set custom function using BOOT_N_SetInterruptHandler()
+}
+/**
   Allows selecting an interrupt handler for LED_TGRDY at application runtime
 */
 void LED_TGRDY_SetInterruptHandler(void (* interruptHandler)(void)) 
@@ -161,6 +178,19 @@ void LED_TGRDY_DefaultInterruptHandler(void)
 {
     // add your LED_TGRDY interrupt custom code
     // or set custom function using LED_TGRDY_SetInterruptHandler()
+}
+/**
+  Allows selecting an interrupt handler for LED_BUSY at application runtime
+*/
+void LED_BUSY_SetInterruptHandler(void (* interruptHandler)(void)) 
+{
+    LED_BUSY_InterruptHandler = interruptHandler;
+}
+
+void LED_BUSY_DefaultInterruptHandler(void)
+{
+    // add your LED_BUSY interrupt custom code
+    // or set custom function using LED_BUSY_SetInterruptHandler()
 }
 /**
   Allows selecting an interrupt handler for TG_MCLR at application runtime
@@ -220,6 +250,10 @@ ISR(PORTA_PORT_vect)
     {
        LED_TGRDY_InterruptHandler(); 
     }
+    if(VPORTA.INTFLAGS & PORT_INT5_bm)
+    {
+       LED_BUSY_InterruptHandler(); 
+    }
     /* Clear interrupt flags */
     VPORTA.INTFLAGS = 0xff;
 }
@@ -244,6 +278,10 @@ ISR(PORTD_PORT_vect)
 ISR(PORTF_PORT_vect)
 { 
     // Call the interrupt handler for the callback registered at runtime
+    if(VPORTF.INTFLAGS & PORT_INT7_bm)
+    {
+       BOOT_N_InterruptHandler(); 
+    }
     if(VPORTF.INTFLAGS & PORT_INT0_bm)
     {
        VTG_EN_N_InterruptHandler(); 

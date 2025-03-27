@@ -1,13 +1,13 @@
 /**
- * RSTCTRL Generated Driver File.
+ * USB0 Generated Driver API Header File
  * 
- * @file rstctrl.h
+ * @file usb0.h
  * 
- * @defgroup rstctrl Reset Control
+ * @defgroup  usb0 USB0
  * 
- * @brief This file contains the API prototypes for the RSTCTRL driver.
+ * @brief This file contains the API prototypes for the USB0 driver.
  *
- * @version RSTCTRL Driver Version 1.1.0
+ * @version USB0 Driver Version 1.0.0
 */
 /*
 © [2025] Microchip Technology Inc. and its subsidiaries.
@@ -30,53 +30,45 @@
     THIS SOFTWARE.
 */
 
-
-#ifndef RSTCTRL_INCLUDED
-#define RSTCTRL_INCLUDED
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include "../system/ccp.h"
+#ifndef USB0_H
+#define USB0_H
 
 /**
- * @ingroup rstctrl
- * @brief Issues a System Reset from the software.
+ * @ingroup usb0
+ * @typedef void *USB_cb_t
+ * @brief Data type for the interrupt handlers called by USB. The default value is set to NULL which means that no callback function will be used.
+ */  
+typedef void (*USB_cb_t)(void);
+
+/**
+  Section: USB0 APIs
+*/
+
+/**
+ * @ingroup usb0
+ * @brief Initializes USB0.
  * @param None.
  * @return None.
- */
-static inline void RSTCTRL_reset(void)
-{
-	/* SWRR is protected with CCP */
-	ccp_write_io((void *)&RSTCTRL.SWRR, 0x1);
-}
+ */ 
+void USB0_Initialize(void);
 
 /**
- * @ingroup rstctrl
- * @brief Returns the value of the Reset Flag register.
- * @param None.
- * @return Reset flag - Value of the Reset Flag register.
- */
-static inline uint8_t RSTCTRL_get_reset_cause(void)
-{
-	return RSTCTRL.RSTFR;
-}
-
-/**
- * @ingroup rstctrl
- * @brief Clears the Reset Flag register.
- * @param None.
+ * @ingroup usb0
+ * @brief Registers a callback function handling the Interrupt Service Routine (ISR) if a Transaction Complete interrupt flag is set.
+ * @param USB_cb_t cb - Callback function for a transaction complete event
  * @return None.
- */
-static inline void RSTCTRL_clear_reset_cause(void)
-{
-	RSTCTRL.RSTFR
-	    = RSTCTRL_UPDIRF_bm | RSTCTRL_SWRF_bm | RSTCTRL_WDRF_bm | RSTCTRL_EXTRF_bm | RSTCTRL_BORF_bm | RSTCTRL_PORF_bm;
-}
+ */ 
+void USB0_TrnComplCallbackRegister(USB_cb_t cb);
 
-#ifdef __cplusplus
-}
-#endif
+/**
+ * @ingroup usb0
+ * @brief Registers a callback function handling the ISR if a Bus Event interrupt flag is set.
+ * @param USB_cb_t cb - Callback function for a bus event
+ * @return None.
+ */ 
+void USB0_BusEventCallbackRegister(USB_cb_t cb);
 
-#endif /* RSTCTRL_INCLUDED */
+#endif // USB0_H
+/**
+ End of File
+*/

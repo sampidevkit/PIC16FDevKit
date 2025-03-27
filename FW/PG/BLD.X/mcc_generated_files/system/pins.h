@@ -95,6 +95,25 @@
 #define BT_FNC_N_EnableInterruptForLowLevelSensing() do { PORTA.PIN7CTRL = (PORTA.PIN7CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 #define PA7_SetInterruptHandler BT_FNC_N_SetInterruptHandler
 
+//get/set BOOT_N aliases
+#define BOOT_N_SetHigh() do { PORTF_OUTSET = 0x80; } while(0)
+#define BOOT_N_SetLow() do { PORTF_OUTCLR = 0x80; } while(0)
+#define BOOT_N_Toggle() do { PORTF_OUTTGL = 0x80; } while(0)
+#define BOOT_N_GetValue() (VPORTF.IN & (0x1 << 7))
+#define BOOT_N_SetDigitalInput() do { PORTF_DIRCLR = 0x80; } while(0)
+#define BOOT_N_SetDigitalOutput() do { PORTF_DIRSET = 0x80; } while(0)
+#define BOOT_N_SetPullUp() do { PORTF_PIN7CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define BOOT_N_ResetPullUp() do { PORTF_PIN7CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define BOOT_N_SetInverted() do { PORTF_PIN7CTRL  |= PORT_INVEN_bm; } while(0)
+#define BOOT_N_ResetInverted() do { PORTF_PIN7CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define BOOT_N_DisableInterruptOnChange() do { PORTF.PIN7CTRL = (PORTF.PIN7CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define BOOT_N_EnableInterruptForBothEdges() do { PORTF.PIN7CTRL = (PORTF.PIN7CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define BOOT_N_EnableInterruptForRisingEdge() do { PORTF.PIN7CTRL = (PORTF.PIN7CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define BOOT_N_EnableInterruptForFallingEdge() do { PORTF.PIN7CTRL = (PORTF.PIN7CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define BOOT_N_DisableDigitalInputBuffer() do { PORTF.PIN7CTRL = (PORTF.PIN7CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define BOOT_N_EnableInterruptForLowLevelSensing() do { PORTF.PIN7CTRL = (PORTF.PIN7CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+#define PF7_SetInterruptHandler BOOT_N_SetInterruptHandler
+
 //get/set LED_TGRDY aliases
 #define LED_TGRDY_SetHigh() do { PORTA_OUTSET = 0x10; } while(0)
 #define LED_TGRDY_SetLow() do { PORTA_OUTCLR = 0x10; } while(0)
@@ -113,6 +132,25 @@
 #define LED_TGRDY_DisableDigitalInputBuffer() do { PORTA.PIN4CTRL = (PORTA.PIN4CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
 #define LED_TGRDY_EnableInterruptForLowLevelSensing() do { PORTA.PIN4CTRL = (PORTA.PIN4CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
 #define PA4_SetInterruptHandler LED_TGRDY_SetInterruptHandler
+
+//get/set LED_BUSY aliases
+#define LED_BUSY_SetHigh() do { PORTA_OUTSET = 0x20; } while(0)
+#define LED_BUSY_SetLow() do { PORTA_OUTCLR = 0x20; } while(0)
+#define LED_BUSY_Toggle() do { PORTA_OUTTGL = 0x20; } while(0)
+#define LED_BUSY_GetValue() (VPORTA.IN & (0x1 << 5))
+#define LED_BUSY_SetDigitalInput() do { PORTA_DIRCLR = 0x20; } while(0)
+#define LED_BUSY_SetDigitalOutput() do { PORTA_DIRSET = 0x20; } while(0)
+#define LED_BUSY_SetPullUp() do { PORTA_PIN5CTRL  |= PORT_PULLUPEN_bm; } while(0)
+#define LED_BUSY_ResetPullUp() do { PORTA_PIN5CTRL  &= ~PORT_PULLUPEN_bm; } while(0)
+#define LED_BUSY_SetInverted() do { PORTA_PIN5CTRL  |= PORT_INVEN_bm; } while(0)
+#define LED_BUSY_ResetInverted() do { PORTA_PIN5CTRL  &= ~PORT_INVEN_bm; } while(0)
+#define LED_BUSY_DisableInterruptOnChange() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x0 ; } while(0)
+#define LED_BUSY_EnableInterruptForBothEdges() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x1 ; } while(0)
+#define LED_BUSY_EnableInterruptForRisingEdge() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x2 ; } while(0)
+#define LED_BUSY_EnableInterruptForFallingEdge() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x3 ; } while(0)
+#define LED_BUSY_DisableDigitalInputBuffer() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x4 ; } while(0)
+#define LED_BUSY_EnableInterruptForLowLevelSensing() do { PORTA.PIN5CTRL = (PORTA.PIN5CTRL & ~PORT_ISC_gm) | 0x5 ; } while(0)
+#define PA5_SetInterruptHandler LED_BUSY_SetInterruptHandler
 
 //get/set TG_MCLR aliases
 #define TG_MCLR_SetHigh() do { PORTD_OUTSET = 0x8; } while(0)
@@ -244,6 +282,27 @@ void BT_FNC_N_SetInterruptHandler(void (* interruptHandler)(void)) ;
 
 /**
  * @ingroup  pinsdriver
+ * @brief Default Interrupt Handler for BOOT_N pin. 
+ *        This is a predefined interrupt handler to be used together with the BOOT_N_SetInterruptHandler() method.
+ *        This handler is called every time the BOOT_N ISR is executed. 
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param none
+ * @return none
+ */
+void BOOT_N_DefaultInterruptHandler(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt Handler Setter for BOOT_N pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for BOOT_N at application runtime
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param InterruptHandler function pointer.
+ * @return none
+ */
+void BOOT_N_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+
+/**
+ * @ingroup  pinsdriver
  * @brief Default Interrupt Handler for LED_TGRDY pin. 
  *        This is a predefined interrupt handler to be used together with the LED_TGRDY_SetInterruptHandler() method.
  *        This handler is called every time the LED_TGRDY ISR is executed. 
@@ -262,6 +321,27 @@ void LED_TGRDY_DefaultInterruptHandler(void);
  * @return none
  */
 void LED_TGRDY_SetInterruptHandler(void (* interruptHandler)(void)) ; 
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Default Interrupt Handler for LED_BUSY pin. 
+ *        This is a predefined interrupt handler to be used together with the LED_BUSY_SetInterruptHandler() method.
+ *        This handler is called every time the LED_BUSY ISR is executed. 
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param none
+ * @return none
+ */
+void LED_BUSY_DefaultInterruptHandler(void);
+
+/**
+ * @ingroup  pinsdriver
+ * @brief Interrupt Handler Setter for LED_BUSY pin input-sense-config functionality.
+ *        Allows selecting an interrupt handler for LED_BUSY at application runtime
+ * @pre PIN_MANAGER_Initialize() has been called at least once
+ * @param InterruptHandler function pointer.
+ * @return none
+ */
+void LED_BUSY_SetInterruptHandler(void (* interruptHandler)(void)) ; 
 
 /**
  * @ingroup  pinsdriver

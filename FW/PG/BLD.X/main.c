@@ -1,48 +1,49 @@
- /*
- * MAIN Generated Driver File
- * 
- * @file main.c
- * 
- * @defgroup main MAIN
- * 
- * @brief This is the generated driver implementation file for the MAIN driver.
- *
- * @version MAIN Driver Version 1.0.2
- *
- * @version Package Version: 3.1.2
-*/
-
-/*
-© [2025] Microchip Technology Inc. and its subsidiaries.
-
-    Subject to your compliance with these terms, you may use Microchip 
-    software and any derivatives exclusively with Microchip products. 
-    You are responsible for complying with 3rd party license terms  
-    applicable to your use of 3rd party software (including open source  
-    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.? 
-    NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS 
-    SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,  
-    MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
-    WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY 
-    KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF 
-    MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE 
-    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S 
-    TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
-    EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
-    THIS SOFTWARE.
-*/
 #include "mcc_generated_files/system/system.h"
-
-/*
-    Main application
-*/
+#include "mcc_generated_files/usb/usb_cdc/usb_cdc.h"
+#include "mcc_generated_files/usb/usb_cdc/usb_cdc_virtual_serial_port.h"
+#include "project.h"
 
 int main(void)
 {
+    int i=0;
+    // USB status variables
+    uint8_t cdcData;
+    volatile RETURN_CODE_t status=SUCCESS;
+    volatile CDC_RETURN_CODE_t cdcStatus=CDC_SUCCESS;
+
     SYSTEM_Initialize();
+    USB_Start();
 
     while(1)
     {
-    }    
+        ClrWdt();
+        status=USBDevice_Handle();
+        // If USB error detected
+        if(SUCCESS!=status)
+        {
+            if(++i==0)
+                LED_BUSY_Toggle();
+        }
+        else
+        {
+            // Tests if DTE is set and USB ready for transfer
+            if(true==USB_CDCDataTerminalReady())
+            {
+                // Checks that CDC TX buffer is not full or pipe is busy
+                if(false==USB_CDCTxBusy())
+                {
+                    // Retrieves CDC data if available and writes it back over CDC
+                    cdcStatus=USB_CDCRead(&cdcData);
+                    
+                    if(CDC_SUCCESS==cdcStatus)
+                    {
+                        cdcStatus=USB_CDCWrite(cdcData);
+                    }
+                }
+
+                // Running CDC Virtual Serial Port handler
+                status=USB_CDCVirtualSerialPortHandler();
+            }
+        }
+    }
 }
