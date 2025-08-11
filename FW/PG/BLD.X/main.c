@@ -26,6 +26,7 @@ int main(void)
         }
         else
         {
+            LED_BUSY_SetHigh();
             // Tests if DTE is set and USB ready for transfer
             if(true==USB_CDCDataTerminalReady())
             {

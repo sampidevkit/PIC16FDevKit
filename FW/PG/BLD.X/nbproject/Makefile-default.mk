@@ -93,8 +93,8 @@ IsDebug="true"
 else
 IsDebug="false"
 endif
-MDFUHostPath="C:\Program Files\Microchip\MPLABX\v6.25\mplab_platform\mplab-pymdfu\bin\windows\pymdfu-bin.exe"
-PYFWImageBuilderPath="C:\Program Files\Microchip\MPLABX\v6.25\mplab_platform\mplab-pymdfu\bin\windows\pyfwimagebuilder-bin.exe"
+MDFUHostPath="D:\Resource\Program Files\microchip\MPLABX\v6.25\mplab_platform\mplab-pymdfu\bin\windows\pymdfu-bin.exe"
+PYFWImageBuilderPath="D:\Resource\Program Files\microchip\MPLABX\v6.25\mplab_platform\mplab-pymdfu\bin\windows\pyfwimagebuilder-bin.exe"
 
 .build-conf:  ${BUILD_SUBPROJECTS}
 ifneq ($(INFORMATION_MESSAGE), )
@@ -441,7 +441,7 @@ ${DISTDIR}/BLD.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makef
 	${MP_CC_DIR}\\avr-objcopy -O ihex "${DISTDIR}/BLD.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}" "${DISTDIR}/BLD.X.${IMAGE_TYPE}.hex"
 	
 	@echo Normalizing hex file
-	@"C:/Program Files/Microchip/MPLABX/v6.25/mplab_platform/platform/../mplab_ide/modules/../../bin/hexmate" --edf="C:/Program Files/Microchip/MPLABX/v6.25/mplab_platform/platform/../mplab_ide/modules/../../dat/en_msgs.txt" ${DISTDIR}/BLD.X.${IMAGE_TYPE}.hex -o${DISTDIR}/BLD.X.${IMAGE_TYPE}.hex
+	@"D:/Resource/Program Files/microchip/MPLABX/v6.25/mplab_platform/platform/../mplab_ide/modules/../../bin/hexmate" --edf="D:/Resource/Program Files/microchip/MPLABX/v6.25/mplab_platform/platform/../mplab_ide/modules/../../dat/en_msgs.txt" ${DISTDIR}/BLD.X.${IMAGE_TYPE}.hex -o${DISTDIR}/BLD.X.${IMAGE_TYPE}.hex
 
 endif
 

@@ -60,6 +60,38 @@ RETURN_CODE_t USBDevice_Handle(void);
  */ 
 RETURN_CODE_t USBDevice_StatusGet(void);
 
+/**
+ * @ingroup usb_device_stack
+ * @brief Registers a callback function handling the Start Of Frame (SOF) events.
+ * @param USB_EVENT_CALLBACK_t cb - Callback function for an SOF event
+ * @return None.
+ */ 
+void USBDevice_StartOfFrameCallbackRegister(USB_EVENT_CALLBACK_t cb);
+
+/**
+ * @ingroup usb_device_stack
+ * @brief Registers a callback function handling the Suspend events.
+ * @param USB_EVENT_CALLBACK_t cb - Callback function for a Suspend event
+ * @return None.
+ */ 
+void USBDevice_SuspendCallbackRegister(USB_EVENT_CALLBACK_t cb);
+
+/**
+ * @ingroup usb_device_stack
+ * @brief Registers a callback function handling the Wake From Suspend events.
+ * @param USB_EVENT_CALLBACK_t cb - Callback function for a Wake From Suspend event
+ * @return None.
+ */ 
+void USBDevice_WakeFromSuspendCallbackRegister(USB_EVENT_CALLBACK_t cb);
+
+/**
+ * @ingroup usb_device_stack
+ * @brief Registers a callback function handling the Reset events.
+ * @param USB_EVENT_CALLBACK_t cb - Callback function for a Reset event
+ * @return None.
+ */ 
+void USBDevice_ResetCallbackRegister(USB_EVENT_CALLBACK_t cb);
+
 #endif // USB_DEVICE_H
 /**
  End of File

@@ -68,8 +68,8 @@ static USB_APPLICATION_CONFIGURATION_t configurationDescriptor = {
             .bNumInterfaces = USB_INTERFACE_NUM,
             .bConfigurationValue = 1u,
             .iConfiguration = 0u,
-            .bmAttributes = USB_CONFIG_ATTR_MUST_SET | USB_CONFIG_ATTR_BUS_POWERED,
-            .bMaxPower = USB_CONFIG_MAX_POWER(2),
+            .bmAttributes = USB_CONFIG_ATTR_MUST_SET | USB_CONFIG_ATTR_SELF_POWERED,
+            .bMaxPower = USB_CONFIG_MAX_POWER(100),
         },
         .Interface0Alternate0 =
         {
