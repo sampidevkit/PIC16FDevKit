@@ -11,7 +11,7 @@
         <itemPath>apps/VCP.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Cfg" projectFiles="true">
-        <itemPath>cfg/project.h</itemPath>
+        <itemPath>cfg/project_cfg.h</itemPath>
       </logicalFolder>
       <logicalFolder name="CLib" displayName="CLib" projectFiles="true">
         <logicalFolder name="common" displayName="common" projectFiles="true">
@@ -28,6 +28,7 @@
           <itemPath>../../CLib/system/soft_wdt.h</itemPath>
           <itemPath>../../CLib/system/system_tick.h</itemPath>
           <itemPath>../../CLib/system/task_manager.h</itemPath>
+          <itemPath>../../CLib/system/gpio.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -158,6 +159,7 @@
           <itemPath>../../CLib/system/soft_wdt.c</itemPath>
           <itemPath>../../CLib/system/system_tick.c</itemPath>
           <itemPath>../../CLib/system/task_manager.c</itemPath>
+          <itemPath>../../CLib/system/gpio_avr.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -265,7 +267,7 @@
         <targetDevice>AVR64DU28</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pk4hybrid</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>3.00</languageToolchainVersion>
         <platform>3</platform>
@@ -309,7 +311,7 @@
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="false"/>
         <property key="extra-include-directories"
-                  value="mcc_generated_files/usb;mcc_generated_files/usb/usb_common;mcc_generated_files/usb/usb_peripheral;mcc_generated_files/usb/usb_vendor;mcc_generated_files/usb/usb_hid;mcc_generated_files/usb/usb_cdc;mcc_generated_files/usb/usb_cdc/circular_buffer;apps;cfg;..\..\CLib"/>
+                  value="mcc_generated_files/usb;mcc_generated_files/usb/usb_common;mcc_generated_files/usb/usb_peripheral;mcc_generated_files/usb/usb_vendor;mcc_generated_files/usb/usb_hid;mcc_generated_files/usb/usb_cdc;mcc_generated_files/usb/usb_cdc/circular_buffer;mcc_generated_files;apps;cfg;..\..\CLib"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>
@@ -521,8 +523,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7fff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="E:/Github/PIC16FDevKit/p16f877a/FW/PG/APP.X/debug/default/BLD_ptg"/>
         <property key="programmerToGoImageName" value="BLD_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
