@@ -9,6 +9,7 @@
                    projectFiles="true">
       <logicalFolder name="f2" displayName="Apps" projectFiles="true">
         <itemPath>apps/VCP.h</itemPath>
+        <itemPath>apps/UART_Mux.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Cfg" projectFiles="true">
         <itemPath>cfg/project_cfg.h</itemPath>
@@ -140,6 +141,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="Apps" projectFiles="true">
         <itemPath>apps/VCP.c</itemPath>
+        <itemPath>apps/UART_Mux.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Cfg" projectFiles="true">
         <itemPath>cfg/system_tick_cfg.c</itemPath>

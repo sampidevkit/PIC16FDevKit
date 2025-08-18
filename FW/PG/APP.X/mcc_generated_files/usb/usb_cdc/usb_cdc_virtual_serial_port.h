@@ -92,6 +92,10 @@ CDC_RETURN_CODE_t USB_CDCWrite(uint8_t data);
  */
 bool USB_CDCTxBusy(void);
 
+bool USB_CDCTxDone(void);
+
+bool USB_CDCRxReady(void);
+
 /**
  * @ingroup usb_cdc
  * @brief Callback function called after the USB IN transaction started.

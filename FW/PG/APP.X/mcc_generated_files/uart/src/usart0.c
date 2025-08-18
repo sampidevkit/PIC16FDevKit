@@ -125,7 +125,7 @@ void USART0_ReceiveISR(void);
   Section: USART0  APIs
 */
 
-void USART0_Initialize(void)
+void USART0_Initialize(uint32_t baud)
 {
     USART0_RxInterruptHandler = USART0_ReceiveISR;  
     USART0_TxInterruptHandler = USART0_TransmitISR;
@@ -133,7 +133,7 @@ void USART0_Initialize(void)
     // Set the USART0 module to the options selected in the user interface.
 
     //BAUD 10000; 
-    USART0.BAUD = (uint16_t)USART0_BAUD_RATE(9600UL);
+    USART0.BAUD = (uint16_t)USART0_BAUD_RATE(baud);
 	
     // ABEIE disabled; DREIE disabled; LBME disabled; RS485 DISABLE; RXCIE enabled; RXSIE enabled; TXCIE enabled; 
     USART0.CTRLA = 0xD0;

@@ -38,35 +38,35 @@
 #include <circular_buffer.h>
 
 // ZLP state
-static bool zlpStateTX = true;
+static bool zlpStateTX=true;
 
 // USB Pipes
-STATIC USB_PIPE_t CDCTxPipe = {
-    .address = USB_CDC_BULK_EP_IN,
-    .direction = USB_EP_DIR_IN,
+STATIC USB_PIPE_t CDCTxPipe={
+    .address=USB_CDC_BULK_EP_IN,
+    .direction=USB_EP_DIR_IN,
 };
 
-STATIC USB_PIPE_t CDCRxPipe = {
-    .address = USB_CDC_BULK_EP_OUT,
-    .direction = USB_EP_DIR_OUT,
+STATIC USB_PIPE_t CDCRxPipe={
+    .address=USB_CDC_BULK_EP_OUT,
+    .direction=USB_EP_DIR_OUT,
 };
 
 // RX Buffer
 STATIC uint8_t usbCDCReceiveTempBuffer[USB_CDC_RX_PACKET_SIZE] __attribute__((aligned(2)));
 STATIC uint8_t usbCDCReceiveArray[USB_CDC_RX_BUFFER_SIZE];
-STATIC CIRCULAR_BUFFER_t usbCDCReceiveBuffer = {
-    .content = usbCDCReceiveArray,
-    .head = 0,
-    .tail = 0,
-    .maxLength = USB_CDC_RX_BUFFER_SIZE,
+STATIC CIRCULAR_BUFFER_t usbCDCReceiveBuffer={
+    .content=usbCDCReceiveArray,
+    .head=0,
+    .tail=0,
+    .maxLength=USB_CDC_RX_BUFFER_SIZE,
 };
 // TX Buffer
 STATIC uint8_t usbCDCTransmitArray[USB_CDC_TX_BUFFER_SIZE];
-STATIC CIRCULAR_BUFFER_t usbCDCTransmitBuffer = {
-    .content = usbCDCTransmitArray,
-    .head = 0,
-    .tail = 0,
-    .maxLength = USB_CDC_TX_BUFFER_SIZE,
+STATIC CIRCULAR_BUFFER_t usbCDCTransmitBuffer={
+    .content=usbCDCTransmitArray,
+    .head=0,
+    .tail=0,
+    .maxLength=USB_CDC_TX_BUFFER_SIZE,
 };
 
 void USB_CDCVirtualSerialPortInitialize(void)
@@ -76,15 +76,15 @@ void USB_CDCVirtualSerialPortInitialize(void)
 
 RETURN_CODE_t USB_CDCVirtualSerialPortHandler(void)
 {
-    RETURN_CODE_t status = SUCCESS;
+    RETURN_CODE_t status=SUCCESS;
 
     // Checks if data have been added to transmit buffer
-    if (false == CIRCBUF_Empty(&usbCDCTransmitBuffer))
+    if(false==CIRCBUF_Empty(&usbCDCTransmitBuffer))
     {
         // Transmits data to host if pipe not busy
-        if (false == USB_PipeStatusIsBusy(CDCTxPipe))
+        if(false==USB_PipeStatusIsBusy(CDCTxPipe))
         {
-            status = USB_TransferWriteStart(CDCTxPipe, usbCDCTransmitArray, usbCDCTransmitBuffer.head, zlpStateTX, USB_CDCDataTransmitted);
+            status=USB_TransferWriteStart(CDCTxPipe, usbCDCTransmitArray, usbCDCTransmitBuffer.head, zlpStateTX, USB_CDCDataTransmitted);
         }
         else
         {
@@ -97,15 +97,15 @@ RETURN_CODE_t USB_CDCVirtualSerialPortHandler(void)
     }
 
     // Checks if outgoing data transmitted or not available
-    if (SUCCESS == status)
+    if(SUCCESS==status)
     {
         // Checks if room exist for 1 USB CDC packet in the receive buffer
-        if (USB_CDC_RX_PACKET_SIZE <= CIRCBUF_FreeSpace(&usbCDCReceiveBuffer))
+        if(USB_CDC_RX_PACKET_SIZE<=CIRCBUF_FreeSpace(&usbCDCReceiveBuffer))
         {
             // Receives data from host if pipe not busy
-            if (false == USB_PipeStatusIsBusy(CDCRxPipe))
+            if(false==USB_PipeStatusIsBusy(CDCRxPipe))
             {
-                status = USB_TransferReadStart(CDCRxPipe, usbCDCReceiveTempBuffer, USB_CDC_RX_PACKET_SIZE, false, USB_CDCDataReceived);
+                status=USB_TransferReadStart(CDCRxPipe, usbCDCReceiveTempBuffer, USB_CDC_RX_PACKET_SIZE, false, USB_CDCDataReceived);
             }
             else
             {
@@ -137,19 +137,29 @@ CDC_RETURN_CODE_t USB_CDCWrite(uint8_t data)
 
 bool USB_CDCTxBusy(void)
 {
-    return CIRCBUF_Full(&usbCDCTransmitBuffer) || USB_PipeStatusIsBusy(CDCTxPipe);
+    return CIRCBUF_Full(&usbCDCTransmitBuffer)||USB_PipeStatusIsBusy(CDCTxPipe);
+}
+
+bool USB_CDCTxDone(void)
+{
+    return (CIRCBUF_Empty(&usbCDCTransmitBuffer) && !USB_PipeStatusIsBusy(CDCTxPipe));
+}
+
+bool USB_CDCRxReady(void)
+{
+    return !CIRCBUF_Empty(&usbCDCReceiveBuffer);
 }
 
 void USB_CDCDataReceived(USB_PIPE_t pipe, USB_TRANSFER_STATUS_t status, uint16_t bytesTransferred)
 {
-    (void)(pipe);
+    (void) (pipe);
 
-    if (USB_PIPE_TRANSFER_OK == status)
+    if(USB_PIPE_TRANSFER_OK==status)
     {
         // Echo data back
         USB_TransferWriteStart(CDCTxPipe, usbCDCReceiveTempBuffer, bytesTransferred, zlpStateTX, NULL);
         // Moves received data to circular buffer
-        for (uint16_t i = 0; i < bytesTransferred; i++)
+        for(uint16_t i=0; i<bytesTransferred; i++)
         {
             CIRCBUF_Enqueue(&usbCDCReceiveBuffer, usbCDCReceiveTempBuffer[i]);
         }
@@ -162,14 +172,14 @@ void USB_CDCDataReceived(USB_PIPE_t pipe, USB_TRANSFER_STATUS_t status, uint16_t
 
 void USB_CDCDataTransmitted(USB_PIPE_t pipe, USB_TRANSFER_STATUS_t status, uint16_t bytesTransferred)
 {
-    (void)(pipe);
-    (void)(bytesTransferred);
+    (void) (pipe);
+    (void) (bytesTransferred);
 
-    if (USB_PIPE_TRANSFER_OK == status)
+    if(USB_PIPE_TRANSFER_OK==status)
     {
         // Data transmitted, reset transmit buffer
-        usbCDCTransmitBuffer.head = 0;
-        usbCDCTransmitBuffer.tail = 0;
+        usbCDCTransmitBuffer.head=0;
+        usbCDCTransmitBuffer.tail=0;
     }
     else
     {

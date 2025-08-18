@@ -125,7 +125,7 @@ extern const uart_drv_interface_t UART1;
  * @param None.
  * @return None.
  */
-void USART1_Initialize(void);
+void USART1_Initialize(uint32_t baud);
 
 /**
  * @ingroup usart1

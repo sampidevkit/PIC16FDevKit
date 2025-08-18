@@ -50,8 +50,8 @@ void SYSTEM_Initialize(void)
     NVM_Initialize();
     RTC_Initialize();
     SLPCTRL_Initialize();
-    USART0_Initialize();
-    USART1_Initialize();
+    USART0_Initialize(9600UL);
+    USART1_Initialize(9600UL);
     VREF_Initialize();
     WDT_Initialize();
     USBDevice_Initialize();

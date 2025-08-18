@@ -56,7 +56,7 @@ extern "C" {
  @brief Structure containing the function pointers of UART driver.
 */
 typedef struct {
-void (*Initialize)(void);   
+void (*Initialize)(uint32_t baudRate);   
 void (*Deinitialize)(void);
 uint8_t (*Read)(void);
 void (*Write)(uint8_t);
