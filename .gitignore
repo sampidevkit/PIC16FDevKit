@@ -6,6 +6,7 @@ dist/
 debug/
 Project Backups/
 .generated_files/
+.history/
 *-backups/
 
 \#auto_saved_files\#

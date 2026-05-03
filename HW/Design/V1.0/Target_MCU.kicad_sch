@@ -151,6 +151,301 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "FET_N-CH_1"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 1.27 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.5 1.5)
+						(bold yes)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "MFET N"
+				(at 1.27 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FET_N-CH_1_0_1"
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 1.905 -5.08) (xy 1.905 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.159) (xy 2.54 -2.921)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -3.429) (xy 2.54 -4.191)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -3.81) (xy 3.81 -3.81) (xy 3.81 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -5.461) (xy 2.54 -4.699)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -1.27) (xy 3.81 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -1.905) (xy 5.08 -1.905) (xy 5.08 -3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -5.715) (xy 5.08 -5.715) (xy 5.08 -4.445)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -6.35) (xy 3.81 -5.08) (xy 2.54 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -3.175) (xy 5.715 -3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -4.445) (xy 5.715 -4.445)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -4.445) (xy 5.08 -3.175) (xy 5.715 -4.445)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "FET_N-CH_1_1_1"
+				(polyline
+					(pts
+						(xy 3.302 -3.429) (xy 3.302 -4.191) (xy 2.921 -3.81) (xy 3.302 -3.429)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 3.81 -3.81)
+					(radius 2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin bidirectional line
+					(at 0 -5.08 0)
+					(length 1.27)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 3.81 -7.62 90)
+					(length 1.27)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 3.81 0 270)
+					(length 1.27)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "LED_1"
 			(pin_numbers
 				(hide yes)
@@ -2146,6 +2441,9 @@
 			(embedded_fonts no)
 		)
 		(symbol "SAMPI:BT2"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(hide yes)
 			)
@@ -2414,7 +2712,358 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "SAMPI:CDS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.5 1.5)
+						(bold yes)
+					)
+				)
+			)
+			(property "Value" "CDS"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "SAMPI:CDS-5MM"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "CDS PHOTORESISTOR 16-33KOHM"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MNP" "PDV-P8103"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "NFT" "Advanced Photonix"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(symbol "CDS_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy -0.635 0.635) (xy -0.635 -0.635) (xy 0 0.635) (xy 0 -0.635) (xy 0.635 0.635)
+						(xy 0.635 -0.635) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 2.54) (xy 0 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.175) (xy 0 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.905) (xy 0.635 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CDS_1_1"
+				(pin bidirectional line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "SAMPI:CERCAP"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at -1.905 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.5 1.5)
+						(bold yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "CerCap"
+				(at -1.905 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CERCAP_0_1"
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0.635 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -1.27) (xy 0.635 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -1.27) (xy 1.905 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CERCAP_1_1"
+				(pin bidirectional line
+					(at -2.54 -2.54 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "SAMPI:FET_N-CH"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(hide yes)
 			)
@@ -2689,6 +3338,143 @@
 					(at 3.81 0 270)
 					(length 1.27)
 					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "SAMPI:MCP9700-SOT23"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MCP9700-SOT23_1_1"
+				(rectangle
+					(start 0 -4.445)
+					(end 7.62 -13.335)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(text "T°C"
+					(at 5.715 -8.89 900)
+					(effects
+						(font
+							(size 1.27 1.27)
+							(bold yes)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -6.35 0)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -2.54 -8.89 0)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -11.43 0)
+					(length 2.54)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3118,6 +3904,129 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "SAMPI:RES"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.5 1.5)
+						(bold yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "RES"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RES_0_1"
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0.635 -1.905) (xy 0.635 -3.175) (xy 1.27 -1.905) (xy 1.27 -3.175) (xy 1.905 -1.905)
+						(xy 1.905 -3.175) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "RES_1_1"
+				(pin bidirectional line
+					(at -2.54 -2.54 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3619,6 +4528,9 @@
 			(embedded_fonts no)
 		)
 		(symbol "SAMPI:XTAL-4P"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(hide yes)
 			)
@@ -3810,155 +4722,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Triet_KiCAD_Sym:CAP_CER"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 4.445 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(bold yes)
-					)
-				)
-			)
-			(property "Value" "nF"
-				(at 4.445 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.016 1.016)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "CAP_CER"
-				(at 0 12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Note" ""
-				(at 4.445 -1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "CAP_CER_0_1"
-				(rectangle
-					(start -1.27 -0.508)
-					(end 1.27 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "CAP_CER_1_1"
-				(rectangle
-					(start -1.27 1.016)
-					(end 1.27 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type color)
-						(color 132 0 0 1)
-					)
-				)
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5056,168 +5819,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Triet_KiCAD_Sym:RES"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 3.81 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(bold yes)
-					)
-				)
-			)
-			(property "Value" "<value>"
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.016 1.016)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 -0.254 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 -0.254 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "RES SMD"
-				(at 11.43 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" ""
-				(at 0 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Note" ""
-				(at 3.175 -1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RES_0_1"
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 1.016 1.016) (xy 0 0.762) (xy -1.016 0.508) (xy 0 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0.254) (xy 1.016 0) (xy 0 -0.254) (xy -1.016 -0.508) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.762) (xy 1.016 -1.016) (xy 0 -1.27) (xy 0 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "RES_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+3.3V"
 			(power global)
 			(pin_numbers
@@ -5621,10 +6222,22 @@
 		(uuid "06d13c4f-156a-45e7-9df1-05f47ae7917a")
 	)
 	(junction
+		(at 31.75 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ac5c506-c366-4b30-a958-3e9391878057")
+	)
+	(junction
 		(at 175.26 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "129fb24b-3318-472c-a16f-f132f01f5b2b")
+	)
+	(junction
+		(at 60.96 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1d34196e-492c-449b-bf2d-9eefd59e5746")
 	)
 	(junction
 		(at 228.6 101.6)
@@ -5633,10 +6246,10 @@
 		(uuid "239366af-93f0-47b4-8447-555e2a65c35d")
 	)
 	(junction
-		(at 38.735 106.68)
+		(at 49.53 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "496fbf03-73df-485e-8fe9-86c47914b3d1")
+		(uuid "27c29bb3-3965-4911-8d9f-3b005d0d1fa5")
 	)
 	(junction
 		(at 203.2 72.39)
@@ -5663,6 +6276,12 @@
 		(uuid "6259f612-c285-4b08-b5ae-ecca0ff9a761")
 	)
 	(junction
+		(at 24.13 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6340ef4e-31ff-433f-80f8-f4c15d411b73")
+	)
+	(junction
 		(at 203.2 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5685,6 +6304,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8244e2b2-d70e-4253-afee-e8a3d0473460")
+	)
+	(junction
+		(at 140.97 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "890c6c33-dd40-4488-a4d9-9d1f91797aa9")
 	)
 	(junction
 		(at 241.3 101.6)
@@ -5717,6 +6342,12 @@
 		(uuid "9d505848-5df6-4858-8891-96071ff88f2b")
 	)
 	(junction
+		(at 60.96 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9dff63c9-d9c0-40af-bd97-ded62b8636b3")
+	)
+	(junction
 		(at 241.3 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5729,19 +6360,13 @@
 		(uuid "a432ad17-1c4c-49b8-9b37-8444fc66b7e0")
 	)
 	(junction
-		(at 54.61 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ab29b6b1-0a0c-4f9c-9ffd-1de935754fb0")
-	)
-	(junction
 		(at 203.2 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ad2e17b1-8279-4675-bc2c-3e1870baf18b")
 	)
 	(junction
-		(at 44.45 85.09)
+		(at 49.53 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aec1e406-12ec-4909-9abf-a89d93ce1ed6")
@@ -5765,28 +6390,34 @@
 		(uuid "bdced263-7508-459b-9eb6-818a334bb923")
 	)
 	(junction
-		(at 35.56 106.68)
+		(at 49.53 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c73914ae-0d20-4b83-94e9-16684e4dcfcb")
+		(uuid "c317a9e8-6d84-44e5-af8f-0c41fc58adda")
 	)
 	(junction
-		(at 39.37 85.09)
+		(at 44.45 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c9fbe3b2-6089-4d67-b2a6-dce665a9d4f7")
+	)
+	(junction
+		(at 133.35 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d3f3b0bc-6d91-478c-a235-9e9cd878e81d")
+	)
+	(junction
+		(at 60.96 151.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e028a521-8fee-4e32-b3dd-ac28f116c2b2")
 	)
 	(junction
 		(at 167.64 72.39)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f9c3cdef-1c0f-4d1d-983f-b42a74ccdb95")
-	)
-	(junction
-		(at 51.435 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fa48e393-0a5a-4589-8cf7-a539590bc6a1")
 	)
 	(junction
 		(at 50.8 36.83)
@@ -5802,7 +6433,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 83.82) (xy 44.45 85.09)
+			(xy 49.53 83.82) (xy 49.53 85.09)
 		)
 		(stroke
 			(width 0)
@@ -5852,6 +6483,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 110.49) (xy 60.96 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10896c0c-f9dc-46c4-9153-2e5a418ce18c")
+	)
+	(wire
+		(pts
 			(xy 228.6 119.38) (xy 228.6 120.65)
 		)
 		(stroke
@@ -5872,7 +6513,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 83.82) (xy 39.37 85.09)
+			(xy 44.45 83.82) (xy 44.45 85.09)
 		)
 		(stroke
 			(width 0)
@@ -5882,7 +6523,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 93.98) (xy 35.56 93.345)
+			(xy 40.64 93.98) (xy 40.64 93.345)
 		)
 		(stroke
 			(width 0)
@@ -5902,17 +6543,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.165 110.49) (xy 51.435 110.49)
-		)
-		(stroke
-			(width 0.254)
-			(type default)
-		)
-		(uuid "1c94fd3a-8e19-48a9-881e-f16866649196")
-	)
-	(wire
-		(pts
-			(xy 34.29 106.68) (xy 35.56 106.68)
+			(xy 48.26 106.68) (xy 49.53 106.68)
 		)
 		(stroke
 			(width 0.254)
@@ -5929,6 +6560,16 @@
 			(type default)
 		)
 		(uuid "1e851478-4fea-4d55-a0f6-a10dfdbf3fbf")
+	)
+	(wire
+		(pts
+			(xy 59.69 151.13) (xy 60.96 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21f3918f-efa1-4562-9a49-da331a01dbf4")
 	)
 	(wire
 		(pts
@@ -5992,6 +6633,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 154.94) (xy 68.58 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ee18e85-075d-4d42-a2cd-76cc5bb2ccc1")
+	)
+	(wire
+		(pts
 			(xy 203.2 19.05) (xy 201.93 19.05)
 		)
 		(stroke
@@ -6022,7 +6673,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 86.995) (xy 35.56 85.09)
+			(xy 40.64 86.995) (xy 40.64 85.09)
 		)
 		(stroke
 			(width 0)
@@ -6032,13 +6683,13 @@
 	)
 	(wire
 		(pts
-			(xy 38.735 106.68) (xy 38.735 111.76)
+			(xy 142.24 82.55) (xy 133.35 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "385604d7-f486-445c-af3f-9fac92cf18d7")
+		(uuid "3db7dc08-1117-4136-9f85-d68751dd2c2a")
 	)
 	(wire
 		(pts
@@ -6072,6 +6723,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 151.13) (xy 60.96 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41e119bd-f831-4cdd-9ce4-b8ad24109db2")
+	)
+	(wire
+		(pts
 			(xy 203.2 72.39) (xy 203.2 64.77)
 		)
 		(stroke
@@ -6089,6 +6750,16 @@
 			(type default)
 		)
 		(uuid "49cdb41b-d556-44a0-b5b5-83a6e07f5551")
+	)
+	(wire
+		(pts
+			(xy 194.31 143.51) (xy 200.66 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b17a33a-213d-4519-8c27-9404393f2490")
 	)
 	(wire
 		(pts
@@ -6112,16 +6783,6 @@
 	)
 	(wire
 		(pts
-			(xy 51.435 110.49) (xy 54.61 110.49)
-		)
-		(stroke
-			(width 0.254)
-			(type default)
-		)
-		(uuid "56559537-b6de-4305-abfa-7cabdb0a2e92")
-	)
-	(wire
-		(pts
 			(xy 236.22 91.44) (xy 241.3 91.44)
 		)
 		(stroke
@@ -6142,17 +6803,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.735 106.68) (xy 62.23 106.68)
-		)
-		(stroke
-			(width 0.254)
-			(type default)
-		)
-		(uuid "69e5943c-ccc8-4c09-86eb-5cdf96e9b609")
-	)
-	(wire
-		(pts
-			(xy 39.37 85.09) (xy 44.45 85.09)
+			(xy 44.45 85.09) (xy 49.53 85.09)
 		)
 		(stroke
 			(width 0)
@@ -6162,7 +6813,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 85.09) (xy 39.37 88.9)
+			(xy 44.45 85.09) (xy 44.45 88.9)
 		)
 		(stroke
 			(width 0)
@@ -6222,7 +6873,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 106.68) (xy 35.56 111.76)
+			(xy 49.53 106.68) (xy 49.53 107.95)
 		)
 		(stroke
 			(width 0)
@@ -6269,6 +6920,16 @@
 			(type default)
 		)
 		(uuid "841e4438-02ef-4fec-9c8c-0d9c2629552b")
+	)
+	(wire
+		(pts
+			(xy 49.53 148.59) (xy 49.53 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8afeedee-7660-44af-b340-269b687e502b")
 	)
 	(wire
 		(pts
@@ -6322,7 +6983,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 85.09) (xy 35.56 85.09)
+			(xy 44.45 85.09) (xy 40.64 85.09)
 		)
 		(stroke
 			(width 0)
@@ -6349,6 +7010,16 @@
 			(type default)
 		)
 		(uuid "9e5ca8ce-b966-435e-a660-a6c1866ab8ea")
+	)
+	(wire
+		(pts
+			(xy 68.58 153.67) (xy 69.85 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f195c44-24f4-4ab4-bd0f-94b8c004b943")
 	)
 	(wire
 		(pts
@@ -6382,6 +7053,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 148.59) (xy 24.13 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a576c187-05b4-4554-b8cc-4fb86d3f432e")
+	)
+	(wire
+		(pts
 			(xy 185.42 19.05) (xy 185.42 83.82)
 		)
 		(stroke
@@ -6389,16 +7070,6 @@
 			(type default)
 		)
 		(uuid "a5d61e05-9b99-406f-94af-e20e2bc9138a")
-	)
-	(wire
-		(pts
-			(xy 54.61 110.49) (xy 54.61 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5e47131-9888-45ce-9923-ffa98f49b7ac")
 	)
 	(wire
 		(pts
@@ -6422,7 +7093,17 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 88.9) (xy 39.37 88.9)
+			(xy 133.35 81.28) (xy 133.35 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a857a01b-5197-4868-bf68-19061165155c")
+	)
+	(wire
+		(pts
+			(xy 43.18 88.9) (xy 44.45 88.9)
 		)
 		(stroke
 			(width 0)
@@ -6442,7 +7123,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 106.68) (xy 38.735 106.68)
+			(xy 49.53 106.68) (xy 62.23 106.68)
 		)
 		(stroke
 			(width 0.254)
@@ -6452,13 +7133,33 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 110.49) (xy 62.23 110.49)
+			(xy 22.86 148.59) (xy 24.13 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aba74efe-5b0e-4616-9504-a3591017aa02")
+	)
+	(wire
+		(pts
+			(xy 60.96 110.49) (xy 62.23 110.49)
 		)
 		(stroke
 			(width 0.254)
 			(type default)
 		)
-		(uuid "ad370312-c549-4b5f-b348-153e8dd3709d")
+		(uuid "acd1e79d-0d2a-4630-b065-282bda4a653c")
+	)
+	(wire
+		(pts
+			(xy 142.24 86.36) (xy 140.97 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afe2aa6a-5049-4251-a2a8-eeab0eff1fdc")
 	)
 	(wire
 		(pts
@@ -6492,7 +7193,7 @@
 	)
 	(wire
 		(pts
-			(xy 51.435 111.76) (xy 51.435 110.49)
+			(xy 60.96 111.76) (xy 60.96 110.49)
 		)
 		(stroke
 			(width 0)
@@ -6522,7 +7223,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 85.09) (xy 44.45 86.36)
+			(xy 49.53 85.09) (xy 49.53 86.36)
 		)
 		(stroke
 			(width 0)
@@ -6552,6 +7253,16 @@
 	)
 	(wire
 		(pts
+			(xy 31.75 148.59) (xy 31.75 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c01ff092-ebc5-421f-b158-b2f25a5fb40e")
+	)
+	(wire
+		(pts
 			(xy 166.37 34.29) (xy 180.34 34.29)
 		)
 		(stroke
@@ -6559,6 +7270,16 @@
 			(type default)
 		)
 		(uuid "c028319b-8ea1-4305-8de9-41d02d50d06b")
+	)
+	(wire
+		(pts
+			(xy 140.97 81.28) (xy 140.97 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c370cd86-5b8a-49ba-b5ac-7442076e3640")
 	)
 	(wire
 		(pts
@@ -6622,6 +7343,46 @@
 	)
 	(wire
 		(pts
+			(xy 194.31 146.05) (xy 200.66 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cae6b3b1-8188-4b7f-ae67-1056d4cb88a6")
+	)
+	(wire
+		(pts
+			(xy 31.75 148.59) (xy 24.13 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdae1eba-4712-4944-9e20-6f52ccb2f271")
+	)
+	(wire
+		(pts
+			(xy 140.97 86.36) (xy 113.03 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdfd6804-ecaf-4f5c-b5e5-32b9c78e1886")
+	)
+	(wire
+		(pts
+			(xy 49.53 148.59) (xy 69.85 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf1e16cb-59b5-4c88-9f2a-d94b884582bd")
+	)
+	(wire
+		(pts
 			(xy 182.88 83.82) (xy 182.88 26.67)
 		)
 		(stroke
@@ -6632,6 +7393,26 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 119.38) (xy 60.96 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d215dccf-6db8-4695-94e0-ae66ecb21a23")
+	)
+	(wire
+		(pts
+			(xy 49.53 147.32) (xy 49.53 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2e44003-dfa7-4834-a18d-01ce7abda37a")
+	)
+	(wire
+		(pts
 			(xy 201.93 41.91) (xy 203.2 41.91)
 		)
 		(stroke
@@ -6639,6 +7420,16 @@
 			(type default)
 		)
 		(uuid "d3b28f56-8ea4-459b-acea-d63c5acca845")
+	)
+	(wire
+		(pts
+			(xy 69.85 151.13) (xy 60.96 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d47e306b-27dc-42f2-8d1a-ce51c717aba9")
 	)
 	(wire
 		(pts
@@ -6672,6 +7463,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.35 82.55) (xy 113.03 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e45831db-cfd0-4baf-a7e7-851b2eb89a8e")
+	)
+	(wire
+		(pts
 			(xy 203.2 49.53) (xy 203.2 41.91)
 		)
 		(stroke
@@ -6679,6 +7480,16 @@
 			(type default)
 		)
 		(uuid "e8643ad0-ee35-420b-8400-9738157bfb9a")
+	)
+	(wire
+		(pts
+			(xy 31.75 148.59) (xy 36.195 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8daded0-2eeb-4c37-b377-ede1b8e37522")
 	)
 	(wire
 		(pts
@@ -6702,7 +7513,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 91.44) (xy 39.37 93.98)
+			(xy 44.45 91.44) (xy 44.45 93.98)
 		)
 		(stroke
 			(width 0)
@@ -6722,7 +7533,7 @@
 	)
 	(wire
 		(pts
-			(xy 38.1 91.44) (xy 39.37 91.44)
+			(xy 43.18 91.44) (xy 44.45 91.44)
 		)
 		(stroke
 			(width 0)
@@ -6742,6 +7553,16 @@
 	)
 	(wire
 		(pts
+			(xy 43.815 148.59) (xy 49.53 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdbf1ad2-639b-4680-aaef-4dfa1d9d3c42")
+	)
+	(wire
+		(pts
 			(xy 241.3 101.6) (xy 238.76 101.6)
 		)
 		(stroke
@@ -6750,131 +7571,63 @@
 		)
 		(uuid "ffc6d14c-f3bf-4137-b20d-90a1f8d52fdb")
 	)
-	(hierarchical_label "PWM2"
-		(shape output)
-		(at 113.03 101.6 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "011411f8-6c34-48d4-ba99-61f4cca95326")
-	)
-	(hierarchical_label "~{UBT}"
-		(shape output)
-		(at 44.45 83.82 90)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "01151386-b1cf-44c3-8f78-ceff9fde8eeb")
-	)
-	(hierarchical_label "RD7"
-		(shape bidirectional)
-		(at 62.23 78.74 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "016d2156-7330-4258-b371-a71e288da1ed")
-	)
-	(hierarchical_label "RD2"
-		(shape bidirectional)
-		(at 62.23 59.69 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "029865f7-102c-4cf4-8123-827eadc5783b")
-	)
-	(hierarchical_label "AN2"
-		(shape output)
-		(at 160.02 138.43 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify right)
-		)
-		(uuid "05053011-e16e-4ad1-b093-23e174601271")
-	)
-	(hierarchical_label "SDO"
-		(shape output)
-		(at 113.03 116.84 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "09812a0c-0e01-4fd5-a2d6-fdc1b6f28ea3")
-	)
-	(hierarchical_label "RD5"
-		(shape bidirectional)
-		(at 62.23 71.12 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "0ab953e7-a33d-458c-9ef9-33f30023d288")
-	)
-	(hierarchical_label "INT0"
+	(global_label "AN3"
 		(shape input)
-		(at 113.03 59.69 0)
+		(at 113.03 40.64 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(face "Consolas")
 				(size 1.016 1.016)
+				(color 0 72 0 1)
 			)
 			(justify left)
 		)
-		(uuid "0f533ed9-ff7e-470a-ac2a-4e7a75800e5a")
-	)
-	(hierarchical_label "SDA"
-		(shape bidirectional)
-		(at 194.31 102.87 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
+		(uuid "01cbe2a0-f06d-4b34-8dde-e67827d89f83")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.5836 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
 			)
-			(justify left)
 		)
-		(uuid "13212a05-c3c8-4133-91cf-20293c00c395")
 	)
-	(hierarchical_label "AN0"
+	(global_label "RD6"
 		(shape output)
-		(at 160.02 133.35 180)
+		(at 62.23 55.88 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(face "Consolas")
 				(size 1.016 1.016)
-				(thickness 0.254)
 			)
 			(justify right)
 		)
-		(uuid "142c50e6-1c03-41ae-9cad-174e5dbc024b")
+		(uuid "05e9b829-b80c-48ac-9e1a-b62aaee51aff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
 	)
-	(hierarchical_label "TXD_MCU"
+	(global_label "PWM1"
 		(shape output)
-		(at 113.03 120.65 0)
+		(at 113.03 105.41 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(face "Consolas")
@@ -6882,23 +7635,25 @@
 			)
 			(justify left)
 		)
-		(uuid "18727a6b-c339-4251-8ba9-c76044252978")
-	)
-	(hierarchical_label "SDO"
-		(shape input)
-		(at 194.31 115.57 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
+		(uuid "08d2f780-74c1-4a81-8b6b-90ab6a240cee")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.3648 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
 			)
-			(justify left)
 		)
-		(uuid "1cef9063-d8e6-4613-9cf6-a3b814e6ec7a")
 	)
-	(hierarchical_label "INT2"
+	(global_label "INT2"
 		(shape output)
 		(at 194.31 133.35 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(face "Consolas")
@@ -6906,24 +7661,497 @@
 			)
 			(justify left)
 		)
-		(uuid "1cff010e-400c-4efd-8c77-185ccfbf52c5")
+		(uuid "0953ce4a-2bfb-48a1-bc3d-67ef11db3280")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.6448 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
 	)
-	(hierarchical_label "AN3"
-		(shape output)
-		(at 160.02 140.97 180)
+	(global_label "AN1"
+		(shape input)
+		(at 113.03 33.02 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(face "Consolas")
 				(size 1.016 1.016)
-				(thickness 0.254)
+				(color 0 72 0 1)
+			)
+			(justify left)
+		)
+		(uuid "14eb96f5-25f7-4671-9580-a361caf89ec4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.5836 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "~{UBT}"
+		(shape input)
+		(at 113.03 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "16c68d40-3ecb-4c01-8be3-97e03e713b16")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.5836 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SDO"
+		(shape input)
+		(at 194.31 115.57 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "1b558ac6-1a62-4839-9488-125abdc5694f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 198.8636 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "AN3"
+		(shape output)
+		(at 160.02 140.97 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
 			)
 			(justify right)
 		)
-		(uuid "1f45b3e0-07b7-44ce-8255-c303bce4f742")
+		(uuid "216f73bf-68a9-4f1c-ba1b-a41b1d9650e6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.4664 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
 	)
-	(hierarchical_label "INT0"
+	(global_label "INT0"
+		(shape input)
+		(at 113.03 59.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "21a752e4-9e6e-4244-be84-f53b44d631fe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.3648 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SDA"
+		(shape bidirectional)
+		(at 227.33 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "228f110e-de3d-4f5c-8ae9-133df3649464")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 221.8874 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GPIO"
+		(shape bidirectional)
+		(at 113.03 78.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "2a0e06d5-a524-49b5-97d5-0a08db8c8808")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 119.2538 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "RD6"
+		(shape input)
+		(at 166.37 26.67 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2f5e6446-ae06-43f1-a594-d9cbee202879")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8164 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "INT1"
+		(shape input)
+		(at 113.03 63.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "3427ce1f-0cb1-42cb-93ab-d332a38e358a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.3648 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "RD7"
+		(shape output)
+		(at 62.23 52.07 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "3575a148-0c0f-476f-812e-d249d328c706")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "SCLK"
+		(shape input)
+		(at 194.31 110.49 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "397724d2-6f01-4c84-95bc-df46c366b567")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.6448 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "INT1"
+		(shape output)
+		(at 194.31 130.81 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "3b448eb1-4064-4d93-929d-cacfd2d39105")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.6448 130.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "LIGHT"
+		(shape input)
+		(at 62.23 93.98 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+				(color 0 72 0 1)
+			)
+			(justify right)
+		)
+		(uuid "3c3359cb-86cc-411a-9ee5-5e15f7ba8b4f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 56.1141 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "T1CKI"
+		(shape output)
+		(at 194.31 138.43 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "3fb02ec7-afc9-4b49-a9c3-a0feba3b57ff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.4259 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "T1CKI"
+		(shape input)
+		(at 113.03 97.79 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "411d891b-2fd7-4319-8fb4-d77fe5afa13b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 119.1459 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "AN0"
+		(shape input)
+		(at 113.03 29.21 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+				(color 0 72 0 1)
+			)
+			(justify left)
+		)
+		(uuid "4563634f-6e98-4a6b-baa6-b6c1c03704e6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.5836 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "AN2"
+		(shape input)
+		(at 113.03 36.83 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+				(color 0 72 0 1)
+			)
+			(justify left)
+		)
+		(uuid "4765a987-80ba-40f5-9cce-e47a6306a0db")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.5836 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "INT2"
+		(shape input)
+		(at 113.03 67.31 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "4a22bd58-361c-43ea-8838-9dd207adf89f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.3648 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "INT0"
 		(shape output)
 		(at 194.31 128.27 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(face "Consolas")
@@ -6931,11 +8159,940 @@
 			)
 			(justify left)
 		)
-		(uuid "219cd256-e372-400f-be36-4c03bd40086c")
+		(uuid "4e943a13-c3fb-4de1-8e1f-618b4a25b406")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.6448 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
 	)
-	(hierarchical_label "SCL"
+	(global_label "RD0"
+		(shape output)
+		(at 62.23 78.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "51a034da-8165-4c48-8a23-faf6ddb4359c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "SDO"
+		(shape output)
+		(at 113.03 116.84 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "57b89c31-a8fe-45ac-a5ce-65f5c72fb066")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.5836 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "PWM2"
+		(shape output)
+		(at 113.03 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "5a130a9b-2c85-4698-b302-8231ae637d76")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.3648 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "PWM2"
+		(shape input)
+		(at 194.31 120.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "5bd68458-7caf-48ca-9345-95e0a4a9e9ad")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.6448 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "AN4"
+		(shape input)
+		(at 113.03 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+				(color 0 72 0 1)
+			)
+			(justify left)
+		)
+		(uuid "654e7e22-0888-449f-9a7a-00e3a2e74ce7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.5836 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SDI"
+		(shape output)
+		(at 194.31 113.03 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "6729f12d-1d86-4cf9-b893-0107084bf9fb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 198.8636 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "TEMP"
+		(shape input)
+		(at 62.23 90.17 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+				(color 0 72 0 1)
+			)
+			(justify right)
+		)
+		(uuid "6af18293-52f1-4b1e-ace0-dd6ae4501384")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 56.8952 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "AN5"
+		(shape output)
+		(at 160.02 146.05 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "6ba2eaf9-c517-4307-a8a2-688d186d292d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.4664 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD1"
+		(shape input)
+		(at 166.37 64.77 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "6c1ebdf2-ba33-446a-aab5-c2a6ec8c32c4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8164 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD4"
+		(shape input)
+		(at 166.37 41.91 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "6f62347e-cf6c-4213-b520-6d23b9dbf23b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8164 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD5"
+		(shape output)
+		(at 62.23 59.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "73509fcf-43bd-4fe9-a01d-b5efa442251e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "AN2"
+		(shape output)
+		(at 160.02 138.43 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "7cb0d77b-b855-4dcb-9106-c1dece8309d6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.4664 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "SDI"
+		(shape input)
+		(at 113.03 113.03 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "7dd0b8ce-a3c1-477d-a423-6d13e1b660b0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 117.5836 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "T0CKI"
+		(shape output)
+		(at 194.31 140.97 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "8b5a8a58-ab93-4cbf-ad3e-b86300da179b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.4259 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "RD3"
+		(shape output)
+		(at 62.23 67.31 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "8cb358bf-a510-42ee-be1f-6768c0167fdf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "TEMP"
+		(shape output)
+		(at 22.86 148.59 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+				(color 0 72 0 1)
+			)
+			(justify right)
+		)
+		(uuid "8f133320-cf91-4d22-93fd-66145eadf5a9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 17.5252 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD5"
+		(shape input)
+		(at 166.37 34.29 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "94ced0bd-b655-41a8-a58a-1a82c72d3faf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8164 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD7"
+		(shape input)
+		(at 166.37 19.05 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "9510fc12-97e0-44d9-ad45-a16b6ec5bdf6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8164 19.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD4"
+		(shape output)
+		(at 62.23 63.5 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "997cac42-c194-40e6-b337-7b94cd720ccd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD2"
+		(shape input)
+		(at 166.37 57.15 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "a7fcb813-aee3-400f-9ec3-2b4796040583")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8164 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD0"
+		(shape input)
+		(at 166.37 72.39 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "ac36b801-ca27-41ff-b7b5-ff53c0e69b73")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8164 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD2"
+		(shape output)
+		(at 62.23 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "af5d80f4-004a-4470-9137-6eead070d855")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "TEMP"
+		(shape output)
+		(at 59.69 151.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+				(color 0 72 0 1)
+			)
+			(justify right)
+		)
+		(uuid "afb4c043-72f9-419a-84d5-75bea2664a80")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 54.3552 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "~{UBT}"
+		(shape output)
+		(at 49.53 83.82 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "b79cad3a-3d71-4fc9-bad7-587259a444e0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 49.53 79.2664 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "PWM1"
+		(shape input)
+		(at 194.31 123.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "d1e330b2-8a49-4b2c-8745-d73ff8e8955c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 199.6448 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "~{CS}"
+		(shape output)
+		(at 113.03 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "d3e77767-9b22-4772-ba34-447c4cc568d9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.8024 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "~{CS}"
+		(shape input)
+		(at 194.31 118.11 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "dcde0a4b-22aa-4988-b95a-2630cf16804c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 198.9714 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "AN5"
+		(shape input)
+		(at 62.23 86.36 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+				(color 0 72 0 1)
+			)
+			(justify right)
+		)
+		(uuid "dd28524c-57a6-471c-aec5-725adebc9011")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GPIO"
+		(shape bidirectional)
+		(at 194.31 135.89 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "de119b8a-45b3-4b13-bb42-5ce274e577ae")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.5338 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "T0CKI"
+		(shape input)
+		(at 113.03 44.45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "dfab38fe-7fdc-47d7-a677-414fa184ae40")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 119.1459 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "RD3"
+		(shape input)
+		(at 166.37 49.53 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "dff9b817-35fe-4700-a82c-32d9c1b10d4d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 161.8164 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "RD1"
+		(shape output)
+		(at 62.23 74.93 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "e02ae718-b0ea-443e-9041-962ec389573f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 57.6764 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "AN1"
+		(shape output)
+		(at 160.02 135.89 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "e64a3f06-7f53-4175-81fe-958bf7cab22d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.4664 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "AN4"
+		(shape output)
+		(at 160.02 143.51 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "e83490b2-3506-4aaf-91aa-8b052a95f217")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.4664 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "AN0"
+		(shape output)
+		(at 160.02 133.35 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "ef7a70d7-bd8a-4d3d-9735-212155f4be0f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155.4664 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "SCLK"
 		(shape output)
 		(at 113.03 109.22 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(face "Consolas")
@@ -6943,7 +9100,46 @@
 			)
 			(justify left)
 		)
-		(uuid "2822b71b-4002-41e2-868d-f0dacf188679")
+		(uuid "f0b11487-2fca-4065-8e02-12576252a597")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.3648 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SCL"
+		(shape input)
+		(at 227.33 101.6 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "f9a9d792-7120-4594-a258-f5a4db8db3a4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 222.7764 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
 	)
 	(hierarchical_label "~{MCLR}"
 		(shape input)
@@ -6957,22 +9153,9 @@
 		)
 		(uuid "317bfa8f-b5ef-4db8-8966-dc3249b10172")
 	)
-	(hierarchical_label "T1CKI"
-		(shape input)
-		(at 113.03 97.79 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "34aa7357-9d2a-4a27-b096-0ce936d4dcab")
-	)
-	(hierarchical_label "SDA"
-		(shape bidirectional)
-		(at 113.03 113.03 0)
+	(hierarchical_label "MCU_TXD"
+		(shape output)
+		(at 113.03 124.46 0)
 		(effects
 			(font
 				(face "Consolas")
@@ -6980,23 +9163,11 @@
 			)
 			(justify left)
 		)
-		(uuid "367cbf7d-397f-4a46-8771-56ab6024486a")
+		(uuid "41733c5d-4dd6-4864-abf5-f9d857de36a5")
 	)
-	(hierarchical_label "RD1"
+	(hierarchical_label "PGC_SDA"
 		(shape bidirectional)
-		(at 166.37 64.77 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "3b8bd956-a9a7-43d5-9d29-85656d63b07b")
-	)
-	(hierarchical_label "PGC{slash}UART_RX_IND"
-		(shape input)
-		(at 113.03 82.55 0)
+		(at 142.24 82.55 0)
 		(effects
 			(font
 				(face "Consolas")
@@ -7006,21 +9177,9 @@
 		)
 		(uuid "452eea5f-1555-40c9-b53f-f5eeab84cd12")
 	)
-	(hierarchical_label "RD0"
-		(shape bidirectional)
-		(at 166.37 72.39 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "45f75ac0-39db-4b88-8deb-b7c861c1cf5c")
-	)
-	(hierarchical_label "INT1"
+	(hierarchical_label "MCU_TXD"
 		(shape output)
-		(at 194.31 130.81 0)
+		(at 208.28 146.05 0)
 		(effects
 			(font
 				(face "Consolas")
@@ -7028,24 +9187,11 @@
 			)
 			(justify left)
 		)
-		(uuid "4df9ce8f-1da4-4239-92b2-bb0c13457a01")
+		(uuid "485ed96f-7436-4a9f-a7a6-7fcd7f8577ce")
 	)
-	(hierarchical_label "AN5"
-		(shape input)
-		(at 62.23 86.36 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify right)
-		)
-		(uuid "4fccd4de-ecd9-4db7-b8d4-12ec98db2715")
-	)
-	(hierarchical_label "RXD"
+	(hierarchical_label "MCU_TXD"
 		(shape output)
-		(at 194.31 146.05 0)
+		(at 113.03 120.65 0)
 		(effects
 			(font
 				(face "Consolas")
@@ -7053,122 +9199,11 @@
 			)
 			(justify left)
 		)
-		(uuid "5a04e2c5-2094-433f-9c53-97a124c07ef4")
+		(uuid "632d3047-8ec2-4965-96fc-c8b2619e589c")
 	)
-	(hierarchical_label "AN3"
-		(shape input)
-		(at 113.03 40.64 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "5a3905f0-7527-4f64-9a0d-22ac746afd32")
-	)
-	(hierarchical_label "AN1"
+	(hierarchical_label "PGD_SCL"
 		(shape output)
-		(at 160.02 135.89 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify right)
-		)
-		(uuid "5d8450ca-20e8-4638-89bb-809fb92a78c8")
-	)
-	(hierarchical_label "~{CS}"
-		(shape output)
-		(at 62.23 90.17 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "5dfe2f04-f0c9-4414-a7df-011c299c5416")
-	)
-	(hierarchical_label "~{CS}"
-		(shape input)
-		(at 194.31 118.11 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "61f98665-443e-44a0-a730-817fa9518346")
-	)
-	(hierarchical_label "SDI"
-		(shape output)
-		(at 194.31 113.03 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "622a9416-b441-4cde-8453-b68dc1ea10bd")
-	)
-	(hierarchical_label "T0CKI"
-		(shape output)
-		(at 194.31 140.97 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "624b6841-eaf0-4408-ac89-68f37203466b")
-	)
-	(hierarchical_label "INT1"
-		(shape input)
-		(at 113.03 63.5 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "781fa711-abf2-45c3-825e-426b21a1cef6")
-	)
-	(hierarchical_label "RD0"
-		(shape bidirectional)
-		(at 62.23 52.07 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "7c7b6f65-ac74-4428-8e31-5831b6235168")
-	)
-	(hierarchical_label "PWM2"
-		(shape input)
-		(at 194.31 120.65 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "7e5e4c12-6dbf-47c4-9549-3963c9db868f")
-	)
-	(hierarchical_label "PGD{slash}UART_TX_SEL"
-		(shape bidirectional)
-		(at 113.03 86.36 0)
+		(at 142.24 86.36 0)
 		(effects
 			(font
 				(face "Consolas")
@@ -7178,9 +9213,9 @@
 		)
 		(uuid "835c0e55-1ac1-4d11-a9fb-57091a7c143e")
 	)
-	(hierarchical_label "PWM1"
+	(hierarchical_label "MCU_TXD"
 		(shape output)
-		(at 113.03 105.41 0)
+		(at 208.28 143.51 0)
 		(effects
 			(font
 				(face "Consolas")
@@ -7188,23 +9223,11 @@
 			)
 			(justify left)
 		)
-		(uuid "8d06a7ad-16bd-478d-8e1f-783e87e09e28")
+		(uuid "860ae4b4-e266-4d1a-86bd-c5004dad607c")
 	)
-	(hierarchical_label "GPIO"
-		(shape output)
-		(at 62.23 93.98 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "8d699b00-8f87-4329-820a-de02db5d0785")
-	)
-	(hierarchical_label "SCLK"
-		(shape input)
-		(at 194.31 110.49 0)
+	(hierarchical_label "PGC_SDA"
+		(shape bidirectional)
+		(at 194.31 102.87 0)
 		(effects
 			(font
 				(face "Consolas")
@@ -7212,20 +9235,7 @@
 			)
 			(justify left)
 		)
-		(uuid "8dcca6d6-1bdb-4d64-9e54-8794e94a3c49")
-	)
-	(hierarchical_label "T0CKI"
-		(shape input)
-		(at 113.03 44.45 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "93b319dd-feb6-49ae-9663-3358fc6ff762")
+		(uuid "8c331da4-8194-421b-a20c-095094841816")
 	)
 	(hierarchical_label "~{MCLR}"
 		(shape output)
@@ -7239,69 +9249,8 @@
 		)
 		(uuid "98628f60-7155-41b8-ad55-ccf886dea635")
 	)
-	(hierarchical_label "SCLK"
+	(hierarchical_label "PGD_SCL"
 		(shape output)
-		(at 113.03 78.74 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "9a7a2d38-6bf9-4e6a-9055-29cd5a4eac73")
-	)
-	(hierarchical_label "RD3"
-		(shape bidirectional)
-		(at 166.37 49.53 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "9e6d61ad-4976-4639-98d2-dc6d7a4fd8d6")
-	)
-	(hierarchical_label "PWM1"
-		(shape input)
-		(at 194.31 123.19 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "9f5ee402-42e7-4a9e-815a-f439fdba8c44")
-	)
-	(hierarchical_label "AN2"
-		(shape input)
-		(at 113.03 36.83 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "9f715511-ee83-4334-9e02-dbadb52e84bb")
-	)
-	(hierarchical_label "TXD"
-		(shape input)
-		(at 194.31 143.51 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "a3e1df67-486a-4bf9-b517-6c1f039aa8a1")
-	)
-	(hierarchical_label "SCL"
-		(shape input)
 		(at 194.31 100.33 0)
 		(effects
 			(font
@@ -7310,282 +9259,12 @@
 			)
 			(justify left)
 		)
-		(uuid "a80da97b-973f-451e-8d29-84e9aec1b6b2")
-	)
-	(hierarchical_label "T1CKI"
-		(shape output)
-		(at 194.31 138.43 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "a92ab9ed-3bba-4180-a5b0-77d5a24766e1")
-	)
-	(hierarchical_label "RD6"
-		(shape bidirectional)
-		(at 166.37 26.67 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "b338eefd-ae8b-4ac0-8d10-0cb40e8b8178")
-	)
-	(hierarchical_label "AN1"
-		(shape input)
-		(at 113.03 33.02 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "b377299a-3a4a-4b34-8fab-16ca5eb63e1f")
-	)
-	(hierarchical_label "INT2"
-		(shape input)
-		(at 113.03 67.31 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "b39a3c0c-d8ba-4a20-9dd7-c9bdccc49c1a")
-	)
-	(hierarchical_label "GPIO"
-		(shape input)
-		(at 194.31 135.89 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "b414707b-8fed-49b5-8dd8-d4286dddb68f")
-	)
-	(hierarchical_label "AN4"
-		(shape output)
-		(at 160.02 143.51 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify right)
-		)
-		(uuid "b467d54f-cd4a-40bb-ac98-fcfa8a920e1e")
-	)
-	(hierarchical_label "SDI"
-		(shape input)
-		(at 113.03 74.93 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "b5812da1-0977-4f7a-a332-f18bca90649b")
-	)
-	(hierarchical_label "SDA"
-		(shape bidirectional)
-		(at 227.33 120.65 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "bb438b11-972d-42f6-9f80-319b3cde994e")
-	)
-	(hierarchical_label "AN4"
-		(shape input)
-		(at 113.03 48.26 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "bf5835eb-0169-4fd6-9a90-5aad19be94b0")
-	)
-	(hierarchical_label "RD4"
-		(shape bidirectional)
-		(at 62.23 67.31 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "c23d5f43-c47c-45ac-b8f3-dda97d70d30d")
-	)
-	(hierarchical_label "AN0"
-		(shape input)
-		(at 113.03 29.21 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify left)
-		)
-		(uuid "c29678fd-c9ac-444f-89cf-e8d6102c2374")
-	)
-	(hierarchical_label "RD7"
-		(shape bidirectional)
-		(at 166.37 19.05 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "c2beb9c7-8e8f-43ea-8910-b28d773a5f3d")
-	)
-	(hierarchical_label "SCL"
-		(shape input)
-		(at 227.33 101.6 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "c663afa8-7c5d-4fdb-9ebe-edb395c9cadc")
-	)
-	(hierarchical_label "AN5"
-		(shape output)
-		(at 160.02 146.05 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-				(thickness 0.254)
-			)
-			(justify right)
-		)
-		(uuid "c71e2d80-1569-4f6d-b1e5-a4ed615c33ca")
-	)
-	(hierarchical_label "RD1"
-		(shape bidirectional)
-		(at 62.23 55.88 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "d4a3c712-a908-4d7f-acf8-56a4a5a667c7")
-	)
-	(hierarchical_label "RD3"
-		(shape bidirectional)
-		(at 62.23 63.5 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "d7c4dc00-8db0-4d2d-b8b8-fcb4b15371ce")
-	)
-	(hierarchical_label "RD2"
-		(shape bidirectional)
-		(at 166.37 57.15 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "d881630d-82af-476d-8d6c-d3003e95e408")
-	)
-	(hierarchical_label "RD4"
-		(shape bidirectional)
-		(at 166.37 41.91 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "dfc1c56f-147a-4d51-87d4-90f95dd56551")
-	)
-	(hierarchical_label "RD5"
-		(shape bidirectional)
-		(at 166.37 34.29 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "e544fee6-1e7a-4221-868f-428f9f9be8e3")
-	)
-	(hierarchical_label "RXD_MCU"
-		(shape input)
-		(at 113.03 124.46 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "e9737d51-1516-460c-a204-b672186e27a8")
-	)
-	(hierarchical_label "RD6"
-		(shape bidirectional)
-		(at 62.23 74.93 180)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify right)
-		)
-		(uuid "f289c8a0-86a4-4f2d-a15e-b760fc9b074d")
-	)
-	(hierarchical_label "~{UBT}"
-		(shape input)
-		(at 113.03 71.12 0)
-		(effects
-			(font
-				(face "Consolas")
-				(size 1.016 1.016)
-			)
-			(justify left)
-		)
-		(uuid "f6e4e836-f6ec-4261-aeec-c7dd570967a0")
+		(uuid "9ddf6c65-ba7c-445e-a80d-91a2c6e773a5")
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:CAP_CER")
-		(at 51.435 115.57 0)
-		(mirror y)
+		(lib_id "SAMPI:CERCAP")
+		(at 58.42 114.3 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7595,7 +9274,7 @@
 		(dnp no)
 		(uuid "04849696-722b-4a5b-8237-423e7970515e")
 		(property "Reference" "C20"
-			(at 48.895 114.2999 0)
+			(at 55.88 114.935 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7604,11 +9283,11 @@
 					(size 1.27 1.27)
 					(bold yes)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "100nF"
-			(at 48.895 116.84 0)
+			(at 55.88 117.4751 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7616,11 +9295,11 @@
 					(face "Consolas")
 					(size 1.016 1.016)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "SAMPI:CAP0603"
-			(at 51.435 115.57 0)
+			(at 58.42 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7632,7 +9311,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 51.435 115.57 0)
+			(at 58.42 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7644,7 +9323,7 @@
 			)
 		)
 		(property "Description" "CAP CER 0.1UF 50V X7R 0603"
-			(at 51.435 102.87 0)
+			(at 45.72 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7656,7 +9335,7 @@
 			)
 		)
 		(property "MFT" "Samsung"
-			(at 51.435 115.57 0)
+			(at 58.42 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7669,7 +9348,7 @@
 			)
 		)
 		(property "MNP" "CL10B104KB8NNNC"
-			(at 51.435 115.57 0)
+			(at 58.42 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7791,7 +9470,7 @@
 		(dnp no)
 		(uuid "08f61622-6181-48e9-8c33-afa4e6a47960")
 		(property "Reference" "MD1"
-			(at 177.165 95.25 0)
+			(at 163.83 97.155 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7803,7 +9482,7 @@
 			)
 		)
 		(property "Value" "ARDUINO-UNO-R3"
-			(at 177.165 97.155 0)
+			(at 186.055 97.155 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7985,8 +9664,121 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 241.3 96.52 0)
+		(lib_id "SAMPI:CERCAP")
+		(at 46.99 154.94 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0e62702a-44b5-4ca8-8f63-85ef2d2de558")
+		(property "Reference" "C21"
+			(at 51.435 152.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10uF"
+			(at 51.435 154.9401 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SAMPI:CAP0603"
+			(at 46.99 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "CAP CER 10UF 6.3V X5R 0603"
+			(at 34.29 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Samsung"
+			(at 46.99 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "CL10A106MQ8NNNC"
+			(at 46.99 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "4117c4c2-0c8c-44f7-8ff6-9512c94d6712")
+		)
+		(pin "1"
+			(uuid "112500c3-6fc0-4902-b86e-55cde5ba94c1")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 60.96 160.02 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -7995,9 +9787,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1bbe49f2-a06e-48f2-a7f0-d76f347aaedf")
-		(property "Reference" "R28"
-			(at 243.205 95.25 0)
+		(uuid "146c57a6-ba4d-4b54-9ec9-08030fd1a2c6")
+		(property "Reference" "#PWR057"
+			(at 60.96 166.37 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8006,11 +9799,10 @@
 					(size 1.27 1.27)
 					(bold yes)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "5.1K, 1%"
-			(at 243.205 97.79 0)
+		(property "Value" "GND"
+			(at 60.96 163.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8018,11 +9810,10 @@
 					(face "Consolas")
 					(size 1.016 1.016)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "SAMPI:RES0603"
-			(at 241.3 96.774 90)
+		(property "Footprint" ""
+			(at 60.96 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8034,7 +9825,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 96.774 90)
+			(at 60.96 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8045,8 +9836,8 @@
 				)
 			)
 		)
-		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
-			(at 229.87 96.52 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 60.96 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8054,53 +9845,25 @@
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "MFT" "Yageo"
-			(at 241.3 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(property "MNP" "RC0603FR-075K1L"
-			(at 241.3 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "7c68f4f6-8325-4fcc-a46d-b5fef9ebff4a")
-		)
-		(pin "2"
-			(uuid "fd5e87c4-1342-48eb-a59d-c6eb40da3716")
+			(uuid "48ea642a-9535-4c8b-b602-b65f8c0893bc")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R28")
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 228.6 115.57 0)
+		(lib_id "SAMPI:RES")
+		(at 199.39 69.85 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8108,9 +9871,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1cb6540f-764c-459f-920d-76fce534a08f")
-		(property "Reference" "R21"
-			(at 226.695 114.3 0)
+		(uuid "15c83d2c-148f-4056-a968-d08c1e837d5a")
+		(property "Reference" "R17"
+			(at 200.025 70.485 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8119,11 +9882,11 @@
 					(size 1.27 1.27)
 					(bold yes)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "5.1K, 1%"
-			(at 226.695 116.84 0)
+		(property "Value" "1K"
+			(at 200.025 74.295 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8131,11 +9894,11 @@
 					(face "Consolas")
 					(size 1.016 1.016)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 228.6 115.824 90)
+			(at 199.39 70.104 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8147,7 +9910,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 115.824 90)
+			(at 199.39 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8158,8 +9921,8 @@
 				)
 			)
 		)
-		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
-			(at 240.03 115.57 0)
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
+			(at 187.96 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8171,7 +9934,238 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 228.6 115.57 0)
+			(at 199.39 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 199.39 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "282955e6-fff1-461f-a1c7-ab117f82b218")
+		)
+		(pin "1"
+			(uuid "6907e307-14d6-42df-9b15-727e7ba6472f")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:MCP9700-SOT23")
+		(at 72.39 142.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1c9c3f4b-072d-4cbc-8fe2-c9392eb14b91")
+		(property "Reference" "U6"
+			(at 72.39 145.415 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 72.39 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SAMPI:SOT23"
+			(at 72.39 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "SENSOR ANALOG -40C-125C SOT23-3"
+			(at 72.39 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MNP" "MCP9700AT-E/TT"
+			(at 72.39 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MFT" "Microchip"
+			(at 72.39 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "10mV/°C"
+			(at 74.93 156.845 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3ad64314-8a48-4188-ba9b-df1a0f598045")
+		)
+		(pin "1"
+			(uuid "c6dd9adc-19c8-4017-9bf7-3c17ccb2efab")
+		)
+		(pin "3"
+			(uuid "51b78541-700f-40f0-83c7-7648f56704d6")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:RES")
+		(at 243.84 116.84 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "20c5e3e2-6a0f-4138-b43f-ff2fab3f63c7")
+		(property "Reference" "R23"
+			(at 242.57 114.3 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.1K"
+			(at 242.57 116.84 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 243.586 116.84 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
+			(at 243.84 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 243.84 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8184,7 +10178,7 @@
 			)
 		)
 		(property "MNP" "RC0603FR-075K1L"
-			(at 228.6 115.57 0)
+			(at 243.84 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8197,15 +10191,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "5118050e-4050-41c5-80e6-04e70a6410aa")
+			(uuid "805afdb6-a87f-4c13-930d-ca429ff80ee2")
 		)
 		(pin "2"
-			(uuid "6a602193-4f64-4e81-abb0-d690af8c0c67")
+			(uuid "f68dd0fb-1ea1-4436-ba50-5aa088e4f93c")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R21")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -8213,7 +10207,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 34.29 106.68 90)
+		(at 48.26 106.68 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8223,7 +10217,7 @@
 		(dnp no)
 		(uuid "211058c5-85f8-4670-874e-a2996300b64a")
 		(property "Reference" "#PWR054"
-			(at 38.1 106.68 0)
+			(at 52.07 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8236,7 +10230,7 @@
 			)
 		)
 		(property "Value" "+VDDTG"
-			(at 31.115 106.68 90)
+			(at 45.085 106.68 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8248,7 +10242,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 34.29 106.68 0)
+			(at 48.26 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8260,7 +10254,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.29 106.68 0)
+			(at 48.26 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8272,7 +10266,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 34.29 106.68 0)
+			(at 48.26 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8381,8 +10375,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 228.6 96.52 0)
+		(lib_id "power:+3.3V")
+		(at 140.97 73.66 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8390,9 +10384,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "249e354f-ccdf-4093-9466-58b2afcf5239")
-		(property "Reference" "R22"
-			(at 226.695 95.25 0)
+		(uuid "232678c3-8ec0-46e4-a84d-dfa4bbf0a929")
+		(property "Reference" "#PWR020"
+			(at 140.97 77.47 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8401,11 +10396,10 @@
 					(size 1.27 1.27)
 					(bold yes)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "5.1K, 1%"
-			(at 226.695 97.79 0)
+		(property "Value" "+VDDTG"
+			(at 140.97 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8413,11 +10407,10 @@
 					(face "Consolas")
 					(size 1.016 1.016)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "SAMPI:RES0603"
-			(at 228.6 96.774 90)
+		(property "Footprint" ""
+			(at 140.97 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8429,7 +10422,91 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 96.774 90)
+			(at 140.97 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 140.97 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "35af7bbd-3abb-431d-a8f6-d6cb97fb7562")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:RES")
+		(at 226.06 97.79 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "249e354f-ccdf-4093-9466-58b2afcf5239")
+		(property "Reference" "R22"
+			(at 227.33 95.25 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.1K"
+			(at 227.33 97.79 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 226.314 97.79 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8441,7 +10518,7 @@
 			)
 		)
 		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
-			(at 240.03 96.52 0)
+			(at 226.06 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8453,7 +10530,7 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 228.6 96.52 0)
+			(at 226.06 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8466,7 +10543,7 @@
 			)
 		)
 		(property "MNP" "RC0603FR-075K1L"
-			(at 228.6 96.52 0)
+			(at 226.06 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8494,8 +10571,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:CAP_CER")
-		(at 45.72 36.83 90)
+		(lib_id "SAMPI:CERCAP")
+		(at 46.99 39.37 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8505,7 +10582,7 @@
 		(dnp no)
 		(uuid "278a7f91-7a45-497c-a373-af1cccc1adc7")
 		(property "Reference" "C15"
-			(at 45.72 31.75 90)
+			(at 43.18 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8517,7 +10594,7 @@
 			)
 		)
 		(property "Value" "22pF"
-			(at 45.72 34.29 90)
+			(at 48.26 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8528,7 +10605,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:CAP0603"
-			(at 45.72 36.83 0)
+			(at 46.99 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8540,7 +10617,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 36.83 0)
+			(at 46.99 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8552,7 +10629,7 @@
 			)
 		)
 		(property "Description" "CAP CER 22PF 50V C0G/NP0 0603"
-			(at 33.02 36.83 0)
+			(at 46.99 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8564,7 +10641,7 @@
 			)
 		)
 		(property "MFT" "Walsin"
-			(at 45.72 36.83 0)
+			(at 46.99 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8577,7 +10654,7 @@
 			)
 		)
 		(property "MNP" "0603N220J500CT"
-			(at 45.72 36.83 0)
+			(at 46.99 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8780,7 +10857,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 44.45 93.98 0)
+		(at 49.53 93.98 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -8791,7 +10868,7 @@
 		(dnp no)
 		(uuid "35e7508d-346a-4536-a7f3-0bed3e070868")
 		(property "Reference" "#PWR050"
-			(at 44.45 100.33 0)
+			(at 49.53 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8804,7 +10881,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.45 97.79 0)
+			(at 49.53 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8815,7 +10892,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 93.98 0)
+			(at 49.53 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8827,7 +10904,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 93.98 0)
+			(at 49.53 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8839,7 +10916,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 44.45 93.98 0)
+			(at 49.53 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8863,9 +10940,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 198.12 19.05 270)
-		(mirror x)
+		(lib_id "SAMPI:RES")
+		(at 199.39 16.51 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8875,7 +10952,7 @@
 		(dnp no)
 		(uuid "36eda04c-33e2-45eb-9106-01c6735c7e36")
 		(property "Reference" "R11"
-			(at 196.5325 16.1926 90)
+			(at 200.025 17.145 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8887,8 +10964,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
-			(at 196.215 21.59 90)
+		(property "Value" "1K"
+			(at 199.39 20.955 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8900,7 +10977,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 197.866 19.05 90)
+			(at 199.39 16.764 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8912,7 +10989,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 197.866 19.05 90)
+			(at 199.39 16.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8924,7 +11001,7 @@
 			)
 		)
 		(property "Description" "RES 330R OHM 5% 1/10W 0603"
-			(at 198.12 7.62 0)
+			(at 187.96 16.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8936,7 +11013,7 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 198.12 19.05 0)
+			(at 199.39 16.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8949,7 +11026,7 @@
 			)
 		)
 		(property "MNP" "RC0603JR-07330RL"
-			(at 198.12 19.05 0)
+			(at 199.39 16.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8977,9 +11054,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 198.12 72.39 270)
-		(mirror x)
+		(lib_id "SAMPI:RES")
+		(at 199.39 46.99 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8987,9 +11064,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "3bc8b810-3a21-465b-9b55-512b91db0384")
-		(property "Reference" "R20"
-			(at 196.5325 69.5326 90)
+		(uuid "38c72ae8-6a67-4cdf-871c-3610420902bf")
+		(property "Reference" "R14"
+			(at 200.025 47.625 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9001,8 +11078,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
-			(at 196.215 74.93 90)
+		(property "Value" "1K"
+			(at 199.39 51.435 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9014,7 +11091,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 197.866 72.39 90)
+			(at 199.39 47.244 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9026,7 +11103,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 197.866 72.39 90)
+			(at 199.39 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9038,7 +11115,7 @@
 			)
 		)
 		(property "Description" "RES 330R OHM 5% 1/10W 0603"
-			(at 198.12 60.96 0)
+			(at 187.96 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9050,7 +11127,7 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 198.12 72.39 0)
+			(at 199.39 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9063,7 +11140,7 @@
 			)
 		)
 		(property "MNP" "RC0603JR-07330RL"
-			(at 198.12 72.39 0)
+			(at 199.39 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9076,15 +11153,129 @@
 			)
 		)
 		(pin "2"
-			(uuid "f57fa5f1-d82c-4337-a51b-b84f8636eb12")
+			(uuid "854d9efa-e6ee-499a-b15d-15a493a62e74")
 		)
 		(pin "1"
-			(uuid "b89704f3-b2e1-4f1f-bc5c-8b37661c0525")
+			(uuid "9f226934-94a5-485c-9035-620e6adcb521")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R20")
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:RES")
+		(at 243.84 97.79 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3a1a0ca6-a919-4434-b199-8862a747952c")
+		(property "Reference" "R21"
+			(at 242.57 95.25 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.1K"
+			(at 242.57 97.79 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 243.586 97.79 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
+			(at 243.84 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 243.84 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603FR-075K1L"
+			(at 243.84 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c07da0d8-9c7e-4523-a1de-3729c27654ec")
+		)
+		(pin "2"
+			(uuid "ae6d0c71-57cc-4de7-bae3-6cd24f9f2286")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -9287,9 +11478,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 198.12 57.15 270)
-		(mirror x)
+		(lib_id "SAMPI:RES")
+		(at 203.2 143.51 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9297,9 +11487,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "46c307f9-6ed6-4a5c-a0f5-7da7532cf0c0")
-		(property "Reference" "R16"
-			(at 196.5325 54.2926 90)
+		(uuid "476a02f9-007b-44e4-a107-d4d541ace539")
+		(property "Reference" "R32"
+			(at 200.66 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9312,7 +11502,7 @@
 			)
 		)
 		(property "Value" "330R"
-			(at 196.215 59.69 90)
+			(at 205.74 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9324,7 +11514,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 197.866 57.15 90)
+			(at 203.2 143.764 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9336,7 +11526,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 197.866 57.15 90)
+			(at 203.2 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9348,7 +11538,7 @@
 			)
 		)
 		(property "Description" "RES 330R OHM 5% 1/10W 0603"
-			(at 198.12 45.72 0)
+			(at 214.63 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9360,7 +11550,7 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 198.12 57.15 0)
+			(at 203.2 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9373,7 +11563,7 @@
 			)
 		)
 		(property "MNP" "RC0603JR-07330RL"
-			(at 198.12 57.15 0)
+			(at 203.2 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9386,129 +11576,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "45bc4f13-ac57-46ec-8a50-e962e36633f6")
+			(uuid "771bf511-3462-4970-8985-93abe965c6ab")
 		)
 		(pin "1"
-			(uuid "b543a7b4-1e6a-4b8c-97ba-4e5288630a9c")
+			(uuid "776c4bb8-6325-4ede-b98e-344c7a2c0b68")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Triet_KiCAD_Sym:CAP_CER")
-		(at 54.61 115.57 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "486aea5f-c62e-4406-96e1-a206712332cb")
-		(property "Reference" "C21"
-			(at 57.15 114.2999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF"
-			(at 57.15 116.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "SAMPI:CAP0603"
-			(at 54.61 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 54.61 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Description" "CAP CER 10UF 6.3V X5R 0603"
-			(at 54.61 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "MFT" "Samsung"
-			(at 54.61 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(property "MNP" "CL10A106MQ8NNNC"
-			(at 54.61 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "095771ef-8795-4878-b365-07754d7d322b")
-		)
-		(pin "2"
-			(uuid "5b76957d-dce8-4151-b23c-b1c85b7dd20d")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "C21")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -9516,7 +11592,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 39.37 76.2 0)
+		(at 44.45 76.2 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -9527,7 +11603,7 @@
 		(dnp no)
 		(uuid "4946730c-3539-4028-ade2-191386b65d12")
 		(property "Reference" "#PWR047"
-			(at 39.37 80.01 0)
+			(at 44.45 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9540,7 +11616,7 @@
 			)
 		)
 		(property "Value" "+VDDTG"
-			(at 39.37 72.39 0)
+			(at 44.45 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9551,7 +11627,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 39.37 76.2 0)
+			(at 44.45 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9563,7 +11639,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 76.2 0)
+			(at 44.45 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9575,7 +11651,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 39.37 76.2 0)
+			(at 44.45 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9599,6 +11675,7 @@
 		)
 	)
 	(symbol
+		(lib_name "FET_N-CH_1")
 		(lib_id "SAMPI:FET_N-CH")
 		(at 231.14 116.84 90)
 		(mirror x)
@@ -9611,7 +11688,7 @@
 		(dnp no)
 		(uuid "4dbdc2a6-6305-4a00-ab90-b8bb947dc468")
 		(property "Reference" "Q7"
-			(at 234.315 114.935 90)
+			(at 234.95 115.57 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9625,6 +11702,7 @@
 		)
 		(property "Value" "SI2302"
 			(at 234.95 116.84 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9714,6 +11792,89 @@
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
 					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 133.35 73.66 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4f015c3c-13c0-4e7a-b1e6-5feb94d933ce")
+		(property "Reference" "#PWR071"
+			(at 133.35 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "+VDDTG"
+			(at 133.35 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 133.35 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a364d3e3-434e-4f76-be1e-f0119342c06e")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -9893,7 +12054,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 39.37 93.98 0)
+		(at 49.53 157.48 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -9902,9 +12063,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5b8d9e81-952e-4767-863b-607a0b0fa77c")
-		(property "Reference" "#PWR051"
-			(at 39.37 100.33 0)
+		(uuid "5201b093-c000-4ce8-9737-08ff1ea8e659")
+		(property "Reference" "#PWR031"
+			(at 49.53 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9917,7 +12078,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 39.37 97.79 0)
+			(at 49.53 161.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9928,7 +12089,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 39.37 93.98 0)
+			(at 49.53 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9940,7 +12101,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 93.98 0)
+			(at 49.53 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9952,7 +12113,204 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 39.37 93.98 0)
+			(at 49.53 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fe9e7592-caf5-4898-aecc-881997079753")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:RES")
+		(at 226.06 116.84 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "538ad2ca-1f0a-4bd1-9825-f850319cc005")
+		(property "Reference" "R20"
+			(at 227.33 114.3 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.1K"
+			(at 227.33 116.84 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 226.314 116.84 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
+			(at 226.06 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 226.06 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603FR-075K1L"
+			(at 226.06 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c243e042-3445-4e48-8c1d-bac3c6fd013e")
+		)
+		(pin "2"
+			(uuid "9a09ae5b-e009-4c3d-a5ff-36c34e0cc3d0")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 44.45 93.98 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5b8d9e81-952e-4767-863b-607a0b0fa77c")
+		(property "Reference" "#PWR051"
+			(at 44.45 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 44.45 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 44.45 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10060,9 +12418,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 39.37 80.01 0)
-		(mirror y)
+		(lib_id "SAMPI:RES")
+		(at 41.91 78.74 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10072,7 +12430,7 @@
 		(dnp no)
 		(uuid "5ccd914e-31bd-4885-a1f1-775611ad47b7")
 		(property "Reference" "R18"
-			(at 36.83 78.7399 0)
+			(at 40.005 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10081,11 +12439,11 @@
 					(size 1.27 1.27)
 					(bold yes)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "10K"
-			(at 36.83 81.28 0)
+			(at 40.64 81.28 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10093,11 +12451,11 @@
 					(face "Consolas")
 					(size 1.016 1.016)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 39.37 80.264 90)
+			(at 42.164 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10109,7 +12467,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 80.264 90)
+			(at 41.91 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10121,7 +12479,7 @@
 			)
 		)
 		(property "Description" "RES 10K OHM 5% 1/10W 0603"
-			(at 27.94 80.01 0)
+			(at 41.91 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10133,7 +12491,7 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 39.37 80.01 0)
+			(at 41.91 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10146,7 +12504,7 @@
 			)
 		)
 		(property "MNP" "RC0603JR-0710KL"
-			(at 39.37 80.01 0)
+			(at 41.91 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10258,8 +12616,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 241.3 115.57 0)
+		(lib_id "SAMPI:RES")
+		(at 199.39 62.23 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10268,123 +12626,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5f45e9f5-7726-4f61-b975-d81ed0e814cc")
-		(property "Reference" "R30"
-			(at 243.205 114.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "5.1K, 1%"
-			(at 243.205 116.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "SAMPI:RES0603"
-			(at 241.3 115.824 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 241.3 115.824 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
-			(at 229.87 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "MFT" "Yageo"
-			(at 241.3 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(property "MNP" "RC0603FR-075K1L"
-			(at 241.3 115.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f0361098-1c57-4f6c-8f30-9bca5ed33f8d")
-		)
-		(pin "2"
-			(uuid "c873e4cc-83d7-46fa-a1f6-3ac3ac79c1c4")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 198.12 49.53 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5fee0c1a-3f08-4a51-8fcc-4511e2714151")
-		(property "Reference" "R15"
-			(at 196.5325 46.6726 90)
+		(uuid "5e99f778-acb5-4b53-b474-398ae7305928")
+		(property "Reference" "R16"
+			(at 200.025 62.865 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10396,8 +12640,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
-			(at 196.215 52.07 90)
+		(property "Value" "1K"
+			(at 199.39 66.675 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10409,7 +12653,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 197.866 49.53 90)
+			(at 199.39 62.484 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10421,7 +12665,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 197.866 49.53 90)
+			(at 199.39 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10433,7 +12677,7 @@
 			)
 		)
 		(property "Description" "RES 330R OHM 5% 1/10W 0603"
-			(at 198.12 38.1 0)
+			(at 187.96 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10445,7 +12689,7 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 198.12 49.53 0)
+			(at 199.39 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10458,7 +12702,7 @@
 			)
 		)
 		(property "MNP" "RC0603JR-07330RL"
-			(at 198.12 49.53 0)
+			(at 199.39 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10471,15 +12715,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "2d99a35e-3ce1-4913-b8db-f1669deb33c0")
+			(uuid "19189bd1-110b-4219-adaa-05625590525f")
 		)
 		(pin "1"
-			(uuid "5bf3808c-22cd-40fd-89b0-4e2b4ac8a976")
+			(uuid "f1e0ae00-507d-445d-90f8-143c51e10c01")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R15")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -10598,9 +12842,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 198.12 26.67 270)
-		(mirror x)
+		(lib_id "SAMPI:RES")
+		(at 203.2 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10608,9 +12851,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "62db82c8-3f80-4cd1-85af-d9bb98312ca7")
-		(property "Reference" "R12"
-			(at 196.5325 23.8126 90)
+		(uuid "6767ea54-e632-45f1-adb8-c9a4bef42df8")
+		(property "Reference" "R31"
+			(at 200.66 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10623,7 +12866,7 @@
 			)
 		)
 		(property "Value" "330R"
-			(at 196.215 29.21 90)
+			(at 205.74 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10635,7 +12878,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 197.866 26.67 90)
+			(at 203.2 141.224 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10647,7 +12890,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 197.866 26.67 90)
+			(at 203.2 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10659,7 +12902,7 @@
 			)
 		)
 		(property "Description" "RES 330R OHM 5% 1/10W 0603"
-			(at 198.12 15.24 0)
+			(at 214.63 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10671,7 +12914,7 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 198.12 26.67 0)
+			(at 203.2 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10684,7 +12927,7 @@
 			)
 		)
 		(property "MNP" "RC0603JR-07330RL"
-			(at 198.12 26.67 0)
+			(at 203.2 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10697,129 +12940,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "48a6c14b-4ee5-487d-876c-736a7fd629de")
+			(uuid "73983ffb-f733-49d1-a46d-33983efe2439")
 		)
 		(pin "1"
-			(uuid "3bd06edd-bcac-4fde-a528-1ad334826bc7")
+			(uuid "8d6ee634-885e-4edd-8d38-3e5dd5380323")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 198.12 64.77 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "63dba89b-551a-41a7-af0d-38e34b89c0e6")
-		(property "Reference" "R17"
-			(at 196.5325 61.9126 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "330R"
-			(at 196.215 67.31 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "SAMPI:RES0603"
-			(at 197.866 64.77 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 197.866 64.77 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Description" "RES 330R OHM 5% 1/10W 0603"
-			(at 198.12 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "MFT" "Yageo"
-			(at 198.12 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(property "MNP" "RC0603JR-07330RL"
-			(at 198.12 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "7ddb095c-2544-4488-8d76-f6f546fc20ec")
-		)
-		(pin "1"
-			(uuid "7a38780c-a16a-4f3b-b1a7-3ac6233f998f")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R17")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -10938,6 +13067,90 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 68.58 154.94 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "72f0f935-f20c-4d32-ade5-64e3dc562bb1")
+		(property "Reference" "#PWR058"
+			(at 68.58 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 68.58 158.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 68.58 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44fab6b4-e318-4c3f-8d27-1c1e59332c13")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR058")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "LED_6")
 		(lib_id "Triet_KiCAD_Sym:LED")
 		(at 190.5 49.53 0)
@@ -11050,8 +13263,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:CAP_CER")
-		(at 38.735 115.57 0)
+		(lib_id "SAMPI:RES")
+		(at 130.81 76.2 90)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11059,10 +13273,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "798e46e2-56a8-4595-a5d7-a118ae91130d")
-		(property "Reference" "C19"
-			(at 41.275 114.2999 0)
+		(uuid "7411628e-4883-4060-a775-07599cca38b5")
+		(property "Reference" "R27"
+			(at 135.255 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11071,11 +13284,11 @@
 					(size 1.27 1.27)
 					(bold yes)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "10uF"
-			(at 41.275 116.84 0)
+		(property "Value" "5.1K"
+			(at 135.255 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11083,11 +13296,11 @@
 					(face "Consolas")
 					(size 1.016 1.016)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "SAMPI:CAP0603"
-			(at 38.735 115.57 0)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 131.064 76.2 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11099,7 +13312,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.735 115.57 0)
+			(at 130.81 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11110,8 +13323,8 @@
 				)
 			)
 		)
-		(property "Description" "CAP CER 10UF 6.3V X5R 0603"
-			(at 38.735 102.87 0)
+		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
+			(at 130.81 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11122,8 +13335,8 @@
 				)
 			)
 		)
-		(property "MFT" "Samsung"
-			(at 38.735 115.57 0)
+		(property "MFT" "Yageo"
+			(at 130.81 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11135,8 +13348,8 @@
 				)
 			)
 		)
-		(property "MNP" "CL10A106MQ8NNNC"
-			(at 38.735 115.57 0)
+		(property "MNP" "RC0603FR-075K1L"
+			(at 130.81 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11149,15 +13362,129 @@
 			)
 		)
 		(pin "1"
-			(uuid "b7ad47e8-9988-45b9-b9ef-b4a737a0867f")
+			(uuid "5c757485-06cc-449b-b490-036336320390")
 		)
 		(pin "2"
-			(uuid "b4db1f9a-882f-4874-b1a0-1dd74ea9ffb9")
+			(uuid "6de0667d-a5dd-4b4f-92e2-ce9bed0022b8")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "C19")
+					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:RES")
+		(at 199.39 24.13 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7b2a3b4e-fda9-41e7-abe3-b06edefe97fd")
+		(property "Reference" "R9"
+			(at 200.025 24.765 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1K"
+			(at 199.39 28.575 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 199.39 24.384 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
+			(at 187.96 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 199.39 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 199.39 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a381fe0c-1c29-440d-a3fb-eb27c838bee1")
+		)
+		(pin "1"
+			(uuid "8c9a14ad-9291-4bfe-b337-1000d2d9b0be")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -11248,6 +13575,303 @@
 		)
 	)
 	(symbol
+		(lib_id "SAMPI:CDS")
+		(at 40.005 148.59 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7f1d4b4d-3e71-417b-9b93-9af9c25b7760")
+		(property "Reference" "R34"
+			(at 40.005 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.5 1.5)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 40.005 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "SAMPI:CDS-5MM"
+			(at 40.005 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.005 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "CDS PHOTORESISTOR 16-33KOHM"
+			(at 40.005 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MNP" "PDV-P8103"
+			(at 40.005 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "NFT" "Advanced Photonix"
+			(at 40.005 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "840963a2-0696-47e1-a3bd-b67eef29b330")
+		)
+		(pin "2"
+			(uuid "aab6f7bf-951e-430f-a583-67b9229c0c1e")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 49.53 139.7 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "80b76ecf-cc43-4e34-b130-4ca150279872")
+		(property "Reference" "#PWR027"
+			(at 49.53 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "+VDDTG"
+			(at 49.53 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 49.53 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f6534fec-7ac2-461b-8f74-ab414ceb3601")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:CERCAP")
+		(at 26.67 152.4 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "825b09f8-99ae-4ec1-b4c6-8914789f59f3")
+		(property "Reference" "C14"
+			(at 27.94 152.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 27.94 154.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "SAMPI:CAP0603"
+			(at 26.67 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 26.67 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "CAP CER 0.1UF 50V X7R 0603"
+			(at 39.37 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Samsung"
+			(at 26.67 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "CL10B104KB8NNNC"
+			(at 26.67 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "60f6321f-68a0-4f20-a3a5-37724e3fbea6")
+		)
+		(pin "2"
+			(uuid "3f7b7d13-77d0-4ee9-9ef2-7a3cea5126e2")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "SAMPI:XTAL-4P")
 		(at 45.72 48.26 90)
 		(unit 1)
@@ -11259,7 +13883,7 @@
 		(dnp no)
 		(uuid "85bd7586-389f-42e2-a9f1-0f7a5594b066")
 		(property "Reference" "U10"
-			(at 53.975 35.56 90)
+			(at 53.975 38.735 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11271,7 +13895,7 @@
 			)
 		)
 		(property "Value" "20MHz"
-			(at 54.61 38.1 90)
+			(at 53.975 42.545 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11369,9 +13993,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:CAP_CER")
-		(at 35.56 115.57 0)
-		(mirror y)
+		(lib_id "SAMPI:CERCAP")
+		(at 52.07 110.49 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11379,10 +14002,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "86576cb4-30af-4b07-8120-b84a58112881")
 		(property "Reference" "C18"
-			(at 33.02 114.2999 0)
+			(at 47.625 110.49 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11391,11 +14013,11 @@
 					(size 1.27 1.27)
 					(bold yes)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "100nF"
-			(at 33.02 116.84 0)
+			(at 47.625 113.03 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11403,11 +14025,11 @@
 					(face "Consolas")
 					(size 1.016 1.016)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "SAMPI:CAP0603"
-			(at 35.56 115.57 0)
+			(at 52.07 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11419,7 +14041,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 115.57 0)
+			(at 52.07 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11431,7 +14053,7 @@
 			)
 		)
 		(property "Description" "CAP CER 0.1UF 50V X7R 0603"
-			(at 35.56 102.87 0)
+			(at 64.77 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11443,7 +14065,7 @@
 			)
 		)
 		(property "MFT" "Samsung"
-			(at 35.56 115.57 0)
+			(at 52.07 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11456,7 +14078,7 @@
 			)
 		)
 		(property "MNP" "CL10B104KB8NNNC"
-			(at 35.56 115.57 0)
+			(at 52.07 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11501,7 +14123,9 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.5 1.5)
+					(face "Consolas")
+					(size 1.27 1.27)
+					(thickness 0.127)
 					(bold yes)
 				)
 				(justify left)
@@ -11513,7 +14137,8 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 				(justify left)
 			)
@@ -11525,7 +14150,8 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -11536,7 +14162,8 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -11547,7 +14174,8 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -11558,7 +14186,8 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -11569,7 +14198,8 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -11592,6 +14222,117 @@
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
 					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:CERCAP")
+		(at 63.5 154.94 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "91441ed2-43fa-4bf4-b4b8-d887cc978546")
+		(property "Reference" "C22"
+			(at 64.77 154.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 64.77 157.48 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "SAMPI:CAP0603"
+			(at 63.5 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "CAP CER 0.1UF 50V X7R 0603"
+			(at 76.2 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Samsung"
+			(at 63.5 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "CL10B104KB8NNNC"
+			(at 63.5 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7089f22b-5aad-4bac-952b-9ffcdbf22f72")
+		)
+		(pin "2"
+			(uuid "f1a2c44a-76a7-402f-ba19-84e956210eb1")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -11848,6 +14589,120 @@
 		)
 	)
 	(symbol
+		(lib_id "SAMPI:RES")
+		(at 199.39 39.37 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9dc715de-0329-407f-9bd8-10491e96af9b")
+		(property "Reference" "R13"
+			(at 200.025 40.005 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1K"
+			(at 199.39 43.815 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 199.39 39.624 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
+			(at 187.96 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 199.39 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 199.39 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "166840b6-2f4f-4e72-b9e4-bfc54372bd0f")
+		)
+		(pin "1"
+			(uuid "83f96f36-0cfa-4767-aefa-3cba32e8af82")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 60.96 128.27 0)
 		(unit 1)
@@ -12026,7 +14881,7 @@
 		(dnp no)
 		(uuid "a331cfa7-00e3-4ca1-b8f0-d7756a066807")
 		(property "Reference" "Q6"
-			(at 234.315 95.885 90)
+			(at 234.95 96.52 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12040,6 +14895,7 @@
 		)
 		(property "Value" "SI2302"
 			(at 234.95 97.79 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12330,9 +15186,9 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 198.12 34.29 270)
-		(mirror x)
+		(lib_id "SAMPI:RES")
+		(at 199.39 31.75 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12340,9 +15196,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "aa2371ab-95e7-4502-b454-5bcebbdc3497")
-		(property "Reference" "R13"
-			(at 196.5325 31.4326 90)
+		(uuid "ac87993f-c5c0-4383-baf3-ad28a37eb447")
+		(property "Reference" "R12"
+			(at 200.025 32.385 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12354,8 +15210,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
-			(at 196.215 36.83 90)
+		(property "Value" "1K"
+			(at 199.39 36.195 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12367,7 +15223,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:RES0603"
-			(at 197.866 34.29 90)
+			(at 199.39 32.004 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12379,7 +15235,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 197.866 34.29 90)
+			(at 199.39 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12391,7 +15247,7 @@
 			)
 		)
 		(property "Description" "RES 330R OHM 5% 1/10W 0603"
-			(at 198.12 22.86 0)
+			(at 187.96 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12403,7 +15259,7 @@
 			)
 		)
 		(property "MFT" "Yageo"
-			(at 198.12 34.29 0)
+			(at 199.39 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12416,7 +15272,7 @@
 			)
 		)
 		(property "MNP" "RC0603JR-07330RL"
-			(at 198.12 34.29 0)
+			(at 199.39 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12429,98 +15285,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "cc61a475-5643-45fd-9067-384569241698")
+			(uuid "7b138629-cb6e-456e-a00a-8c9a2d840c83")
 		)
 		(pin "1"
-			(uuid "e3d3eb95-2af7-40cd-9def-56257a861609")
+			(uuid "9db82b2e-4d43-4a29-85ba-c3851a3cdc19")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 51.435 119.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ac3ddf47-2bfb-4e1d-af02-82dd18edfd1f")
-		(property "Reference" "#PWR058"
-			(at 51.435 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 51.435 123.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 51.435 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 51.435 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 51.435 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c3e99efc-a956-4ffb-bfa3-81f18533bf3f")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "#PWR058")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -12606,120 +15379,6 @@
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
 					(reference "#PWR040")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Triet_KiCAD_Sym:RES")
-		(at 198.12 41.91 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b49200f6-f53f-4b27-9f8d-d8901f596479")
-		(property "Reference" "R14"
-			(at 196.5325 39.0526 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.27 1.27)
-					(bold yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "330R"
-			(at 196.215 44.45 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "SAMPI:RES0603"
-			(at 197.866 41.91 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 197.866 41.91 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Description" "RES 330R OHM 5% 1/10W 0603"
-			(at 198.12 30.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "MFT" "Yageo"
-			(at 198.12 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(property "MNP" "RC0603JR-07330RL"
-			(at 198.12 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(face "Consolas")
-					(size 1.016 1.016)
-					(thickness 0.254)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "9f779441-2bf2-4184-99c4-ee5879fc4791")
-		)
-		(pin "1"
-			(uuid "6be94e6d-ae79-45c8-a0a6-23ea76879370")
-		)
-		(instances
-			(project "PIC16DevKit"
-				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -12893,6 +15552,203 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 24.13 157.48 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c10bb1c3-a277-486e-8f2d-2be5d4154d79")
+		(property "Reference" "#PWR059"
+			(at 24.13 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 24.13 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 24.13 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ed4ec086-8f64-4cd2-b7da-9e3fa40b72d1")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR059")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:RES")
+		(at 52.07 142.24 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c528c537-343b-4cf6-a9a2-e81c85a5b699")
+		(property "Reference" "R35"
+			(at 50.8 142.24 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330R"
+			(at 50.8 144.145 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 51.816 142.24 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
+			(at 52.07 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 52.07 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 52.07 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9a04c56b-e2c6-4c5f-9e3d-f99a3a182fe2")
+		)
+		(pin "1"
+			(uuid "d2b0257f-c281-425f-a0ec-34d778932f9b")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "LED_5")
 		(lib_id "Triet_KiCAD_Sym:LED")
 		(at 190.5 57.15 0)
@@ -13006,7 +15862,7 @@
 	)
 	(symbol
 		(lib_id "SAMPI:BT2")
-		(at 31.75 90.17 90)
+		(at 36.83 90.17 90)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -13018,7 +15874,7 @@
 		(fields_autoplaced yes)
 		(uuid "cd396920-d616-4eea-a3fd-80ab27b822a4")
 		(property "Reference" "BT2"
-			(at 33.02 88.8999 90)
+			(at 38.1 88.8999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13031,7 +15887,7 @@
 			)
 		)
 		(property "Value" "UBT"
-			(at 33.02 91.4399 90)
+			(at 38.1 91.4399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13043,8 +15899,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Liem:SW6x6-G"
-			(at 31.75 90.17 0)
+		(property "Footprint" "SAMPI:SW6x6-G"
+			(at 36.83 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13057,7 +15913,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 90.17 0)
+			(at 36.83 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13070,7 +15926,7 @@
 			)
 		)
 		(property "Description" "SWITCH TACTILE SPST-NO 0.05A 12V"
-			(at 41.275 90.17 0)
+			(at 46.355 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13083,7 +15939,7 @@
 			)
 		)
 		(property "MFT" "CUI"
-			(at 41.275 90.17 0)
+			(at 46.355 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13096,7 +15952,7 @@
 			)
 		)
 		(property "MNP" "TS04-66-73-BK-100-SMT"
-			(at 41.275 89.535 0)
+			(at 46.355 89.535 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13242,6 +16098,233 @@
 		)
 	)
 	(symbol
+		(lib_id "SAMPI:RES")
+		(at 199.39 54.61 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d712139e-f22f-4109-85cc-d9814ff6cc88")
+		(property "Reference" "R15"
+			(at 200.025 55.245 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1K"
+			(at 199.39 59.055 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 199.39 54.864 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "RES 330R OHM 5% 1/10W 0603"
+			(at 187.96 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 199.39 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603JR-07330RL"
+			(at 199.39 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0d5d0d38-0587-40ab-86b1-c5fbb9a5bd62")
+		)
+		(pin "1"
+			(uuid "b0f9262c-46b3-47aa-8a4c-0be3c27530da")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SAMPI:RES")
+		(at 34.29 152.4 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d76d8258-6bdd-4bc8-8f99-047f199a4267")
+		(property "Reference" "R33"
+			(at 35.56 152.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 35.56 154.94 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 34.036 152.4 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "RES 10K OHM 5% 1/10W 0603"
+			(at 34.29 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 34.29 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603JR-0710KL"
+			(at 34.29 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8c487644-957b-4870-9fef-df38baf11c85")
+		)
+		(pin "1"
+			(uuid "afc4240c-c0e4-4238-85ce-751cd6a1ef32")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "R33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 54.61 40.64 90)
 		(mirror x)
@@ -13327,8 +16410,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 54.61 119.38 0)
+		(lib_id "SAMPI:RES")
+		(at 138.43 78.74 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13336,10 +16419,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ded0ac86-13ea-4288-917f-9445daa20602")
-		(property "Reference" "#PWR059"
-			(at 54.61 125.73 0)
-			(hide yes)
+		(uuid "de1b75f9-1381-414f-af07-b33ede99f0d6")
+		(property "Reference" "R19"
+			(at 142.875 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13348,10 +16430,11 @@
 					(size 1.27 1.27)
 					(bold yes)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "GND"
-			(at 54.61 123.19 0)
+		(property "Value" "5.1K"
+			(at 142.875 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13359,10 +16442,11 @@
 					(face "Consolas")
 					(size 1.016 1.016)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 54.61 119.38 0)
+		(property "Footprint" "SAMPI:RES0603"
+			(at 138.684 78.74 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13374,7 +16458,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 119.38 0)
+			(at 138.43 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13385,8 +16469,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 54.61 119.38 0)
+		(property "Description" "RES 5.1K OHM 1% 1/10W 0603"
+			(at 138.43 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13394,16 +16478,45 @@
 				(font
 					(face "Consolas")
 					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "MFT" "Yageo"
+			(at 138.43 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "MNP" "RC0603FR-075K1L"
+			(at 138.43 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "57818020-a66b-4cba-a2a5-17ce8e097f02")
+			(uuid "891cf4db-2dac-4ea1-b239-afa1f178c7ef")
+		)
+		(pin "2"
+			(uuid "b258ed93-409a-46cf-aee4-d8c5ab3e5f7a")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "#PWR059")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -13419,10 +16532,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "df80023e-a76b-45d0-9c33-b6a171a21fa4")
 		(property "Reference" "U4"
-			(at 87.63 20.32 0)
+			(at 68.58 23.495 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13434,7 +16546,7 @@
 			)
 		)
 		(property "Value" "PIC16F877A"
-			(at 87.63 22.86 0)
+			(at 104.14 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13648,8 +16760,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:CAP_CER")
-		(at 45.72 44.45 90)
+		(lib_id "SAMPI:CERCAP")
+		(at 44.45 46.99 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -13660,7 +16772,7 @@
 		(dnp no)
 		(uuid "df9cc7c1-e02b-4bb1-9992-06070483d181")
 		(property "Reference" "C16"
-			(at 45.72 46.99 90)
+			(at 43.18 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13672,7 +16784,7 @@
 			)
 		)
 		(property "Value" "22pF"
-			(at 45.72 49.53 90)
+			(at 48.26 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13683,7 +16795,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:CAP0603"
-			(at 45.72 44.45 0)
+			(at 44.45 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13695,7 +16807,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 44.45 0)
+			(at 44.45 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13707,7 +16819,7 @@
 			)
 		)
 		(property "Description" "CAP CER 22PF 50V C0G/NP0 0603"
-			(at 33.02 44.45 0)
+			(at 44.45 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13719,7 +16831,7 @@
 			)
 		)
 		(property "MFT" "Walsin"
-			(at 45.72 44.45 0)
+			(at 44.45 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13732,7 +16844,7 @@
 			)
 		)
 		(property "MNP" "0603N220J500CT"
-			(at 45.72 44.45 0)
+			(at 44.45 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13760,8 +16872,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Triet_KiCAD_Sym:CAP_CER")
-		(at 44.45 90.17 180)
+		(lib_id "SAMPI:CERCAP")
+		(at 52.07 88.9 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13771,7 +16883,7 @@
 		(dnp no)
 		(uuid "e261a82f-4627-4915-b596-343fd2d4b123")
 		(property "Reference" "C17"
-			(at 48.26 88.9 0)
+			(at 53.34 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13783,7 +16895,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 48.26 91.44 0)
+			(at 53.34 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13794,7 +16906,7 @@
 			)
 		)
 		(property "Footprint" "SAMPI:CAP0603"
-			(at 44.45 90.17 0)
+			(at 52.07 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13806,7 +16918,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 90.17 0)
+			(at 52.07 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13818,7 +16930,7 @@
 			)
 		)
 		(property "Description" "CAP CER 0.1UF 50V X7R 0603"
-			(at 44.45 102.87 0)
+			(at 64.77 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13830,7 +16942,7 @@
 			)
 		)
 		(property "MFT" "Samsung"
-			(at 44.45 90.17 0)
+			(at 52.07 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13843,7 +16955,7 @@
 			)
 		)
 		(property "MNP" "CL10B104KB8NNNC"
-			(at 44.45 90.17 0)
+			(at 52.07 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14206,7 +17318,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 35.56 93.98 0)
+		(at 40.64 93.98 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -14217,7 +17329,7 @@
 		(dnp no)
 		(uuid "f518eb07-34c6-4062-8427-8a1b323890ba")
 		(property "Reference" "#PWR072"
-			(at 35.56 100.33 0)
+			(at 40.64 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14230,7 +17342,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 97.79 0)
+			(at 40.64 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14241,7 +17353,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 93.98 0)
+			(at 40.64 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14253,7 +17365,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 93.98 0)
+			(at 40.64 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14265,7 +17377,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 35.56 93.98 0)
+			(at 40.64 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14290,7 +17402,8 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 38.735 119.38 0)
+		(at 31.75 157.48 0)
+		(mirror y)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14298,9 +17411,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "fe6f93ef-a979-43dd-8c95-927299c4c636")
-		(property "Reference" "#PWR057"
-			(at 38.735 125.73 0)
+		(uuid "f953ed53-1c89-417b-b58f-2ee08081b508")
+		(property "Reference" "#PWR061"
+			(at 31.75 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14313,7 +17426,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 38.735 123.19 0)
+			(at 31.75 161.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14324,7 +17437,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.735 119.38 0)
+			(at 31.75 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14336,7 +17449,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.735 119.38 0)
+			(at 31.75 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14348,7 +17461,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 38.735 119.38 0)
+			(at 31.75 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14360,12 +17473,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "069b0410-db3a-4a5f-bd44-9a6c13dccd87")
+			(uuid "e86ee59f-7d44-4123-8fb8-0371b91768ed")
 		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "#PWR057")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -14373,7 +17486,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 35.56 119.38 0)
+		(at 49.53 115.57 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14383,7 +17496,7 @@
 		(dnp no)
 		(uuid "fe7e7aa4-dfae-4125-82ee-70500f357e72")
 		(property "Reference" "#PWR056"
-			(at 35.56 125.73 0)
+			(at 49.53 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14396,7 +17509,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 35.56 123.19 0)
+			(at 49.53 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14407,7 +17520,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 119.38 0)
+			(at 49.53 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14419,7 +17532,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 119.38 0)
+			(at 49.53 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14431,7 +17544,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 35.56 119.38 0)
+			(at 49.53 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14456,7 +17569,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 50.165 110.49 90)
+		(at 59.69 110.49 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14466,7 +17579,7 @@
 		(dnp no)
 		(uuid "ff1f5de2-256d-47d5-b9f0-0e0da97d369e")
 		(property "Reference" "#PWR055"
-			(at 53.975 110.49 0)
+			(at 63.5 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14479,7 +17592,7 @@
 			)
 		)
 		(property "Value" "+VDDTG"
-			(at 46.99 110.49 90)
+			(at 56.515 110.49 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14491,7 +17604,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.165 110.49 0)
+			(at 59.69 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14503,7 +17616,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.165 110.49 0)
+			(at 59.69 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14515,7 +17628,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 50.165 110.49 0)
+			(at 59.69 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
