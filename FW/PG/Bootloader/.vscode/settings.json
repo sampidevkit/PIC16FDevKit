@@ -1,0 +1,9 @@
+{
+    "cmake.sourceDirectory": "C:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/cmake/Bootloader/default",
+    "cmake.autoDetectSourceDirectory": false,
+    "mplab.clangd.compileCommandsDir": "${workspaceFolder}/_build/Bootloader/default",
+    "mplab.clangd.arguments": [
+        "--header-insertion=never"
+    ],
+    "mplab.clangd.path": "c:\\Program Files\\Microchip\\xc8\\v4.00\\bin\\xc8-clangd.exe"
+}

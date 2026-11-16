@@ -1,0 +1,57 @@
+{
+    "version": "1.9",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "conf1",
+            "device": "AVR64DU28",
+            "imagePath": "./out/Bootloader/default.elf",
+            "tool": "Simulator",
+            "packs": [
+                {
+                    "name": "AVR-Dx_DFP",
+                    "vendor": "Microchip",
+                    "version": "2.8.343"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC8"
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "default-XC8",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc8@4.00",
+            "properties": {
+                "XC8-config-global.constdata-progmem": true,
+                "XC8-config-global.mapped-progmem": true,
+                "HI-TECH-COMP.use-cci": true,
+                "HI-TECH-COMP.extra-include-directories": [
+                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/cfg",
+                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files",
+                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb",
+                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/usb_cdc",
+                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/usb_common",
+                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/usb_peripheral",
+                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/src",
+                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/usb_cdc/circular_buffer"
+                ],
+                "HI-TECH-COMP.optimization-level": "-Os",
+                "HI-TECH-COMP.preprocess-assembler": true,
+                "XC8-CO.stack-guidance": true
+            }
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "default",
+            "files": [
+                {
+                    "include": "**/*",
+                    "exclude": "**/@(build|_build|out|cmake|.vscode)/**/*"
+                }
+            ]
+        }
+    ]
+}
