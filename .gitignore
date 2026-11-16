@@ -7,6 +7,9 @@ debug/
 Project Backups/
 .generated_files/
 .history/
+queuelogs/
+_build/
+cmake/
 *-backups/
 
 \#auto_saved_files\#
