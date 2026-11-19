@@ -4355,35 +4355,40 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "MD1"
-				(at 0 3.175 0)
+			(property "Reference" "MD401"
+				(at -13.335 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
+						(face "Consolas")
 						(size 1.27 1.27)
 						(bold yes)
 					)
 				)
 			)
 			(property "Value" "ARDUINO-UNO-R3"
-				(at 0 1.27 0)
+				(at 8.89 1.27 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
+						(face "Consolas")
 						(size 1.016 1.016)
+						(thickness 0.254)
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "SAMPI:ARDUINO-UNO-R3"
 				(at 0 3.175 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(face "Consolas")
+						(size 1.016 1.016)
+						(thickness 0.254)
 					)
 				)
 			)
@@ -4394,18 +4399,86 @@
 				(hide yes)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(face "Consolas")
+						(size 1.016 1.016)
+						(thickness 0.254)
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "PCB 4-LAYER 1.6MM 1-0.5-0.5-1OZ BLACK&WHITE HALS"
 				(at 0 3.175 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
 					(font
-						(size 1.27 1.27)
+						(face "Consolas")
+						(size 1.016 1.016)
+						(thickness 0.254)
+					)
+				)
+			)
+			(property "MNP" "PCB.SAMM-877A"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(face "Consolas")
+						(size 1.016 1.016)
+						(thickness 0.254)
+					)
+				)
+			)
+			(property "MFT" "JLCPCB"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(face "Consolas")
+						(size 1.016 1.016)
+						(thickness 0.254)
+					)
+				)
+			)
+			(symbol "ARDUINO-UNO-R3_0_1"
+				(polyline
+					(pts
+						(xy -8.255 -10.795) (xy -6.985 -10.795) (xy -6.985 -3.175) (xy -8.255 -3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -45.085) (xy -5.715 -45.085) (xy -5.715 -47.625) (xy -6.35 -47.625)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 -1.905) (xy 6.35 -1.905) (xy 6.35 -4.445) (xy 6.985 -4.445)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -4423,16 +4496,24 @@
 						(type background)
 					)
 				)
+				(text "PROG UPDI"
+					(at -7.62 -6.985 900)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
 				(text "(Ext RPU)"
-					(at -3.81 -46.355 0)
+					(at -1.905 -46.355 0)
 					(effects
 						(font
 							(size 1 1)
 						)
 					)
 				)
-				(text "ARDUINO UNO PINOUT"
-					(at 0 -25.4 900)
+				(text "ARDUINO\nUNO PINOUT"
+					(at 0 -25.4 0)
 					(effects
 						(font
 							(size 1.524 1.524)
@@ -4440,8 +4521,8 @@
 						)
 					)
 				)
-				(text "(Int RPU)"
-					(at 3.81 -3.175 0)
+				(text "(RPU 5.1K)"
+					(at 1.905 -3.175 0)
 					(effects
 						(font
 							(size 1 1)
@@ -4487,7 +4568,7 @@
 				(pin input line
 					(at -17.145 -18.415 0)
 					(length 2.54)
-					(name "RESET"
+					(name "~{MCLR}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5017,6 +5098,78 @@
 						)
 					)
 					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.145 -3.175 0)
+					(length 2.54)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -17.145 -5.715 0)
+					(length 2.54)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -17.145 -8.255 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.145 -10.795 0)
+					(length 2.54)
+					(name "UPDI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "P4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5644,8 +5797,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 0.635 0)
+			(property "Reference" "U403"
+				(at 5.08 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -5654,19 +5807,21 @@
 						(thickness 0.254)
 						(bold yes)
 					)
+					(justify left)
 				)
 			)
 			(property "Value" "DS18B20"
-				(at 0 -1.27 0)
+				(at 5.08 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.016 1.016)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "SAMPI:TO-92-SMD"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5739,6 +5894,24 @@
 						(font
 							(size 1.27 1.27)
 							(bold yes)
+						)
+					)
+				)
+				(pin passive line
+					(at 1.905 -13.335 90)
+					(length 2.54)
+					(name "EP"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "0"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
 						)
 					)
 				)
@@ -11732,6 +11905,18 @@
 		)
 		(uuid "03f77673-b570-423d-9cb0-dacaddc6549d")
 	)
+	(hierarchical_label "PROG_UPDI"
+		(shape bidirectional)
+		(at 160.02 109.22 180)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "2b397266-d592-43ef-9c62-0fd695495c49")
+	)
 	(hierarchical_label "~{MCLR}"
 		(shape input)
 		(at 62.23 29.21 180)
@@ -11757,7 +11942,7 @@
 		(uuid "41733c5d-4dd6-4864-abf5-f9d857de36a5")
 	)
 	(hierarchical_label "PGC_SCL"
-		(shape bidirectional)
+		(shape input)
 		(at 130.81 82.55 0)
 		(effects
 			(font
@@ -11816,7 +12001,7 @@
 		)
 		(uuid "860ae4b4-e266-4d1a-86bd-c5004dad607c")
 	)
-	(hierarchical_label "PGC_SDA"
+	(hierarchical_label "PGD_SDA"
 		(shape bidirectional)
 		(at 194.31 102.87 0)
 		(effects
@@ -11852,8 +12037,8 @@
 		)
 		(uuid "9c40a479-cb6f-4d12-8c35-831fb856e94d")
 	)
-	(hierarchical_label "PGD_SCL"
-		(shape bidirectional)
+	(hierarchical_label "PGC_SCL"
+		(shape input)
 		(at 194.31 100.33 0)
 		(effects
 			(font
@@ -11864,7 +12049,7 @@
 		)
 		(uuid "9ddf6c65-ba7c-445e-a80d-91a2c6e773a5")
 	)
-	(hierarchical_label "PGC_SDA"
+	(hierarchical_label "PGD_SDA"
 		(shape bidirectional)
 		(at 227.33 120.65 180)
 		(effects
@@ -11876,8 +12061,8 @@
 		)
 		(uuid "a309962e-9211-4a3e-85ce-003708d00630")
 	)
-	(hierarchical_label "PGD_SCL"
-		(shape bidirectional)
+	(hierarchical_label "PGC_SCL"
+		(shape input)
 		(at 227.33 101.6 180)
 		(effects
 			(font
@@ -11887,6 +12072,102 @@
 			(justify right)
 		)
 		(uuid "c5c90f43-f10b-4a1f-8346-205f55b64992")
+	)
+	(hierarchical_label "~{PROG_RESET}"
+		(shape output)
+		(at 160.02 101.6 180)
+		(effects
+			(font
+				(face "Consolas")
+				(size 1.016 1.016)
+			)
+			(justify right)
+		)
+		(uuid "e4b3e396-164e-4603-921d-1650fa5624b0")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 76.835 158.115 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "01baf827-0499-44fb-9db5-0b43a9d3a106")
+		(property "Reference" "#PWR0438"
+			(at 76.835 164.465 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 76.835 161.925 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.835 158.115 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.835 158.115 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 76.835 158.115 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a8f581ae-a872-4b38-9ac7-627f15e04020")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR0438")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_name "CERCAP_6")
@@ -12189,7 +12470,7 @@
 		(pin "27"
 			(uuid "d73f7e91-a7c8-47a6-8c20-fc3d856bc655")
 		)
-		(pin "1"
+		(pin "P1"
 			(uuid "55a93fc2-77ba-4900-807c-180a694f54d0")
 		)
 		(pin "28"
@@ -12281,6 +12562,18 @@
 		)
 		(pin "8"
 			(uuid "30b0fac2-4192-499c-b325-459172997c91")
+		)
+		(pin "1"
+			(uuid "d9f1f3f6-5f59-4c32-8151-eded12c96ef4")
+		)
+		(pin "P3"
+			(uuid "81ad6a90-cc63-49c1-8f23-72b94526d4e4")
+		)
+		(pin "P2"
+			(uuid "7eda9e1d-bd65-4436-8afa-b33f06ac700c")
+		)
+		(pin "P4"
+			(uuid "e2bded59-c0b4-4eeb-b074-bbb56b36fe01")
 		)
 		(instances
 			(project "PIC16DevKit"
@@ -13206,6 +13499,90 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 160.02 106.68 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "31699b52-b982-44fb-b886-b220bef035b3")
+		(property "Reference" "#PWR0437"
+			(at 153.67 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 156.845 106.68 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 160.02 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c877b89-84f3-40b4-aae9-bf02597272c5")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR0437")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 44.45 93.98 0)
 		(mirror y)
 		(unit 1)
@@ -14075,6 +14452,96 @@
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
 					(reference "#PWR0406")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "+5V_1")
+		(lib_id "power:+5V")
+		(at 160.02 104.14 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4a3e2ff4-7b4d-47fe-a981-09215c1ed6e3")
+		(property "Reference" "#PWR0436"
+			(at 163.83 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 155.575 104.14 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 160.02 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Consolas")
+					(size 1.016 1.016)
+					(thickness 0.254)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5c2610b7-7804-4f53-abc7-d590c5ba26dc")
+		)
+		(instances
+			(project "PIC16DevKit"
+				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
+					(reference "#PWR0436")
 					(unit 1)
 				)
 			)
@@ -15177,38 +15644,41 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "62a27953-49b0-43a6-b2cb-82b19b61231c")
-		(property "Reference" "U403"
+		(property "Reference" "J403"
 			(at 80.01 149.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.27 1.27)
-					(thickness 0.254)
+					(thickness 0.127)
 					(bold yes)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "DS18B20"
+		(property "Value" "For DS18B20"
 			(at 80.01 152.4 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" "SAMPI:TO-92-SMD"
+		(property "Footprint" "SAMPI:JST-XH2.54-3P-SMD-RA"
 			(at 74.93 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -15219,7 +15689,8 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -15230,7 +15701,8 @@
 			(do_not_autoplace no)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(face "Consolas")
+					(size 1.016 1.016)
 				)
 			)
 		)
@@ -15241,6 +15713,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 			)
@@ -15252,6 +15725,7 @@
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Consolas")
 					(size 1.016 1.016)
 				)
 			)
@@ -15265,10 +15739,13 @@
 		(pin "1"
 			(uuid "ce5b5aef-0796-4fe9-b0ec-9cf2ff1090c0")
 		)
+		(pin "0"
+			(uuid "3bcb953d-6243-4d5a-bae0-0f9db722fc0e")
+		)
 		(instances
 			(project "PIC16DevKit"
 				(path "/17281b91-3f9a-4e36-96b2-66002b412b3a/dceb7a93-1172-4461-96bc-c129bdd90128"
-					(reference "U403")
+					(reference "J403")
 					(unit 1)
 				)
 			)
@@ -19463,7 +19940,7 @@
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "f0392e85-1b54-439d-b742-16c565381e19")
 		(property "Reference" "J401"
 			(at 176.53 90.805 90)
