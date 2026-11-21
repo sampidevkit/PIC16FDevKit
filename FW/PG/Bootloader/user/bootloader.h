@@ -1,8 +1,8 @@
 #ifndef BOOTLOADER_H
 #define	BOOTLOADER_H
 
-#include "Common/LibDef.h"
-#include "Project_Cfg.h"
+#include "Common/libdef.h"
+#include "project.h"
 
 void BLD_Init(void);
 void BLD_Deinit(void);

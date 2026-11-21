@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: N/A
-creation_date: 2026-11-16T20:53:56.555+07:00[Asia/Bangkok]
+creation_date: 2026-11-21T16:09:17.967+07:00[Asia/Bangkok]
 operating_system: Windows 11
 mcc_mode: VSCodePlugin
 mcc_mode_version: Unknown
@@ -22,6 +22,7 @@ modules:
 - {name: '@mchp-mcc/avr8-pin-manager', type: MELODY, version: 4.6.2}
 - {name: '@mchp-mcc/main-manager', type: MELODY, version: 3.1.2}
 - {name: '@mchp-mcc/pin-content-processor', type: MELODY, version: 3.11.0}
+- {name: '@mchp-mcc/power-driver', type: MELODY, version: 1.1.0}
 - {name: '@mchp-mcc/scf-avr8-bod-v1', type: MELODY, version: 4.1.1}
 - {name: '@mchp-mcc/scf-avr8-clkctrl-v3', type: MELODY, version: 2.2.0}
 - {name: '@mchp-mcc/scf-avr8-interrupt-v1', type: MELODY, version: 5.0.12}

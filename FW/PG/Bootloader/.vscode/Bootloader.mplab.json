@@ -3,9 +3,10 @@
     "configurations": [
         {
             "name": "default",
-            "id": "conf1",
+            "id": "",
             "device": "AVR64DU28",
             "imagePath": "./out/Bootloader/default.elf",
+            "toolProperties": "default-tool-base",
             "tool": "Simulator",
             "packs": [
                 {
@@ -19,6 +20,11 @@
         }
     ],
     "propertyGroups": [
+        {
+            "name": "default-uservariables",
+            "type": "uservariables",
+            "properties": {}
+        },
         {
             "name": "default-XC8",
             "type": "toolchain",
@@ -35,11 +41,26 @@
                     "./config.mcc/mcc_generated_files/usb/usb_common",
                     "./config.mcc/mcc_generated_files/usb/usb_peripheral",
                     "./config.mcc/mcc_generated_files/usb/src",
-                    "./config.mcc/mcc_generated_files/usb/usb_cdc/circular_buffer"
+                    "./config.mcc/mcc_generated_files/usb/usb_cdc/circular_buffer",
+                    "./user",
+                    "../../CLib"
                 ],
                 "HI-TECH-COMP.optimization-level": "-Os",
                 "HI-TECH-COMP.preprocess-assembler": true,
                 "XC8-CO.stack-guidance": true
+            }
+        },
+        {
+            "name": "default-tool-base",
+            "type": "tool",
+            "properties": {}
+        },
+        {
+            "name": "default-debug",
+            "type": "debug",
+            "provider": "microchip.mplab-core-da:DebugPropertyGroup",
+            "properties": {
+                "useOnDemandDebugStrategy": true
             }
         }
     ],

@@ -1,11 +1,8 @@
-#include "hardware.h"
-#include "Common/Util.h"
-#include "Common/debug.h"
-#include "Apps/DataLog/DataLog.h"
+#include "project.h"
+#include "common/Util.h"
+#include "common/debug.h"
 #include "internal_memory_maps.h"
-#include "Bootloader/bootloader.h"
-#include "Apps/DataLog/datalog_memory_maps.h"
-#include "IrDA.h"
+#include "bootloader.h"
 
 //#define __TEST__
 static uint32_t lastAppAddr=0;
@@ -13,19 +10,12 @@ static uint32_t lastAppAddr=0;
 /* *************************************** Prototypes for data streaming port */
 void BLD_Port_Init(void)
 {
-    VREF_Initialize();
-    AC1_Initialize();
-    USART2_Initialize();
-    IrDA_RxEnable();
     lastAppAddr=AppCodeMem()->BEGIN_ADDR;
 }
 
 void BLD_Port_DeInit(void)
 {
-    VREF_Deinitialize();
-    AC1_Deinitialize();
-    USART2_Deinitialize();
-    IrDA_RxTxDisable();
+
 }
 
 bool BLD_Port_IsTxReady(void)
@@ -35,7 +25,7 @@ bool BLD_Port_IsTxReady(void)
 
 void BLD_Port_Write(uint8_t b)
 {
-    IrDA_Write(b);
+
 }
 
 bool BLD_Port_IsTxDone(void)
@@ -45,12 +35,12 @@ bool BLD_Port_IsTxDone(void)
 
 bool BLD_Port_IsRxReady(void)
 {
-    return IrDA_IsRxReady();
+    return 0;
 }
 
 uint8_t BLD_Port_Read(void)
 {
-    return IrDA_Read();
+    return 0;
 }
 
 void BLD_Port_Task(void)
@@ -61,7 +51,7 @@ void BLD_Port_Task(void)
 /* ********************************* Prototypes for trigger/indicator signals */
 bool BLD_TRIG_GetValue(void)
 {
-    if((TAMPER_N_GetValue()&TAMPER_S_GetValue())==0) // Mot trong 2 cam bien Hall duoc kich hoat
+    if((BT_FNC_N_GetValue()==0)||(NoInitMem()->BootCnt==0xAA))
         return 1;
 
     return 0;
@@ -70,62 +60,18 @@ bool BLD_TRIG_GetValue(void)
 /* ************************************************************** Application */
 bool BLD_BootFlag(void)
 {
-    if(EEPROM_Read(EepromMem()->BEGIN_ADDR+StatusMem()->offset)!=BOOTLOADER_DISABLE)
-    {
-        //__dbs("\r\nBoot flag");
-        return 1;
-    }
-
-    return 0;
+    return BLD_TRIG_GetValue();
 }
 
 void BLD_SetBootFlag(void)
 {
     __dbs("\r\nApplication is updated");
-    EEPROM_Write(EepromMem()->BEGIN_ADDR+StatusMem()->offset, BOOTLOADER_APP_RDY);
-    while(EEPROM_IsBusy());
+    NoInitMem()->BootCnt=0;
 }
 
 void BLD_GetEncryptKey(uint32_t key[4])
 {
-    uint8_t i;
-    bool blank;
-    uint32_t addr;
-    uint16_t *pKey;
 
-    blank=1;
-    pKey=(uint16_t *) key;
-    addr=AppDataMem()->BEGIN_ADDR+SecKeyMem()->offset;
-
-    if(EEPROM_Read(ACTIVE_ADDR)!=DEVICE_DEACTIVATED)
-    {
-        for(i=0; i<8; i++)
-        {
-            *pKey=FLASH_ReadWord(addr);
-
-            if(*pKey!=0xFFFF)
-                blank=0;
-
-            pKey++;
-            addr+=2;
-        }
-    }
-
-    if(blank==1) // SECKEY is blanked
-    {
-        __dbs("\r\nLoad default key");
-        key[0]=0x05DB08E2;
-        key[1]=0x3D53E789;
-        key[2]=0x2859B98B;
-        key[3]=0x7AD58395;
-    }
-
-#ifndef DISABLE_CLIB_WARNING
-    __dbsh("\r\nKey: ", key[0]);
-    __dbh8(key[1]);
-    __dbh8(key[2]);
-    __dbh8(key[3]);
-#endif
 }
 
 void BLD_NVM_Write(uint32_t addr, uint32_t data)

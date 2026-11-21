@@ -6,13 +6,17 @@
 #include <stdbool.h>
 
 /* ************************************************************** MCC library */
-#include "../mcc_generated_files/system/system.h"
+#include "system/system.h"
 #include <avr/wdt.h>
 #include <avr/sleep.h>
 #include <util/delay.h>
+#include <avr/pgmspace.h>
 
 /* ****************************************************** Application library */
 
 #define ClrWdt() wdt_reset()
+#define SoftReset() RSTCTRL_SoftwareReset()
 
+#define BLD_USE_DEBUG
+#define USE_INTERNAL_MEMORY_MAPS_DEBUG
 #endif
