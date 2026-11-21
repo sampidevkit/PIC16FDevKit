@@ -28,14 +28,14 @@
                 "XC8-config-global.mapped-progmem": true,
                 "HI-TECH-COMP.use-cci": true,
                 "HI-TECH-COMP.extra-include-directories": [
-                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/cfg",
-                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files",
-                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb",
-                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/usb_cdc",
-                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/usb_common",
-                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/usb_peripheral",
-                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/src",
-                    "c:/Git/Github/PIC16FDevKit/P16F877A/FW/PG/Bootloader/config.mcc/mcc_generated_files/usb/usb_cdc/circular_buffer"
+                    "./cfg",
+                    "./config.mcc/mcc_generated_files",
+                    "./config.mcc/mcc_generated_files/usb",
+                    "./config.mcc/mcc_generated_files/usb/usb_cdc",
+                    "./config.mcc/mcc_generated_files/usb/usb_common",
+                    "./config.mcc/mcc_generated_files/usb/usb_peripheral",
+                    "./config.mcc/mcc_generated_files/usb/src",
+                    "./config.mcc/mcc_generated_files/usb/usb_cdc/circular_buffer"
                 ],
                 "HI-TECH-COMP.optimization-level": "-Os",
                 "HI-TECH-COMP.preprocess-assembler": true,
