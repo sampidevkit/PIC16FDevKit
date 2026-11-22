@@ -46,7 +46,7 @@ void SYSTEM_Initialize(void)
     SYSCFG_Initialize();
     
     PIN_MANAGER_Initialize();
-    USB0_Initialize();
+    //USB0_Initialize();
     (void) BOD_Initialize();
     (void) WDT_Initialize();
     NVM_Initialize();

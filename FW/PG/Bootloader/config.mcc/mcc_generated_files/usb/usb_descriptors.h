@@ -10,7 +10,7 @@
  * @version USB_DEVICE_STACK Driver Version 1.0.0
 */
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+© [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -51,21 +51,21 @@
  * @def STRING_MANUFACTURER
  * @brief Manufacturer String descriptor.
  */
-#define STRING_MANUFACTURER L"SAMPI Dev Kits"
+#define STRING_MANUFACTURER L"SAMPI Dev Kit"
 
 /**
  * @ingroup usb_device_stack
  * @def STRING_PRODUCT
  * @brief Product String descriptor.
  */
-#define STRING_PRODUCT      L"Bootloader"
+#define STRING_PRODUCT      L"CDC DFU"
 
 /**
  * @ingroup usb_device_stack
  * @def STRING_SERIAL
  * @brief Serial Number String descriptor.
  */
-#define STRING_SERIAL       L"SDK0000000003072"
+#define STRING_SERIAL       L"1234567890"
 
 /**
  * @ingroup usb_device_stack

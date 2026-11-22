@@ -5,8 +5,15 @@
 
 static bool vcp_is_opened=false;
 
+int i=0;
+// USB status variables
+uint8_t cdcData;
+volatile RETURN_CODE_t status=SUCCESS;
+volatile CDC_RETURN_CODE_t cdcStatus=CDC_SUCCESS;
+
 public new_simple_task_t(VCP_Tasks)
 {
+#if(0)
     if(SUCCESS==USBDevice_Handle())
     {
         vcp_is_opened=USB_CDCDataTerminalReady();
@@ -20,7 +27,47 @@ public new_simple_task_t(VCP_Tasks)
     {
         vcp_is_opened=false;
     }
+#else
+    status=USBDevice_Handle();
 
+    // If USB error detected
+    if(SUCCESS==status)
+    {
+        // Tests if DTE is set and USB ready for transfer
+        if(true==USB_CDCDataTerminalReady())
+        {
+            // Checks that CDC TX buffer is not full or pipe is busy
+            if(false==USB_CDCTxBusy())
+            {
+                // Retrieves CDC data if available and writes it back over CDC
+                cdcStatus=USB_CDCRead(&cdcData);
+
+                if(CDC_SUCCESS==cdcStatus)
+                {
+                    i=0;
+                    LED_BUSY_SetLow();
+                    cdcStatus=USB_CDCWrite(cdcData);
+                }
+            }
+
+            // Running CDC Virtual Serial Port handler
+            status=USB_CDCVirtualSerialPortHandler();
+
+            if(i<2000)
+                i++;
+            else
+                LED_BUSY_SetHigh();
+        }
+        else
+        {
+            if(++i>=10000)
+            {
+                i=0;
+                LED_BUSY_Toggle();
+            }
+        }
+    }
+#endif
     Task_Done();
 }
 
@@ -51,7 +98,7 @@ bool VCP_IsRxReady(void)
         return false;
     }
 
-    return USB_CDCRxReady();
+    return 1;// USB_CDCRxReady();
 }
 
 uint8_t VCP_RxByte(void)
@@ -61,7 +108,7 @@ uint8_t VCP_RxByte(void)
         return 0;
     }
 
-    return USB_CDCRead();
+    return 1; //USB_CDCRead();
 }
 
 bool VCP_IsTxReady(void)

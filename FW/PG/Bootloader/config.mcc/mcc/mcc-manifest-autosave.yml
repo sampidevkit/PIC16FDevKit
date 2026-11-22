@@ -2,10 +2,10 @@
 
 manifest_file_version: 1.0.0
 project: N/A
-creation_date: 2026-11-21T17:33:56.087+07:00[Asia/Bangkok]
-operating_system: Windows 11
-mcc_mode: VSCodePlugin
-mcc_mode_version: Unknown
+creation_date: 2026-11-22T23:28:02.486+07:00[Asia/Bangkok]
+operating_system: Windows 10
+mcc_mode: Standalone
+mcc_mode_version: 5.7.2
 device_name: AVR64DU28
 compiler: N/A
 mcc_version: 5.7.2

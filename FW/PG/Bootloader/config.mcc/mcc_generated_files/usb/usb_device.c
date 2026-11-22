@@ -10,7 +10,7 @@
  * @version USB_DEVICE_STACK Driver Version 1.0.0
 */
 /*
-© [2025] Microchip Technology Inc. and its subsidiaries.
+© [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -30,30 +30,16 @@
     THIS SOFTWARE.
 */
 
-#include <usb_core.h>
-#include <usb_cdc_virtual_serial_port.h>
 #include "usb_device.h"
 #include "usb0.h"
 
 static RETURN_CODE_t usbStatus;
 static void USBDevice_TransferHandler(void);
 static void USBDevice_EventHandler(void);
-static void USBDevice_DefaultStartOfFrameCallback(void);
-static void USBDevice_DefaultSuspendCallback(void);
-static void USBDevice_DefaultWakeFromSuspendCallback(void);
-static void USBDevice_DefaultResetCallback(void);
-static USB_EVENT_CALLBACK_t USBDevice_StartOfFrame_cb = &USBDevice_DefaultStartOfFrameCallback;
-static USB_EVENT_CALLBACK_t USBDevice_Suspend_cb = &USBDevice_DefaultSuspendCallback;
-static USB_EVENT_CALLBACK_t USBDevice_WakeFromSuspend_cb = &USBDevice_DefaultWakeFromSuspendCallback;
-static USB_EVENT_CALLBACK_t USBDevice_Reset_cb = &USBDevice_DefaultResetCallback;
 
 void USBDevice_Initialize(void)
 {
     USB_DescriptorPointersSet(&descriptorPointers);
-    USB_SOFCallbackRegister(USBDevice_StartOfFrame_cb);
-    USB_SuspendCallbackRegister(USBDevice_Suspend_cb);
-    USB_ResumeCallbackRegister(USBDevice_WakeFromSuspend_cb);
-    USB_ResetCallbackRegister(USBDevice_Reset_cb);
     
     USB_CDCVirtualSerialPortInitialize();
 
@@ -87,46 +73,6 @@ static void USBDevice_TransferHandler(void)
 static void USBDevice_EventHandler(void)
 {
     usbStatus = USB_EventHandler();
-}
-
-void USBDevice_StartOfFrameCallbackRegister(USB_EVENT_CALLBACK_t cb)
-{
-    USBDevice_StartOfFrame_cb = cb;
-}
-
-void USBDevice_SuspendCallbackRegister(USB_EVENT_CALLBACK_t cb)
-{
-    USBDevice_Suspend_cb = cb;
-}
-
-void USBDevice_WakeFromSuspendCallbackRegister(USB_EVENT_CALLBACK_t cb)
-{
-    USBDevice_WakeFromSuspend_cb = cb;
-}
-
-void USBDevice_ResetCallbackRegister(USB_EVENT_CALLBACK_t cb)
-{
-    USBDevice_Reset_cb = cb;
-}
-
-static void USBDevice_DefaultStartOfFrameCallback(void)
-{
-    // Add routine here
-}
-
-static void USBDevice_DefaultSuspendCallback(void)
-{
-    // Add routine here
-}
-
-static void USBDevice_DefaultWakeFromSuspendCallback(void)
-{
-    // Add routine here
-}
-
-static void USBDevice_DefaultResetCallback(void)
-{
-    // Add routine here
 }
 
 /**

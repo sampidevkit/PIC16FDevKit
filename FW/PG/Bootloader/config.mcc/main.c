@@ -72,6 +72,7 @@ int main(void)
 
     SYSTEM_Initialize();
 
+LOOP:
     if(BLD_TRIG_GetValue())
     {
         tick_timer_t Tick;
@@ -84,7 +85,7 @@ int main(void)
         TaskManager_Init();
         VCP_Init();
 
-        while(TaskManager_Count()>0)
+        while(1)
         {
             ClrWdt();
             TaskManager();
@@ -254,13 +255,14 @@ int main(void)
                 default:
                 {
                     LED_TGRDY_SetLow();
-                    TaskManager_End_AllTasks();
-                    break;
+                    VCP_Deinit();
+                    goto EXIT;
                 }
             }
         }
     }
 
+EXIT:
     LED_BUSY_SetLow();
     opcode=FLASH_ReadWord(AppCodeMem()->BEGIN_ADDR);
 
@@ -271,7 +273,10 @@ int main(void)
         jump_to_variable_address(AppCodeMem()->BEGIN_ADDR); // Jump to application, located immediately after boot section
     }
     else
+    {
         NoInitMem()->BootCnt=0xAA;
+        goto LOOP;
+    }
 
     POWER_LowPowerModeEnter(POWER_PDOWN_MODE);
 
