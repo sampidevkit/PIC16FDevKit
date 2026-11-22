@@ -10,7 +10,7 @@
  * @version USB_DEVICE_STACK Driver Version 1.0.0
 */
 /*
-© [2026] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -68,8 +68,8 @@ static USB_APPLICATION_CONFIGURATION_t configurationDescriptor = {
             .bNumInterfaces = USB_INTERFACE_NUM,
             .bConfigurationValue = 1u,
             .iConfiguration = 0u,
-            .bmAttributes = USB_CONFIG_ATTR_MUST_SET | USB_CONFIG_ATTR_BUS_POWERED,
-            .bMaxPower = USB_CONFIG_MAX_POWER(2),
+            .bmAttributes = USB_CONFIG_ATTR_MUST_SET | USB_CONFIG_ATTR_SELF_POWERED,
+            .bMaxPower = USB_CONFIG_MAX_POWER(100),
         },
         .Interface0Alternate0 =
         {

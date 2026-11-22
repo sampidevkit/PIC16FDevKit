@@ -4,9 +4,9 @@
 #include <stdint.h>
 #include "system/system.h"
 
-#define SRAM_BEGIN_ADDR     0x804000U
+#define SRAM_BEGIN_ADDR     0x806000U
 #define SRAM_END_ADDR       0x807FFFU
-#define SRAM_SIZE           0x8000U
+#define SRAM_SIZE           0x2000U
 
 #define BOOT_BEGIN_ADDR     ((uint32_t) FLASHSTART)
 #define BOOT_PAGE_COUNT     0x27UL // FUSE.BOOTSIZE in configure bits

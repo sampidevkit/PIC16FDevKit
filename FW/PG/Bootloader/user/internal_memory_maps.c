@@ -1,4 +1,4 @@
-#include "project.h"
+#include "project_cfg.h"
 #include "internal_memory_maps.h"
 
 #ifndef USE_INTERNAL_MEMORY_MAPS_DEBUG

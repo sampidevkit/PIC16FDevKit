@@ -72,7 +72,16 @@ RETURN_CODE_t USB_CDCVirtualSerialPortHandler(void);
  * @param buffer - Pointer to application receive buffer
  * @return status - Result of the called circular buffer function
  */
-CDC_RETURN_CODE_t USB_CDCRead(uint8_t *data);
+uint8_t USB_CDCRead(void);
+
+/**
+ * @ingroup usb_cdc
+ * @brief Checks if the receive buffer is empty.
+ * @param None.
+ * @retval 0 - buffer is empty
+ * @retval 1 - buffer is not empty
+ */
+bool USB_CDCRxReady(void);
 
 /**
  * @ingroup usb_cdc

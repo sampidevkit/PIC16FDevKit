@@ -10,7 +10,7 @@
  * @version USB_DEVICE_STACK Driver Version 1.0.0
 */
 /*
-© [2026] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -33,8 +33,7 @@
 #ifndef USB_DEVICE_H
 #define USB_DEVICE_H
 
-#include <usb_core.h>
-#include <usb_cdc_virtual_serial_port.h>
+#include <usb_common_elements.h>
 #include "usb_descriptors.h"
 
 /**

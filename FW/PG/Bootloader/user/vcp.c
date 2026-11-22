@@ -1,79 +1,83 @@
 #include "vcp.h"
-#include "project.h"
+#include "system/system.h"
+#include "usb/usb_cdc/usb_cdc.h"
+#include "usb/usb_cdc/usb_cdc_virtual_serial_port.h"
 
-static bool vcp_is_opened = false;
+static bool vcp_is_opened=false;
 
-public
-new_simple_task_t(VCP_Tasks) {
-  uint8_t cdcData;
-  volatile RETURN_CODE_t status = SUCCESS;
-  volatile CDC_RETURN_CODE_t cdcStatus = CDC_SUCCESS;
+public new_simple_task_t(VCP_Tasks)
+{
+    if(SUCCESS==USBDevice_Handle())
+    {
+        vcp_is_opened=USB_CDCDataTerminalReady();
 
-  status = USBDevice_Handle();
-  // If USB error detected
-  if (SUCCESS == status) {
-    vcp_is_opened = USB_CDCDataTerminalReady();
-
-    // Tests if DTE is set and USB ready for transfer
-    if (true == vcp_is_opened) {
-      // Running CDC Virtual Serial Port handler
-      status = USB_CDCVirtualSerialPortHandler();
+        if(true==vcp_is_opened)
+        {
+            USB_CDCVirtualSerialPortHandler();
+        }
     }
-  } else {
-    vcp_is_opened = false;
-  }
+    else
+    {
+        vcp_is_opened=false;
+    }
 
-  Task_Done();
+    Task_Done();
 }
 
-void VCP_Init(void) {
-  vcp_is_opened = false;
-  USB_Start();
-  TaskManager_Create_NewSimpleTask(VCP_Tasks);
+void VCP_Init(void)
+{
+    vcp_is_opened=false;
+    USBDevice_Initialize();
+    USB_Start();
+    TaskManager_Create_NewSimpleTask(VCP_Tasks);
 }
 
-void VCP_Deinit(void) {
-  vcp_is_opened = false;
-  TaskManager_End_Task(VCP_Tasks);
-  USB_Stop();
+void VCP_Deinit(void)
+{
+    vcp_is_opened=false;
+    TaskManager_End_Task(VCP_Tasks);
+    USB_Stop();
 }
 
-bool VCP_IsOpenned(void) { return vcp_is_opened; }
-
-bool VCP_IsRxReady(void) {
-  if (!vcp_is_opened) {
-    return false;
-  }
-
-  return USB_CDCRxAvailable() > 0;
+bool VCP_IsOpenned(void)
+{
+    return vcp_is_opened;
 }
 
-uint8_t VCP_RxByte(void) {
-  if (!vcp_is_opened) {
-    return 0;
-  }
+bool VCP_IsRxReady(void)
+{
+    if(!vcp_is_opened)
+    {
+        return false;
+    }
 
-  return USB_CDCReadByte();
+    return USB_CDCRxReady();
 }
 
-bool VCP_IsTxReady(void) {
-  if (!vcp_is_opened) {
-    return false;
-  }
+uint8_t VCP_RxByte(void)
+{
+    if(!vcp_is_opened)
+    {
+        return 0;
+    }
 
-  return !USB_CDCTxBusy();
+    return USB_CDCRead();
 }
 
-bool VCP_IsTxDone(void) {
-  if (!vcp_is_opened) {
-    return false;
-  }
+bool VCP_IsTxReady(void)
+{
+    if(!vcp_is_opened)
+    {
+        return false;
+    }
 
-  return USB_CDCTxIsComplete();
+    return !USB_CDCTxBusy();
 }
 
-void VCP_TxByte(uint8_t data) {
-  if (vcp_is_opened) {
-    USB_CDCWrite(data);
-  }
+void VCP_TxByte(uint8_t data)
+{
+    if(vcp_is_opened)
+    {
+        USB_CDCWrite(data);
+    }
 }

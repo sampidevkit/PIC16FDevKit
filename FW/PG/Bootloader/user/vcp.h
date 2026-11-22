@@ -11,7 +11,6 @@ bool VCP_IsOpenned(void);
 bool VCP_IsRxReady(void);
 uint8_t VCP_RxByte(void);
 bool VCP_IsTxReady(void);
-bool VCP_IsTxDone(void);
 void VCP_TxByte(uint8_t data);
 
 #endif // VCP_H

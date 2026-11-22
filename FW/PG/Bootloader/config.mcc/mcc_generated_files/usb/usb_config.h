@@ -13,7 +13,7 @@
  * @version USB_DEVICE_STACK Driver Version 1.0.0
 */
 /*
-© [2026] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -79,8 +79,8 @@
  */
 ///@{
 #define INTERFACE0ALTERNATE0_INTERRUPT_EP1_IN_SIZE 64U
-#define INTERFACE1ALTERNATE0_BULK_EP2_IN_SIZE 16U
-#define INTERFACE1ALTERNATE0_BULK_EP2_OUT_SIZE 16U
+#define INTERFACE1ALTERNATE0_BULK_EP2_IN_SIZE 64U
+#define INTERFACE1ALTERNATE0_BULK_EP2_OUT_SIZE 64U
 ///@}
 
 /**

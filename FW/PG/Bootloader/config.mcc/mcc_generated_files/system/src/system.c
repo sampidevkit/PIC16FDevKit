@@ -52,7 +52,7 @@ void SYSTEM_Initialize(void)
     NVM_Initialize();
     RTC_Initialize();
     SLPCTRL_Initialize();
-    USBDevice_Initialize();
+    //USBDevice_Initialize();
     CPUINT_Initialize();
 }
 

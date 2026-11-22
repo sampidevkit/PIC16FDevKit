@@ -10,7 +10,7 @@
  * @version USB_DEVICE_STACK Driver Version 1.0.0
 */
 /*
-© [2026] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -30,6 +30,8 @@
     THIS SOFTWARE.
 */
 
+#include <usb_core.h>
+#include <usb_cdc_virtual_serial_port.h>
 #include "usb_device.h"
 #include "usb0.h"
 
@@ -57,8 +59,6 @@ void USBDevice_Initialize(void)
 
     USB0_TrnComplCallbackRegister(USBDevice_TransferHandler);
     USB0_BusEventCallbackRegister(USBDevice_EventHandler);
-
-    usbStatus = USB_Start();
 }
 
 RETURN_CODE_t USBDevice_Handle(void)
@@ -91,25 +91,21 @@ static void USBDevice_EventHandler(void)
 
 void USBDevice_StartOfFrameCallbackRegister(USB_EVENT_CALLBACK_t cb)
 {
-    USB_SOFCallbackRegister(cb);
     USBDevice_StartOfFrame_cb = cb;
 }
 
 void USBDevice_SuspendCallbackRegister(USB_EVENT_CALLBACK_t cb)
 {
-    USB_SuspendCallbackRegister(cb);
     USBDevice_Suspend_cb = cb;
 }
 
 void USBDevice_WakeFromSuspendCallbackRegister(USB_EVENT_CALLBACK_t cb)
 {
-    USB_ResumeCallbackRegister(cb);
     USBDevice_WakeFromSuspend_cb = cb;
 }
 
 void USBDevice_ResetCallbackRegister(USB_EVENT_CALLBACK_t cb)
 {
-    USB_ResetCallbackRegister(cb);
     USBDevice_Reset_cb = cb;
 }
 

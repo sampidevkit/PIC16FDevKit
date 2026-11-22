@@ -10,7 +10,7 @@
  * @version USB0 Driver Version 1.0.0
 */
 /*
-© [2026] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -46,7 +46,7 @@ void USB0_Initialize(void)
     USB0.INTCTRLA = 0x0;
     // GNDONE disabled; SETUP disabled; TRNCOMPL disabled; 
     USB0.INTCTRLB = 0x0;
-    SYSCFG_UsbVregDisable();
+    SYSCFG_UsbVregEnable();
 }
 
 void USB0_TrnComplCallbackRegister(USB_cb_t cb)
