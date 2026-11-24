@@ -1,5 +1,6 @@
 import queue
 import threading
+import time
 import tkinter as tk
 from datetime import datetime
 from pathlib import Path
@@ -13,6 +14,7 @@ ADDR_SIZE = 4
 CRC_SIZE = 2
 PAYLOAD_BEFORE_CRC = ADDR_SIZE + PAGE_SIZE  # 516 bytes
 DECODED_CHUNK_SIZE = PAYLOAD_BEFORE_CRC + CRC_SIZE  # 518 bytes
+RESPONSE_TIMEOUT_SEC = 5.0
 
 # Các vùng nhớ tham khảo trên AVR-Dx (byte-addressed):
 # - Flash thông thường: 0x00000000 .. 0x0001FFFF (tối đa 128 KB cho DA/DB; EA/EB/DU có thể có vùng map riêng)
@@ -320,7 +322,7 @@ class AvrDxFlasherGUI:
             self.console_history.append(msg)
             self.txt_log.insert(tk.END, msg + "\n")
             self.txt_log.see(tk.END)
-        self.root.after(100, self._poll_logs)
+        self.root.after(20, self._poll_logs)
 
     def scan_serial_ports(self) -> None:
         self.cb_port.set("")
@@ -421,6 +423,24 @@ class AvrDxFlasherGUI:
             daemon=True,
         ).start()
 
+    def _wait_for_response(self, ser: serial.Serial, timeout_sec: float = RESPONSE_TIMEOUT_SEC) -> bytes:
+        """
+        Đọc phản hồi từ MCU cho đến khi nhận được '\nOK\r' hoặc '\nERR\r',
+        hoặc hết thời gian timeout_sec. Trả về ngay khi phát hiện chuỗi phản hồi.
+        """
+        deadline = time.monotonic() + timeout_sec
+        buf = bytearray()
+
+        while time.monotonic() < deadline:
+            waiting = ser.in_waiting
+            chunk = ser.read(waiting if waiting > 0 else 1)
+            if chunk:
+                buf.extend(chunk)
+                if b"\nOK\r" in buf or b"\nERR\r" in buf:
+                    return bytes(buf)
+
+        return bytes(buf)
+
     def _send_with_retry(
         self, ser: serial.Serial, label: str, frame: bytes, max_retries: int = 5
     ) -> bool:
@@ -430,9 +450,7 @@ class AvrDxFlasherGUI:
             ser.flush()
             self.log(f"[TX] Gửi {label} (lần {attempt}/{max_retries})")
 
-            resp = ser.read_until(b"\r\nERR\r\n")
-            if b"\r\nOK\r\n" not in resp and b"\r\nERR\r\n" not in resp:
-                resp += ser.read(64)
+            resp = self._wait_for_response(ser, RESPONSE_TIMEOUT_SEC)
 
             if not resp:
                 self.log(
@@ -440,10 +458,10 @@ class AvrDxFlasherGUI:
                 )
                 return False
 
-            if b"\r\nOK\r\n" in resp:
+            if b"\nOK\r" in resp:
                 self.log(f"[RX] Nhận OK cho {label}.")
                 return True
-            elif b"\r\nERR\r\n" in resp:
+            elif b"\nERR\r" in resp:
                 self.log(f"[RX] Nhận ERR cho {label} (lần {attempt}/{max_retries}).")
             else:
                 self.log(f"[RX] Phản hồi không hợp lệ ({resp!r}) cho {label}.")
@@ -457,7 +475,7 @@ class AvrDxFlasherGUI:
         ser: serial.Serial | None = None
         try:
             self.log(f"[SERIAL] Mở cổng {port} @ {baudrate} bps...")
-            ser = serial.Serial(port=port, baudrate=baudrate, timeout=5.0)
+            ser = serial.Serial(port=port, baudrate=baudrate, timeout=0.05)
 
             for label, frame in frames:
                 ok = self._send_with_retry(ser, label, frame, max_retries=5)
@@ -480,7 +498,6 @@ class AvrDxFlasherGUI:
 
     def save_session_log_file(self) -> Path:
         """Ghi toàn bộ console log và toàn bộ dữ liệu đã giải mã ra tệp log khi tắt GUI."""
-        # Xả nốt các log còn trong queue nếu có
         while not self.log_queue.empty():
             self.console_history.append(self.log_queue.get_nowait())
 
@@ -533,3 +550,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = AvrDxFlasherGUI(root)
     root.mainloop()
+    
