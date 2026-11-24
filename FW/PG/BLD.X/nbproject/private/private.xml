@@ -4,8 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Github/PIC16FDevKit/p16f877a/FW/PG/BLD.X/user/vcp.c</file>
+            <file>file:/D:/Github/PIC16FDevKit/p16f877a/FW/PG/BLD.X/user/internal_memory_maps.h</file>
             <file>file:/D:/Github/PIC16FDevKit/p16f877a/FW/PG/BLD.X/user/bld.c</file>
             <file>file:/D:/Github/PIC16FDevKit/p16f877a/FW/PG/BLD.X/main.c</file>
+            <file>file:/D:/Github/PIC16FDevKit/p16f877a/FW/CLib/misc/util.c</file>
+            <file>file:/D:/Github/PIC16FDevKit/p16f877a/FW/CLib/misc/util.h</file>
         </group>
     </open-files>
 </project-private>

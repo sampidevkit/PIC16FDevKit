@@ -13,6 +13,16 @@
 #define CRC16_CCITT_POLY  0x1021U
 #define CRC16_CCITT_INIT  0xFFFFU
 
+typedef enum
+{
+    WAIT_PORT_OPEN=0,
+    GET_NEW_CMD,
+    REP_OK,
+    REP_ERR,
+    PUT_REPORT,
+    TASK_EXCEPT
+} bld_task_t;
+
 typedef void (*func_ptr_t)(void);
 
 static struct
@@ -26,7 +36,7 @@ static struct
 {
     tick_timer_t Tick;
     uint16_t Cnt;
-    uint8_t DoNext;
+    bld_task_t DoNext;
 } TaskCxt;
 
 static uint8_t tmp8;
@@ -96,42 +106,48 @@ static void Jump2App(void) // <editor-fold defaultstate="collapsed" desc="Jump t
 void BLD_Tasks(void) // <editor-fold defaultstate="collapsed" desc="BLD task">
 {
 #if(1)
+    if(VCP_IsOpenned())
+    {
+        if(TaskCxt.DoNext==WAIT_PORT_OPEN)
+        {
+            TaskCxt.DoNext=GET_NEW_CMD;
+            TaskCxt.Cnt=0;
+            FrameCxt.DgCnt=0;
+            FrameCxt.Len=0xFFFF;
+            LED_TGRDY_SetLow();
+            Tick_Timer_Reset(TaskCxt.Tick);
+        }
+    }
+    else if(TaskCxt.DoNext!=WAIT_PORT_OPEN)
+    {
+        TaskCxt.DoNext=WAIT_PORT_OPEN;
+        TaskCxt.Cnt=0;
+        Tick_Timer_Reset(TaskCxt.Tick);
+        LED_BUSY_SetHigh();
+    }
+    else if(Tick_Timer_Is_Over_Ms(TaskCxt.Tick, 100))
+    {
+        LED_TGRDY_Toggle();
+
+        if(TaskCxt.Cnt<300)
+        {
+            TaskCxt.Cnt++;
+        }
+        else
+        {
+            TaskCxt.DoNext=TASK_EXCEPT;
+        }
+    }
+
     switch(TaskCxt.DoNext)
     {
-        case 0:
+        case WAIT_PORT_OPEN:
         {
-            if(VCP_IsOpenned())
-            {
-                TaskCxt.Cnt=0;
-                TaskCxt.DoNext=1;
-                FrameCxt.DgCnt=0;
-                FrameCxt.Len=0xFFFF;
-                LED_TGRDY_SetLow();
-                Tick_Timer_Reset(TaskCxt.Tick);
-            }
-            else if(Tick_Timer_Is_Over_Ms(TaskCxt.Tick, 100))
-            {
-                LED_TGRDY_Toggle();
-
-                if(++TaskCxt.Cnt>=300)
-                    TaskCxt.DoNext=5;
-                break;
-            }
-
             break;
         }
 
-        case 1:
+        case GET_NEW_CMD:
         {
-            if(!VCP_IsOpenned())
-            {
-                TaskCxt.DoNext=0;
-                TaskCxt.Cnt=0;
-                Tick_Timer_Reset(TaskCxt.Tick);
-                LED_BUSY_SetHigh();
-                break;
-            }
-
             if(VCP_IsRxReady())
             {
                 tmp8=VCP_RxByte();
@@ -150,7 +166,7 @@ void BLD_Tasks(void) // <editor-fold defaultstate="collapsed" desc="BLD task">
                 {
                     if(FrameCxt.Len!=518)
                     {
-                        TaskCxt.DoNext=3;
+                        TaskCxt.DoNext=REP_ERR;
                         break;
                     }
 
@@ -162,107 +178,102 @@ void BLD_Tasks(void) // <editor-fold defaultstate="collapsed" desc="BLD task">
 
                         if((tmp32<AppCodeMem()->BEGIN_ADDR)||(tmp32>AppCodeMem()->END_ADDR))
                         {
-                            FLASH_PageErase(tmp32);
-                            while(!FLASH_IsBusy());
-                            FLASH_RowWrite(tmp32, &FrameCxt.Data[4]);
-                            while(!FLASH_IsBusy());
-                            TaskCxt.DoNext=3;
+                            //                            FLASH_PageErase(tmp32);
+                            //                            while(!FLASH_IsBusy());
+                            //                            FLASH_RowWrite(tmp32, &FrameCxt.Data[4]);
+                            //                            while(!FLASH_IsBusy());
+                            TaskCxt.DoNext=REP_OK;
                         }
                         else if(tmp32==0xFFFFFFFF)
                         {
-                            TaskCxt.DoNext=5;
+                            TaskCxt.DoNext=TASK_EXCEPT;
                         }
-                    }
-                }
-                else
-                {
-                    if(is_hex_data(tmp8))
-                    {
-                        FrameCxt.Data[FrameCxt.Len]<<=4;
-                        FrameCxt.Data[FrameCxt.Len]|=AHex2Bcd(tmp8);
-
-                        if(++FrameCxt.DgCnt>=2)
+                        else
                         {
-                            if(++FrameCxt.Len>=518)
-                            {
-                                FrameCxt.Len=0;
-                            }
-
-                            FrameCxt.Data[FrameCxt.Len]=0;
+                            TaskCxt.DoNext=REP_OK;
                         }
                     }
                     else
                     {
-                        FrameCxt.Len=0xFFFF;
+                        TaskCxt.DoNext=REP_ERR;
                     }
+                }
+                else if(is_hex_data(tmp8))
+                {
+                    if(FrameCxt.Len>=518)
+                    {
+                        FrameCxt.Len=0;
+                    }
+
+                    FrameCxt.Data[FrameCxt.Len]<<=4;
+                    FrameCxt.Data[FrameCxt.Len]|=AHex2Bcd(tmp8);
+
+                    if(++FrameCxt.DgCnt>=2)
+                    {
+                        FrameCxt.Len++;
+                        FrameCxt.DgCnt=0;
+                        FrameCxt.Data[FrameCxt.Len]=0;
+                    }
+                }
+                else
+                {
+                    FrameCxt.Len=0xFFFF;
                 }
 
                 Tick_Timer_Reset(TaskCxt.Tick);
-                TaskCxt.DoNext=2;
             }
-
-            if(Tick_Timer_Is_Over_Ms(TaskCxt.Tick, 30000))
-            {
-                TaskCxt.DoNext=5;
-                break;
-            }
-
             break;
         }
 
-        case 2: // Success
+        case REP_OK: // Success
         {
             FrameCxt.Data[0]='\n';
             FrameCxt.Data[1]='O';
             FrameCxt.Data[2]='K';
             FrameCxt.Data[3]='\r';
-            FrameCxt.Len=4;
-            TaskCxt.DoNext=4;
+            FrameCxt.Data[4]='\0';
+            FrameCxt.Len=0;
+            TaskCxt.DoNext=PUT_REPORT;
             break;
         }
 
-        case 3: // Error
+        case REP_ERR: // Error
         {
             FrameCxt.Data[0]='\n';
             FrameCxt.Data[1]='E';
             FrameCxt.Data[2]='R';
             FrameCxt.Data[3]='R';
             FrameCxt.Data[4]='\r';
-            FrameCxt.Len=5;
-            TaskCxt.DoNext=4;
+            FrameCxt.Data[5]='\0';
+            FrameCxt.Len=0;
+            TaskCxt.DoNext=PUT_REPORT;
             break;
         }
 
-        case 4:
+        case PUT_REPORT:
         {
-            if(!VCP_IsOpenned())
+            if(VCP_IsTxReady())
             {
-                TaskCxt.DoNext=0;
-                TaskCxt.Cnt=0;
-                Tick_Timer_Reset(TaskCxt.Tick);
-                LED_BUSY_SetHigh();
-                break;
+                VCP_TxByte(FrameCxt.Data[FrameCxt.Len++]);
+
+                if(FrameCxt.Data[FrameCxt.Len]=='\0')
+                {
+                    TaskCxt.DoNext=GET_NEW_CMD;
+                    FrameCxt.Len=0xFFFF;
+                    LED_TGRDY_SetLow();
+                }
             }
 
-            for(tmp16=0; tmp16<FrameCxt.Len; tmp16++)
-            {
-                while(!VCP_IsTxReady())
-                    TaskManager();
-
-                VCP_TxByte(FrameCxt.Data[tmp16]);
-            }
-
-            TaskCxt.DoNext=1;
-            FrameCxt.Len=0xFFFF;
-            LED_TGRDY_SetLow();
             break;
         }
 
+        case TASK_EXCEPT:
         default:
         {
             LED_TGRDY_SetLow();
             Jump2App();
             SoftReset();
+            while(1);
             break;
         }
     }
@@ -275,7 +286,7 @@ void BLD_Init(void) // <editor-fold defaultstate="collapsed" desc="BLD init">
 
     if(BLD_TRIG_GetValue())
     {
-        TaskCxt.DoNext=0;
+        TaskCxt.DoNext=WAIT_PORT_OPEN;
         TaskCxt.Cnt=0;
         Tick_Timer_Reset(TaskCxt.Tick);
         LED_BUSY_SetHigh();

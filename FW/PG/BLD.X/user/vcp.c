@@ -17,6 +17,14 @@ void VCP_Tasks(void)
             vcp_is_opened=true;
             USB_CDCVirtualSerialPortHandler();
         }
+        else
+        {
+            vcp_is_opened=false;
+        }
+    }
+    else
+    {
+        vcp_is_opened=false;
     }
 }
 
